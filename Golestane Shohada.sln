@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS", "Golestane Shohada\CMS.csproj", "{B66DDE47-E93C-4A92-B0F2-E8A00E9435F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS", "CMS\CMS.csproj", "{B66DDE47-E93C-4A92-B0F2-E8A00E9435F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golestan", "Golestan\Golestan.csproj", "{D856AA46-0E36-4F13-B330-9401B74D0FDC}"
 EndProject
