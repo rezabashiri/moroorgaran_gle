@@ -1,0 +1,11 @@
+E:\reza\projects\Golestane Shohada\Golestane Shohada\Golestan\bin\Golestan.dll
+E:\reza\projects\Golestane Shohada\Golestane Shohada\Golestan\bin\Golestan.pdb
+E:\reza\projects\Golestane Shohada\Golestane Shohada\Golestan\bin\DynamicData.dll
+E:\reza\projects\Golestane Shohada\Golestane Shohada\Golestan\bin\EntityFramework.dll
+E:\reza\projects\Golestane Shohada\Golestane Shohada\Golestan\bin\EntityFramework.SqlServer.dll
+E:\reza\projects\Golestane Shohada\Golestane Shohada\Golestan\bin\DynamicData.pdb
+E:\reza\projects\Golestane Shohada\Golestane Shohada\Golestan\bin\DynamicData.xml
+E:\reza\projects\Golestane Shohada\Golestane Shohada\Golestan\bin\EntityFramework.xml
+E:\reza\projects\Golestane Shohada\Golestane Shohada\Golestan\bin\EntityFramework.SqlServer.xml
+E:\reza\projects\Golestane Shohada\Golestane Shohada\Golestan\obj\Debug\Golestan.dll
+E:\reza\projects\Golestane Shohada\Golestane Shohada\Golestan\obj\Debug\Golestan.pdb
