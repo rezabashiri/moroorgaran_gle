@@ -47,5 +47,6 @@ namespace Golestan.Model
         public virtual ICollection<ShahidRabete> ShahidRabetes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ShahidRabete> ShahidRabetes1 { get; set; }
+        public virtual Maghbare Maghbare { get; set; }
     }
 }

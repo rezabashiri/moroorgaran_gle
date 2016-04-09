@@ -84,6 +84,9 @@
     <Compile Include="Model\Bakhsh.cs">
       <DependentUpon>GolestanModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Ghate.cs">
+      <DependentUpon>GolestanModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\GolestanModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -98,6 +101,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GolestanModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Maghbare.cs">
+      <DependentUpon>GolestanModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Mantaghe.cs">
       <DependentUpon>GolestanModel.tt</DependentUpon>

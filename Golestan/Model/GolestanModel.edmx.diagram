@@ -57,6 +57,10 @@
         <AssociationConnector Association="GolestanShohadaModel.AmaliatNoghteAsar" ManuallyRouted="false" />
         <AssociationConnector Association="GolestanShohadaModel.NoghteAsarMogheyat" ManuallyRouted="false" />
         <AssociationConnector Association="GolestanShohadaModel.RasteVahed" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GolestanShohadaModel.Ghate" Width="1.5" PointX="10.5" PointY="0.75" />
+        <EntityTypeShape EntityType="GolestanShohadaModel.Maghbare" Width="1.5" PointX="12.75" PointY="2.5" />
+        <AssociationConnector Association="GolestanShohadaModel.FK_Maghbare_Ghate" />
+        <AssociationConnector Association="GolestanShohadaModel.FK_Maghbare_Shahid" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

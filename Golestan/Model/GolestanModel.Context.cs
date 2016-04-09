@@ -52,5 +52,7 @@ namespace Golestan.Model
         public virtual DbSet<ViewNirooVahed> ViewNirooVaheds { get; set; }
         public virtual DbSet<ViewShahid> ViewShahids { get; set; }
         public virtual DbSet<ViewShahidAmaliat> ViewShahidAmaliats { get; set; }
+        public virtual DbSet<Ghate> Ghates { get; set; }
+        public virtual DbSet<Maghbare> Maghbares { get; set; }
     }
 }

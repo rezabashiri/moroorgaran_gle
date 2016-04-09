@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="GolestanShohadaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="GolestanShohadaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AfzoodaneEtelaat">
           <Key>
             <PropertyRef Name="ID" />
@@ -60,6 +60,21 @@
           <Property Name="dateupdate" Type="datetime" />
           <Property Name="UserID" Type="uniqueidentifier" />
           <Property Name="IDShahrestan" Type="int" />
+        </EntityType>
+        <EntityType Name="Ghate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Maghbare">
+          <Key>
+            <PropertyRef Name="IDShahid" />
+          </Key>
+          <Property Name="IDShahid" Type="int" Nullable="false" />
+          <Property Name="IDGhate" Type="int" />
+          <Property Name="SangNeveshte" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Mantaghe">
           <Key>
@@ -397,6 +412,32 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Maghbare_Ghate">
+          <End Role="Ghate" Type="Self.Ghate" Multiplicity="0..1" />
+          <End Role="Maghbare" Type="Self.Maghbare" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ghate">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Maghbare">
+              <PropertyRef Name="IDGhate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Maghbare_Shahid">
+          <End Role="Shahid" Type="Self.Shahid" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Maghbare" Type="Self.Maghbare" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Shahid">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Maghbare">
+              <PropertyRef Name="IDShahid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_MatalebEzafe_MatalebEzafe">
           <End Role="NoeMatlab" Type="Self.NoeMatlab" Multiplicity="0..1" />
           <End Role="MatalebEzafe" Type="Self.MatalebEzafe" Multiplicity="*" />
@@ -701,6 +742,8 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           <EntitySet Name="AmaliatNoghteAsar" EntityType="Self.AmaliatNoghteAsar" Schema="gle" store:Type="Tables" />
           <EntitySet Name="Ashnayan" EntityType="Self.Ashnayan" Schema="gle" store:Type="Tables" />
           <EntitySet Name="Bakhsh" EntityType="Self.Bakhsh" Schema="gle" store:Type="Tables" />
+          <EntitySet Name="Ghate" EntityType="Self.Ghate" Schema="gle" store:Type="Tables" />
+          <EntitySet Name="Maghbare" EntityType="Self.Maghbare" Schema="gle" store:Type="Tables" />
           <EntitySet Name="Mantaghe" EntityType="Self.Mantaghe" Schema="gle" store:Type="Tables" />
           <EntitySet Name="MatalebEzafe" EntityType="Self.MatalebEzafe" Schema="gle" store:Type="Tables" />
           <EntitySet Name="Mogheyat" EntityType="Self.Mogheyat" Schema="gle" store:Type="Tables" />
@@ -814,6 +857,14 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             <End Role="Shahrestan" EntitySet="Shahrestan" />
             <End Role="Bakhsh" EntitySet="Bakhsh" />
           </AssociationSet>
+          <AssociationSet Name="FK_Maghbare_Ghate" Association="Self.FK_Maghbare_Ghate">
+            <End Role="Ghate" EntitySet="Ghate" />
+            <End Role="Maghbare" EntitySet="Maghbare" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Maghbare_Shahid" Association="Self.FK_Maghbare_Shahid">
+            <End Role="Shahid" EntitySet="Shahid" />
+            <End Role="Maghbare" EntitySet="Maghbare" />
+          </AssociationSet>
           <AssociationSet Name="FK_MatalebEzafe_MatalebEzafe" Association="Self.FK_MatalebEzafe_MatalebEzafe">
             <End Role="NoeMatlab" EntitySet="NoeMatlab" />
             <End Role="MatalebEzafe" EntitySet="MatalebEzafe" />
@@ -911,8 +962,7 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             <End Role="YeganVahed" EntitySet="YeganVahed" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="GolestanShohadaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1110,6 +1160,7 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           <NavigationProperty Name="ShahidAmaliats" Relationship="Self.FK_ShahidAmaliat_Shahid" FromRole="Shahid" ToRole="ShahidAmaliat" />
           <NavigationProperty Name="ShahidRabetes" Relationship="Self.FK_ShahidRabete_Shahid" FromRole="Shahid" ToRole="ShahidRabete" />
           <NavigationProperty Name="ShahidRabetes1" Relationship="Self.FK_ShahidRabete_Shahid1" FromRole="Shahid" ToRole="ShahidRabete" />
+          <NavigationProperty Name="Maghbare" Relationship="GolestanShohadaModel.FK_Maghbare_Shahid" FromRole="Shahid" ToRole="Maghbare" />
         </EntityType>
         <EntityType Name="ShahidAmaliat">
           <Key>
@@ -1692,7 +1743,61 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             <End Role="Raste" EntitySet="Rastes" />
             <End Role="Vahed" EntitySet="Vaheds" />
           </AssociationSet>
+          <EntitySet Name="Ghates" EntityType="GolestanShohadaModel.Ghate" />
+          <EntitySet Name="Maghbares" EntityType="GolestanShohadaModel.Maghbare" />
+          <AssociationSet Name="FK_Maghbare_Ghate" Association="GolestanShohadaModel.FK_Maghbare_Ghate">
+            <End Role="Ghate" EntitySet="Ghates" />
+            <End Role="Maghbare" EntitySet="Maghbares" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Maghbare_Shahid" Association="GolestanShohadaModel.FK_Maghbare_Shahid">
+            <End Role="Shahid" EntitySet="Shahids" />
+            <End Role="Maghbare" EntitySet="Maghbares" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Ghate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Maghbares" Relationship="GolestanShohadaModel.FK_Maghbare_Ghate" FromRole="Ghate" ToRole="Maghbare" />
+        </EntityType>
+        <EntityType Name="Maghbare">
+          <Key>
+            <PropertyRef Name="IDShahid" />
+          </Key>
+          <Property Name="IDShahid" Type="Int32" Nullable="false" />
+          <Property Name="IDGhate" Type="Int32" />
+          <Property Name="SangNeveshte" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Ghate" Relationship="GolestanShohadaModel.FK_Maghbare_Ghate" FromRole="Maghbare" ToRole="Ghate" />
+          <NavigationProperty Name="Shahid" Relationship="GolestanShohadaModel.FK_Maghbare_Shahid" FromRole="Maghbare" ToRole="Shahid" />
+        </EntityType>
+        <Association Name="FK_Maghbare_Ghate">
+          <End Type="GolestanShohadaModel.Ghate" Role="Ghate" Multiplicity="0..1" />
+          <End Type="GolestanShohadaModel.Maghbare" Role="Maghbare" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ghate">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Maghbare">
+              <PropertyRef Name="IDGhate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Maghbare_Shahid">
+          <End Type="GolestanShohadaModel.Shahid" Role="Shahid" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="GolestanShohadaModel.Maghbare" Role="Maghbare" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Shahid">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Maghbare">
+              <PropertyRef Name="IDShahid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2046,6 +2151,23 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
               <ScalarProperty Name="ID" ColumnName="IDVahed" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="Ghates">
+            <EntityTypeMapping TypeName="GolestanShohadaModel.Ghate">
+              <MappingFragment StoreEntitySet="Ghate">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Maghbares">
+            <EntityTypeMapping TypeName="GolestanShohadaModel.Maghbare">
+              <MappingFragment StoreEntitySet="Maghbare">
+                <ScalarProperty Name="SangNeveshte" ColumnName="SangNeveshte" />
+                <ScalarProperty Name="IDGhate" ColumnName="IDGhate" />
+                <ScalarProperty Name="IDShahid" ColumnName="IDShahid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
