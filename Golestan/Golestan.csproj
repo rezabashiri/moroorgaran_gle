@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\DynamicDataConfig.cs" />
+    <Compile Include="DBClass\ShahidPartial.cs" />
     <Compile Include="Model\AfzoodaneEtelaat.cs">
       <DependentUpon>GolestanModel.tt</DependentUpon>
     </Compile>
@@ -115,9 +116,6 @@
       <DependentUpon>GolestanModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Niroo.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\NirooYegan.cs">
       <DependentUpon>GolestanModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\NirooYeganVahedAmaliat.cs">
@@ -169,9 +167,6 @@
       <DependentUpon>GolestanModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Yegan.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\YeganVahed.cs">
       <DependentUpon>GolestanModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

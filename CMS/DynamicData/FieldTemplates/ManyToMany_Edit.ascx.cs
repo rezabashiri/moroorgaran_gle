@@ -1,69 +1,81 @@
-using System;
-using System.Data;
-using System.Data.Objects;
-using System.Data.Objects.DataClasses;
+﻿using System;
+using System.Data.Entity.Core.Objects;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Configuration;
 using System.Collections;
-using System.Collections.Specialized;
 using System.Linq;
-using System.Web;
-using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
-using System.Xml.Linq;
 using System.Web.DynamicData;
 using System.Collections.Generic;
-
-namespace CMS {
-    public partial class ManyToMany_EditField : System.Web.DynamicData.FieldTemplateUserControl {
-         protected ObjectContext ObjectContext { get; set; }
-
+using Telerik.Web.UI;
+namespace DynamicWebApp
+{
+    public partial class ManyToMany_EditField : System.Web.DynamicData.FieldTemplateUserControl
+    {
+        protected ObjectContext ObjectContext { get; set; }
+        public int RePeatColumn
+        {
+            set;
+            get;
+        }
         public void Page_Load(object sender, EventArgs e)
         {
-            EntityDataSource ds = (EntityDataSource)this.FindDataSourceControl();
 
-            ds.ContextCreated += (_, ctxCreatedEnventArgs) => ObjectContext = ctxCreatedEnventArgs.Context;
+            // Register for the DataSource's updating event
+            Microsoft.AspNet.EntityDataSource.EntityDataSource ds = (Microsoft.AspNet.EntityDataSource.EntityDataSource)this.FindDataSourceControl();
 
-            ds.Updating += new EventHandler<EntityDataSourceChangingEventArgs>(DataSource_UpdatingOrInserting);
-            ds.Inserting += new EventHandler<EntityDataSourceChangingEventArgs>(DataSource_UpdatingOrInserting);
+            ds.ContextCreated += (_, ctxCreatedEventArg) => ObjectContext = ctxCreatedEventArg.Context;
+
+            // This field template is used both for Editing and Inserting
+            ds.Updating += ds_Updating;
+            ds.Inserting += ds_Updating;
+
+  
         }
 
-        void DataSource_UpdatingOrInserting(object sender, EntityDataSourceChangingEventArgs e)
+
+
+        void ds_Updating(object sender, Microsoft.AspNet.EntityDataSource.EntityDataSourceChangingEventArgs e)
         {
             MetaTable childTable = ChildrenColumn.ChildTable;
 
+            // Comments assume employee/territory for illustration, but the code is generic
+
             if (Mode == DataBoundControlMode.Edit)
-            {
                 ObjectContext.LoadProperty(e.Entity, Column.Name);
-            }
 
-            dynamic entityCollection = Column.EntityTypeProperty.GetValue(e.Entity, null);
+            // Get the collection of territories for this employee
+            dynamic entityList = Column.EntityTypeProperty.GetValue(e.Entity, null);
 
+            // Go through all the territories (not just those for this employee)
             foreach (dynamic childEntity in childTable.GetQuery(e.Context))
             {
-                var isCurrentlyInList = ListContainsEntity(childTable, entityCollection, childEntity);
 
+                // Check if the employee currently has this territory
+                bool isCurrentlyInList = ListContainsEntity(childTable, entityList, childEntity);
+
+                // Find the checkbox for this territory, which gives us the new state
                 string pkString = childTable.GetPrimaryKeyString(childEntity);
-                ListItem listItem = CheckBoxList1.Items.FindByValue(pkString);
-                if (listItem == null)
-                    continue;
 
-                if (listItem.Selected)
+           //     RadComboBoxItem list = cmbForignKeys.Items.FindItemByValue(pkString);
+                ListItem list = DropDownCheckBoxes1.Items.FindByValue(pkString);
+                if (list == null  )
+                    continue;
+                // If the states differs, make the appropriate add/remove change
+                if (list.Selected)
                 {
                     if (!isCurrentlyInList)
-                        entityCollection.Add(childEntity);
+                        entityList.Add(childEntity);
                 }
                 else
                 {
                     if (isCurrentlyInList)
-                        entityCollection.Remove(childEntity);
+                        entityList.Remove(childEntity);
                 }
             }
         }
+
+
 
         private static bool ListContainsEntity(MetaTable table, IEnumerable<object> list, object entity)
         {
@@ -72,14 +84,51 @@ namespace CMS {
 
         private static bool AreEntitiesEqual(MetaTable table, object entity1, object entity2)
         {
-            return Enumerable.SequenceEqual(table.GetPrimaryKeyValues(entity1), table.GetPrimaryKeyValues(entity2));
+            var pks1 = table.GetPrimaryKeyValues(entity1);
+            var pks2 = table.GetPrimaryKeyValues(entity2);
+
+            return Enumerable.SequenceEqual(pks1, pks2);
         }
 
-        protected void CheckBoxList1_DataBound(object sender, EventArgs e)
+        public override Control DataControl
+        {
+            get
+            {
+                return DropDownCheckBoxes1;
+            }
+        }
+        //protected override void OnDataBinding(EventArgs e)
+        //{
+        //    base.OnDataBinding(e);
+        //    object entity;
+        //    ICustomTypeDescriptor rowDescriptor = Row as ICustomTypeDescriptor;
+        //    if (rowDescriptor != null)
+        //    {
+        //        // Get the real entity from the wrapper
+        //        entity = rowDescriptor.GetPropertyOwner(null);
+        //    }
+        //    else
+        //    {
+        //        entity = Row;
+        //    }
+
+        //    // Get the collection
+        //    var entityCollection = Column.EntityTypeProperty.GetValue(entity, null);
+
+        //    cmbForignKeys.DataSource = entityCollection;
+        //    if (ChildrenColumn != null)
+        //    {
+        //        cmbForignKeys.DataTextField = ChildrenColumn.ChildTable.DisplayColumn.Name;
+        //    }
+        //    cmbForignKeys.DataBind();
+        //}
+        protected void cmbForignKeys_DataBound(object sender, EventArgs e)
         {
             MetaTable childTable = ChildrenColumn.ChildTable;
 
-            IEnumerable<object> entityCollection = null;
+            // Comments assume employee/territory for illustration, but the code is generic
+
+            IEnumerable<object> entityList = null;
 
             if (Mode == DataBoundControlMode.Edit)
             {
@@ -87,6 +136,7 @@ namespace CMS {
                 ICustomTypeDescriptor rowDescriptor = Row as ICustomTypeDescriptor;
                 if (rowDescriptor != null)
                 {
+                    // Get the real entity from the wrapper
                     entity = rowDescriptor.GetPropertyOwner(null);
                 }
                 else
@@ -94,35 +144,35 @@ namespace CMS {
                     entity = Row;
                 }
 
-                entityCollection = (IEnumerable<object>)Column.EntityTypeProperty.GetValue(entity, null);
-                var realEntityCollection = entityCollection as RelatedEnd;
-                if (realEntityCollection != null && !realEntityCollection.IsLoaded)
-                {
-                    realEntityCollection.Load();
-                }
+                // Get the collection of territories for this employee
+                entityList = (IEnumerable<object>)Column.EntityTypeProperty.GetValue(entity, null);
             }
-
+            
+            // Go through all the territories (not just those for this employee)
             foreach (object childEntity in childTable.GetQuery(ObjectContext))
             {
-                ListItem listItem = new ListItem(
-                    childTable.GetDisplayString(childEntity),
+                // Create a checkbox for it
+                RadComboBoxItem list = new RadComboBoxItem(childTable.GetDisplayString(childEntity),
                     childTable.GetPrimaryKeyString(childEntity));
-
+                ListItem _ListItem=new System.Web.UI.WebControls.ListItem(childTable.GetDisplayString(childEntity),
+                    childTable.GetPrimaryKeyString(childEntity));
+         
+       
+                
+                
+                // Make it selected if the current employee has that territory
                 if (Mode == DataBoundControlMode.Edit)
                 {
-                    listItem.Selected = ListContainsEntity(childTable, entityCollection, childEntity);
+                    
+                    _ListItem.Selected = list.Checked = ListContainsEntity(childTable, entityList, childEntity);
                 }
-                CheckBoxList1.Items.Add(listItem);
+               
+               //cmbForignKeys.Items.Add(list);
+                DropDownCheckBoxes1.Items.Add(_ListItem);
             }
+           
+                  //cmbForignKeys.CheckBoxes = true;
         }
 
-        public override Control DataControl
-        {
-            get
-            {
-                return CheckBoxList1;
-            }
-        }
-    
     }
 }

@@ -66,6 +66,10 @@
     <Reference Include="App_Web_uscfileupload.ascx.cc671b29">
       <HintPath>..\..\..\..\publish\WebUtility\bin\App_Web_uscfileupload.ascx.cc671b29.dll</HintPath>
     </Reference>
+    <Reference Include="DropDownCheckBoxes, Version=1.1.0.27408, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DropDownCheckBoxes.dll</HintPath>
+    </Reference>
     <Reference Include="DynamicData">
       <HintPath>..\packages\DynamicData.4.5.0.1112\lib\net45\DynamicData.dll</HintPath>
     </Reference>
@@ -74,6 +78,9 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Heidarpour.WebControlUI">
+      <HintPath>..\packages\Heidarpour.WebControlUI.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\HtmlAgilityPack.dll</HintPath>
@@ -142,6 +149,20 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.Design, Version=2014.2.618.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q2 2014\Bin45\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Device.Detection">
+      <HintPath>C:\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q2 2014\Bin45\Telerik.Web.Device.Detection.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2014.2.618.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q2 2014\Bin45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>C:\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q2 2014\Bin45\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
     <Reference Include="TimePicker">
       <HintPath>..\packages\TimePicker.dll</HintPath>
     </Reference>
@@ -365,10 +386,15 @@
     <Content Include="DynamicData\FieldTemplates\ManyToMany.ascx" />
     <Content Include="DynamicData\FieldTemplates\ManyToMany_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\PersianDate.ascx" />
+    <Content Include="DynamicData\FieldTemplates\PersianDate_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Text.ascx" />
     <Content Include="DynamicData\FieldTemplates\Text_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Url.ascx" />
     <Content Include="DynamicData\FieldTemplates\Url_Edit.ascx" />
+    <Content Include="DynamicData\Filters\Boolean.ascx" />
+    <Content Include="DynamicData\Filters\Enumeration.ascx" />
+    <Content Include="DynamicData\Filters\ForeignKey.ascx" />
     <Content Include="DynamicData\PageTemplates\Details.aspx" />
     <Content Include="DynamicData\PageTemplates\Edit.aspx" />
     <Content Include="DynamicData\PageTemplates\Insert.aspx" />
@@ -762,6 +788,20 @@
     <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.designer.cs">
       <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
     </Compile>
+    <Compile Include="DynamicData\FieldTemplates\PersianDate.ascx.cs">
+      <DependentUpon>PersianDate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\PersianDate.ascx.designer.cs">
+      <DependentUpon>PersianDate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\PersianDate_Edit.ascx.cs">
+      <DependentUpon>PersianDate_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\PersianDate_Edit.ascx.designer.cs">
+      <DependentUpon>PersianDate_Edit.ascx</DependentUpon>
+    </Compile>
     <Compile Include="DynamicData\FieldTemplates\Text.ascx.cs">
       <DependentUpon>Text.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -789,6 +829,27 @@
     </Compile>
     <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.designer.cs">
       <DependentUpon>Url_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Boolean.ascx.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Boolean.ascx.designer.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Enumeration.ascx.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Enumeration.ascx.designer.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\ForeignKey.ascx.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\ForeignKey.ascx.designer.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
     </Compile>
     <Compile Include="DynamicData\PageTemplates\Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>

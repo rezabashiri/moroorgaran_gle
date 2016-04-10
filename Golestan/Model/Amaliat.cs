@@ -17,9 +17,9 @@ namespace Golestan.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Amaliat()
         {
-            this.NirooYeganVahedAmaliats = new HashSet<NirooYeganVahedAmaliat>();
             this.ShahidAmaliats = new HashSet<ShahidAmaliat>();
             this.NoghteAsars = new HashSet<NoghteAsar>();
+            this.NirooYeganVahedAmaliats = new HashSet<NirooYeganVahedAmaliat>();
         }
     
         public int ID { get; set; }
@@ -29,12 +29,13 @@ namespace Golestan.Model
         public Nullable<System.DateTime> TarikhePayan { get; set; }
         public string Tozihat { get; set; }
         public string Kholase { get; set; }
+        public byte[] Thumbnale { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NirooYeganVahedAmaliat> NirooYeganVahedAmaliats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NoghteAsar> NoghteAsars { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NirooYeganVahedAmaliat> NirooYeganVahedAmaliats { get; set; }
     }
 }

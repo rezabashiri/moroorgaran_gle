@@ -22,5 +22,7 @@ namespace Golestan.Model
         public string Phone { get; set; }
         public Nullable<bool> ISRead { get; set; }
         public Nullable<int> IDShahid { get; set; }
+    
+        public virtual Shahid Shahid { get; set; }
     }
 }
