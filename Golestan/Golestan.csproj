@@ -72,7 +72,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\DynamicDataConfig.cs" />
-    <Compile Include="DBClass\ShahidPartial.cs" />
+    <Compile Include="DBClass\AfzoodaneEtelaat.cs" />
+    <Compile Include="DBClass\AmaliatPartial.cs" />
+    <Compile Include="DBClass\Ashnayan.cs" />
+    <Compile Include="DBClass\Bakhsh.cs" />
+    <Compile Include="DBClass\Ghate.cs" />
+    <Compile Include="DBClass\Maghbare.cs" />
+    <Compile Include="DBClass\Mantaghe.cs" />
+    <Compile Include="DBClass\MatalebEzafe.cs" />
+    <Compile Include="DBClass\Mogheyat.cs" />
+    <Compile Include="DBClass\Niroo.cs" />
+    <Compile Include="DBClass\NirooYeganVahedAmaliat.cs" />
+    <Compile Include="DBClass\NoeMatlab.cs" />
+    <Compile Include="DBClass\NoeRabete.cs" />
+    <Compile Include="DBClass\NoghteAsar.cs" />
+    <Compile Include="DBClass\Ostan.cs" />
+    <Compile Include="DBClass\Raste.cs" />
+    <Compile Include="DBClass\Shahid.cs" />
+    <Compile Include="DBClass\ShahidAmaliat.cs" />
+    <Compile Include="DBClass\ShahidRabete.cs" />
+    <Compile Include="DBClass\Shahrestan.cs" />
+    <Compile Include="DBClass\Vahed.cs" />
+    <Compile Include="DBClass\Vaziat.cs" />
+    <Compile Include="DBClass\ViewAmaliat.cs" />
+    <Compile Include="DBClass\ViewNirooVahed.cs" />
+    <Compile Include="DBClass\ViewShahid.cs" />
+    <Compile Include="DBClass\ViewShahidAmaliat.cs" />
+    <Compile Include="DBClass\Yegan.cs" />
     <Compile Include="Model\AfzoodaneEtelaat.cs">
       <DependentUpon>GolestanModel.tt</DependentUpon>
     </Compile>
