@@ -36,7 +36,7 @@ public class MyClass
     // 3. -----
 
 
-    public int dbID = 1;
+    public int dbID = 2;
 
     public void SpecifyingDB()
     {
@@ -51,34 +51,19 @@ public class MyClass
                 } break;
             case 2:
                 {
-                    server = "87.247.179.110,1633";
-                    database = "Professor";
-                    user = "MyProfessor";
-                    pass = "portalostad92";
+                    server = "SAEEDPC\\MSSQLSERVER14";
+                    database = "Others";
+                    user = "sa";
+                    pass = "946744";
 
                 } break;
-            case 3:
-                {
-                    server = "sql.kouroshfathi.com,1430";
-                    database = "814_Professor";
-                    user = "814_MyProfessor";
-                    pass = "portalostad92";
-
-                } break;
-            case 4:
-                {
-                    server = "sql.dr-khorasani.com,1430";
-                    database = "886_Professor";
-                    user = "886_MyProfessor";
-                    pass = "portalostad92";
-
-                } break;
+          
         }
     }
 
     public int GetCustomer()
     {
-        int customerID = 1;
+        int customerID = 13;
         return customerID;
     }
 

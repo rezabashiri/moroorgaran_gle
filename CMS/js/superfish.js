@@ -84,7 +84,7 @@
 		hoverClass	: 'sfHover',
 		pathClass	: 'overideThisToUse',
 		pathLevels	: 2,
-		delay		: 1000,
+		delay		: 500,
 		animation	: {height:'show'},
 		speed		: 'normal',
 		autoArrows	: false,
