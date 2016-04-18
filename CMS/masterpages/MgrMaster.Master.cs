@@ -26,8 +26,8 @@ namespace CMS.masterpages
             {
                 SiteTitle();
                 //lblDate.Text = farsicalender();
-                //TablesReapeter.DataSource = Golestan.AppStart.DynamicDataConfig.GolestanModel.VisibleTables.Where(x => x.Scaffold == true).ToList();
-                //TablesReapeter.DataBind();
+                TablesReapeter.DataSource = Golestan.AppStart.DynamicDataConfig.GolestanModel.VisibleTables.Where(x => x.Scaffold == true).ToList();
+                TablesReapeter.DataBind();
             }
         }
         protected void SiteTitle()

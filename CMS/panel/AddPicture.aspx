@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CMS_panel_AddPicture" MasterPageFile="~/masterpages/MgrMaster.Master" Codebehind="AddPicture.aspx.cs" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="TitleContentPH">
@@ -28,7 +29,7 @@
             <div class="Rcolumn">
                 افزودن تصاویر(فرمت jpeg,jpg):</div>
             <div class="Lcolumn">
-                <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
+              
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
                         <asp:AjaxFileUpload ID="AjaxFileUpload1" runat="server" ThrobberID="myThrobber" ContextKeys="cntFileUpload"

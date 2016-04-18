@@ -93,7 +93,7 @@
                 <asp:Label ID="Label1" runat="server" Text="حداکثر حجم 150 کیلوبایت"></asp:Label>
             </div>
             <div class="Lcolumn width_84">
-                <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="Server" />
+          
                 <asp:AsyncFileUpload ID="AsyncFileUpload1" runat="server" />
             </div>
         </div>

@@ -1,5 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MgrMaster.master.cs" Inherits="CMS.masterpages.MgrMaster" %>
-
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -83,6 +83,21 @@
                           <li><a  href="../panel/ItemsList.aspx">جستجو و ویرایش</a></li>
                       </ul>
                   </li>
+                    <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-paragraph"></i>
+                          <span>مدیریت شهدا</span>
+                      </a>
+                      <ul class="sub">
+                        <asp:Repeater ID="TablesReapeter" runat="server">
+                                        <ItemTemplate>
+                                            <li>
+                                                <asp:DynamicHyperLink ID="DynamicHyperLink1" Action="ListDetails" runat="server"></asp:DynamicHyperLink>
+                                            </li>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                              </ul>
+                  </li>
               </ul>
               <!-- sidebar menu end-->
           </div>
@@ -97,6 +112,7 @@
           <section class="wrapper">
               <div class="row">
                   <div class="col-lg-11 main-chart">	
+                  <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
                 <asp:ContentPlaceHolder ID="TitleContentPH" runat="server">
         
         </asp:ContentPlaceHolder>

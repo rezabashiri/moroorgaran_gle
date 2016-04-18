@@ -1,4 +1,4 @@
-<%@ Page Language="C#"  MasterPageFile="~/CMS/masterpages/MgrMaster.master"  CodeBehind="List.aspx.cs" Inherits="CMS.List" %>
+<%@ Page Language="C#"  MasterPageFile="~/MasterPages/MgrMaster.master"  CodeBehind="List.aspx.cs" Inherits="CMS.List" %>
 
 <%@ Register src="~/DynamicData/Content/GridViewPager.ascx" tagname="GridViewPager" tagprefix="asp" %>
 
@@ -29,8 +29,8 @@
                 <br />
             </div>
 
-            <asp:GridView ID="GridView1" runat="server" DataSourceID="GridDataSource" EnablePersistedSelection="true"
-                AllowPaging="True" AllowSorting="True" CssClass="DDGridView"
+            <asp:GridView ID="GridView1" runat="server" CssClass="table table-striped table-advance table-hover"  DataSourceID="GridDataSource" EnablePersistedSelection="true"
+                AllowPaging="True" AllowSorting="True"  
                 RowStyle-CssClass="td" HeaderStyle-CssClass="th" CellPadding="6">
                 <Columns>
                     <asp:TemplateField>

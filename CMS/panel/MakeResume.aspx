@@ -46,7 +46,7 @@
             <div class="Rcolumn">
                 <asp:Label ID="lblPhoto" runat="server" Text="تصویر :" Font-Size="12px"></asp:Label></div>
             <div class="Lcolumn">
-                <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="Server" />
+              
                 <asp:AsyncFileUpload ID="AsyncFileUpload1" runat="server" />
             </div>
         </div>

@@ -18,7 +18,7 @@
     <div class="clear">
     </div>
     <div id="main_content">
-        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="Server" />
+        
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
                 <div>
