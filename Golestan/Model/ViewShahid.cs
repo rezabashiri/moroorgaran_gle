@@ -30,5 +30,12 @@ namespace Golestan.Model
         public string NameBakhash { get; set; }
         public string NameShahrestan { get; set; }
         public string NameOstan { get; set; }
+        public string ShomareShenasname { get; set; }
+        public int GhateID { get; set; }
+        public string SangNeveshte { get; set; }
+        public string NameGhate { get; set; }
+        public int IDBakhsh { get; set; }
+        public int IDShahrestan { get; set; }
+        public int IDOstan { get; set; }
     }
 }

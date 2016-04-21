@@ -21,21 +21,29 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
+   <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PrecompileBeforePublish>true</PrecompileBeforePublish>
+    <UseFixedNames>true</UseFixedNames>
+    <WDPMergeOption>CreateSeparateAssembly</WDPMergeOption>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
+     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PrecompileBeforePublish>true</PrecompileBeforePublish>
+    <UseFixedNames>true</UseFixedNames>
+    <WDPMergeOption>CreateSeparateAssembly</WDPMergeOption>
+    <UseMerge>false</UseMerge>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DynamicData">
@@ -46,6 +54,9 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Heidarpour.WebControlUI">
+      <HintPath>..\packages\Heidarpour.WebControlUI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Runtime.Serialization" />
@@ -66,12 +77,47 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="tkvUtility">
+      <HintPath>..\..\..\..\component\Utility\bin\x86\Debug\tkvUtility.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Control\UscFullSearchShahid.ascx" />
+    <Content Include="Control\UscSearchAmaliat.ascx" />
+    <Content Include="Control\UscSearchNiroo.ascx" />
+    <Content Include="Control\UscSearchShahid.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\DynamicDataConfig.cs" />
+    <Compile Include="Control\UscFullSearchShahid.ascx.cs">
+      <DependentUpon>UscFullSearchShahid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\UscFullSearchShahid.ascx.designer.cs">
+      <DependentUpon>UscFullSearchShahid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UscSearchAmaliat.ascx.cs">
+      <DependentUpon>UscSearchAmaliat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\UscSearchAmaliat.ascx.designer.cs">
+      <DependentUpon>UscSearchAmaliat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UscSearchNiroo.ascx.cs">
+      <DependentUpon>UscSearchNiroo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\UscSearchNiroo.ascx.designer.cs">
+      <DependentUpon>UscSearchNiroo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UscSearchShahid.ascx.cs">
+      <DependentUpon>UscSearchShahid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\UscSearchShahid.ascx.designer.cs">
+      <DependentUpon>UscSearchShahid.ascx</DependentUpon>
+    </Compile>
     <Compile Include="DBClass\AfzoodaneEtelaat.cs" />
     <Compile Include="DBClass\AmaliatPartial.cs" />
     <Compile Include="DBClass\Ashnayan.cs" />
@@ -99,123 +145,126 @@
     <Compile Include="DBClass\ViewShahid.cs" />
     <Compile Include="DBClass\ViewShahidAmaliat.cs" />
     <Compile Include="DBClass\Yegan.cs" />
+    <Compile Include="Helpers\ContextHelper.cs" />
+    <Compile Include="Helpers\InterFace.cs" />
     <Compile Include="Model\AfzoodaneEtelaat.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Amaliat.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Ashnayan.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Bakhsh.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Ghate.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\GolestanModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GolestanModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\GolestanModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GolestanModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\GolestanModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GolestanModel.edmx</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Maghbare.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Mantaghe.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\MatalebEzafe.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Mogheyat.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Niroo.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\NirooYeganVahedAmaliat.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\NoeMatlab.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\NoeRabete.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\NoghteAsar.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Ostan.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Raste.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Shahid.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ShahidAmaliat.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ShahidRabete.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Shahrestan.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ShohadaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShohadaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ShohadaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ShohadaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShohadaModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\Vahed.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Vaziat.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ViewAmaliat.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ViewNirooVahed.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ViewShahid.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ViewShahidAmaliat.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Yegan.cs">
-      <DependentUpon>GolestanModel.tt</DependentUpon>
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Model\GolestanModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>GolestanModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Model\GolestanModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GolestanModel.edmx</DependentUpon>
-      <LastGenOutput>GolestanModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\GolestanModel.edmx.diagram">
-      <DependentUpon>GolestanModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model\GolestanModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GolestanModel.edmx</DependentUpon>
-      <LastGenOutput>GolestanModel.cs</LastGenOutput>
-    </Content>
     <Content Include="packages.config" />
+    <EntityDeploy Include="Model\ShohadaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ShohadaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model\ShohadaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ShohadaModel.edmx</DependentUpon>
+      <LastGenOutput>ShohadaModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\ShohadaModel.edmx.diagram">
+      <DependentUpon>ShohadaModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\ShohadaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ShohadaModel.edmx</DependentUpon>
+      <LastGenOutput>ShohadaModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Properties\PublishProfiles\Golestan.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

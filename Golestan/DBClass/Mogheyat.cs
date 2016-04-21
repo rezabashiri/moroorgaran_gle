@@ -12,6 +12,7 @@ namespace Golestan.Model
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Linq;
     [MetadataType(typeof(MetaData))]
     [System.ComponentModel.DisplayName("منطقه")]
     public partial class Mogheyat
@@ -29,6 +30,13 @@ namespace Golestan.Model
             public virtual Mantaghe Mantaghe { get; set; }
 
             public virtual ICollection<NoghteAsar> NoghteAsars { get; set; }
+        }
+        public List<Mogheyat> SelectMogheyatByMantaghe(int IDMantaghe)
+        {
+            using (var myen = Golestan.Helpers.ContextHelper.GetContext)
+            {
+                return myen.Mogheyats.Where(x => x.IDMantaghe == IDMantaghe).ToList<Mogheyat>();
+            }
         }
     }
 }

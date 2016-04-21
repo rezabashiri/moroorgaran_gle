@@ -29,9 +29,8 @@ namespace Golestan.Model
             public string NamePedar { get; set; }
             public string Shoghl { get; set; }
             public byte[] QRCode { get; set; }
-            public Nullable<int> IDBakhsheTavalod { get; set; }
-            public Nullable<System.Guid> AttachID { get; set; }
-            public string NameBakhsh { get; set; }
+ 
+           
             public int IDAmaliat { get; set; }
             public string NameAmaliat { get; set; }
             public Nullable<System.DateTime> TarikheShoroo { get; set; }

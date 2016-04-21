@@ -14,19 +14,6 @@ namespace Golestan.Model
     
     public partial class ViewShahidAmaliat
     {
-        public string Name { get; set; }
-        public string Family { get; set; }
-        public string CodeMeli { get; set; }
-        public int IDShahid { get; set; }
-        public Nullable<System.DateTime> TarikheTavalod { get; set; }
-        public Nullable<System.DateTime> TarikheShahadat { get; set; }
-        public string Jensiat { get; set; }
-        public string NamePedar { get; set; }
-        public string Shoghl { get; set; }
-        public byte[] QRCode { get; set; }
-        public Nullable<int> IDBakhsheTavalod { get; set; }
-        public Nullable<System.Guid> AttachID { get; set; }
-        public string NameBakhsh { get; set; }
         public int IDAmaliat { get; set; }
         public string NameAmaliat { get; set; }
         public Nullable<System.DateTime> TarikheShoroo { get; set; }
@@ -36,5 +23,31 @@ namespace Golestan.Model
         public string NameNiroo { get; set; }
         public string NameYegan { get; set; }
         public string NameVahed { get; set; }
+        public string Name { get; set; }
+        public string CodeMeli { get; set; }
+        public string Family { get; set; }
+        public Nullable<System.DateTime> TarikheTavalod { get; set; }
+        public Nullable<System.DateTime> TarikheShahadat { get; set; }
+        public string NamePedar { get; set; }
+        public string Jensiat { get; set; }
+        public string Shoghl { get; set; }
+        public byte[] QRCode { get; set; }
+        public string NameOstan { get; set; }
+        public string NameShahrestan { get; set; }
+        public string NameBakhash { get; set; }
+        public string VaziateShahid { get; set; }
+        public int IDShahid { get; set; }
+        public string ShomareShenasname { get; set; }
+        public string Ramz { get; set; }
+        public int IDYegan { get; set; }
+        public int IDNiroo { get; set; }
+        public int IDRaste { get; set; }
+        public int IDVahed { get; set; }
+        public int IDBakhsh { get; set; }
+        public int IDOstan { get; set; }
+        public int IDShahrestan { get; set; }
+        public string NameGhate { get; set; }
+        public int GhateID { get; set; }
+        public string SangNeveshte { get; set; }
     }
 }
