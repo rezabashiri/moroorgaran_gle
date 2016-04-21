@@ -12,5 +12,10 @@ namespace Golestan.Helpers
             Shahid _shahid = new Shahid();
             return _shahid.SearchShahidByGheteID(IDGhate);
         }
+        public ViewShahid GetShahidByID(int IDShahid)
+        {
+            Shahid _shahid = new Shahid();
+            return _shahid.GetShahidByID(IDShahid);
+        }
     }
 }

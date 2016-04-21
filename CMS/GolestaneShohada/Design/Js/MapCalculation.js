@@ -6,7 +6,7 @@ function init() {
     viewer.openDzi("GolestaneShohada/Design/GolestanMap/GeneratedImages/dzc_output.xml");
     viewer.addEventListener("open", showViewport);
     viewer.addEventListener("animation", showViewport);
-    //viewer.addEventListener("open", addoverlay);
+    viewer.addEventListener("open", addoverlay);
     Seadragon.Utils.addEvent(viewer.elmt, "mousemove",
       showMouse);
 

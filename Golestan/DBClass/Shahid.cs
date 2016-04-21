@@ -74,6 +74,14 @@ namespace Golestan.Model
             string param = string.Format("GhateID = {0}", IDGhete);
             return SearchShahidByParameter(param);
         }
+        public ViewShahid GetShahidByID(int IDShahid)
+        {
+            using (var myen = Golestan.Helpers.ContextHelper.GetContext)
+            { 
+                string whereparam=string.Format(" ID = {0}",IDShahid);
+                return myen.sp_SearchSahid(whereparam).FirstOrDefault<ViewShahid>();
+            }
+        }
         public List<ViewShahid> SearchShahidByParameter(string WhereParameter)
         {
             using (var myen = Golestan.Helpers.ContextHelper.GetContext)
