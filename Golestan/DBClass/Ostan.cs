@@ -11,7 +11,7 @@ namespace Golestan.Model
 {
     using System;
     using System.Collections.Generic;
-
+    using System.Linq;
     using System.ComponentModel.DataAnnotations;
     [MetadataType(typeof(MetaData))]
     [System.ComponentModel.DisplayName("«” «‰")]
@@ -30,5 +30,13 @@ namespace Golestan.Model
 
             public virtual ICollection<Shahrestan> Shahrestans { get; set; }
         }
+        public List<Ostan> SelectOstan()
+        {
+            using (var myen = Golestan.Helpers.ContextHelper.GetContext)
+            {
+                return  myen.Ostans.ToList() ;
+            }
+        }
     }
+    
 }

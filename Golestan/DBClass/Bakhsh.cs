@@ -12,6 +12,7 @@ namespace Golestan.Model
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Linq;
     [MetadataType(typeof(MetaData))]
     [System.ComponentModel.DisplayName("хнт")]
     public partial class Bakhsh
@@ -33,6 +34,13 @@ namespace Golestan.Model
             public virtual Shahrestan Shahrestan { get; set; }
 
             public virtual ICollection<Shahid> Shahids { get; set; }
+        }
+        public List<Bakhsh> SelectBakhshByShahrestan(int IDShahrestan)
+        {
+            using (var myen = Golestan.Helpers.ContextHelper.GetContext)
+            {
+                return myen.Bakhshes.Where(x => x.IDShahrestan == IDShahrestan).ToList();
+            }
         }
     }
 }

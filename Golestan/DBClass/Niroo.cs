@@ -12,6 +12,7 @@ namespace Golestan.Model
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Linq;
     [MetadataType(typeof(MetaData))]
     [System.ComponentModel.DisplayName("نیرو")]
     public partial class Niroo
@@ -28,6 +29,13 @@ namespace Golestan.Model
             public virtual ICollection<Yegan> Yegans { get; set; }
 
             public virtual ICollection<NirooYeganVahedAmaliat> NirooYeganVahedAmaliats { get; set; }
+        }
+        public List<Niroo> SelectNiroo()
+        {
+            using (var myen = Golestan.Helpers.ContextHelper.GetContext)
+            {
+                return myen.Niroos.ToList();
+            }
         }
     }
 }

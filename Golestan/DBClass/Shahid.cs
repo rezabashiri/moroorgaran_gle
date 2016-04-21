@@ -11,7 +11,7 @@ namespace Golestan.Model
 {
     using System;
     using System.Collections.Generic;
-
+    using System.Linq;
 
     using System.ComponentModel.DataAnnotations;
     [MetadataType(typeof(MetaData))]
@@ -47,6 +47,7 @@ namespace Golestan.Model
             public Nullable<int> IDBakhsheTavalod { get; set; }
             public Nullable<System.Guid> AttachID { get; set; }
             public Nullable<int> IDVaziat { get; set; }
+            [UIHint("Image")]
             public byte[] Thumbnale { get; set; }
 
             public virtual Bakhsh Bakhsh { get; set; }
@@ -66,6 +67,26 @@ namespace Golestan.Model
         public override string ToString()
         {
             return string.Format("{0} {1}", this.Name, this.Family);
+        }
+
+        internal List<ViewShahid> SearchShahidByGheteID(int IDGhete)
+        {
+            string param = string.Format("GhateID = {0}", IDGhete);
+            return SearchShahidByParameter(param);
+        }
+        public List<ViewShahid> SearchShahidByParameter(string WhereParameter)
+        {
+            using (var myen = Golestan.Helpers.ContextHelper.GetContext)
+            {
+                return myen.sp_SearchSahid(WhereParameter).ToList<ViewShahid>();
+            }
+        }
+        public List<ViewShahid> SearchShahidByQuery(string fulltextquery)
+        {
+            using (var myen = Golestan.Helpers.ContextHelper.GetContext)
+            {
+                return myen.sp_SearchShahidByQuery(fulltextquery).ToList<ViewShahid>();
+            }
         }
     }
 }

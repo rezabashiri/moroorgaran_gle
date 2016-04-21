@@ -11,7 +11,7 @@ namespace CMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var res = new Golestan.Helpers.InterFace().Search_SahidByGhateID(1);
         }
     }
 }

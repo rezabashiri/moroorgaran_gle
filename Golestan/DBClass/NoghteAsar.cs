@@ -12,6 +12,7 @@ namespace Golestan.Model
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Linq;
     [MetadataType(typeof(MetaData))]
     [System.ComponentModel.DisplayName("نقطه اثر_یادمان")]
     public partial class NoghteAsar
@@ -31,6 +32,13 @@ namespace Golestan.Model
             public virtual ICollection<Mogheyat> Mogheyats { get; set; }
 
             public virtual ICollection<Amaliat> Amaliats { get; set; }
+        }
+        public List<NoghteAsar> SelectNoghteAsarByMogheyat(int IDMogheyat)
+        {
+            using (var myen = Golestan.Helpers.ContextHelper.GetContext)
+            {
+                return myen.NoghteAsars.Where(x=>x.Mogheyats.Any(y => y.ID == IDMogheyat)).ToList();
+            }
         }
     }
 }

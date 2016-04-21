@@ -13,6 +13,7 @@ namespace Golestan.Model
     using System.Collections.Generic;
 
     using System.ComponentModel.DataAnnotations;
+    using System.Linq;
     [MetadataType(typeof(MetaData))]
     [System.ComponentModel.DisplayName("یگان")]
 
@@ -32,6 +33,13 @@ namespace Golestan.Model
             public virtual ICollection<Niroo> Niroos { get; set; }
 
             public virtual ICollection<NirooYeganVahedAmaliat> NirooYeganVahedAmaliats { get; set; }
+        }
+        public List<Yegan> SelectYeganByNiroo(int IDNiroo)
+        {
+            using (var myen = Golestan.Helpers.ContextHelper.GetContext)
+            {
+                return myen.Yegans.Where(x => x.Niroos.Any(y=>y.ID == IDNiroo)).ToList();
+            }
         }
     }
 }

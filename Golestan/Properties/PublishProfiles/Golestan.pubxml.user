@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/App_Web_uscfullsearchshahid.ascx.cc961b29.dll">
+      <publishTime>04/21/2016 10:26:25</publishTime>
+    </File>
+    <File Include="bin/App_Web_uscsearchamaliat.ascx.cc961b29.dll">
+      <publishTime>04/21/2016 10:26:23</publishTime>
+    </File>
+    <File Include="bin/App_Web_uscsearchniroo.ascx.cc961b29.dll">
+      <publishTime>04/21/2016 10:26:24</publishTime>
+    </File>
+    <File Include="bin/App_Web_uscsearchshahid.ascx.cc961b29.dll">
+      <publishTime>04/21/2016 10:26:22</publishTime>
+    </File>
+    <File Include="bin/DynamicData.dll">
+      <publishTime>04/03/2016 14:43:19</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/03/2016 14:40:15</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/03/2016 14:40:15</publishTime>
+    </File>
+    <File Include="bin/Golestan.dll">
+      <publishTime>04/21/2016 10:26:15</publishTime>
+    </File>
+    <File Include="bin/Heidarpour.WebControlUI.dll">
+      <publishTime>04/18/2016 13:03:19</publishTime>
+    </File>
+    <File Include="bin/tkvUtility.dll">
+      <publishTime>01/27/2016 15:32:50</publishTime>
+    </File>
+    <File Include="bin/uscfullsearchshahid.ascx.cc961b29.compiled">
+      <publishTime>04/21/2016 10:26:25</publishTime>
+    </File>
+    <File Include="bin/uscsearchamaliat.ascx.cc961b29.compiled">
+      <publishTime>04/21/2016 10:26:23</publishTime>
+    </File>
+    <File Include="bin/uscsearchniroo.ascx.cc961b29.compiled">
+      <publishTime>04/21/2016 10:26:24</publishTime>
+    </File>
+    <File Include="bin/uscsearchshahid.ascx.cc961b29.compiled">
+      <publishTime>04/21/2016 10:26:23</publishTime>
+    </File>
+    <File Include="bin/WinSCPnet.dll">
+      <publishTime>12/19/2013 10:30:14</publishTime>
+    </File>
+    <File Include="Control/UscFullSearchShahid.ascx">
+      <publishTime>04/20/2016 19:55:41</publishTime>
+    </File>
+    <File Include="Control/UscSearchAmaliat.ascx">
+      <publishTime>04/20/2016 18:37:08</publishTime>
+    </File>
+    <File Include="Control/UscSearchNiroo.ascx">
+      <publishTime>04/20/2016 19:55:42</publishTime>
+    </File>
+    <File Include="Control/UscSearchShahid.ascx">
+      <publishTime>04/20/2016 13:24:12</publishTime>
+    </File>
+    <File Include="Model/ShohadaModel.Context.tt">
+      <publishTime>04/20/2016 12:55:37</publishTime>
+    </File>
+    <File Include="Model/ShohadaModel.edmx.diagram">
+      <publishTime>04/20/2016 22:08:16</publishTime>
+    </File>
+    <File Include="Model/ShohadaModel.tt">
+      <publishTime>04/20/2016 12:55:38</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/03/2016 19:03:46</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>04/21/2016 10:26:17</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/21/2016 10:26:16</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

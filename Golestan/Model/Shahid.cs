@@ -17,15 +17,16 @@ namespace Golestan.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Shahid()
         {
+            this.AfzoodaneEtelaats = new HashSet<AfzoodaneEtelaat>();
             this.MatalebEzafes = new HashSet<MatalebEzafe>();
             this.ShahidAmaliats = new HashSet<ShahidAmaliat>();
             this.ShahidRabetes = new HashSet<ShahidRabete>();
             this.ShahidRabetes1 = new HashSet<ShahidRabete>();
-            this.AfzoodaneEtelaats = new HashSet<AfzoodaneEtelaat>();
         }
     
         public int ID { get; set; }
         public string CodeMeli { get; set; }
+        public string ShomareShenasname { get; set; }
         public string Name { get; set; }
         public string Family { get; set; }
         public Nullable<System.DateTime> TarikheTavalod { get; set; }
@@ -39,6 +40,8 @@ namespace Golestan.Model
         public Nullable<int> IDVaziat { get; set; }
         public byte[] Thumbnale { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AfzoodaneEtelaat> AfzoodaneEtelaats { get; set; }
         public virtual Bakhsh Bakhsh { get; set; }
         public virtual Maghbare Maghbare { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -50,7 +53,5 @@ namespace Golestan.Model
         public virtual ICollection<ShahidRabete> ShahidRabetes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ShahidRabete> ShahidRabetes1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AfzoodaneEtelaat> AfzoodaneEtelaats { get; set; }
     }
 }
