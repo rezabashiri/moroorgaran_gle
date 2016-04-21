@@ -399,6 +399,19 @@
     <Content Include="fa\Resume.aspx" />
     <Content Include="fonts\WebYekan.svg" />
     <Content Include="Global.asax" />
+    <Content Include="GolestaneShohada\Design\Css\audioplayer.css" />
+    <Content Include="GolestaneShohada\Design\Css\bootstrap.css" />
+    <Content Include="GolestaneShohada\Design\Css\color-4.css" />
+    <Content Include="GolestaneShohada\Design\Css\color.css" />
+    <Content Include="GolestaneShohada\Design\Css\content_slider_style.css" />
+    <Content Include="GolestaneShohada\Design\Css\custom.css" />
+    <Content Include="GolestaneShohada\Design\Css\font-awesome.min.css" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\fontawesome-webfont.svg" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\WebYekan.svg" />
+    <Content Include="GolestaneShohada\Design\Css\jquery.bxslider.css" />
+    <Content Include="GolestaneShohada\Design\Css\prettyPhoto.css" />
+    <Content Include="GolestaneShohada\Design\Css\responsive.css" />
+    <Content Include="GolestaneShohada\Design\Default.aspx" />
     <Content Include="GolestaneShohada\Design\GolestanMap\embed.html" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output.xml" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\0\0_0.png" />
@@ -625,6 +638,10 @@
     <Content Include="GolestaneShohada\Design\Image\zoomout_hover.png" />
     <Content Include="GolestaneShohada\Design\Image\zoomout_pressed.png" />
     <Content Include="GolestaneShohada\Design\Image\zoomout_rest.png" />
+    <Content Include="GolestaneShohada\Design\Js\audioplayer.js" />
+    <Content Include="GolestaneShohada\Design\Js\blocksit.min.js" />
+    <Content Include="GolestaneShohada\Design\Js\bootstrap.js" />
+    <Content Include="GolestaneShohada\Design\Js\custom.js" />
     <Content Include="GolestaneShohada\Design\Js\images\fullpage_grouphover.png" />
     <Content Include="GolestaneShohada\Design\Js\images\fullpage_hover.png" />
     <Content Include="GolestaneShohada\Design\Js\images\fullpage_pressed.png" />
@@ -641,8 +658,22 @@
     <Content Include="GolestaneShohada\Design\Js\images\zoomout_hover.png" />
     <Content Include="GolestaneShohada\Design\Js\images\zoomout_pressed.png" />
     <Content Include="GolestaneShohada\Design\Js\images\zoomout_rest.png" />
+    <Content Include="GolestaneShohada\Design\Js\jquery-1.11.3.min.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.bxslider.min.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.content_slider.min.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.countdown.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.final-countdown.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.flexisel.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.plugin.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.prettyPhoto.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.stellar.min.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.tabSlideOut.v1.3.js" />
+    <Content Include="GolestaneShohada\Design\Js\kinetic.js" />
+    <Content Include="GolestaneShohada\Design\Js\location-map-api.js" />
+    <Content Include="GolestaneShohada\Design\Js\location-map.js" />
     <Content Include="GolestaneShohada\Design\Js\OpenSeadragon.js" />
     <Content Include="GolestaneShohada\Design\Js\openseadragon.min.js" />
+<<<<<<< HEAD
     <Content Include="GolestaneShohada\Design\Js\seadragon-dev.js" />
     <Content Include="GolestaneShohada\Design\Js\MapCalculation.js" />
     <Content Include="GolestaneShohada\Design\Js\seadragon-min.js" />
@@ -668,6 +699,11 @@
     <Content Include="GolestaneShohada\Design\Js\src\_intro.txt" />
     <Content Include="GolestaneShohada\Design\Js\src\_outro.txt" />
     <Content Include="GolestaneShohada\WebServices\GolestanWebservice.asmx" />
+=======
+    <Content Include="GolestaneShohada\Design\Js\respond.js" />
+    <Content Include="GolestaneShohada\Design\Js\styleswitch.js" />
+    <Content Include="GolestaneShohada\Design\Js\TimeCircles.js" />
+>>>>>>> UI
     <Content Include="images\Add.png" />
     <Content Include="images\banner-bg.png" />
     <Content Include="images\banner-bg1.png" />
@@ -1138,9 +1174,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="GolestaneShohada\WebServices\GolestanWebservice.asmx.cs">
       <DependentUpon>GolestanWebservice.asmx</DependentUpon>
       <SubType>Component</SubType>
+=======
+    <Compile Include="GolestaneShohada\Design\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+>>>>>>> UI
     </Compile>
     <Compile Include="MapTest.aspx.cs">
       <DependentUpon>MapTest.aspx</DependentUpon>
@@ -1334,6 +1379,7 @@
     <Content Include="js\tinymce\skins\lightgray\fonts\tinymce.eot" />
     <Content Include="js\tinymce\skins\lightgray\fonts\tinymce.ttf" />
     <Content Include="js\tinymce\skins\lightgray\fonts\tinymce.woff" />
+<<<<<<< HEAD
     <Content Include="assets\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="assets\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="assets\font-awesome\fonts\fontawesome-webfont.woff" />
@@ -1360,6 +1406,26 @@
     <Content Include="assets\lineicons\fonts\linecons.eot" />
     <Content Include="assets\lineicons\fonts\linecons.ttf" />
     <Content Include="assets\lineicons\fonts\linecons.woff" />
+=======
+    <Content Include="GolestaneShohada\Design\Css\fonts\fontawesome-webfont.eot" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\fontawesome-webfont.woff" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\fontawesome-webfont.woff2" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\FontAwesome.otf" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\IRANSans-Light.eot" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\IRANSans-Light.woff" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\IRANSans-Light.woff2" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\IRANSANS.eot" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\IRANSANS.woff" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\IRANSANS.woff2" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\iransw.eot" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\iransw.ttf" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\iransw.woff" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\iransw.woff2" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\WebYekan.eot" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\WebYekan.ttf" />
+    <Content Include="GolestaneShohada\Design\Css\fonts\WebYekan.woff" />
+>>>>>>> UI
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1368,7 +1434,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GolestaneShohada\Design\Css\" />
     <Folder Include="GolestaneShohada\Design\MasterPage\" />
     <Folder Include="GolestaneShohada\Logic\" />
     <Folder Include="GolestaneShohada\Media\Amaliat\" />
