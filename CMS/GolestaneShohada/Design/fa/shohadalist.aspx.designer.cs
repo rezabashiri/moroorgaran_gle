@@ -13,13 +13,13 @@ namespace CMS.GolestaneShohada.Design.fa {
     public partial class shohadalist {
         
         /// <summary>
-        /// shahidsearch control.
+        /// Uscshahidsearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Golestan.Control.FullShahidSearch shahidsearch;
+        protected global::Golestan.Control.FullShahidSearch Uscshahidsearch;
         
         /// <summary>
         /// ListView1 control.

@@ -5,7 +5,7 @@
       <div class="container">
                  <h1>لیست شهدا</h1>
         <p>جهت جستجوی شهید مورد نظر خود از فرم زیر استفاده نمایید.</p>
-           <uc1:FullShahidSearch runat="server" ID="shahidsearch"></uc1:FullShahidSearch>
+           <uc1:FullShahidSearch runat="server" ID="Uscshahidsearch"></uc1:FullShahidSearch>
       </div>
     </section>
     <!--Inner Pages Heading Area End--> 

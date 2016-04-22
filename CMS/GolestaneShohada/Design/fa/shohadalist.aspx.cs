@@ -12,12 +12,14 @@ namespace CMS.GolestaneShohada.Design.fa
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            FillList();
+            Uscshahidsearch.OnDataBind += Uscshahidsearch_OnDataBind;
         }
-        public void FillList()
+
+        void Uscshahidsearch_OnDataBind(List<Golestan.Model.ViewShahid> DataSource)
         {
-            ListView1.DataSource = shahidsearch.DataSource;
-            ListView1.DataBind();
+            ListView1.DataSource = DataSource;
+            ListView1.DataBind();           
         }
+
     }
 }
