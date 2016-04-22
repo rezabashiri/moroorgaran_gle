@@ -2159,6 +2159,7 @@ span.colun-3 {
 	-moz-box-shadow: 0 -3px 0 0 #ccc inset;
 	font: 400 16px/37px 'Noto Serif', serif;
 	color: #999;
+    text-align:center;
 }
 .pagination-all.pagination ul > li > a:hover, .pagination ul > li > a:focus, .pagination ul > .active > a, .pagination ul > .active > span {
 	color: #fff;
@@ -4028,9 +4029,9 @@ span.colun-3 {
 	margin: 0 0 29px 0;
 }
 .recent-post h3 {
-	font: 400 22px 'Noto Serif', serif !important;
 	margin: 0 !important;
 	word-spacing: -4px;
+    font-size:18px;
 }
 .recent-post ul {
 	padding: 0;
@@ -4045,20 +4046,23 @@ span.colun-3 {
 	width: 100%;
 }
 .recent-post .frame {
-	float: left;
-	margin: 0 16px 0 0 !important;
+	float: right;
+	margin: 0 0 0 16px !important;
 	width: auto !important;
 }
 .recent-post .text-box {
-	float: left;
+/*	float: right;*/
 	width: auto !important;
 }
-.recent-post .text-box strong.title {
-	font: 400 16px/12px 'Noto Serif', serif;
+.recent-post .text-box a.title {
+	font-size:12px;
 	color: #333;
 	display: block;
 	padding: 0 0 10px 0;
 	word-spacing: -3px;
+    text-align:right;
+    direction:rtl;
+    line-height:20px;
 }
 .recent-post .text-box strong.post {
 	font: 400 12px 'Open Sans', sans-serif;
@@ -4072,15 +4076,15 @@ span.colun-3 {
 .recent-post .text-box a.readmore {
 	font: italic 400 14px 'Noto Serif', serif;
 	color: #333;
-	float: left;
+	float: right;
 	text-decoration: none;
-	padding: 0 0 0 15px;
+	padding: 0 15px 0 0;
 	position: relative;
 }
-.recent-post .text-box a.readmore:before {
+.recent-post .text-box a.readmore:after {
 	content: '';
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 8px;
 	border-left: 2px solid;
 	border-width: 10px;
@@ -4098,9 +4102,9 @@ span.colun-3 {
 	margin: 0 0 23px 0;
 }
 .sidebar-latest-news h3 {
-	font: 400 22px/22px 'Noto Serif', serif !important;
 	margin: 0 0 1px 0 !important;
 	word-spacing: -4px;
+    font-size:18px;
 }
 .sidebar-latest-news ul {
 	padding: 0;
@@ -4134,24 +4138,24 @@ span.colun-3 {
 	font-style: italic;
 }
 .sidebar-latest-news .text-box p {
-	font: 400 14px/20px 'Open Sans', sans-serif;
+	font-size:12px;
 	color: #666;
 	margin: 0 0 6px 0;
 }
 .sidebar-latest-news .text-box a.readmore {
 	font: italic 400 14px 'Noto Serif', serif;
 	color: #333;
-	float: left;
+	float: right;
 	text-decoration: none;
-	padding: 0 0 0 15px;
+	padding: 0 15px 0 0;
 	position: relative;
 }
-.sidebar-latest-news .text-box a.readmore:before {
+.sidebar-latest-news .text-box a.readmore:after {
 	content: '';
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 8px;
-	border-left: 2px solid;
+	border-right: 2px solid;
 	border-width: 10px;
 	height: 2px;
 }
@@ -5518,6 +5522,8 @@ span.colun-3 {
 	float: left;
 	padding: 0 0 35px 0;
 	width: 100%;
+    text-align:right;
+    direction:rtl;
 }
 .sermon-page ul li:hover .frame {
 	opacity: 0.7;
@@ -5569,9 +5575,11 @@ span.colun-3 {
 	display: block;
 }
 .sermon-box .text-box {
-	float: left;
+	float: right;
 	max-width: 100%;
 	padding:17px 10px;
+    text-align:right;
+    direction:rtl;
 }
 .sermon-box .text-box h2 {
 	font: 400 18px/18px 'Noto Serif', serif;
@@ -5617,18 +5625,18 @@ span.colun-3 {
 	padding: 0 7px 0 0;
 }
 .sermon-box .text-box .list-area {
-	float: left;
+	float: right;
 	padding: 0;
 	margin: 0;
 	list-style: none;
 }
 .sermon-box .text-box .list-area li {
-	float: left;
-	padding: 0 20px 0 0;
+	float: right;
+	padding: 0 0 0 20px;
 	width: auto;
 }
 .sermon-box .text-box .list-area li a {
-	float: left;
+	float: right;
 	width: 60px;
 	height: 60px;
 	border-radius: 100%;

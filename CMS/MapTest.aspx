@@ -45,8 +45,8 @@
       }
         </style>
     <form id="form1" runat="server">
-    <uc1:FullShahidSearch runat="server" ID="shahidsearch"></uc1:FullShahidSearch>
-
+    
+        <uc1:FullShahidSearch runat="server" ID="shahidsearch"></uc1:FullShahidSearch>
                <%--     <asp:ScriptManager ID="ScriptManager1" runat="server">
                 <Scripts>
                     <asp:ScriptReference Path="~/GolestaneShohada/Design/Js/OpenSeadragon.js" />

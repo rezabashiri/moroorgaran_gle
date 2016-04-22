@@ -380,6 +380,7 @@
     <Content Include="fa\Resume.aspx" />
     <Content Include="fonts\WebYekan.svg" />
     <Content Include="Global.asax" />
+    <Content Include="GolestaneShohada\Design\fa\shohadalist.aspx" />
     <Content Include="GolestaneShohada\Design\GolestanMap\embed.html" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output.xml" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\0\0_0.png" />
@@ -1124,6 +1125,20 @@
     <Compile Include="GolestaneShohada\Design\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\shohadalist.aspx.cs">
+      <DependentUpon>shohadalist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\shohadalist.aspx.designer.cs">
+      <DependentUpon>shohadalist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\MasterPage\WebMaster.Master.cs">
+      <DependentUpon>WebMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\MasterPage\WebMaster.Master.designer.cs">
+      <DependentUpon>WebMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="GolestaneShohada\WebServices\GolestanWebservice.asmx.cs">
       <DependentUpon>GolestanWebservice.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -1342,6 +1357,7 @@
     <Content Include="assets\lineicons\fonts\linecons.eot" />
     <Content Include="assets\lineicons\fonts\linecons.ttf" />
     <Content Include="assets\lineicons\fonts\linecons.woff" />
+    <Content Include="GolestaneShohada\Design\MasterPage\WebMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1351,7 +1367,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GolestaneShohada\Design\Css\" />
-    <Folder Include="GolestaneShohada\Design\MasterPage\" />
     <Folder Include="GolestaneShohada\Logic\" />
     <Folder Include="GolestaneShohada\Media\Amaliat\" />
     <Folder Include="GolestaneShohada\Media\Shahid\" />

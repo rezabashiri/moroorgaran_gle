@@ -845,8 +845,8 @@ span.colun-1, span.colun-2, span.colun-3{
 	padding: 0 21px 0 21px;
 }
 .sermon-box .frame {
-	float: left;
-	margin: 0 30px 0 0;
+	float: right;
+	margin: 0 0 0 30px;
 	width:auto;
 }
 .sermon-box .text-box {

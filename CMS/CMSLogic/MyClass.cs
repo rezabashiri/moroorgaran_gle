@@ -51,8 +51,8 @@ public class MyClass
                 } break;
             case 2:
                 {
-                    server = "SAEEDPC\\MSSQLSERVER14";
-                    database = "Others";
+                    server = ".";
+                    database = "GolestanShohada";
                     user = "sa";
                     pass = "946744";
 
