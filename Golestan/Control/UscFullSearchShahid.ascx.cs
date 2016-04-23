@@ -9,6 +9,8 @@ namespace Golestan.Control
 {
     public partial class UscFullSearchShahid : System.Web.UI.UserControl
     {
+        public delegate void DataBind(List<ViewShahid> DataSource);
+            public event DataBind OnDataBind;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -22,6 +24,7 @@ namespace Golestan.Control
         {
             Shahid _shahid = new Shahid();
             DataSource = _shahid.SearchShahidByQuery(QueryBuild());
+            OnDataBind(DataSource);
         }
         private string QueryBuild()
         {

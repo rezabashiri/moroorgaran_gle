@@ -54,18 +54,6 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="App_Web_departmentchart.ascx.3bbd1c1b">
-      <HintPath>..\..\..\..\publish\AccessManagement\bin\App_Web_departmentchart.ascx.3bbd1c1b.dll</HintPath>
-    </Reference>
-    <Reference Include="App_Web_logincontrol.ascx.cc671b29">
-      <HintPath>..\..\..\..\publish\AccessManagement\bin\App_Web_logincontrol.ascx.cc671b29.dll</HintPath>
-    </Reference>
-    <Reference Include="App_Web_uscdateshow.ascx.cc671b29">
-      <HintPath>..\..\..\..\publish\WebUtility\bin\App_Web_uscdateshow.ascx.cc671b29.dll</HintPath>
-    </Reference>
-    <Reference Include="App_Web_uscfileupload.ascx.cc671b29">
-      <HintPath>..\..\..\..\publish\WebUtility\bin\App_Web_uscfileupload.ascx.cc671b29.dll</HintPath>
-    </Reference>
     <Reference Include="App_Web_uscfullsearchshahid.ascx.cc961b29">
       <HintPath>..\..\..\..\publish\Golestan\bin\App_Web_uscfullsearchshahid.ascx.cc961b29.dll</HintPath>
     </Reference>
@@ -342,13 +330,6 @@
     <Content Include="css\MgrLogin_style.css" />
     <Content Include="css\MgrMasterStyle.css" />
     <Content Include="css\Style.css" />
-    <Content Include="css_Alemtabriz\grid.css" />
-    <Content Include="css_Alemtabriz\Home_Component.css" />
-    <Content Include="css_Alemtabriz\ie.css" />
-    <Content Include="css_Alemtabriz\reset.css" />
-    <Content Include="css_Alemtabriz\style.css" />
-    <Content Include="css_Alemtabriz\superfish.css" />
-    <Content Include="Default6.aspx" />
     <Content Include="DynamicData\Content\GridViewPager.ascx" />
     <Content Include="DynamicData\Content\Images\Back.gif" />
     <Content Include="DynamicData\Content\Images\header_back.gif" />
@@ -399,6 +380,7 @@
     <Content Include="fa\Resume.aspx" />
     <Content Include="fonts\WebYekan.svg" />
     <Content Include="Global.asax" />
+    <Content Include="GolestaneShohada\Design\fa\shohadalist.aspx" />
     <Content Include="GolestaneShohada\Design\GolestanMap\embed.html" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output.xml" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\0\0_0.png" />
@@ -667,6 +649,7 @@
     <Content Include="GolestaneShohada\Design\Js\src\Seadragon.Viewport.js" />
     <Content Include="GolestaneShohada\Design\Js\src\_intro.txt" />
     <Content Include="GolestaneShohada\Design\Js\src\_outro.txt" />
+    <Content Include="GolestaneShohada\Design\Default.aspx" />
     <Content Include="GolestaneShohada\WebServices\GolestanWebservice.asmx" />
     <Content Include="images\Add.png" />
     <Content Include="images\banner-bg.png" />
@@ -865,9 +848,6 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\DynamicDataConfig.cs" />
-    <Compile Include="Default6.aspx.designer.cs">
-      <DependentUpon>Default6.aspx</DependentUpon>
-    </Compile>
     <Compile Include="DynamicData\Content\GridViewPager.ascx.cs">
       <DependentUpon>GridViewPager.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1138,6 +1118,27 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GolestaneShohada\Design\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\shohadalist.aspx.cs">
+      <DependentUpon>shohadalist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\shohadalist.aspx.designer.cs">
+      <DependentUpon>shohadalist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\MasterPage\WebMaster.Master.cs">
+      <DependentUpon>WebMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\MasterPage\WebMaster.Master.designer.cs">
+      <DependentUpon>WebMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="GolestaneShohada\WebServices\GolestanWebservice.asmx.cs">
       <DependentUpon>GolestanWebservice.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -1160,10 +1161,6 @@
       <DependentUpon>WebMaster.master</DependentUpon>
     </Compile>
     <Compile Include="CMSLogic\MyClass.cs" />
-    <Compile Include="Default6.aspx.cs">
-      <DependentUpon>Default6.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="fa\Album.aspx.cs">
       <DependentUpon>Album.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1360,6 +1357,7 @@
     <Content Include="assets\lineicons\fonts\linecons.eot" />
     <Content Include="assets\lineicons\fonts\linecons.ttf" />
     <Content Include="assets\lineicons\fonts\linecons.woff" />
+    <Content Include="GolestaneShohada\Design\MasterPage\WebMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1369,7 +1367,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GolestaneShohada\Design\Css\" />
-    <Folder Include="GolestaneShohada\Design\MasterPage\" />
     <Folder Include="GolestaneShohada\Logic\" />
     <Folder Include="GolestaneShohada\Media\Amaliat\" />
     <Folder Include="GolestaneShohada\Media\Shahid\" />
