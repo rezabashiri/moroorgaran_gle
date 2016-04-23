@@ -1,20 +1,21 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pershahid.aspx.cs" Inherits="CMS.GolestaneShohada.Design.fa.pershahid" MasterPageFile="~/GolestaneShohada/Design/MasterPage/WebMaster.Master" %>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPageHeading">
-    <h1>
-        <asp:Label ID="lblName" runat="server" ></asp:Label><asp:Label ID="lblFamily" runat="server" ></asp:Label></h1>
-        <p>درباره شهید</p>           
+    <br />
+    <h1><i class="fa fa-bookmark"></i> شهید <asp:Label ID="lblName" runat="server" ></asp:Label>&nbsp;<asp:Label ID="lblFamily" runat="server" ></asp:Label></h1>        
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
             <div class="fram-holder">
               <div class="right">
-                <div class="date-box"> <strong class="day">Sunday</strong> <strong class="date">30</strong> <strong class="mnt">APRIL</strong> <strong class="year">2014</strong> </div>
+                <div class="date-box"><strong class="title">تاریخ شهادت</strong> <strong class="day">
+                    <asp:Label ID="lbldayofWeek" runat="server"></asp:Label></strong> <strong class="date">
+                        <asp:Label ID="lblDay" runat="server" ></asp:Label></strong> <strong class="mnt">
+                            <asp:Label ID="lblMonth" runat="server"></asp:Label></strong> <strong class="year">
+                                <asp:Label ID="lblyear" runat="server" ></asp:Label></strong> </div>
                 <ul>
-                  <li><a href="#"><i class="fa fa-calendar"></i>تاریخ</a></li>
-                  <li><a href="#"><i class="fa fa-clock-o"></i>9:00 am to 4:00 pm</a></li>
-                  <li><a href="#"><i class="fa fa-microphone"></i>John Doe, William</a></li>
-                  <li><a href="#"><i class="fa fa-tags"></i>Church, Worship</a></li>
-                  <li><a href="#"><i class="fa fa-map-marker"></i>Nisi elit consequat
-                    nec sagittis.</a></li>
+                  <li><span><i class="fa fa-calendar"></i>متولد <asp:Label ID="lblTavalod" runat="server"></asp:Label></span></li>
+                  <li><span><i class="fa fa-user"></i>فرزند <asp:Label ID="lblFather" runat="server" ></asp:Label></span></li>
+                  <li><span><i class="fa fa-map"></i>اهل <asp:Label ID="lblShahr" runat="server"></asp:Label></span></li>
+                  <li><span><i class="fa fa-map-marker"></i>قطعه <asp:Label ID="lblGhete" runat="server"></asp:Label></span></li>
                 </ul></div>
               <div class="event-frame"> <a href="#"><img src="images/event-detail-img.jpg" alt="img"></a>
                 <div class="map-row">
@@ -26,8 +27,10 @@
                 </div>
               </div>
             </div>
+    <div class="lineH">
             <p>درباره شهید در اینجا نوشته می شود. درباره شهید در اینجا نوشته می شود. درباره شهید در اینجا نوشته می شود. درباره شهید در اینجا نوشته می شود. درباره شهید در اینجا نوشته می شود. 
                 درباره شهید در اینجا نوشته می شود. درباره شهید در اینجا نوشته می شود. درباره شهید در اینجا نوشته می شود. درباره شهید در اینجا نوشته می شود. 
             </p>
+        </div>
 
 </asp:Content>

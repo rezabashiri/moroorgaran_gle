@@ -585,6 +585,7 @@
     <Content Include="GolestaneShohada\Design\Image\home_hover.png" />
     <Content Include="GolestaneShohada\Design\Image\home_pressed.png" />
     <Content Include="GolestaneShohada\Design\Image\home_rest.png" />
+    <Content Include="GolestaneShohada\Design\Image\innder-heading-bg.jpg" />
     <Content Include="GolestaneShohada\Design\Image\next_grouphover.png" />
     <Content Include="GolestaneShohada\Design\Image\next_hover.png" />
     <Content Include="GolestaneShohada\Design\Image\next_pressed.png" />
@@ -652,6 +653,7 @@
     <Content Include="GolestaneShohada\Design\Js\src\_intro.txt" />
     <Content Include="GolestaneShohada\Design\Js\src\_outro.txt" />
     <Content Include="GolestaneShohada\Design\Default.aspx" />
+    <Content Include="GolestaneShohada\Media\Shahid\hemmat.jpg" />
     <Content Include="GolestaneShohada\WebServices\GolestanWebservice.asmx" />
     <Content Include="images\Add.png" />
     <Content Include="images\banner-bg.png" />
@@ -1385,7 +1387,6 @@
     <Folder Include="GolestaneShohada\Design\Css\" />
     <Folder Include="GolestaneShohada\Logic\" />
     <Folder Include="GolestaneShohada\Media\Amaliat\" />
-    <Folder Include="GolestaneShohada\Media\Shahid\" />
     <Folder Include="GolestaneShohada\Media\Yegan\" />
   </ItemGroup>
   <ItemGroup>
