@@ -380,6 +380,8 @@
     <Content Include="fa\Resume.aspx" />
     <Content Include="fonts\WebYekan.svg" />
     <Content Include="Global.asax" />
+    <Content Include="GolestaneShohada\Design\fa\pershahid.aspx" />
+    <Content Include="GolestaneShohada\Design\fa\readitem.aspx" />
     <Content Include="GolestaneShohada\Design\fa\shohadalist.aspx" />
     <Content Include="GolestaneShohada\Design\GolestanMap\embed.html" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output.xml" />
@@ -1124,6 +1126,20 @@
     </Compile>
     <Compile Include="GolestaneShohada\Design\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\pershahid.aspx.cs">
+      <DependentUpon>pershahid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\pershahid.aspx.designer.cs">
+      <DependentUpon>pershahid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\readitem.aspx.cs">
+      <DependentUpon>readitem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\readitem.aspx.designer.cs">
+      <DependentUpon>readitem.aspx</DependentUpon>
     </Compile>
     <Compile Include="GolestaneShohada\Design\fa\shohadalist.aspx.cs">
       <DependentUpon>shohadalist.aspx</DependentUpon>

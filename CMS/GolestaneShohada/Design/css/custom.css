@@ -1866,10 +1866,14 @@ span.colun-3 {
 	word-spacing: -4px;
 }
 .inner-headding p {
-	font: 400 14px 'Open Sans', sans-serif;
 	color: #666;
 	margin: 0;
 }
+.inner-headding p span{
+    font-size:12px;
+    font-family:yekan !important;
+}
+
 /*Inner Pages Heading Area End*/
 /*Donation Page Start*/
 .donation-page {
@@ -4664,10 +4668,10 @@ span.colun-3 {
 	width: 100%;
 	margin: 0 0 28px 0;
 }
-.fram-holder .left {
-	float: left;
+.fram-holder .right {
+	float: right;
 	width: 165px;
-	margin: 0 29px 0 0;
+	margin: 0 0 0 29px;
 }
 .date-box {
 	float: left;
@@ -4711,28 +4715,28 @@ span.colun-3 {
 	background: rgba(0,0,0,0.2);
 	padding: 8px 0;
 }
-.fram-holder .left ul {
+.fram-holder .right ul {
 	padding: 0;
 	margin: 0 0 11px 0;
 	list-style: none;
-	float: left;
+	float: right;
 }
-.fram-holder .left ul li {
-	float: left;
+.fram-holder .right ul li {
+	float: right;
 	padding: 0 0 11px 0;
 }
-.fram-holder .left ul li a {
-	font: 400 14px 'Open Sans', sans-serif;
+.fram-holder .right ul li a {
+	font-size:12px;
 	color: #999;
 	text-decoration: none;
 }
-.fram-holder .left ul li a .fa {
-	float: left;
+.fram-holder .right ul li a .fa {
+	float: right;
 	width: 23px;
 	height: 21px;
 	line-height: 20px;
 }
-.fram-holder .left a.btn-participate {
+.fram-holder .right a.btn-participate {
 	display: block;
 	padding: 17px 0;
 	text-decoration: none;
