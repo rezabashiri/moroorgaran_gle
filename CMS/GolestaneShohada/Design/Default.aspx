@@ -592,7 +592,7 @@
 <!--Bxslider Js--> 
 <script src="js/jquery.bxslider.min.js"></script> 
 <!--Content Slider Js--> 
-<script src="js/jquery.content_slider.min.js"></script> 
+<script src="js/jquery.content_slider.js"></script> 
 <!-- Style Switcher --> 
 <script src="js/styleswitch.js"></script> 
 <script src="js/jquery.tabSlideOut.v1.3.js"></script> 

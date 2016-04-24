@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace CMS
+namespace CMS.GolestaneShohada.Controls
 {
-    public partial class MapTest : System.Web.UI.Page
+    public partial class UscShahidMaghbare : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var res = new Golestan.Helpers.InterFace().GetShahidCloserToDeath(3);
+
         }
     }
 }

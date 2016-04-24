@@ -22,6 +22,7 @@ namespace Golestan.Model
         {
             public int IDAmaliat { get; set; }
             public int IDShahid { get; set; }
+            [Display(Name="این عملیات منجر به شهادت شده است؟")]
             public Nullable<bool> ISMonjarBeShahadat { get; set; }
             public Nullable<int> IDRaste { get; set; }
             public Nullable<int> IDVahed { get; set; }

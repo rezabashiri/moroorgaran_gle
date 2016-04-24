@@ -1,13 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MapTest.aspx.cs" Inherits="CMS.MapTest" %>
 
+<%@ Register Src="~/GolestaneShohada/Controls/UscShahidMaghbare.ascx" TagPrefix="uc2" TagName="UscShahidMaghbare" %>
+
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
     <script src="/assets/js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="GolestaneShohada/Design/Js/seadragon-min.js" lang="ja"></script>
-    <script type="text/javascript" src="GolestaneShohada/Design/Js/MapCalculation.js" lang="ja"></script>
+  <%--  <script type="text/javascript" src="GolestaneShohada/Design/Js/seadragon-min.js" lang="ja"></script>
+    <script type="text/javascript" src="GolestaneShohada/Design/Js/MapCalculation.js" lang="ja"></script>--%>
     <%--   <script type="text/javascript"
               src="http://seadragon.com/ajax/0.8/seadragon-min.js">
         </script>--%>
@@ -72,11 +75,12 @@
         <td id="viewportSizePoints">-</td>
 
       </tr>
-    </table>            
-     <div id="container"  >
+    </table>  
+          <uc2:UscShahidMaghbare runat="server" ID="UscShahidMaghbare" />        
+ <%--    <div id="container"  >
       
          
-    </div>
+    </div>--%>
         <%--<ajaxToolkit:Seadragon SourceUrl="~/GolestaneShohada/Design/GolestanMap/dzc_output.xml" ID="Seadragon1" runat="server"></ajaxToolkit:Seadragon>--%>
     </form>
 </body>

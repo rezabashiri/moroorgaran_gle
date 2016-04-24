@@ -386,6 +386,8 @@
     <Content Include="fa\Resume.aspx" />
     <Content Include="fonts\WebYekan.svg" />
     <Content Include="Global.asax" />
+    <Content Include="GolestaneShohada\Controls\UscShahidMaghbare.ascx" />
+    <Content Include="GolestaneShohada\Design\fa\images\Pin_Map.png" />
     <Content Include="GolestaneShohada\Design\fa\pershahid.aspx" />
     <Content Include="GolestaneShohada\Design\fa\readitem.aspx" />
     <Content Include="GolestaneShohada\Design\fa\shohadalist.aspx" />
@@ -633,6 +635,7 @@
     <Content Include="GolestaneShohada\Design\Js\images\zoomout_hover.png" />
     <Content Include="GolestaneShohada\Design\Js\images\zoomout_pressed.png" />
     <Content Include="GolestaneShohada\Design\Js\images\zoomout_rest.png" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.content_slider.js" />
     <Content Include="GolestaneShohada\Design\Js\OpenSeadragon.js" />
     <Content Include="GolestaneShohada\Design\Js\openseadragon.min.js" />
     <Content Include="GolestaneShohada\Design\Js\seadragon-dev.js" />
@@ -1143,6 +1146,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GolestaneShohada\Controls\UscShahidMaghbare.ascx.cs">
+      <DependentUpon>UscShahidMaghbare.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Controls\UscShahidMaghbare.ascx.designer.cs">
+      <DependentUpon>UscShahidMaghbare.ascx</DependentUpon>
     </Compile>
     <Compile Include="GolestaneShohada\Design\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

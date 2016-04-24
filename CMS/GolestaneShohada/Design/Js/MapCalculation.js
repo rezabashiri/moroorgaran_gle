@@ -129,30 +129,40 @@ function getghate(point) {
     if (point.x >= 0.3113 && point.y >= 0.6019 && point.x <= 0.3302 && point.y <= 0.6184)
         alert("قطعه شماره34");
 }
+ function getghateposition (num)
+{
+     var point = new Seadragon.Point();
+     if (num == 1) {
+         point.x = 0.4164;
+         point.y = 0.6733;
+     }
 
+
+     return point;
+         
+}
 
  
 function addoverlay(viewer) {
     if (!viewer.isOpen()) {
         return;
     }
-    //var img = document.createElement("img");
-    //var point = new Seadragon.Point(
-    //    0.6479860647626986, 0.21632549161594064);
-    //// island off the coast of africa
+    var img = document.createElement("img");
+    var point = getghateposition(1);
+    // island off the coast of africa
 
-    //var placement = Seadragon.OverlayPlacement.BOTTOM;
+    var placement = Seadragon.OverlayPlacement.BOTTOM;
 
-    //img.src = "pushpin.gif";
-    //viewer.drawer.addOverlay(img, point, placement);
+    img.src = "GolestaneShohada/Design/fa/images/Pin_Map.png";
+    viewer.drawer.addOverlay(img, point, placement);
     var div = document.createElement("div");
-    var rect = new Seadragon.Rect(
-        0.15226931601316998, 0.11237404811046009,
-        0.1487579850430218, 0.06805920884321259);
+    //var rect = new Seadragon.Rect(
+    //    0.15226931601316998, 0.11237404811046009,
+    //    0.1487579850430218, 0.06805920884321259);
     // roughly the united states
 
-    div.className = "overlay";
-    viewer.drawer.addOverlay(div, rect);
+    //div.className = "overlay";
+    //viewer.drawer.addOverlay(div, rect);
 }
 function showMouse(event) {
     // getMousePosition() returns position relative to page,

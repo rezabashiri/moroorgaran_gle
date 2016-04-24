@@ -1,4 +1,4 @@
-<%@ Page Language="C#"  MasterPageFile="~/MasterPages/MgrMaster.master"  CodeBehind="List.aspx.cs" Inherits="CMS.List" %>
+﻿<%@ Page Language="C#"  MasterPageFile="~/MasterPages/MgrMaster.master"  CodeBehind="List.aspx.cs" Inherits="CMS.List" %>
 
 <%@ Register src="~/DynamicData/Content/GridViewPager.ascx" tagname="GridViewPager" tagprefix="asp" %>
 
@@ -35,10 +35,10 @@
                 <Columns>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:DynamicHyperLink runat="server" Action="Edit" Text="Edit"
-                            />&nbsp;<asp:LinkButton runat="server" CommandName="Delete" Text="Delete"
+                            <asp:DynamicHyperLink runat="server" Action="Edit" Text="ویرایش"
+                            />&nbsp;<asp:LinkButton runat="server" CommandName="Delete" Text="حذف"
                                 OnClientClick='return confirm("Are you sure you want to delete this item?");'
-                            />&nbsp;<asp:DynamicHyperLink runat="server" Text="Details" />
+                            />&nbsp;<asp:DynamicHyperLink runat="server" Text="جزئیات" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
@@ -48,7 +48,7 @@
                     <asp:GridViewPager runat="server" />
                 </PagerTemplate>
                 <EmptyDataTemplate>
-                    There are currently no items in this table.
+                    خالی
                 </EmptyDataTemplate>
             </asp:GridView>
 
@@ -61,7 +61,7 @@
             <br />
 
             <div class="DDBottomHyperLink">
-                <asp:DynamicHyperLink ID="InsertHyperLink" runat="server" Action="Insert"><img runat="server" src="~/DynamicData/Content/Images/plus.gif" alt="Insert new item" />Insert new item</asp:DynamicHyperLink>
+                <asp:DynamicHyperLink ID="InsertHyperLink" runat="server" Action="Insert"><img runat="server" src="~/DynamicData/Content/Images/plus.gif" alt="Insert new item" />رکورد جدید</asp:DynamicHyperLink>
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>

@@ -32,5 +32,16 @@ namespace Golestan.Model
             [Display(AutoGenerateField=false)]
             public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
         }
+        public override string ToString()
+        {
+            string name="";
+            if (Niroo != null)
+                name = Niroo.Name;
+            if (Yegan != null)
+                name = string.Format("{0} {1}" ,name,Yegan.Name);
+            if (Vahed != null)
+                name = string.Format("{0} {1}", name, Vahed.Name);
+            return name;
+        }
     }
 }
