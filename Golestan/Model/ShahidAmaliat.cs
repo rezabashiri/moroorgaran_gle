@@ -22,9 +22,9 @@ namespace Golestan.Model
         public Nullable<int> IDYegan { get; set; }
         public Nullable<int> IDNiroo { get; set; }
     
-        public virtual Amaliat Amaliat { get; set; }
         public virtual NirooYeganVahedAmaliat NirooYeganVahedAmaliat { get; set; }
         public virtual Raste Raste { get; set; }
         public virtual Shahid Shahid { get; set; }
+        public virtual Amaliat Amaliat { get; set; }
     }
 }

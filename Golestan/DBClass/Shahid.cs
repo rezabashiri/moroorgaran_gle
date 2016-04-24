@@ -42,27 +42,31 @@ namespace Golestan.Model
             public string Jensiat { get; set; }
             [Display(Name="شغل")]
             public string Shoghl { get; set; }
-            
+            [Display(Name="شماره شناسنامه")]
+            public string ShomareShenasname { get; set; }
+
             public byte[] QRCode { get; set; }
             public Nullable<int> IDBakhsheTavalod { get; set; }
             [UIHint("FileUpload")]
+            [Display(Name="مالتی مدیا")]
             public Nullable<System.Guid> AttachID { get; set; }
             public Nullable<int> IDVaziat { get; set; }
             [UIHint("Image")]
+            [Display(Name="عکس پروفایل در اندروید")]
             public byte[] Thumbnale { get; set; }
 
             public virtual Bakhsh Bakhsh { get; set; }
             public virtual Maghbare Maghbare { get; set; }
-          
+          [Display(Name="مطالب اضافه")]
             public virtual ICollection<MatalebEzafe> MatalebEzafes { get; set; }
             public virtual Vaziat Vaziat { get; set; }
-           
-            //public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
-           
+            [Display(Name="عملیاتهای شرکت کرده شهید")]
+            public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
+           [Display(Name="ارتباط ما بین شهدا")]
             public virtual ICollection<ShahidRabete> ShahidRabetes { get; set; }
        
             public virtual ICollection<ShahidRabete> ShahidRabetes1 { get; set; }
-     
+            [Display (Name="اطلاعات رسیده مخاطبین")]
             public virtual ICollection<AfzoodaneEtelaat> AfzoodaneEtelaats { get; set; }
         }
         public override string ToString()
@@ -110,6 +114,11 @@ namespace Golestan.Model
             {
                 return myen.sp_SearchSahid(WhereParameter).ToList<ViewShahid>();
             }
+        }
+        internal List<ViewShahid> GetShahidCloserToDeath(int top)
+        {
+            string query = string.Format("select top {0} * from ViewShahid order by TarikheShahadat desc", top);
+            return SearchShahidByQuery(query);
         }
         internal List<ViewShahid> SearchShahidByQuery(string fulltextquery)
         {

@@ -7,25 +7,25 @@
 <!-- Mirrored from html.crunchpress.com/prayer/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Apr 2016 06:51:01 GMT -->
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Prayer Church</title>
 <!--Custom Css-->
-<link href="css/custom.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css"/>
 <!--Bootstrap 3.1.1 Css-->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
 <!--RESPONSIVE Css-->
 <link rel="stylesheet" href="css/responsive.css" />
 <!--Audio Player Css-->
 <link rel="stylesheet" href="css/audioplayer.css" />
 <!--Color Css-->
-<link href="css/color.css" rel="stylesheet" type="text/css">
+<link href="css/color.css" rel="stylesheet" type="text/css"/>
 <!--Font Awesome-->
-<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <!--Fevicon-->
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
 <!--Google Fonts-->
-<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600' rel='stylesheet' type='text/css'>
+<%--<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600' rel='stylesheet' type='text/css'>--%>
 <!--Bxslider Css-->
 <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css">
 <!--Content Slider Css-->
@@ -115,7 +115,7 @@
             </div>
           </div>
         </div>
-       <strong class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></strong>
+      <strong class="logo"><a href="index.html"><img src="/GolestaneShohada/Design/fa/images/logo.png" alt="logo1"/></a></strong>
       </div>
     </section>
     <!--Logo Row End--> 

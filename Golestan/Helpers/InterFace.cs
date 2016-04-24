@@ -29,5 +29,10 @@ namespace Golestan.Helpers
             Shahid _shahid = new Shahid();
             return _shahid.GetShahid_AmaliatMonjarBeShahadatByIDShahid(IDShahid);
         }
+        public List<ViewShahid> GetShahidCloserToDeath(int top)
+        {
+            Shahid _shahid = new Shahid();
+            return _shahid.GetShahidCloserToDeath(top);
+        }
     }
 }

@@ -30,6 +30,7 @@ namespace Golestan.Model
         public string Tozihat { get; set; }
         public string Kholase { get; set; }
         public byte[] Thumbnale { get; set; }
+        public Nullable<System.Guid> AttachID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NirooYeganVahedAmaliat> NirooYeganVahedAmaliats { get; set; }

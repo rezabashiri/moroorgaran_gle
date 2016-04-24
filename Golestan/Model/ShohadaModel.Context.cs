@@ -28,7 +28,6 @@ namespace Golestan.Model
         }
     
         public virtual DbSet<AfzoodaneEtelaat> AfzoodaneEtelaats { get; set; }
-        public virtual DbSet<Amaliat> Amaliats { get; set; }
         public virtual DbSet<Ashnayan> Ashnayans { get; set; }
         public virtual DbSet<Bakhsh> Bakhshes { get; set; }
         public virtual DbSet<Ghate> Ghates { get; set; }
@@ -51,9 +50,10 @@ namespace Golestan.Model
         public virtual DbSet<Yegan> Yegans { get; set; }
         public virtual DbSet<ViewNirooVahed> ViewNirooVaheds { get; set; }
         public virtual DbSet<Shahid> Shahids { get; set; }
-        public virtual DbSet<ViewAmaliat> ViewAmaliats { get; set; }
         public virtual DbSet<ViewShahid> ViewShahids { get; set; }
         public virtual DbSet<ViewShahidAmaliat> ViewShahidAmaliats { get; set; }
+        public virtual DbSet<Amaliat> Amaliats { get; set; }
+        public virtual DbSet<ViewAmaliat> ViewAmaliats { get; set; }
     
         public virtual ObjectResult<ViewShahid> sp_SearchSahid(string whereParameter)
         {

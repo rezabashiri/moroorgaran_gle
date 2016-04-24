@@ -28,6 +28,17 @@ namespace Golestan.Model
             public string Kholase { get; set; }
             [UIHint("Image")]
             public byte[] Thumbnale { get; set; }
+
+            [UIHint("FileUpload")]
+            [Display(Name = "مالتی مدیا")]
+            public Nullable<System.Guid> AttachID { get; set; }
+
+            [Display(AutoGenerateField=false)]
+            public virtual ICollection<NirooYeganVahedAmaliat> NirooYeganVahedAmaliats { get; set; }
+            [Display(AutoGenerateField = false)]            
+            public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
+             
+            public virtual ICollection<NoghteAsar> NoghteAsars { get; set; }
         }
     }
 }

@@ -17,8 +17,8 @@ namespace Golestan.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NoghteAsar()
         {
-            this.Amaliats = new HashSet<Amaliat>();
             this.Mogheyats = new HashSet<Mogheyat>();
+            this.Amaliats = new HashSet<Amaliat>();
         }
     
         public int ID { get; set; }
@@ -28,8 +28,8 @@ namespace Golestan.Model
         public Nullable<System.Guid> AttachID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Amaliat> Amaliats { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Mogheyat> Mogheyats { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Amaliat> Amaliats { get; set; }
     }
 }

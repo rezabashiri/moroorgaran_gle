@@ -36,7 +36,7 @@
                     <div class="col-sm-2 text-right">
                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("DisplayName") %>' OnPreRender="Label_PreRender" />
                         </div>
-                        <div class="col-sm-10 text-right">
+                        <div class="col-sm-6 text-right">
                             <asp:DynamicFilter runat="server" ID="DynamicFilter" OnFilterChanged="DynamicFilter_FilterChanged" />
                           </div>
                     
@@ -45,7 +45,7 @@
         </asp:QueryableFilterRepeater>
 
     </div>
-    <div class="row col-sm-12" style="float: right" dir="rtl">
+    <div class="row col-sm-12" style="float: right ;margin-top:5px" dir="rtl">
         <dynamic:DynamicRadGrid ID="GridView1" AllowPaging="true" AllowSorting="True" Width="100%" OnItemInserted="GridView1_ItemInserted" 
             ShowFooter="true" ShowGroupPanel="true" AllowFilteringByColumn="true"
             EnableHeaderContextFilterMenu="false" EnableHeaderContextMenu="true"

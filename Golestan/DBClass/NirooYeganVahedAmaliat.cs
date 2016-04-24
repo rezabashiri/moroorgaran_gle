@@ -29,7 +29,7 @@ namespace Golestan.Model
             public virtual Niroo Niroo { get; set; }
             public virtual Vahed Vahed { get; set; }
             public virtual Yegan Yegan { get; set; }
-
+            [Display(AutoGenerateField=false)]
             public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
         }
     }

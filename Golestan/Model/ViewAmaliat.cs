@@ -36,5 +36,13 @@ namespace Golestan.Model
         public string ToziahtMogheyat { get; set; }
         public Nullable<int> IDMantaghe { get; set; }
         public string NameMantaghe { get; set; }
+        public System.Guid AttachID { get; set; }
+        public string FileName { get; set; }
+        public string FileExtension { get; set; }
+        public Nullable<long> ContentLength { get; set; }
+        public string ContentType { get; set; }
+        public string VirtualAddress { get; set; }
+        public string ServerAddress { get; set; }
+        public Nullable<System.DateTime> UploadedTime { get; set; }
     }
 }
