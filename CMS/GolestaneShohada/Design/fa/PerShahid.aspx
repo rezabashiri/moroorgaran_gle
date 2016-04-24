@@ -16,7 +16,7 @@
                   <li><span><i class="fa fa-user"></i>فرزند <asp:Label ID="lblFather" runat="server" ></asp:Label></span></li>
                   <li><span><i class="fa fa-map"></i>اهل <asp:Label ID="lblShahr" runat="server"></asp:Label></span></li>
                   <li><span><i class="fa fa-map-marker"></i>قطعه <asp:Label ID="lblGhete" runat="server"></asp:Label></span></li>
-                  <li><span><i class="fa fa-map-marker"></i>عملیات منجر به شهادت: <asp:Label ID=" lblamaliat" runat="server"></asp:Label></span></li>
+                  <li><span><i class="fa fa-map-marker"></i>عملیات منجر به شهادت: <asp:Label ID="lblamaliat" runat="server"></asp:Label></span></li>
                     <li><span><i class="fa fa-map-marker"></i><asp:Label ID="lblSemat" runat="server"></asp:Label></span></li>
                     <li><span><i class="fa fa-map-marker"></i><asp:Label ID="lblYegan" runat="server"></asp:Label></span></li>
                     <li><span><i class="fa fa-map-marker"></i><asp:Label ID="lblNiroo" runat="server"></asp:Label></span></li>
