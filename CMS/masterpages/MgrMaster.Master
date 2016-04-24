@@ -111,9 +111,10 @@
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
       <section id="main-content">
+          <div class="content-panel">
           <section class="wrapper">
               <div class="row">
-                  <div class="col-lg-11 main-chart">	
+                  <div class="col-sm-12 main-chart">	
                   <%--<asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>--%>
                       <telerik:RadScriptManager  ID="RadScriptManager1"  runat="server"></telerik:RadScriptManager>
                 <asp:ContentPlaceHolder ID="TitleContentPH" runat="server">
@@ -122,6 +123,7 @@
                   </div><!-- /col-lg-12 END SECTION MIDDLE -->   
               </div><! --/row -->
           </section>
+              </div>
       </section>
 
       <!--main content end-->
