@@ -609,6 +609,8 @@
     <Content Include="GolestaneShohada\Design\Image\rotateright_hover.png" />
     <Content Include="GolestaneShohada\Design\Image\rotateright_pressed.png" />
     <Content Include="GolestaneShohada\Design\Image\rotateright_rest.png" />
+    <Content Include="GolestaneShohada\Design\Image\sample-photo.jpg" />
+    <Content Include="GolestaneShohada\Design\Image\thumb-sample.jpg" />
     <Content Include="GolestaneShohada\Design\Image\zoomin_grouphover.png" />
     <Content Include="GolestaneShohada\Design\Image\zoomin_hover.png" />
     <Content Include="GolestaneShohada\Design\Image\zoomin_pressed.png" />

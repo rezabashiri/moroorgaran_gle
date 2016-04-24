@@ -249,7 +249,7 @@
     <!--Home Widget Box End--> 
     
     <!-- Latest Sermons Box Start-->
-    <section class="latest-sermons-box">
+    <section class="latest-sermons-box disNone">
       <div class="container">
         <h3>شهدای برجسته استان</h3>
         <div class="row">
@@ -445,14 +445,14 @@
             <h3>گالری تصاویر</h3>
             <div class="timelines-box">
               <ul id="timelines-slider">
-                <li> <img src="images/timelines-img-3.jpg" alt="img" />
+                <li> <img src="Image/sample-photo.jpg" alt="img" />
                 </li>
-                <li> <img src="images/timelines-img-2.jpg" alt="img" />
+                <li> <img src="Image/sample-photo.jpg" alt="img" />
                 </li>
-                <li> <img src="images/timelines-img-1.jpg" alt="img" />
+                <li> <img src="Image/sample-photo.jpg" alt="img" />
                 </li>
               </ul>
-              <div id="bx-pager"> <a data-slide-index="0" href="#"><img src="images/timelines-thumb-img-3.jpg" alt="img" /></a> <a data-slide-index="1" href="#"><img src="images/timelines-thumb-img-2.jpg" alt="img" /></a> <a data-slide-index="2" href="#"><img src="images/timelines-thumb-img.jpg" alt="img" /></a> </div>
+              <div id="bx-pager"> <a data-slide-index="0" href="#"><img src="Image/thumb-sample.jpg" alt="img" /></a> <a data-slide-index="1" href="#"><img src="Image/thumb-sample.jpg" alt="img" /></a> <a data-slide-index="2" href="#"><img src="Image/thumb-sample.jpg" alt="img" /></a> </div>
             </div>
           </div>
         </div>
