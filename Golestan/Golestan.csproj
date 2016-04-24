@@ -78,7 +78,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="tkvUtility">
-      <HintPath>..\CMS\bin\tkvUtility.dll</HintPath>
+      <HintPath>..\packages\tkvUtility.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

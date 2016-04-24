@@ -14,9 +14,9 @@ namespace CMS
 
         protected void Application_Start(object sender, EventArgs e)
         {
-       
-            //WebUtility.AppStart.EntityModelHelpers.RegisterEntityModel(Golestan.AppStart.DynamicDataConfig.GolestanModel, new Golestan.Model.GolestanShohadaEntities());
-            //WebUtility.AppStart.ConfigRoutes.RegisterModelRoutes(RouteTable.Routes, Golestan.AppStart.DynamicDataConfig.GolestanModel);
+
+            WebUtility.AppStart.EntityModelHelpers.RegisterEntityModel(Golestan.AppStart.DynamicDataConfig.GolestanModel, new Golestan.Model.GolestanShohadaEntities());
+            WebUtility.AppStart.ConfigRoutes.RegisterModelRoutes(RouteTable.Routes, Golestan.AppStart.DynamicDataConfig.GolestanModel);
             //WebUtility.AppStart.EntityModelHelpers.RegisterEntityModel(global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel, new global::AccessManagementService.Model.AccessEntities());
             //WebUtility.AppStart.ConfigRoutes.RegisterModelRoutes(RouteTable.Routes, global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel);
         
