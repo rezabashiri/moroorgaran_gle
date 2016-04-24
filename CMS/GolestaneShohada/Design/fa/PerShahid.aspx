@@ -16,8 +16,13 @@
                   <li><span><i class="fa fa-user"></i>فرزند <asp:Label ID="lblFather" runat="server" ></asp:Label></span></li>
                   <li><span><i class="fa fa-map"></i>اهل <asp:Label ID="lblShahr" runat="server"></asp:Label></span></li>
                   <li><span><i class="fa fa-map-marker"></i>قطعه <asp:Label ID="lblGhete" runat="server"></asp:Label></span></li>
+                  <li><span><i class="fa fa-map-marker"></i>عملیات منجر به شهادت: <asp:Label ID="lblamaliat" runat="server"></asp:Label></span></li>
+                    <li><span><i class="fa fa-map-marker"></i><asp:Label ID="lblSemat" runat="server"></asp:Label></span></li>
+                    <li><span><i class="fa fa-map-marker"></i><asp:Label ID="lblYegan" runat="server"></asp:Label></span></li>
+                    <li><span><i class="fa fa-map-marker"></i><asp:Label ID="lblNiroo" runat="server"></asp:Label></span></li>
                 </ul></div>
-              <div class="event-frame"> <a href="#"><img src="images/event-detail-img.jpg" alt="img"></a>
+              <div class="event-frame"> <a href="#">
+                  <asp:Image ID="Image1" runat="server" /><img src="images/event-detail-img.jpg" alt="img"></a>
                 <div class="map-row">
                   <div class="event-detail-timer">
                   </div>

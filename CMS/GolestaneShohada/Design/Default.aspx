@@ -159,7 +159,7 @@
     <ul id="home-banner">
         <asp:ListView ID="ListView1" runat="server">
             <ItemTemplate>
-                 <li> <img src='<%# "/CMS/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>' 
+                 <li> <img src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>' 
                      alt='<%# DataBinder.Eval(Container.DataItem, "ItemTopic") %>' >
         <div class="caption">
           <div class="container">
@@ -342,7 +342,7 @@
                     <div class="col-md-3 col-sm-6">
             <div class="latest-event-box">
               <div class="frame"> <a href="fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
-                  <img src='<%# "/CMS/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
+                  <img src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
                                alt='<%# DataBinder.Eval(Container.DataItem, "ItemTopic") %>'></a>
                 <div class="date"><strong class="dat">27</strong><strong class="mnt">تیر</strong></div>
                 <div class="caption">
@@ -352,9 +352,8 @@
                   </div>
                 </div>
                 <div class="inner-area">
-                  <div class="timer-box">
-                    <div class="defaultCountdown"></div>
-                  </div>
+                    <br />
+
                   <div class="text-area"> <strong class="title"><%# DataBinder.Eval(Container.DataItem, "ItemTopic") %></strong>
                     <ul>
                       <li><span><i class="fa fa-calendar"></i></span><strong><%# MyClass.GetFarsiDate(Eval("ShowDate")) %></strong></li>
@@ -381,7 +380,7 @@
                     <div class="col-md-6 col-sm-6">
             <div class="blog-posts-box">
               <div class="frame"><a href="fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
-                  <img src='<%# "/CMS/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
+                  <img src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
                                alt='<%# DataBinder.Eval(Container.DataItem, "ItemTopic") %>'></a></div>
               <div class="text-box">
                 <div class="col-md-6">
@@ -430,7 +429,7 @@
                     <ItemTemplate>
                         <div class="latest-news">
                 <div class="frame"><a href="fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
-                    <img src='<%# "/CMS/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
+                    <img src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
                                alt='<%# DataBinder.Eval(Container.DataItem, "ItemTopic") %>'></a></div>
                 <div class="text-box"> <strong class="title"><%# DataBinder.Eval(Container.DataItem, "ItemTopic") %></strong>
                   <div class="date-row"> <a class="link"><i class="fa fa-calendar"></i><%# MyClass.GetFarsiDate(Eval("ShowDate")) %></a>  </div>

@@ -54,8 +54,7 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="App_Web_uscfileupload.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="App_Web_uscfileupload.ascx.cc671b29">
       <HintPath>..\packages\App_Web_uscfileupload.ascx.cc671b29.dll</HintPath>
     </Reference>
     <Reference Include="App_Web_uscfullsearchshahid.ascx.cc961b29">
@@ -1407,6 +1406,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="files\Album\" />
+    <Folder Include="files\GeneralFiles\" />
+    <Folder Include="files\photoItems\" />
+    <Folder Include="files\UploadFiles\" />
+    <Folder Include="files\Video\" />
     <Folder Include="GolestaneShohada\Design\Css\" />
     <Folder Include="GolestaneShohada\Logic\" />
   </ItemGroup>

@@ -1,11 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS", "CMS\CMS.csproj", "{B66DDE47-E93C-4A92-B0F2-E8A00E9435F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golestan", "Golestan\Golestan.csproj", "{D856AA46-0E36-4F13-B330-9401B74D0FDC}"
 EndProject
- 
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,10 +21,6 @@ Global
 		{D856AA46-0E36-4F13-B330-9401B74D0FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D856AA46-0E36-4F13-B330-9401B74D0FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D856AA46-0E36-4F13-B330-9401B74D0FDC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D78F6BDC-6D1C-4511-ADD2-44B116D77CD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D78F6BDC-6D1C-4511-ADD2-44B116D77CD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D78F6BDC-6D1C-4511-ADD2-44B116D77CD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D78F6BDC-6D1C-4511-ADD2-44B116D77CD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -20,7 +20,7 @@ namespace CMS.GolestaneShohada.Design.fa
         public void Fill()
         {
             int shahidID = Convert.ToInt32(Request.QueryString["shahidID"]);
-            var Myshahid = new Golestan.Helpers.InterFace().GetShahidByID(shahidID);
+            var Myshahid = new Golestan.Helpers.InterFace().GetShahidAmaliatByID(shahidID);
             lblName.Text = Myshahid.Name.ToString();
             lblFamily.Text = Myshahid.Family.ToString();
             lbldayofWeek.Text = mc.GetFarsiDate2(Convert.ToDateTime(Myshahid.TarikheShahadat), 1);
@@ -28,10 +28,19 @@ namespace CMS.GolestaneShohada.Design.fa
             lblMonth.Text = mc.GetFarsiDate2(Convert.ToDateTime(Myshahid.TarikheShahadat), 3);
             lblyear.Text = mc.GetFarsiDate2(Convert.ToDateTime(Myshahid.TarikheShahadat), 4);
 
-            lblTavalod.Text = mc.GetFarsiDate2(Convert.ToDateTime(Myshahid.TarikheTavalod),0);
+            lblTavalod.Text = mc.GetFarsiDate2(Convert.ToDateTime(Myshahid.TarikheTavalod), 0);
             lblFather.Text = Myshahid.NamePedar.ToString();
             lblShahr.Text = Myshahid.NameShahrestan.ToString();
             lblGhete.Text = Myshahid.NameGhate.ToString();
+
+            lblamaliat.Text = Myshahid.NameAmaliat.ToString();
+            lblSemat.Text = Myshahid.NameRaste.ToString();
+            lblYegan.Text = Myshahid.NameYegan.ToString();
+            lblNiroo.Text = Myshahid.NameNiroo.ToString();
+            Image1.ImageUrl = Myshahid.VirtualAddress.ToString();
+            Image1.AlternateText = "درباره شهید" + " " + Myshahid.Name.ToString() + " " + Myshahid.Family.ToString();
+            Image1.ToolTip = Myshahid.Name.ToString() + " " + Myshahid.Family.ToString();
+
 
             // image will be added.
         }
