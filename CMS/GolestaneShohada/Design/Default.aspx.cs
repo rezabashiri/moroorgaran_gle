@@ -17,10 +17,10 @@ namespace CMS.GolestaneShohada.Design
         {
             if (!IsPostBack)
             {
-                //FillSlider();
-                //FillEvent();
-                //FillBlog();
-                //FillNews();
+                FillSlider();
+                FillEvent();
+                FillBlog();
+                FillNews();
                 
             }
         }

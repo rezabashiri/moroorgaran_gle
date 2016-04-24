@@ -18,40 +18,6 @@ public partial class panel_MakeItem : System.Web.UI.Page
         int CstID = Convert.ToInt32(Session["CustomerID"]);
         return CstID;
     }
-    //public int Part()
-    //{
-    //    int PartID = Convert.ToInt32(Request.QueryString["PartID"]);
-    //    if (PartID == 1)
-    //        DivUplode.Visible = false;
-    //    if (PartID == 2)
-    //    {
-    //        lblSummary.Text = "خلاصه ای در مورد فایل";
-    //        DivBody.Visible = false;
-    //    }
-    //    return PartID;
-    //}
-    //protected void FillTitle()
-    //{
-    //    switch (Part())
-    //    {
-    //        case 1:
-    //            {
-    //                lblTitle.Text = "درج خبر جدید";
-    //                lblSpanTitle.Text = "ایجاد و ویرایش اخبار";
-    //            } break;
-    //        case 2:
-    //            {
-    //                lblTitle.Text = "بارگذاری فایل جدید";
-    //                lblSpanTitle.Text = "قرار دادن فایل جهت دانلود به همراه توضیحات مربوط به فایل";
-    //            } break;
-    //        case 3:
-    //            {
-    //                lblTitle.Text = "معرفی فعالیت ها";
-    //                lblSpanTitle.Text = "ایجاد و ویرایش فعالیت جدید ";
-    //            } break;
-
-    //    }
-    //}
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -206,7 +172,7 @@ public partial class panel_MakeItem : System.Web.UI.Page
                 photoName = System.IO.Path.GetFileName(AsyncFileUpload1.PostedFile.FileName);
                 string format = photoName.Split('.').Last();
                 photoName = RandomName() + "." + format;
-                ImgSaveLocation = Server.MapPath("\\CMS\\files\\photoItems") + "\\" + photoName;
+                ImgSaveLocation = Server.MapPath("..\\files\\photoItems") + "\\" + photoName;
                 AsyncFileUpload1.PostedFile.SaveAs(ImgSaveLocation);
             }
 
@@ -220,7 +186,7 @@ public partial class panel_MakeItem : System.Web.UI.Page
                 FileName = System.IO.Path.GetFileName(AsyncFileUpload2.PostedFile.FileName);
                 string format = FileName.Split('.').Last();
                 FileName = RandomName() + "." + format;
-                FileSaveLocation = Server.MapPath("\\CMS\\files\\UploadFiles") + "\\" + FileName;
+                FileSaveLocation = Server.MapPath("..\\files\\UploadFiles") + "\\" + FileName;
                 AsyncFileUpload2.PostedFile.SaveAs(FileSaveLocation);
             }
 
@@ -300,7 +266,7 @@ public partial class panel_MakeItem : System.Web.UI.Page
             DivPhoto.Visible = true;
             string photoName = dt.Rows[0]["PhotoName"].ToString();
             Session["photo"] = photoName;
-            imgItem.ImageUrl = "\\CMS\\files\\photoItems\\" + photoName;
+            imgItem.ImageUrl = "..\\files\\photoItems\\" + photoName;
             lblPhoto.Text = "تصویر جایگزین:";
 
             txtSummary.Text = dt.Rows[0]["SummaryTxt"].ToString();
@@ -335,7 +301,7 @@ public partial class panel_MakeItem : System.Web.UI.Page
     protected void lnkBtnExFile_Click(object sender, EventArgs e)
     {
         string filename = lnkBtnExFile.Text;
-        string Path = "\\CMS\\files\\UploadFiles\\" + filename;
+        string Path = "..\\files\\UploadFiles\\" + filename;
         if (Path != "")
         {
             Response.Clear();
