@@ -5,6 +5,8 @@
 
  
 
+<div class="tab-area">
+
 
 <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#home">شهید</a></li>
@@ -14,21 +16,24 @@
 
 <div class="tab-content">
   <div id="home" class="tab-pane fade in active">
-   
-    <p><uc1:UscSearchShahid runat="server" ID="UscSearchShahid" />
-</p>
+   <div class="tab-text-box">
+    <p><uc1:UscSearchShahid runat="server" ID="UscSearchShahid" /></p>
+       </div>
   </div>
   <div id="menu1" class="tab-pane fade">
-     
+      <div class="tab-text-box">
     <p><uc1:UscSearchAmaliat runat="server" ID="UscSearchAmaliat" /></p>
+          </div>
   </div>
   <div id="menu2" class="tab-pane fade">
-     
+      <div class="tab-text-box">
     <p><uc1:UscSearchNiroo runat="server" ID="UscSearchNiroo" /></p>
+          </div>
   </div>
 </div>
 <div class="row">
     <div class="col-sm-12 text-center">
-        <asp:Button runat="server" ID="btnSearch" Text="جستجو" CssClass="btn btn-info" OnClick="btnSearch_Click" />
+        <asp:Button runat="server" ID="btnSearch" Text="جستجو" CssClass="btn detail-btn-sumbit2" OnClick="btnSearch_Click" />
     </div>
 </div>
+    </div>

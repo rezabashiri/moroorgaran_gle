@@ -90,5 +90,23 @@ namespace Golestan.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewShahid>("sp_SearchShahidByQuery", mergeOption, queryParameter);
         }
+    
+        public virtual ObjectResult<ViewShahidAmaliat> sp_SearchShahidAmaliat(string whereParameter)
+        {
+            var whereParameterParameter = whereParameter != null ?
+                new ObjectParameter("WhereParameter", whereParameter) :
+                new ObjectParameter("WhereParameter", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewShahidAmaliat>("sp_SearchShahidAmaliat", whereParameterParameter);
+        }
+    
+        public virtual ObjectResult<ViewShahidAmaliat> sp_SearchShahidAmaliat(string whereParameter, MergeOption mergeOption)
+        {
+            var whereParameterParameter = whereParameter != null ?
+                new ObjectParameter("WhereParameter", whereParameter) :
+                new ObjectParameter("WhereParameter", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewShahidAmaliat>("sp_SearchShahidAmaliat", mergeOption, whereParameterParameter);
+        }
     }
 }

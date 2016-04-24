@@ -54,6 +54,10 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="App_Web_uscfileupload.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\publish\WebUtilityv2\bin\App_Web_uscfileupload.ascx.cc671b29.dll</HintPath>
+    </Reference>
     <Reference Include="App_Web_uscfullsearchshahid.ascx.cc961b29">
       <HintPath>..\..\..\..\publish\Golestan\bin\App_Web_uscfullsearchshahid.ascx.cc961b29.dll</HintPath>
     </Reference>
@@ -174,8 +178,9 @@
     <Reference Include="WebGrease">
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
-    <Reference Include="WebUtility">
-      <HintPath>..\..\..\..\publish\WebUtility\bin\WebUtility.dll</HintPath>
+    <Reference Include="WebUtilityv2, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\publish\WebUtilityv2\bin\WebUtilityv2.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -351,6 +356,8 @@
     <Content Include="DynamicData\FieldTemplates\EmailAddress.ascx" />
     <Content Include="DynamicData\FieldTemplates\Enumeration.ascx" />
     <Content Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\FileUpload.ascx" />
+    <Content Include="DynamicData\FieldTemplates\FileUpload_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\ForeignKey.ascx" />
     <Content Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Image.ascx" />
@@ -575,38 +582,7 @@
     <Content Include="GolestaneShohada\Design\GolestanMap\img\zoomout_rest.png" />
     <Content Include="GolestaneShohada\Design\GolestanMap\library.html" />
     <Content Include="GolestaneShohada\Design\GolestanMap\readme.txt" />
-    <Content Include="GolestaneShohada\Design\Image\fullpage_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Image\fullpage_hover.png" />
-    <Content Include="GolestaneShohada\Design\Image\fullpage_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Image\fullpage_rest.png" />
-    <Content Include="GolestaneShohada\Design\Image\home_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Image\home_hover.png" />
-    <Content Include="GolestaneShohada\Design\Image\home_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Image\home_rest.png" />
-    <Content Include="GolestaneShohada\Design\Image\next_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Image\next_hover.png" />
-    <Content Include="GolestaneShohada\Design\Image\next_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Image\next_rest.png" />
-    <Content Include="GolestaneShohada\Design\Image\previous_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Image\previous_hover.png" />
-    <Content Include="GolestaneShohada\Design\Image\previous_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Image\previous_rest.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateleft_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateleft_hover.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateleft_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateleft_rest.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateright_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateright_hover.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateright_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateright_rest.png" />
-    <Content Include="GolestaneShohada\Design\Image\zoomin_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Image\zoomin_hover.png" />
-    <Content Include="GolestaneShohada\Design\Image\zoomin_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Image\zoomin_rest.png" />
-    <Content Include="GolestaneShohada\Design\Image\zoomout_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Image\zoomout_hover.png" />
-    <Content Include="GolestaneShohada\Design\Image\zoomout_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Image\zoomout_rest.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\header-pattren-1.png" />
     <Content Include="GolestaneShohada\Design\Js\images\fullpage_grouphover.png" />
     <Content Include="GolestaneShohada\Design\Js\images\fullpage_hover.png" />
     <Content Include="GolestaneShohada\Design\Js\images\fullpage_pressed.png" />
@@ -650,6 +626,7 @@
     <Content Include="GolestaneShohada\Design\Js\src\_intro.txt" />
     <Content Include="GolestaneShohada\Design\Js\src\_outro.txt" />
     <Content Include="GolestaneShohada\Design\Default.aspx" />
+    <Content Include="GolestaneShohada\Media\Shahids\1\Download-Icon.png" />
     <Content Include="GolestaneShohada\WebServices\GolestanWebservice.asmx" />
     <Content Include="images\Add.png" />
     <Content Include="images\banner-bg.png" />
@@ -945,6 +922,20 @@
     </Compile>
     <Compile Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx.designer.cs">
       <DependentUpon>Enumeration_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\FileUpload.ascx.cs">
+      <DependentUpon>FileUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\FileUpload.ascx.designer.cs">
+      <DependentUpon>FileUpload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\FileUpload_Edit.ascx.cs">
+      <DependentUpon>FileUpload_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\FileUpload_Edit.ascx.designer.cs">
+      <DependentUpon>FileUpload_Edit.ascx</DependentUpon>
     </Compile>
     <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.cs">
       <DependentUpon>ForeignKey.ascx</DependentUpon>
@@ -1367,10 +1358,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GolestaneShohada\Design\Css\" />
+    <Folder Include="GolestaneShohada\Design\Image\" />
     <Folder Include="GolestaneShohada\Logic\" />
-    <Folder Include="GolestaneShohada\Media\Amaliat\" />
-    <Folder Include="GolestaneShohada\Media\Shahid\" />
-    <Folder Include="GolestaneShohada\Media\Yegan\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

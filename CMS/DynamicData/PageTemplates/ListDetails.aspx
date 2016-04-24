@@ -15,8 +15,8 @@
 
     <h2 class="DDSubHeader"><%= table.DisplayName %></h2>
 
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
+<%--    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>--%>
             <div class="DD">
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" EnableClientScript="true"
                     HeaderText="List of validation errors" CssClass="DDValidator" />
@@ -105,7 +105,7 @@
                     <asp:ControlFilterExpression ControlID="GridView1" />
                 </asp:QueryExtender>
             </asp:Panel>
-        </ContentTemplate>
-    </asp:UpdatePanel>
+     <%--   </ContentTemplate>
+    </asp:UpdatePanel>--%>
 </asp:Content>
 

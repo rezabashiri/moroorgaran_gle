@@ -2,8 +2,10 @@
         <%@ Register Assembly="Heidarpour.WebControlUI" Namespace="Heidarpour.WebControlUI" TagPrefix="rhp" %>
 
 
+<div style="direction:rtl">
 
-<div class="row">
+
+<div class="row" >
    
     <div class="col-sm-4">
          <asp:TextBox ID="txtName" placeholder="نام" CssClass="comment-input" runat="server"></asp:TextBox>
@@ -85,5 +87,6 @@
     <rhp:DatePicker CssClass=" text-right" Enabled="true"  ID="dpcShahidTa"  runat="server"></rhp:DatePicker>
         </div>
 
+    </div>
     </div>
 

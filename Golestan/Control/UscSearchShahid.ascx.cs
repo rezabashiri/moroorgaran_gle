@@ -45,13 +45,13 @@ namespace Golestan.Control
             if (!string.IsNullOrEmpty(cmbBakhsh.SelectedValue))
                 query += string.Format(" and IDBakhsh = {0}", cmbBakhsh.SelectedValue.ToInt32());
             if (dpcTavalodAz.Date != null)
-                query += string.Format(" and TarikheTavalod >= {0}", dpcTavalodAz.Date);
+                query += string.Format(" and TarikheTavalod >= {0}", dpcTavalodAz.Date.Value.ToShortDateString());
             if (dpcTavalodTa.Date != null)
-                query += string.Format(" and TarikheTavalod <= {0}", dpcTavalodTa.Date);
+                query += string.Format(" and TarikheTavalod <= {0}", dpcTavalodTa.Date.Value.ToShortDateString());
             if (dpcShahadatAz.Date != null)
-                query += string.Format(" and TarikheShahadat >= {0}", dpcShahadatAz.Date);
+                query += string.Format(" and TarikheShahadat >= {0}", dpcShahadatAz.Date.Value.ToShortDateString());
             if (dpcShahidTa.Date != null)
-                query += string.Format(" and TarikheShahadat >= {0}", dpcShahidTa.Date);
+                query += string.Format(" and TarikheShahadat >= {0}", dpcShahidTa.Date.Value.ToShortDateString());
            
             if (!string.IsNullOrEmpty(query))
             {

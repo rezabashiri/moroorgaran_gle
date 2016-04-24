@@ -38,7 +38,7 @@ namespace Golestan.Control
             }
             if (!string.IsNullOrEmpty(UscSearchAmaliat.SearchString))
             {
-                string q2 = "ID in (select IDShahid from ViewShahidAmaliat where " + UscSearchAmaliat.SearchString;
+                string q2 = string.Format("ID in (select IDShahid from ViewShahidAmaliat where {0} )", UscSearchAmaliat.SearchString);
                 if (!string.IsNullOrEmpty(condition))
                     condition += " and " + q2;
                 else
@@ -46,7 +46,7 @@ namespace Golestan.Control
             }
             if (!string.IsNullOrEmpty(UscSearchNiroo.SearchString))
             {
-                string q3 = "ID in (select IDShahid from ViewShahidAmaliat where " + UscSearchNiroo.SearchString;
+                string q3 = string.Format("ID in (select IDShahid from ViewShahidAmaliat where {0} )", UscSearchNiroo.SearchString);
                 if (!string.IsNullOrEmpty(condition))
                     condition += " and " + q3;
                 else

@@ -49,5 +49,21 @@ namespace Golestan.Model
         public string NameGhate { get; set; }
         public int GhateID { get; set; }
         public string SangNeveshte { get; set; }
+        public Nullable<int> IDNoghteAsar { get; set; }
+        public string NameNoghteAsar { get; set; }
+        public Nullable<double> X { get; set; }
+        public Nullable<double> Y { get; set; }
+        public string NameMogheyat { get; set; }
+        public string TozihateMogheyat { get; set; }
+        public Nullable<int> IDMantaghe { get; set; }
+        public string NameMantaghe { get; set; }
+        public string TozihateMantaghe { get; set; }
+        public string FileName { get; set; }
+        public string FileExtension { get; set; }
+        public Nullable<long> ContentLength { get; set; }
+        public string ContentType { get; set; }
+        public string VirtualAddress { get; set; }
+        public string ServerAddress { get; set; }
+        public Nullable<bool> ISMonjarBeShahadat { get; set; }
     }
 }

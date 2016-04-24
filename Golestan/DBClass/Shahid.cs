@@ -45,6 +45,7 @@ namespace Golestan.Model
             
             public byte[] QRCode { get; set; }
             public Nullable<int> IDBakhsheTavalod { get; set; }
+            [UIHint("FileUpload")]
             public Nullable<System.Guid> AttachID { get; set; }
             public Nullable<int> IDVaziat { get; set; }
             [UIHint("Image")]
@@ -74,7 +75,28 @@ namespace Golestan.Model
             string param = string.Format("GhateID = {0}", IDGhete);
             return SearchShahidByParameter(param);
         }
-        public ViewShahid GetShahidByID(int IDShahid)
+
+
+        internal List<ViewShahidAmaliat> SearchShahidAmaliatByParameter(string WhereParameter)
+        {
+            using (var myen = Golestan.Helpers.ContextHelper.GetContext)
+            {
+                return myen.sp_SearchShahidAmaliat(WhereParameter).ToList<ViewShahidAmaliat>();
+            }
+        }
+        /// <summary>
+        /// select viewshahidamaliat witch is couse to death
+        /// </summary>
+        /// <param name="IDShahid"></param>
+        /// <returns></returns>
+        internal ViewShahidAmaliat GetShahid_AmaliatMonjarBeShahadatByIDShahid(int IDShahid )
+        {
+            
+                string whereparam = string.Format(" IDShahid = {0} ", IDShahid );
+                return SearchShahidAmaliatByParameter(whereparam).FirstOrDefault<ViewShahidAmaliat>();
+           
+        }
+        internal ViewShahid GetShahidByID(int IDShahid)
         {
             using (var myen = Golestan.Helpers.ContextHelper.GetContext)
             { 
@@ -82,14 +104,14 @@ namespace Golestan.Model
                 return myen.sp_SearchSahid(whereparam).FirstOrDefault<ViewShahid>();
             }
         }
-        public List<ViewShahid> SearchShahidByParameter(string WhereParameter)
+        internal List<ViewShahid> SearchShahidByParameter(string WhereParameter)
         {
             using (var myen = Golestan.Helpers.ContextHelper.GetContext)
             {
                 return myen.sp_SearchSahid(WhereParameter).ToList<ViewShahid>();
             }
         }
-        public List<ViewShahid> SearchShahidByQuery(string fulltextquery)
+        internal List<ViewShahid> SearchShahidByQuery(string fulltextquery)
         {
             using (var myen = Golestan.Helpers.ContextHelper.GetContext)
             {

@@ -49,7 +49,6 @@
         <AssociationConnector Association="GolestanShohadaModel.YeganVahed" ManuallyRouted="false" />
         <EntityTypeShape EntityType="GolestanShohadaModel.Shahid" Width="1.5" PointX="7.875" PointY="5.625" />
         <EntityTypeShape EntityType="GolestanShohadaModel.ViewAmaliat" Width="1.5" PointX="0.75" PointY="11.75" />
-        <EntityTypeShape EntityType="GolestanShohadaModel.ViewShahid" Width="1.5" PointX="2.75" PointY="11.75" />
         <AssociationConnector Association="GolestanShohadaModel.FK_AfzoodaneEtelaat_Shahid" />
         <AssociationConnector Association="GolestanShohadaModel.FK_Shahid_Bakhsh" />
         <AssociationConnector Association="GolestanShohadaModel.FK_Maghbare_Shahid" />
@@ -58,7 +57,8 @@
         <AssociationConnector Association="GolestanShohadaModel.FK_ShahidAmaliat_Shahid" />
         <AssociationConnector Association="GolestanShohadaModel.FK_ShahidRabete_Shahid" />
         <AssociationConnector Association="GolestanShohadaModel.FK_ShahidRabete_Shahid1" />
-        <EntityTypeShape EntityType="GolestanShohadaModel.ViewShahidAmaliat" Width="1.5" PointX="15.375" PointY="0.75" />
+        <EntityTypeShape EntityType="GolestanShohadaModel.ViewShahid" Width="1.5" PointX="15.375" PointY="0.75" />
+        <EntityTypeShape EntityType="GolestanShohadaModel.ViewShahidAmaliat" Width="1.5" PointX="15.375" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

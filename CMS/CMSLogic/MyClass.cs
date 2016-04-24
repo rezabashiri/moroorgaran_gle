@@ -62,7 +62,7 @@ public class MyClass
 
     public int GetCustomer()
     {
-        int customerID = 15;
+        int customerID = 1;
         return customerID;
     }
 
@@ -89,7 +89,7 @@ public class MyClass
     public void connect()
     {
         cn.Close();
-        string cnStr = "Server='{0}' ;DataBase='{1}';User id='{2}'; Password='{3}';";
+        string cnStr = Golestan.Helpers.InterFace.ConnectionString; //"Server='{0}' ;DataBase='{1}';User id='{2}'; Password='{3}';";
         cnStr = string.Format(cnStr, server, database, user, pass);
         cn.ConnectionString = cnStr;
         cn.Open();

@@ -40,13 +40,13 @@ namespace Golestan.Control
             if (!string.IsNullOrEmpty(cmbNoghteAsar.SelectedValue))
                 query += string.Format(" and IDNoghteAsar = {0}", cmbNoghteAsar.SelectedValue.ToInt32());
             if (dpcShorooAz.Date != null)
-                query += string.Format(" and TarikheShoroo >= {0}", dpcShorooAz.Date);
+                query += string.Format(" and TarikheShoroo >= {0}", dpcShorooAz.Date.Value.ToShortDateString());
             if (dpcShorooTa.Date != null)
-                query += string.Format(" and TarikheShoroo <= {0}", dpcShorooTa.Date);
+                query += string.Format(" and TarikheShoroo <= {0}", dpcShorooTa.Date.Value.ToShortDateString());
             if (dpcPayanAz.Date != null)
-                query += string.Format(" and TarikhePayan >= {0}", dpcPayanAz.Date);
+                query += string.Format(" and TarikhePayan >= {0}", dpcPayanAz.Date.Value.ToShortDateString());
             if (dpcPayanTa.Date != null)
-                query += string.Format(" and TarikhePayan >= {0}", dpcPayanTa.Date);
+                query += string.Format(" and TarikhePayan >= {0}", dpcPayanTa.Date.Value.ToShortDateString());
              
             if (!string.IsNullOrEmpty(query))
             {

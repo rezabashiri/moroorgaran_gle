@@ -8,7 +8,7 @@
     <meta name="robots" content="nosnippet">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="author" content="پیوند سیستم">
+    <meta name="author" content="مرورگران">
 
     <script type="text/javascript" src="../js/tinymce/tinymce.min.js"></script>
    <script type="text/javascript">
@@ -85,7 +85,7 @@
                 <asp:Label ID="Label1" runat="server" Text="حداکثر حجم 150 کیلوبایت"></asp:Label>
             </div>
             <div class="Lcolumn width_84">
-                <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="Server" />
+             <%--   <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="Server" />--%>
                 <asp:AsyncFileUpload ID="AsyncFileUpload1" runat="server" />
             </div>
         </div>

@@ -21,6 +21,7 @@ namespace CMS.GolestaneShohada.Design
                 //FillEvent();
                 //FillBlog();
                 //FillNews();
+                
             }
         }
         public void FillSlider()

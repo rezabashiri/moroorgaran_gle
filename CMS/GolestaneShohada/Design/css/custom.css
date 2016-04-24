@@ -156,7 +156,7 @@ body {
 #header {
 	float: left;
 	width: 100%;
-	background-image: url(../images/header-pattren-top.png);
+	background-image: url(../fa/images/header-pattren-top.png);
 }
 /*Head Topbar Start*/
 .head-topbar {
@@ -308,7 +308,7 @@ body {
 .logo-row {
 	float: left;
 	width: 100%;
-	background-image: url(../images/header-pattren-1.png);
+	background-image: url(../fa/images/header-pattren-1.png);
 	position: relative;
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3) inset;
 	-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3) inset;

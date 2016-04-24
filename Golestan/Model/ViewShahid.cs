@@ -37,5 +37,11 @@ namespace Golestan.Model
         public int IDBakhsh { get; set; }
         public int IDShahrestan { get; set; }
         public int IDOstan { get; set; }
+        public string FileName { get; set; }
+        public string FileExtension { get; set; }
+        public Nullable<long> ContentLength { get; set; }
+        public string ContentType { get; set; }
+        public string VirtualAddress { get; set; }
+        public string ServerAddress { get; set; }
     }
 }
