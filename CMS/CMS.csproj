@@ -180,7 +180,7 @@
     </Reference>
     <Reference Include="WebUtilityv2, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\publish\WebUtilityv2\bin\WebUtilityv2.dll</HintPath>
+      <HintPath>..\packages\WebUtilityv2.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -1408,7 +1408,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GolestaneShohada\Design\Css\" />
-    <Folder Include="GolestaneShohada\Design\Image\" />
     <Folder Include="GolestaneShohada\Logic\" />
   </ItemGroup>
   <ItemGroup>
