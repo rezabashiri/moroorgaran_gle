@@ -5955,3 +5955,7 @@ span.colun-3 {
 	width: 100% !important;
 }
 /*Special Classes End*/
+
+.disNone{
+    display:none;
+}

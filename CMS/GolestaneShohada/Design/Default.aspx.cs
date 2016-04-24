@@ -21,6 +21,7 @@ namespace CMS.GolestaneShohada.Design
                 FillEvent();
                 FillBlog();
                 FillNews();
+                //FillComming();
                 
             }
         }
@@ -107,6 +108,12 @@ namespace CMS.GolestaneShohada.Design
             catch (Exception)
             {
             }
+        }
+        
+        public void FillComming()
+        {
+            //ListView222 = new Golestan.Helpers.InterFace().GetShahidCloserToDeath(10);
+            
         }
     }
 }
