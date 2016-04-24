@@ -91,8 +91,8 @@ namespace Golestan.Model
         /// <returns></returns>
         internal ViewShahidAmaliat GetShahid_AmaliatMonjarBeShahadatByIDShahid(int IDShahid )
         {
-            
-                string whereparam = string.Format(" IDShahid = {0} ", IDShahid );
+
+            string whereparam = string.Format(" IDShahid = {0} and ISMonjarBeShahadat ={1}", IDShahid,true);
                 return SearchShahidAmaliatByParameter(whereparam).FirstOrDefault<ViewShahidAmaliat>();
            
         }

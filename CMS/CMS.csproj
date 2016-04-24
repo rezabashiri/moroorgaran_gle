@@ -1410,11 +1410,6 @@
     <Folder Include="GolestaneShohada\Design\Css\" />
     <Folder Include="GolestaneShohada\Design\Image\" />
     <Folder Include="GolestaneShohada\Logic\" />
-<<<<<<< HEAD
-=======
-    <Folder Include="GolestaneShohada\Media\Amaliat\" />
-    <Folder Include="GolestaneShohada\Media\Yegan\" />
->>>>>>> per-shahid
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
