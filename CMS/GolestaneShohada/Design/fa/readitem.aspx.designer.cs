@@ -7,45 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CMS.GolestaneShohada.Design.MasterPage {
+namespace CMS.GolestaneShohada.Design.fa {
     
     
-    public partial class WebMaster {
+    public partial class readitem {
         
         /// <summary>
-        /// head control.
+        /// lblTopic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label lblTopic;
         
         /// <summary>
-        /// form1 control.
+        /// lblDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblDate;
         
         /// <summary>
-        /// ContentPageHeading control.
+        /// lblGrp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPageHeading;
+        protected global::System.Web.UI.WebControls.Label lblGrp;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// DivItem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivItem;
     }
 }

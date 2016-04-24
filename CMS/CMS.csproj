@@ -387,6 +387,8 @@
     <Content Include="fa\Resume.aspx" />
     <Content Include="fonts\WebYekan.svg" />
     <Content Include="Global.asax" />
+    <Content Include="GolestaneShohada\Design\fa\pershahid.aspx" />
+    <Content Include="GolestaneShohada\Design\fa\readitem.aspx" />
     <Content Include="GolestaneShohada\Design\fa\shohadalist.aspx" />
     <Content Include="GolestaneShohada\Design\GolestanMap\embed.html" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output.xml" />
@@ -583,6 +585,39 @@
     <Content Include="GolestaneShohada\Design\GolestanMap\library.html" />
     <Content Include="GolestaneShohada\Design\GolestanMap\readme.txt" />
     <Content Include="GolestaneShohada\Design\fa\images\header-pattren-1.png" />
+    <Content Include="GolestaneShohada\Design\Image\fullpage_grouphover.png" />
+    <Content Include="GolestaneShohada\Design\Image\fullpage_hover.png" />
+    <Content Include="GolestaneShohada\Design\Image\fullpage_pressed.png" />
+    <Content Include="GolestaneShohada\Design\Image\fullpage_rest.png" />
+    <Content Include="GolestaneShohada\Design\Image\home_grouphover.png" />
+    <Content Include="GolestaneShohada\Design\Image\home_hover.png" />
+    <Content Include="GolestaneShohada\Design\Image\home_pressed.png" />
+    <Content Include="GolestaneShohada\Design\Image\home_rest.png" />
+    <Content Include="GolestaneShohada\Design\Image\innder-heading-bg.jpg" />
+    <Content Include="GolestaneShohada\Design\Image\next_grouphover.png" />
+    <Content Include="GolestaneShohada\Design\Image\next_hover.png" />
+    <Content Include="GolestaneShohada\Design\Image\next_pressed.png" />
+    <Content Include="GolestaneShohada\Design\Image\next_rest.png" />
+    <Content Include="GolestaneShohada\Design\Image\previous_grouphover.png" />
+    <Content Include="GolestaneShohada\Design\Image\previous_hover.png" />
+    <Content Include="GolestaneShohada\Design\Image\previous_pressed.png" />
+    <Content Include="GolestaneShohada\Design\Image\previous_rest.png" />
+    <Content Include="GolestaneShohada\Design\Image\rotateleft_grouphover.png" />
+    <Content Include="GolestaneShohada\Design\Image\rotateleft_hover.png" />
+    <Content Include="GolestaneShohada\Design\Image\rotateleft_pressed.png" />
+    <Content Include="GolestaneShohada\Design\Image\rotateleft_rest.png" />
+    <Content Include="GolestaneShohada\Design\Image\rotateright_grouphover.png" />
+    <Content Include="GolestaneShohada\Design\Image\rotateright_hover.png" />
+    <Content Include="GolestaneShohada\Design\Image\rotateright_pressed.png" />
+    <Content Include="GolestaneShohada\Design\Image\rotateright_rest.png" />
+    <Content Include="GolestaneShohada\Design\Image\zoomin_grouphover.png" />
+    <Content Include="GolestaneShohada\Design\Image\zoomin_hover.png" />
+    <Content Include="GolestaneShohada\Design\Image\zoomin_pressed.png" />
+    <Content Include="GolestaneShohada\Design\Image\zoomin_rest.png" />
+    <Content Include="GolestaneShohada\Design\Image\zoomout_grouphover.png" />
+    <Content Include="GolestaneShohada\Design\Image\zoomout_hover.png" />
+    <Content Include="GolestaneShohada\Design\Image\zoomout_pressed.png" />
+    <Content Include="GolestaneShohada\Design\Image\zoomout_rest.png" />
     <Content Include="GolestaneShohada\Design\Js\images\fullpage_grouphover.png" />
     <Content Include="GolestaneShohada\Design\Js\images\fullpage_hover.png" />
     <Content Include="GolestaneShohada\Design\Js\images\fullpage_pressed.png" />
@@ -627,6 +662,7 @@
     <Content Include="GolestaneShohada\Design\Js\src\_outro.txt" />
     <Content Include="GolestaneShohada\Design\Default.aspx" />
     <Content Include="GolestaneShohada\Media\Shahids\1\Download-Icon.png" />
+    <Content Include="GolestaneShohada\Media\Shahid\hemmat.jpg" />
     <Content Include="GolestaneShohada\WebServices\GolestanWebservice.asmx" />
     <Content Include="images\Add.png" />
     <Content Include="images\banner-bg.png" />
@@ -1116,6 +1152,20 @@
     <Compile Include="GolestaneShohada\Design\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\pershahid.aspx.cs">
+      <DependentUpon>pershahid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\pershahid.aspx.designer.cs">
+      <DependentUpon>pershahid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\readitem.aspx.cs">
+      <DependentUpon>readitem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\readitem.aspx.designer.cs">
+      <DependentUpon>readitem.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GolestaneShohada\Design\fa\shohadalist.aspx.cs">
       <DependentUpon>shohadalist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1360,6 +1410,11 @@
     <Folder Include="GolestaneShohada\Design\Css\" />
     <Folder Include="GolestaneShohada\Design\Image\" />
     <Folder Include="GolestaneShohada\Logic\" />
+<<<<<<< HEAD
+=======
+    <Folder Include="GolestaneShohada\Media\Amaliat\" />
+    <Folder Include="GolestaneShohada\Media\Yegan\" />
+>>>>>>> per-shahid
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

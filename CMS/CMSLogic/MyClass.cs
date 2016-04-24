@@ -355,6 +355,115 @@ public class MyClass
         date = string.Format(date, DayOfWeek, day, month, year);
         return date;
     }
+    public string GetFarsiDate2(object dd, int kind)
+    {
+        PersianCalendar pc = new PersianCalendar();
+        DateTime InputDate = Convert.ToDateTime(dd);
+        string year = pc.GetYear(InputDate).ToString();
+        string m = pc.GetMonth(InputDate).ToString();
+        string day = pc.GetDayOfMonth(InputDate).ToString();
+        string dw = pc.GetDayOfWeek(InputDate).ToString();
+        pc.Equals(dw);
+        string month = "";
+        switch (m)
+        {
+            case "1":
+                month = "فروردین";
+                break;
+            case "2":
+                month = "اردیبهشت";
+                break;
+            case "3":
+                month = "خرداد";
+                break;
+            case "4":
+                month = "تیر";
+                break;
+            case "5":
+                month = "مرداد";
+                break;
+            case "6":
+                month = "شهریور";
+                break;
+            case "7":
+                month = "مهر";
+                break;
+            case "8":
+                month = "آبان";
+                break;
+            case "9":
+                month = "آذر";
+                break;
+            case "10":
+                month = "دی";
+                break;
+            case "11":
+                month = "بهمن";
+                break;
+            case "12":
+                month = "اسفند";
+                break;
+        }
+        string DayOfWeek = "";
+        switch (dw)
+        {
+
+            case "Saturday":
+                DayOfWeek = "شنبه";
+                break;
+            case "Sunday":
+                DayOfWeek = "یکشنبه";
+                break;
+            case "Monday":
+                DayOfWeek = "دوشنبه";
+                break;
+            case "Tuesday":
+                DayOfWeek = "سه شنبه";
+                break;
+            case "Wednesday":
+                DayOfWeek = "چهارشنبه";
+                break;
+            case "Thursday":
+                DayOfWeek = "پنجشنبه";
+                break;
+            case "Friday":
+                DayOfWeek = "جمعه";
+                break;
+
+        }
+        switch (kind)
+        {
+            default:
+                {
+                    string date = @"{0} {1} {2} {3}";
+                    date = string.Format(date, DayOfWeek, day, month, year);
+                    return date;
+                }
+            case 0:
+                {
+                    string date = @"{0} {1} {2} {3}";
+                    date = string.Format(date, DayOfWeek, day, month, year);
+                    return date;
+                }
+                break;
+            case 1:
+                {
+                    return DayOfWeek;
+                } break;
+            case 2:
+                {
+                    return day;
+                } break;
+            case 3:
+                {
+                    return month;
+                } break;
+            case 4:
+                {
+                    return year;
+                } break;
+        }
+    }
     public DataView SpSearch(string PartID, string itemtopic, string GroupID, string FromDate, string ToDate, string Customer)
     {
         DataView dv = new DataView();
