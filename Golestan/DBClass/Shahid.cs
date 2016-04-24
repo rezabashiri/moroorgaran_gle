@@ -57,7 +57,7 @@ namespace Golestan.Model
             public virtual ICollection<MatalebEzafe> MatalebEzafes { get; set; }
             public virtual Vaziat Vaziat { get; set; }
            
-            public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
+            //public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
            
             public virtual ICollection<ShahidRabete> ShahidRabetes { get; set; }
        
@@ -92,7 +92,7 @@ namespace Golestan.Model
         internal ViewShahidAmaliat GetShahid_AmaliatMonjarBeShahadatByIDShahid(int IDShahid )
         {
 
-            string whereparam = string.Format(" IDShahid = {0} and ISMonjarBeShahadat ={1}", IDShahid,true);
+            string whereparam = string.Format(" IDShahid = {0} and ISMonjarBeShahadat ={1}", IDShahid,1);
                 return SearchShahidAmaliatByParameter(whereparam).FirstOrDefault<ViewShahidAmaliat>();
            
         }

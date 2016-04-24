@@ -13,7 +13,7 @@ namespace Golestan.Model
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     [MetadataType(typeof(MetaData))]
-    [System.ComponentModel.DisplayName("منطقه")]
+    [System.ComponentModel.DisplayName("مطالب اضافه در مورد شهدا")]
     public partial class MatalebEzafe
     {
         private class MetaData
