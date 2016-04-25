@@ -496,6 +496,13 @@ public class MyClass
         return dv;
 
     }
+    public static int CustomerId
+    {
+        get
+        {
+            return AccessManagementService.Access.AccessControl.LoggenInUser.ID;
+        }
+    }
 }
 
 

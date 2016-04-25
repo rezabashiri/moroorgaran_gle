@@ -4,12 +4,21 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using tkv.Utility;
 namespace CMS.GolestaneShohada.Design.fa
 {
     public partial class pershahid : System.Web.UI.Page
     {
         MyClass mc = new MyClass();
+        public double X
+        {
+            get;set;
+        }
+        public double Y
+        {
+            get;
+            set;
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -19,28 +28,36 @@ namespace CMS.GolestaneShohada.Design.fa
         }
         public void Fill()
         {
-            int shahidID = Convert.ToInt32(Request.QueryString["shahidID"]);
+            int shahidID = Helpers.QueryStringHelpers.GetValue(Helpers.QueryStringHelpers.QueryStrings.shahidID).ToInt32();
+            if (shahidID == int.MinValue)
+                return;
             var Myshahid = new Golestan.Helpers.InterFace().GetShahidAmaliatByID(shahidID);
-            lblName.Text = Myshahid.Name.ToString();
-            lblFamily.Text = Myshahid.Family.ToString();
-            lbldayofWeek.Text = mc.GetFarsiDate2(Convert.ToDateTime(Myshahid.TarikheShahadat), 1);
-            lblDay.Text = mc.GetFarsiDate2(Convert.ToDateTime(Myshahid.TarikheShahadat), 2);
-            lblMonth.Text = mc.GetFarsiDate2(Convert.ToDateTime(Myshahid.TarikheShahadat), 3);
-            lblyear.Text = mc.GetFarsiDate2(Convert.ToDateTime(Myshahid.TarikheShahadat), 4);
+            lblName.Text = Myshahid.Name;
+           lblFamily.Text = Myshahid.Family;
+           Title = string.Format("{0} {1}", Myshahid.Name, Myshahid.Family);
+            if (Myshahid.TarikheShahadat.HasValue)
+            {
+                lbldayofWeek.Text = Myshahid.TarikheShahadat.Value.PersianDayOfWeek();
+                lblDay.Text = Myshahid.TarikheShahadat.Value.ToPersianDate().Day.ToString();
+                lblMonth.Text = mc.GetFarsiDate2(Convert.ToDateTime(Myshahid.TarikheShahadat), 3);
+                lblyear.Text = Myshahid.TarikheShahadat.Value.ToPersianDate().Year.ToString();
+            }
+            lblTavalod.Text =  Myshahid.TarikheTavalod.HasValue ?  Myshahid.TarikheTavalod.Value.ToPersianDate().ToShortDateString() : string.Empty;
+            lblFather.Text = Myshahid.NamePedar ;
+            lblShahr.Text = Myshahid.NameShahrestan ;
+            lblGhete.Text = Myshahid.NameGhate ;
+            UscShahidMaghbare.GhateID = Myshahid.GhateID.ToString();
+            X = Myshahid.X ?? 0;
+            Y = Myshahid.Y ?? 0;
+            lblamaliat.Text = Myshahid.NameAmaliat ;
+            lblSemat.Text = Myshahid.NameRaste ;
+            lblYegan.Text = Myshahid.NameYegan ;
+            lblNiroo.Text = Myshahid.NameNiroo ;
+            Image1.ImageUrl = Myshahid.VirtualAddress ;
+            Image1.AlternateText = "درباره شهید" + " " + Myshahid.Name  + " " + Myshahid.Family ;
+            Image1.ToolTip = Myshahid.Name  + " " + Myshahid.Family ;
 
-            lblTavalod.Text = mc.GetFarsiDate2(Convert.ToDateTime(Myshahid.TarikheTavalod), 0);
-            lblFather.Text = Myshahid.NamePedar.ToString();
-            lblShahr.Text = Myshahid.NameShahrestan.ToString();
-            lblGhete.Text = Myshahid.NameGhate.ToString();
-
-            lblamaliat.Text = Myshahid.NameAmaliat.ToString();
-            lblSemat.Text = Myshahid.NameRaste.ToString();
-            lblYegan.Text = Myshahid.NameYegan.ToString();
-            lblNiroo.Text = Myshahid.NameNiroo.ToString();
-            Image1.ImageUrl = Myshahid.VirtualAddress.ToString();
-            Image1.AlternateText = "درباره شهید" + " " + Myshahid.Name.ToString() + " " + Myshahid.Family.ToString();
-            Image1.ToolTip = Myshahid.Name.ToString() + " " + Myshahid.Family.ToString();
-
+            
 
             // image will be added.
         }

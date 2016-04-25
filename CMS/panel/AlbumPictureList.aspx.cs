@@ -15,7 +15,7 @@ public partial class aspx_AlbumPictureList : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            CheckCustomer();
+            //CheckCustomer();
             BindDataList();
             FillLbl();
         }

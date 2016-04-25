@@ -12,7 +12,7 @@ public partial class CMS_panel_AddVideo : System.Web.UI.Page
     DataTable dt = new DataTable();
     string sql = "";
     PersianCalendar pc = new PersianCalendar();
-    public int Customer()
+    public int CstID()
     {
         int CstID = Convert.ToInt32(Session["CustomerID"]);
         return CstID;
@@ -21,7 +21,7 @@ public partial class CMS_panel_AddVideo : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            CheckCustomer();
+         //   CheckCustomer();
             BindPart();
             BindFreshStat();
             BindCommentStat();

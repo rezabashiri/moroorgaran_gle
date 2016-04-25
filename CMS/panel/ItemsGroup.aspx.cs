@@ -12,14 +12,13 @@ public partial class panel_ItemsGroup : System.Web.UI.Page
     string sql = "";
     public int Customer()
     {
-        int CstID = Convert.ToInt32(Session["CustomerID"]);
-        return CstID;
+        return MyClass.CustomerId;
     }
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
-            CheckCustomer();
+           
             FirstGroup();
             BindPartDrp();
             BindGrv();

@@ -3,10 +3,9 @@ var mouseDownPixel;
 var mouseDownCenter;
 function init() {
     viewer = new Seadragon.Viewer("container");
-    viewer.openDzi("GolestaneShohada/Design/GolestanMap/GeneratedImages/dzc_output.xml");
+    viewer.openDzi("/GolestaneShohada/Design/GolestanMap/GeneratedImages/dzc_output.xml");
     viewer.addEventListener("open", showViewport);
     viewer.addEventListener("animation", showViewport);
-    viewer.addEventListener("open", addoverlay);
     Seadragon.Utils.addEvent(viewer.elmt, "mousemove",
       showMouse);
 
@@ -143,27 +142,7 @@ function getghate(point) {
 }
 
  
-function addoverlay(viewer) {
-    if (!viewer.isOpen()) {
-        return;
-    }
-    var img = document.createElement("img");
-    var point = getghateposition(1);
-    // island off the coast of africa
-
-    var placement = Seadragon.OverlayPlacement.BOTTOM;
-
-    img.src = "GolestaneShohada/Design/fa/images/Pin_Map.png";
-    viewer.drawer.addOverlay(img, point, placement);
-    var div = document.createElement("div");
-    //var rect = new Seadragon.Rect(
-    //    0.15226931601316998, 0.11237404811046009,
-    //    0.1487579850430218, 0.06805920884321259);
-    // roughly the united states
-
-    //div.className = "overlay";
-    //viewer.drawer.addOverlay(div, rect);
-}
+ 
 function showMouse(event) {
     // getMousePosition() returns position relative to page,
     // while we want the position relative to the viewer

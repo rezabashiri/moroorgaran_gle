@@ -15,14 +15,13 @@ public partial class panel_MakeItem : System.Web.UI.Page
     PersianCalendar pc = new PersianCalendar();
     public int Customer()
     {
-        int CstID = Convert.ToInt32(Session["CustomerID"]);
-        return CstID;
+        return MyClass.CustomerId;
     }
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
-            CheckCustomer();
+             
             //FillTitle();
             BindGrp();
             BindFreshStat();

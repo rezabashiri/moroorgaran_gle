@@ -17,8 +17,8 @@ namespace CMS
 
             WebUtility.AppStart.EntityModelHelpers.RegisterEntityModel(Golestan.AppStart.DynamicDataConfig.GolestanModel, new Golestan.Model.GolestanShohadaEntities());
             WebUtility.AppStart.ConfigRoutes.RegisterModelRoutes(RouteTable.Routes, Golestan.AppStart.DynamicDataConfig.GolestanModel);
-            //WebUtility.AppStart.EntityModelHelpers.RegisterEntityModel(global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel, new global::AccessManagementService.Model.AccessEntities());
-            //WebUtility.AppStart.ConfigRoutes.RegisterModelRoutes(RouteTable.Routes, global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel);
+            WebUtility.AppStart.EntityModelHelpers.RegisterEntityModel(global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel, new global::AccessManagementService.Model.AccessEntities());
+            WebUtility.AppStart.ConfigRoutes.RegisterModelRoutes(RouteTable.Routes, global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel);
         
         }
 
@@ -27,11 +27,14 @@ namespace CMS
             Session["CustomerID"] = "";
         }
 
-        protected void Application_BeginRequest(object sender, EventArgs e)
-        {
 
+
+        void Application_BeginRequest(object sender, EventArgs e)
+        {
+            System.Threading.Thread.CurrentThread.CurrentCulture = new tkv.Utility.CultureHelpers().GetCulture();
         }
 
+        
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
         {
 

@@ -103,13 +103,13 @@ namespace CMS.GolestaneShohada.Design.fa {
         protected global::System.Web.UI.WebControls.Label lblGhete;
         
         /// <summary>
-        ///  lblamaliat control.
+        /// lblamaliat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label  lblamaliat;
+        protected global::System.Web.UI.WebControls.Label lblamaliat;
         
         /// <summary>
         /// lblSemat control.
@@ -146,5 +146,14 @@ namespace CMS.GolestaneShohada.Design.fa {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image1;
+        
+        /// <summary>
+        /// UscShahidMaghbare control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CMS.GolestaneShohada.Controls.UscShahidMaghbare UscShahidMaghbare;
     }
 }

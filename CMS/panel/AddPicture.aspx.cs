@@ -17,31 +17,11 @@ public partial class CMS_panel_AddPicture : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            CheckCustomer();
+           
             FillAlbumName();
         }
     }
-    protected void CheckCustomer()
-    {
-        try
-        {
-            int CustomerID = Convert.ToInt32(Session["CustomerID"]);
-            string sql = "select Count(*) from TCustomers where CustomerID={0} and Enable=1";
-            sql = string.Format(sql, CustomerID);
-            mc.connect();
-            int Cnt = Convert.ToInt32(mc.docommandScalar(sql));
-            mc.disconnect();
-            if (Cnt != 1)
-            {
-                Session["CustomerID"] = "";
-                Response.Redirect("MgrLogin.aspx");
-            }
-        }
-        catch (Exception)
-        {
-            Response.Redirect("MgrLogin.aspx");
-        }
-    }
+ 
     protected void FillAlbumName()
     {
         int Albumid = Convert.ToInt32(Session["AlbumID"]);

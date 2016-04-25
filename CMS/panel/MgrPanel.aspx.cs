@@ -13,38 +13,18 @@ public partial class Control_Panel_aspx_MgrPanel : System.Web.UI.Page
     string sql = "";
     public int Customer()
     {
-        int CstID = Convert.ToInt32(Session["CustomerID"]);
+        int CstID = CMS.GolestaneShohada.Helpers.SessionHelpers.GetUser().ID;
         return CstID;
     }
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
-            CheckCustomer();
+          //  CheckCustomer();
             LoadRemark();
         }
     }
-    protected void CheckCustomer()
-    {
-        try
-        {
-            int CustomerID = Convert.ToInt32(Session["CustomerID"]);
-            string sql = "select Count(*) from TCustomers where CustomerID={0} and Enable=1";
-            sql = string.Format(sql, CustomerID);
-            mc.connect();
-            int Cnt = Convert.ToInt32(mc.docommandScalar(sql));
-            mc.disconnect();
-            if (Cnt != 1)
-            {
-                Session["CustomerID"] = "";
-                Response.Redirect("MgrLogin.aspx");
-            }
-        }
-        catch (Exception)
-        {
-            Response.Redirect("MgrLogin.aspx");
-        }
-    }
+
 
     protected void LoadRemark()
     {

@@ -10,10 +10,11 @@ namespace CMS {
     public partial class Boolean_EditField : System.Web.DynamicData.FieldTemplateUserControl {
         protected override void OnDataBinding(EventArgs e) {
             base.OnDataBinding(e);
-    
+            bool chk = false;
             object val = FieldValue;
             if (val != null)
-                CheckBox1.Checked = (bool) val;
+                bool.TryParse(val.ToString(), out chk);
+            CheckBox1.Checked = chk;
         }
     
         protected override void ExtractValues(IOrderedDictionary dictionary) {

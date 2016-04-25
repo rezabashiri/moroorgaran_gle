@@ -14,8 +14,7 @@ public partial class panel_ItemsList : System.Web.UI.Page
     string sql = "";
     public int Customer()
     {
-        int CstID = Convert.ToInt32(Session["CustomerID"]);
-        return CstID;
+        return MyClass.CustomerId;
     }
     //public int Part()
     //{
@@ -26,7 +25,7 @@ public partial class panel_ItemsList : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            CheckCustomer();
+           
             FillGroup();
             //ReferenceGroup();
             //FillTitle();

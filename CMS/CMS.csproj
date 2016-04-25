@@ -39,11 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AccessManagement">
-      <HintPath>..\..\..\Modiriat Gharardadha\AccessManagement\bin\AccessManagement.dll</HintPath>
-    </Reference>
-    <Reference Include="AccessManagementService">
-      <HintPath>..\..\..\..\publish\AccessManagement\bin\AccessManagementService.dll</HintPath>
+    <Reference Include="AccessManagementService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AccessManagementService.dll</HintPath>
     </Reference>
     <Reference Include="AjaxControlToolkit">
       <HintPath>..\packages\AjaxControlToolkit.dll</HintPath>
@@ -53,6 +51,10 @@
     </Reference>
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_logincontrol.ascx.cc671b29, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\App_Web_logincontrol.ascx.cc671b29.dll</HintPath>
     </Reference>
     <Reference Include="App_Web_uscfileupload.ascx.cc671b29">
       <HintPath>..\packages\App_Web_uscfileupload.ascx.cc671b29.dll</HintPath>
@@ -171,8 +173,9 @@
     <Reference Include="TimePicker">
       <HintPath>..\packages\TimePicker.dll</HintPath>
     </Reference>
-    <Reference Include="tkvUtility">
-      <HintPath>..\..\..\..\component\Utility\bin\x86\Debug\tkvUtility.dll</HintPath>
+    <Reference Include="tkvUtility, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\tkvUtility.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -365,6 +368,8 @@
     <Content Include="DynamicData\FieldTemplates\ManyToMany.ascx" />
     <Content Include="DynamicData\FieldTemplates\ManyToMany_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Password.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Password_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\PersianDate.ascx" />
     <Content Include="DynamicData\FieldTemplates\PersianDate_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Text.ascx" />
@@ -386,184 +391,582 @@
     <Content Include="fa\Resume.aspx" />
     <Content Include="fonts\WebYekan.svg" />
     <Content Include="Global.asax" />
+    <Content Include="GolestaneShohada\Controls\UscNaghsheGolestanShohada.ascx" />
     <Content Include="GolestaneShohada\Controls\UscShahidMaghbare.ascx" />
+    <Content Include="GolestaneShohada\Design\css\audioplayer.css" />
+    <Content Include="GolestaneShohada\Design\css\bootstrap.css" />
+    <Content Include="GolestaneShohada\Design\css\bootstrap.min.css" />
+    <Content Include="GolestaneShohada\Design\css\color-4.css" />
+    <Content Include="GolestaneShohada\Design\css\color.css" />
+    <Content Include="GolestaneShohada\Design\css\content_slider_style.css" />
+    <Content Include="GolestaneShohada\Design\css\custom.css" />
+    <Content Include="GolestaneShohada\Design\css\font-awesome.min.css" />
+    <Content Include="GolestaneShohada\Design\css\fonts\fontawesome-webfont.svg" />
+    <Content Include="GolestaneShohada\Design\css\fonts\WebYekan.svg" />
+    <Content Include="GolestaneShohada\Design\css\jquery.bxslider.css" />
+    <Content Include="GolestaneShohada\Design\css\prettyPhoto.css" />
+    <Content Include="GolestaneShohada\Design\css\responsive.css" />
+    <Content Include="GolestaneShohada\Design\Default.aspx" />
+    <Content Include="GolestaneShohada\Design\fa\images\404-bg.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\about-img.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\author-img.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\banner-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\banner-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\banner-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\blog-medium\blog-medium-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\blog-medium\blog-medium-img-10.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\blog-medium\blog-medium-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\blog-medium\blog-medium-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\blog-medium\blog-medium-img-4.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\blog-medium\blog-medium-img-5.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\blog-medium\blog-medium-img-6.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\blog-medium\blog-medium-img-7.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\blog-medium\blog-medium-img-8.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\blog-medium\blog-medium-img-9.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\border-img.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\bx_loader.gif" />
+    <Content Include="GolestaneShohada\Design\fa\images\calendar-img.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\color\1.gif" />
+    <Content Include="GolestaneShohada\Design\fa\images\color\2.gif" />
+    <Content Include="GolestaneShohada\Design\fa\images\color\3.gif" />
+    <Content Include="GolestaneShohada\Design\fa\images\color\4.gif" />
+    <Content Include="GolestaneShohada\Design\fa\images\color\5.gif" />
+    <Content Include="GolestaneShohada\Design\fa\images\color\6.gif" />
+    <Content Include="GolestaneShohada\Design\fa\images\colun-img.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\comment-img-1.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\comment-img-2.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\controls.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\error-text-img.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\event-detail-img.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\event-listing\event-listing-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\event-listing\event-listing-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\event-listing\event-listing-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\event-listing\event-listing-img-4.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\event-listing\event-listing-img-5.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\event-listing\event-listing-img-6.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\event-listing\event-listing-img-7.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\favicon.ico" />
+    <Content Include="GolestaneShohada\Design\fa\images\featured-sermon-pattren.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\flickr-photo\flickr-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\flickr-photo\flickr-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\flickr-photo\flickr-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\flickr-photo\flickr-img-4.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\flickr-photo\flickr-img-5.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\flickr-photo\flickr-img-6.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\flickr-photo\flickr-img-7.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\flickr-photo\flickr-img-8.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\flickr-photo\flickr-img-9.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-album\gallery-album-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-album\gallery-album-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-album\gallery-album-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-album\gallery-album-img-4.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-album\gallery-album-img-5.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-album\gallery-album-img-6.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-album\gallery-album-img-7.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-album\gallery-album-img-8.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-album\gallery-album-img-9.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-four-column\gallery-4-column-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-four-column\gallery-4-column-img-10.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-four-column\gallery-4-column-img-11.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-four-column\gallery-4-column-img-12.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-four-column\gallery-4-column-img-13.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-four-column\gallery-4-column-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-four-column\gallery-4-column-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-four-column\gallery-4-column-img-4.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-four-column\gallery-4-column-img-5.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-four-column\gallery-4-column-img-6.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-four-column\gallery-4-column-img-7.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-four-column\gallery-4-column-img-8.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-four-column\gallery-4-column-img-9.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\Gallery-Masonry\masonry-gallery-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\Gallery-Masonry\masonry-gallery-img-10.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\Gallery-Masonry\masonry-gallery-img-11.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\Gallery-Masonry\masonry-gallery-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\Gallery-Masonry\masonry-gallery-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\Gallery-Masonry\masonry-gallery-img-4.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\Gallery-Masonry\masonry-gallery-img-5.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\Gallery-Masonry\masonry-gallery-img-6.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\Gallery-Masonry\masonry-gallery-img-7.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\Gallery-Masonry\masonry-gallery-img-8.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\Gallery-Masonry\masonry-gallery-img-9.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-three-column\gallery-3-column-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-three-column\gallery-3-column-img-10.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-three-column\gallery-3-column-img-11.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-three-column\gallery-3-column-img-12.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-three-column\gallery-3-column-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-three-column\gallery-3-column-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-three-column\gallery-3-column-img-4.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-three-column\gallery-3-column-img-5.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-three-column\gallery-3-column-img-6.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-three-column\gallery-3-column-img-7.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-three-column\gallery-3-column-img-8.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-three-column\gallery-3-column-img-9.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-two-column\gallery-2-column-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-two-column\gallery-2-column-img-10.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-two-column\gallery-2-column-img-11.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-two-column\gallery-2-column-img-12.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-two-column\gallery-2-column-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-two-column\gallery-2-column-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-two-column\gallery-2-column-img-4.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-two-column\gallery-2-column-img-5.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-two-column\gallery-2-column-img-6.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-two-column\gallery-2-column-img-7.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-two-column\gallery-2-column-img-8.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\gallery-two-column\gallery-2-column-img-9.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\header-pattren-1.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\header-pattren-top.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\home-blog-post-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\home-blog-post-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\home-wedigt-img.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\innder-heading-bg.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-event-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-event-img-10.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-event-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-event-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-event-img-4.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-event-img-5.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-event-img-6.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-event-img-7.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-event-img-8.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-event-img-9.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-event-img.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-news-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-news-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-news\latest-news-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-news\latest-news-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-news\latest-news-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-news\latest-news-img-4.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-news\latest-news-img-5.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-news\latest-news-img-6.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-sermons-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-sermons-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\latest-sermons-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\left-arrow.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\logo1.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\news-detail-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\news-listing-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\our-preachers-bg.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\our-project-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\our-project-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\our-project-img-3.jpg" />
     <Content Include="GolestaneShohada\Design\fa\images\Pin_Map.png" />
-    <Content Include="GolestaneShohada\Design\fa\pershahid.aspx" />
+    <Content Include="GolestaneShohada\Design\fa\images\plus-icon.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\post-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\post-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\post-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\default\loader.gif" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\default\sprite.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\purchase-section-bg.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\quote-message-img-1.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\recent-post-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\recent-post-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\recent-post-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\recent-post-img-4.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\related-event-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\related-event-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\related-event-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\right-arrow.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\sermons\sermons-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\sermons\sermons-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\sermons\sermons-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\sermons\sermons-img-4.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\sermons\sermons-img-5.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\sermons\sermons-img-6.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\sermons\sermons-img-7.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\team\team-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\team\team-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\team\team-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\team\team-img-4.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\team\team-img-5.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\team\team-img-6.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\team\team-img-7.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\team\team-img-8.png" />
+    <Content Include="GolestaneShohada\Design\fa\images\timeline-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\timelines-img-1.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\timelines-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\timelines-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\timelines-thumb-img-2.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\timelines-thumb-img-3.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\timelines-thumb-img.jpg" />
+    <Content Include="GolestaneShohada\Design\fa\images\top1.png" />
+    <Content Include="GolestaneShohada\Design\fa\PerShahid.aspx" />
     <Content Include="GolestaneShohada\Design\fa\readitem.aspx" />
     <Content Include="GolestaneShohada\Design\fa\shohadalist.aspx" />
     <Content Include="GolestaneShohada\Design\GolestanMap\embed.html" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output.xml" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\0\0_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\0\0_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\0_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\0_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\0_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\0_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\0_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\0_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\1_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\1_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\1_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\1_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\1_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\1_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\2_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\2_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\2_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\2_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\2_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\10\2_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\0_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\0_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\0_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\0_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\0_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\0_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\0_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\0_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\0_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\0_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\1_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\1_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\1_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\1_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\1_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\1_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\1_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\1_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\1_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\1_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\2_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\2_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\2_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\2_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\2_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\2_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\2_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\2_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\2_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\2_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\3_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\3_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\3_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\3_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\3_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\3_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\3_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\3_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\3_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\3_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\4_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\4_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\4_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\4_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\4_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\4_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\4_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\4_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\4_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\4_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\5_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\5_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\5_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\5_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\5_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\5_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\5_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\5_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\5_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\11\5_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_5.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_5.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_6.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_6.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_7.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_7.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_8.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_8.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_9.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\0_9.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_5.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_5.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_6.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_6.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_7.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_7.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_8.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_8.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_9.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\10_9.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_5.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_5.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_6.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_6.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_7.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_7.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_8.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_8.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_9.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\11_9.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_5.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_5.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_6.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_6.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_7.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_7.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_8.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_8.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_9.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\1_9.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_5.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_5.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_6.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_6.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_7.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_7.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_8.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_8.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_9.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\2_9.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_5.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_5.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_6.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_6.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_7.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_7.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_8.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_8.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_9.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\3_9.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_5.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_5.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_6.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_6.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_7.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_7.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_8.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_8.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_9.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\4_9.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_5.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_5.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_6.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_6.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_7.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_7.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_8.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_8.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_9.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\5_9.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_5.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_5.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_6.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_6.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_7.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_7.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_8.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_8.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_9.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\6_9.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_5.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_5.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_6.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_6.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_7.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_7.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_8.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_8.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_9.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\7_9.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_5.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_5.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_6.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_6.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_7.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_7.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_8.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_8.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_9.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\8_9.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_2.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_2.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_3.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_3.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_4.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_4.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_5.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_5.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_6.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_6.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_7.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_7.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_8.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_8.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_9.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\9_9.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\1\0_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\1\0_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\2\0_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\2\0_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\3\0_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\3\0_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\4\0_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\4\0_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\5\0_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\5\0_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\6\0_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\6\0_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\7\0_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\7\0_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\8\0_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\8\0_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\9\0_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\9\0_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\9\0_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\9\0_1.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\9\1_0.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\9\1_0.png" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\9\1_1.jpg" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\9\1_1.png" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\scene.xml" />
     <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\SparseImageSceneGraph.xml" />
@@ -585,7 +988,13 @@
     <Content Include="GolestaneShohada\Design\GolestanMap\img\zoomout_rest.png" />
     <Content Include="GolestaneShohada\Design\GolestanMap\library.html" />
     <Content Include="GolestaneShohada\Design\GolestanMap\readme.txt" />
-    <Content Include="GolestaneShohada\Design\fa\images\header-pattren-1.png" />
+    <Content Include="GolestaneShohada\Design\Image\innder-heading-bg.jpg" />
+    <Content Include="GolestaneShohada\Design\Image\sample-photo.jpg" />
+    <Content Include="GolestaneShohada\Design\Image\thumb-sample.jpg" />
+    <Content Include="GolestaneShohada\Design\Js\audioplayer.js" />
+    <Content Include="GolestaneShohada\Design\Js\blocksit.min.js" />
+    <Content Include="GolestaneShohada\Design\Js\bootstrap.js" />
+    <Content Include="GolestaneShohada\Design\Js\custom.js" />
     <Content Include="GolestaneShohada\Design\Image\fullpage_grouphover.png" />
     <Content Include="GolestaneShohada\Design\Image\fullpage_hover.png" />
     <Content Include="GolestaneShohada\Design\Image\fullpage_pressed.png" />
@@ -594,25 +1003,6 @@
     <Content Include="GolestaneShohada\Design\Image\home_hover.png" />
     <Content Include="GolestaneShohada\Design\Image\home_pressed.png" />
     <Content Include="GolestaneShohada\Design\Image\home_rest.png" />
-    <Content Include="GolestaneShohada\Design\Image\innder-heading-bg.jpg" />
-    <Content Include="GolestaneShohada\Design\Image\next_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Image\next_hover.png" />
-    <Content Include="GolestaneShohada\Design\Image\next_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Image\next_rest.png" />
-    <Content Include="GolestaneShohada\Design\Image\previous_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Image\previous_hover.png" />
-    <Content Include="GolestaneShohada\Design\Image\previous_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Image\previous_rest.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateleft_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateleft_hover.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateleft_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateleft_rest.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateright_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateright_hover.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateright_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Image\rotateright_rest.png" />
-    <Content Include="GolestaneShohada\Design\Image\sample-photo.jpg" />
-    <Content Include="GolestaneShohada\Design\Image\thumb-sample.jpg" />
     <Content Include="GolestaneShohada\Design\Image\zoomin_grouphover.png" />
     <Content Include="GolestaneShohada\Design\Image\zoomin_hover.png" />
     <Content Include="GolestaneShohada\Design\Image\zoomin_pressed.png" />
@@ -621,27 +1011,24 @@
     <Content Include="GolestaneShohada\Design\Image\zoomout_hover.png" />
     <Content Include="GolestaneShohada\Design\Image\zoomout_pressed.png" />
     <Content Include="GolestaneShohada\Design\Image\zoomout_rest.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\fullpage_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\fullpage_hover.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\fullpage_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\fullpage_rest.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\home_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\home_hover.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\home_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\home_rest.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\zoomin_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\zoomin_hover.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\zoomin_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\zoomin_rest.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\zoomout_grouphover.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\zoomout_hover.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\zoomout_pressed.png" />
-    <Content Include="GolestaneShohada\Design\Js\images\zoomout_rest.png" />
+    <Content Include="GolestaneShohada\Design\Js\jquery-1.11.3.min.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.bxslider.min.js" />
     <Content Include="GolestaneShohada\Design\Js\jquery.content_slider.js" />
-    <Content Include="GolestaneShohada\Design\Js\OpenSeadragon.js" />
-    <Content Include="GolestaneShohada\Design\Js\openseadragon.min.js" />
-    <Content Include="GolestaneShohada\Design\Js\seadragon-dev.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.content_slider.min.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.countdown.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.final-countdown.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.flexisel.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.plugin.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.prettyPhoto.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.stellar.min.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.tabSlideOut.v1.3.js" />
+    <Content Include="GolestaneShohada\Design\Js\kinetic.js" />
+    <Content Include="GolestaneShohada\Design\Js\location-map-api.js" />
+    <Content Include="GolestaneShohada\Design\Js\location-map.js" />
+    <Content Include="GolestaneShohada\Design\Js\MaghbareShahid.js" />
     <Content Include="GolestaneShohada\Design\Js\MapCalculation.js" />
+    <Content Include="GolestaneShohada\Design\Js\respond.js" />
+    <Content Include="GolestaneShohada\Design\Js\seadragon-dev.js" />
     <Content Include="GolestaneShohada\Design\Js\seadragon-min.js" />
     <Content Include="GolestaneShohada\Design\Js\src\Seadragon.Buttons.js" />
     <Content Include="GolestaneShohada\Design\Js\src\Seadragon.Config.js" />
@@ -664,7 +1051,8 @@
     <Content Include="GolestaneShohada\Design\Js\src\Seadragon.Viewport.js" />
     <Content Include="GolestaneShohada\Design\Js\src\_intro.txt" />
     <Content Include="GolestaneShohada\Design\Js\src\_outro.txt" />
-    <Content Include="GolestaneShohada\Design\Default.aspx" />
+    <Content Include="GolestaneShohada\Design\Js\styleswitch.js" />
+    <Content Include="GolestaneShohada\Design\Js\TimeCircles.js" />
     <Content Include="GolestaneShohada\Media\Shahids\1\Download-Icon.png" />
     <Content Include="GolestaneShohada\Media\Shahid\hemmat.jpg" />
     <Content Include="GolestaneShohada\WebServices\GolestanWebservice.asmx" />
@@ -841,6 +1229,7 @@
     <Content Include="js\tinymce\tinymce.min.js" />
     <Content Include="js\tms-0.3.js" />
     <Content Include="js\tms_presets.js" />
+    <Content Include="LoginUser.aspx" />
     <Content Include="MapTest.aspx" />
     <Content Include="Panel.aspx" />
     <Content Include="panel\AddPicture.aspx" />
@@ -860,7 +1249,9 @@
     <Content Include="panel\MgrLogin.aspx" />
     <Content Include="panel\MgrPanel.aspx" />
     <Content Include="panel\PictureBoard.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -1033,6 +1424,20 @@
     <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.designer.cs">
       <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
     </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Password.ascx.cs">
+      <DependentUpon>Password.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Password.ascx.designer.cs">
+      <DependentUpon>Password.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Password_Edit.ascx.cs">
+      <DependentUpon>Password_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Password_Edit.ascx.designer.cs">
+      <DependentUpon>Password_Edit.ascx</DependentUpon>
+    </Compile>
     <Compile Include="DynamicData\FieldTemplates\PersianDate.ascx.cs">
       <DependentUpon>PersianDate.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1149,6 +1554,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GolestaneShohada\Controls\UscNaghsheGolestanShohada.ascx.cs">
+      <DependentUpon>UscNaghsheGolestanShohada.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Controls\UscNaghsheGolestanShohada.ascx.designer.cs">
+      <DependentUpon>UscNaghsheGolestanShohada.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GolestaneShohada\Controls\UscShahidMaghbare.ascx.cs">
       <DependentUpon>UscShahidMaghbare.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1164,11 +1576,11 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="GolestaneShohada\Design\fa\pershahid.aspx.cs">
-      <DependentUpon>pershahid.aspx</DependentUpon>
+      <DependentUpon>PerShahid.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GolestaneShohada\Design\fa\pershahid.aspx.designer.cs">
-      <DependentUpon>pershahid.aspx</DependentUpon>
+      <DependentUpon>PerShahid.aspx</DependentUpon>
     </Compile>
     <Compile Include="GolestaneShohada\Design\fa\readitem.aspx.cs">
       <DependentUpon>readitem.aspx</DependentUpon>
@@ -1191,9 +1603,18 @@
     <Compile Include="GolestaneShohada\Design\MasterPage\WebMaster.Master.designer.cs">
       <DependentUpon>WebMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="GolestaneShohada\Helpers\QueryStringHelpers.cs" />
+    <Compile Include="GolestaneShohada\Helpers\SessionHelpers.cs" />
     <Compile Include="GolestaneShohada\WebServices\GolestanWebservice.asmx.cs">
       <DependentUpon>GolestanWebservice.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LoginUser.aspx.cs">
+      <DependentUpon>LoginUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginUser.aspx.designer.cs">
+      <DependentUpon>LoginUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="MapTest.aspx.cs">
       <DependentUpon>MapTest.aspx</DependentUpon>
@@ -1374,7 +1795,6 @@
     <Content Include="fonts\WebYekan.woff" />
     <Content Include="MasterPages\WebMaster.master" />
     <Content Include="packages.config" />
-    <Content Include="GolestaneShohada\Design\Js\openseadragon.min.js.map" />
     <Content Include="MasterPages\MgrMaster.Master" />
     <Content Include="js\tinymce\langs\readme.md" />
     <Content Include="js\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
@@ -1409,6 +1829,29 @@
     <Content Include="assets\lineicons\fonts\linecons.eot" />
     <Content Include="assets\lineicons\fonts\linecons.ttf" />
     <Content Include="assets\lineicons\fonts\linecons.woff" />
+    <Content Include="GolestaneShohada\Design\css\fonts\fontawesome-webfont.eot" />
+    <Content Include="GolestaneShohada\Design\css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="GolestaneShohada\Design\css\fonts\fontawesome-webfont.woff" />
+    <Content Include="GolestaneShohada\Design\css\fonts\fontawesome-webfont.woff2" />
+    <Content Include="GolestaneShohada\Design\css\fonts\FontAwesome.otf" />
+    <Content Include="GolestaneShohada\Design\css\fonts\IRANSans-Light.eot" />
+    <Content Include="GolestaneShohada\Design\css\fonts\IRANSans-Light.woff" />
+    <Content Include="GolestaneShohada\Design\css\fonts\IRANSans-Light.woff2" />
+    <Content Include="GolestaneShohada\Design\css\fonts\IRANSANS.eot" />
+    <Content Include="GolestaneShohada\Design\css\fonts\IRANSANS.woff" />
+    <Content Include="GolestaneShohada\Design\css\fonts\IRANSANS.woff2" />
+    <Content Include="GolestaneShohada\Design\css\fonts\iransw.eot" />
+    <Content Include="GolestaneShohada\Design\css\fonts\iransw.ttf" />
+    <Content Include="GolestaneShohada\Design\css\fonts\iransw.woff" />
+    <Content Include="GolestaneShohada\Design\css\fonts\iransw.woff2" />
+    <Content Include="GolestaneShohada\Design\css\fonts\WebYekan.eot" />
+    <Content Include="GolestaneShohada\Design\css\fonts\WebYekan.ttf" />
+    <Content Include="GolestaneShohada\Design\css\fonts\WebYekan.woff" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\0\Thumbs.db" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\12\Thumbs.db" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\GeneratedImages\dzc_output_files\6\Thumbs.db" />
+    <Content Include="GolestaneShohada\Design\GolestanMap\img\Thumbs.db" />
+    <Content Include="GolestaneShohada\Design\Js\openseadragon.min.js.map" />
     <Content Include="GolestaneShohada\Design\MasterPage\WebMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1423,7 +1866,6 @@
     <Folder Include="files\photoItems\" />
     <Folder Include="files\UploadFiles\" />
     <Folder Include="files\Video\" />
-    <Folder Include="GolestaneShohada\Design\Css\" />
     <Folder Include="GolestaneShohada\Logic\" />
   </ItemGroup>
   <ItemGroup>

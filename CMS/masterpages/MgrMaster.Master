@@ -100,6 +100,22 @@
                                     </asp:Repeater>
                               </ul>
                   </li>
+
+                         <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-paragraph"></i>
+                          <span>مدیریت کاربران</span>
+                      </a>
+                      <ul class="sub">
+                        <asp:Repeater ID="UserRepeater" runat="server">
+                                        <ItemTemplate>
+                                            <li>
+                                                <asp:DynamicHyperLink ID="DynamicHyperLink2" Action="ListDetails" runat="server"></asp:DynamicHyperLink>
+                                            </li>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                              </ul>
+                  </li>
               </ul>
               <!-- sidebar menu end-->
           </div>

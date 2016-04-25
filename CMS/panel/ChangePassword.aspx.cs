@@ -13,15 +13,11 @@ public partial class aspx_ChangePassword : System.Web.UI.Page
     string sql = "";
     public int Customer()
     {
-        int CstID = Convert.ToInt32(Session["CustomerID"]);
-        return CstID;
+        return MyClass.CustomerId;
     }
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
-        {
-            CheckCustomer();
-        }
+      
     }
     protected void CheckCustomer()
     {

@@ -15,15 +15,13 @@ namespace CMS.panel
         string sql = "";
         public int Customer()
         {
-            Session["CustomerID"] = 13;
-            int CstID = Convert.ToInt32(Session["CustomerID"]);
-            return CstID;
+            return MyClass.CustomerId;
         }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                CheckCustomer();
+                
                 FirstGroup();
                 BindGrv();
                 ViewState["Edit"] = 0;

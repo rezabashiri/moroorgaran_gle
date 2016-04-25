@@ -28,6 +28,11 @@ namespace CMS.masterpages
                 //lblDate.Text = farsicalender();
                 TablesReapeter.DataSource = Golestan.AppStart.DynamicDataConfig.GolestanModel.VisibleTables.Where(x => x.Scaffold == true).ToList();
                 TablesReapeter.DataBind();
+
+                UserRepeater.DataSource = global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel.VisibleTables.Where(x => x.Scaffold == true);
+                UserRepeater.DataBind();
+
+                 
             }
         }
         protected void SiteTitle()
