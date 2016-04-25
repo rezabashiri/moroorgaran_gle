@@ -9,10 +9,13 @@
                 <asp:ListView ID="ListView1" runat="server">
                     <ItemTemplate>
                         <li>
+                            <asp:HyperLink NavigateUrl='<%# CreateLink(Eval("ID")) %>' ID="hpr" runat="server">
+
+                          
                 <div class="sermon-box">
-                  <div class="frame"><a href="#"><img src="images/sermons/sermons-img-1.jpg" alt="img"></a></div>
+                  <div class="frame"> <asp:Image ImageUrl='<%# DataBinder.Eval( Container.DataItem,"VirtualAddress") %>' ID="imgShahid" runat="server" alt="img"></asp:Image></div>
                   <div class="text-box">
-                    <h2><%# DataBinder.Eval(Container.DataItem, "Name") %> <%# DataBinder.Eval(Container.DataItem, "Family") %></h2>
+                    <h2><%#  DataBinder.Eval(Container.DataItem, "Name") %>&nbsp<%# DataBinder.Eval( Container.DataItem, "Family")  %></h2>
                     <p>متن درباره شهید. متن درباره شهید. متن درباره شهید. متن درباره شهید. متن درباره شهید. متن درباره شهید. متن درباره شهید. </p>
                     <div class="detail-row">
                       <ul>
@@ -30,6 +33,7 @@
                     </ul>
                   </div>
                 </div>
+                                  </asp:HyperLink>
               </li>
                     </ItemTemplate>
                 </asp:ListView>

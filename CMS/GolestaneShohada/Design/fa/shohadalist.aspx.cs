@@ -20,6 +20,14 @@ namespace CMS.GolestaneShohada.Design.fa
             ListView1.DataSource = DataSource;
             ListView1.DataBind();           
         }
-
+        public string CreateLink(object id)
+        {
+            if (id != null)
+            {
+                string link = string.Format("PerShahid.aspx?{0}", Helpers.QueryStringHelpers.SetValue(Helpers.QueryStringHelpers.QueryStrings.shahidID, id.ToString()));
+                return link;
+            }
+            return string.Empty;
+        }
     }
 }
