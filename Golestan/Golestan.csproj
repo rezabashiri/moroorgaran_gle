@@ -240,6 +240,15 @@
     <Compile Include="Model\ViewShahidAmaliat.cs">
       <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\ViewShahidAshena.cs">
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewShahidMatalebEzafe.cs">
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewShahidRabete.cs">
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Yegan.cs">
       <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>

@@ -34,9 +34,9 @@ namespace Golestan.Model
         public int GhateID { get; set; }
         public string SangNeveshte { get; set; }
         public string NameGhate { get; set; }
-        public int IDBakhsh { get; set; }
-        public int IDShahrestan { get; set; }
-        public int IDOstan { get; set; }
+        public Nullable<int> IDBakhsh { get; set; }
+        public Nullable<int> IDShahrestan { get; set; }
+        public Nullable<int> IDOstan { get; set; }
         public string FileName { get; set; }
         public string FileExtension { get; set; }
         public Nullable<long> ContentLength { get; set; }

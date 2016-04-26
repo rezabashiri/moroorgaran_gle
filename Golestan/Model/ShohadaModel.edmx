@@ -56,12 +56,12 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="faal" Type="bit" />
           <Property Name="dateupdate" Type="datetime" />
           <Property Name="UserID" Type="uniqueidentifier" />
-          <Property Name="IDShahrestan" Type="int" />
+          <Property Name="IDShahrestan" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Ghate">
           <Key>
@@ -214,14 +214,18 @@
           <Key>
             <PropertyRef Name="IDAmaliat" />
             <PropertyRef Name="IDShahid" />
+            <PropertyRef Name="IDRaste" />
+            <PropertyRef Name="IDVahed" />
+            <PropertyRef Name="IDYegan" />
+            <PropertyRef Name="IDNiroo" />
           </Key>
           <Property Name="IDAmaliat" Type="int" Nullable="false" />
           <Property Name="IDShahid" Type="int" Nullable="false" />
           <Property Name="ISMonjarBeShahadat" Type="bit" />
-          <Property Name="IDRaste" Type="int" />
-          <Property Name="IDVahed" Type="int" />
-          <Property Name="IDYegan" Type="int" />
-          <Property Name="IDNiroo" Type="int" />
+          <Property Name="IDRaste" Type="int" Nullable="false" />
+          <Property Name="IDVahed" Type="int" Nullable="false" />
+          <Property Name="IDYegan" Type="int" Nullable="false" />
+          <Property Name="IDNiroo" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="ShahidRabete">
           <Key>
@@ -331,9 +335,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahid' does not have a pr
           <Key>
             <PropertyRef Name="ID" />
             <PropertyRef Name="GhateID" />
-            <PropertyRef Name="IDBakhsh" />
-            <PropertyRef Name="IDShahrestan" />
-            <PropertyRef Name="IDOstan" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" />
           <Property Name="CodeMeli" Type="varchar" MaxLength="10" />
@@ -355,9 +356,9 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahid' does not have a pr
           <Property Name="GhateID" Type="int" Nullable="false" />
           <Property Name="SangNeveshte" Type="nvarchar" MaxLength="50" />
           <Property Name="NameGhate" Type="nvarchar" MaxLength="50" />
-          <Property Name="IDBakhsh" Type="int" Nullable="false" />
-          <Property Name="IDShahrestan" Type="int" Nullable="false" />
-          <Property Name="IDOstan" Type="int" Nullable="false" />
+          <Property Name="IDBakhsh" Type="int" />
+          <Property Name="IDShahrestan" Type="int" />
+          <Property Name="IDOstan" Type="int" />
           <Property Name="FileName" Type="nvarchar(max)" />
           <Property Name="FileExtension" Type="varchar" MaxLength="20" />
           <Property Name="ContentLength" Type="bigint" />
@@ -374,13 +375,8 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             <PropertyRef Name="IDOstan" />
             <PropertyRef Name="IDShahrestan" />
             <PropertyRef Name="GhateID" />
-            <PropertyRef Name="IDAmaliat" />
-            <PropertyRef Name="IDYegan" />
-            <PropertyRef Name="IDNiroo" />
-            <PropertyRef Name="IDRaste" />
-            <PropertyRef Name="IDVahed" />
           </Key>
-          <Property Name="IDAmaliat" Type="int" Nullable="false" />
+          <Property Name="IDAmaliat" Type="int" />
           <Property Name="NameAmaliat" Type="nvarchar" MaxLength="50" />
           <Property Name="TarikheShoroo" Type="datetime" />
           <Property Name="TarikhePayan" Type="datetime" />
@@ -405,10 +401,10 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           <Property Name="IDShahid" Type="int" Nullable="false" />
           <Property Name="ShomareShenasname" Type="nvarchar" MaxLength="10" />
           <Property Name="Ramz" Type="nvarchar" MaxLength="50" />
-          <Property Name="IDYegan" Type="int" Nullable="false" />
-          <Property Name="IDNiroo" Type="int" Nullable="false" />
-          <Property Name="IDRaste" Type="int" Nullable="false" />
-          <Property Name="IDVahed" Type="int" Nullable="false" />
+          <Property Name="IDYegan" Type="int" />
+          <Property Name="IDNiroo" Type="int" />
+          <Property Name="IDRaste" Type="int" />
+          <Property Name="IDVahed" Type="int" />
           <Property Name="IDBakhsh" Type="int" Nullable="false" />
           <Property Name="IDOstan" Type="int" Nullable="false" />
           <Property Name="IDShahrestan" Type="int" Nullable="false" />
@@ -431,6 +427,53 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           <Property Name="VirtualAddress" Type="nvarchar(max)" />
           <Property Name="ServerAddress" Type="nvarchar(max)" />
           <Property Name="ISMonjarBeShahadat" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAshena' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ViewShahidAshena">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="NameAhena" Type="nvarchar" MaxLength="50" />
+          <Property Name="FamilAshena" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tozihat" Type="nvarchar" MaxLength="200" />
+          <Property Name="Kholase" Type="nvarchar" MaxLength="50" />
+          <Property Name="IDNoeRabete" Type="int" />
+          <Property Name="NameRabete" Type="nvarchar" MaxLength="50" />
+          <Property Name="NameShahid" Type="nvarchar" MaxLength="50" />
+          <Property Name="FamilShahid" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidMatalebEzafe' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ViewShahidMatalebEzafe">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Family" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kholase" Type="nvarchar" MaxLength="50" />
+          <Property Name="IDNoeMatlab" Type="int" />
+          <Property Name="Tozihat" Type="nvarchar" MaxLength="200" />
+          <Property Name="Expr1" Type="nvarchar" MaxLength="50" />
+          <Property Name="NoeInSystem" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ViewShahidRabete">
+          <Key>
+            <PropertyRef Name="IDShahid1" />
+            <PropertyRef Name="IDShahid2" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Family" Type="nvarchar" MaxLength="50" />
+          <Property Name="IDShahid1" Type="int" Nullable="false" />
+          <Property Name="IDShahid2" Type="int" Nullable="false" />
+          <Property Name="Name2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name3" Type="nvarchar" MaxLength="50" />
+          <Property Name="NameRabete" Type="nvarchar" MaxLength="50" />
+          <Property Name="NoeInSystem" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_AfzoodaneEtelaat_Shahid">
           <End Role="Shahid" Type="Self.Shahid" Multiplicity="0..1" />
@@ -481,9 +524,7 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Bakhsh_Shahrestan">
-          <End Role="Shahrestan" Type="Self.Shahrestan" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="Shahrestan" Type="Self.Shahrestan" Multiplicity="1" />
           <End Role="Bakhsh" Type="Self.Bakhsh" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Shahrestan">
@@ -533,7 +574,9 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_MatalebEzafe_Shahid">
-          <End Role="Shahid" Type="Self.Shahid" Multiplicity="0..1" />
+          <End Role="Shahid" Type="Self.Shahid" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="MatalebEzafe" Type="Self.MatalebEzafe" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Shahid">
@@ -700,20 +743,8 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ShahidAmaliat_Amaliat">
-          <End Role="Amaliat" Type="Self.Amaliat" Multiplicity="1" />
-          <End Role="ShahidAmaliat" Type="Self.ShahidAmaliat" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Amaliat">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ShahidAmaliat">
-              <PropertyRef Name="IDAmaliat" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ShahidAmaliat_NirooYeganVahedAmaliat">
-          <End Role="NirooYeganVahedAmaliat" Type="Self.NirooYeganVahedAmaliat" Multiplicity="0..1" />
+          <End Role="NirooYeganVahedAmaliat" Type="Self.NirooYeganVahedAmaliat" Multiplicity="1" />
           <End Role="ShahidAmaliat" Type="Self.ShahidAmaliat" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="NirooYeganVahedAmaliat">
@@ -731,7 +762,7 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ShahidAmaliat_Raste">
-          <End Role="Raste" Type="Self.Raste" Multiplicity="0..1" />
+          <End Role="Raste" Type="Self.Raste" Multiplicity="1" />
           <End Role="ShahidAmaliat" Type="Self.ShahidAmaliat" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Raste">
@@ -827,6 +858,12 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           </ReferentialConstraint>
         </Association>
         <Function Name="sp_SearchShahidAmaliat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="WhereParameter" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_GetShahidAshena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="gle">
+          <Parameter Name="WhereParameter" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_GetShahidMatalebEzafe" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="gle">
           <Parameter Name="WhereParameter" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="sp_SearchSahid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="gle">
@@ -996,6 +1033,43 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
     [ViewShahidAmaliat].[ISMonjarBeShahadat] AS [ISMonjarBeShahadat]
     FROM [dbo].[ViewShahidAmaliat] AS [ViewShahidAmaliat]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="ViewShahidAshena" EntityType="Self.ViewShahidAshena" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ViewShahidAshena].[NameAhena] AS [NameAhena], 
+    [ViewShahidAshena].[FamilAshena] AS [FamilAshena], 
+    [ViewShahidAshena].[Tozihat] AS [Tozihat], 
+    [ViewShahidAshena].[Kholase] AS [Kholase], 
+    [ViewShahidAshena].[IDNoeRabete] AS [IDNoeRabete], 
+    [ViewShahidAshena].[NameRabete] AS [NameRabete], 
+    [ViewShahidAshena].[NameShahid] AS [NameShahid], 
+    [ViewShahidAshena].[FamilShahid] AS [FamilShahid], 
+    [ViewShahidAshena].[ID] AS [ID]
+    FROM [dbo].[ViewShahidAshena] AS [ViewShahidAshena]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ViewShahidMatalebEzafe" EntityType="Self.ViewShahidMatalebEzafe" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ViewShahidMatalebEzafe].[ID] AS [ID], 
+    [ViewShahidMatalebEzafe].[Name] AS [Name], 
+    [ViewShahidMatalebEzafe].[Family] AS [Family], 
+    [ViewShahidMatalebEzafe].[Kholase] AS [Kholase], 
+    [ViewShahidMatalebEzafe].[IDNoeMatlab] AS [IDNoeMatlab], 
+    [ViewShahidMatalebEzafe].[Tozihat] AS [Tozihat], 
+    [ViewShahidMatalebEzafe].[Expr1] AS [Expr1], 
+    [ViewShahidMatalebEzafe].[NoeInSystem] AS [NoeInSystem]
+    FROM [dbo].[ViewShahidMatalebEzafe] AS [ViewShahidMatalebEzafe]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ViewShahidRabete" EntityType="Self.ViewShahidRabete" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ViewShahidRabete].[Name] AS [Name], 
+    [ViewShahidRabete].[Family] AS [Family], 
+    [ViewShahidRabete].[IDShahid1] AS [IDShahid1], 
+    [ViewShahidRabete].[IDShahid2] AS [IDShahid2], 
+    [ViewShahidRabete].[Name2] AS [Name2], 
+    [ViewShahidRabete].[Name3] AS [Name3], 
+    [ViewShahidRabete].[NameRabete] AS [NameRabete], 
+    [ViewShahidRabete].[NoeInSystem] AS [NoeInSystem]
+    FROM [dbo].[ViewShahidRabete] AS [ViewShahidRabete]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_AfzoodaneEtelaat_Shahid" Association="Self.FK_AfzoodaneEtelaat_Shahid">
             <End Role="Shahid" EntitySet="Shahid" />
             <End Role="AfzoodaneEtelaat" EntitySet="AfzoodaneEtelaat" />
@@ -1084,10 +1158,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             <End Role="Vaziat" EntitySet="Vaziat" />
             <End Role="Shahid" EntitySet="Shahid" />
           </AssociationSet>
-          <AssociationSet Name="FK_ShahidAmaliat_Amaliat" Association="Self.FK_ShahidAmaliat_Amaliat">
-            <End Role="Amaliat" EntitySet="Amaliat" />
-            <End Role="ShahidAmaliat" EntitySet="ShahidAmaliat" />
-          </AssociationSet>
           <AssociationSet Name="FK_ShahidAmaliat_NirooYeganVahedAmaliat" Association="Self.FK_ShahidAmaliat_NirooYeganVahedAmaliat">
             <End Role="NirooYeganVahedAmaliat" EntitySet="NirooYeganVahedAmaliat" />
             <End Role="ShahidAmaliat" EntitySet="ShahidAmaliat" />
@@ -1156,19 +1226,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           <Property Name="IDNoeRabete" Type="Int32" />
           <NavigationProperty Name="NoeRabete" Relationship="Self.FK_Ashnayan_Rabete" FromRole="Ashnayan" ToRole="NoeRabete" />
         </EntityType>
-        <EntityType Name="Bakhsh">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="faal" Type="Boolean" />
-          <Property Name="dateupdate" Type="DateTime" Precision="3" />
-          <Property Name="UserID" Type="Guid" />
-          <Property Name="IDShahrestan" Type="Int32" />
-          <NavigationProperty Name="Shahrestan" Relationship="Self.FK_Bakhsh_Shahrestan" FromRole="Bakhsh" ToRole="Shahrestan" />
-          <NavigationProperty Name="Shahids" Relationship="GolestanShohadaModel.FK_Shahid_Bakhsh" FromRole="Bakhsh" ToRole="Shahid" />
-        </EntityType>
         <EntityType Name="Ghate">
           <Key>
             <PropertyRef Name="ID" />
@@ -1225,25 +1282,8 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="NirooYeganVahedAmaliats" Relationship="Self.FK_NirooYeganVahedAmaliat_Niroo" FromRole="Niroo" ToRole="NirooYeganVahedAmaliat" />
           <NavigationProperty Name="Yegans" Relationship="Self.NirooYegan" FromRole="Niroo" ToRole="Yegan" />
-        </EntityType>
-        <EntityType Name="NirooYeganVahedAmaliat">
-          <Key>
-            <PropertyRef Name="IDNiroo" />
-            <PropertyRef Name="IDYegan" />
-            <PropertyRef Name="IDAmaliat" />
-            <PropertyRef Name="IDVahed" />
-          </Key>
-          <Property Name="IDNiroo" Type="Int32" Nullable="false" />
-          <Property Name="IDYegan" Type="Int32" Nullable="false" />
-          <Property Name="IDAmaliat" Type="Int32" Nullable="false" />
-          <Property Name="IDVahed" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Niroo" Relationship="Self.FK_NirooYeganVahedAmaliat_Niroo" FromRole="NirooYeganVahedAmaliat" ToRole="Niroo" />
-          <NavigationProperty Name="Vahed" Relationship="Self.FK_NirooYeganVahedAmaliat_Vahed" FromRole="NirooYeganVahedAmaliat" ToRole="Vahed" />
-          <NavigationProperty Name="Yegan" Relationship="Self.FK_NirooYeganVahedAmaliat_Yegan" FromRole="NirooYeganVahedAmaliat" ToRole="Yegan" />
-          <NavigationProperty Name="ShahidAmaliats" Relationship="Self.FK_ShahidAmaliat_NirooYeganVahedAmaliat" FromRole="NirooYeganVahedAmaliat" ToRole="ShahidAmaliat" />
-          <NavigationProperty Name="Amaliat" Relationship="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Amaliat" FromRole="NirooYeganVahedAmaliat" ToRole="Amaliat" />
+          <NavigationProperty Name="NirooYeganVahedAmaliats" Relationship="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Niroo" FromRole="Niroo" ToRole="NirooYeganVahedAmaliat" />
         </EntityType>
         <EntityType Name="NoeMatlab">
           <Key>
@@ -1283,7 +1323,7 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Arm" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <NavigationProperty Name="Shahrestans" Relationship="Self.FK_Shahrestan_Ostan" FromRole="Ostan" ToRole="Shahrestan" />
+          <NavigationProperty Name="Shahrestans" Relationship="GolestanShohadaModel.FK_Shahrestan_Ostan" FromRole="Ostan" ToRole="Shahrestan" />
         </EntityType>
         <EntityType Name="Raste">
           <Key>
@@ -1292,25 +1332,8 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Tozihat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ShahidAmaliats" Relationship="Self.FK_ShahidAmaliat_Raste" FromRole="Raste" ToRole="ShahidAmaliat" />
           <NavigationProperty Name="Vaheds" Relationship="Self.RasteVahed" FromRole="Raste" ToRole="Vahed" />
-        </EntityType>
-        <EntityType Name="ShahidAmaliat">
-          <Key>
-            <PropertyRef Name="IDAmaliat" />
-            <PropertyRef Name="IDShahid" />
-          </Key>
-          <Property Name="IDAmaliat" Type="Int32" Nullable="false" />
-          <Property Name="IDShahid" Type="Int32" Nullable="false" />
-          <Property Name="ISMonjarBeShahadat" Type="Boolean" />
-          <Property Name="IDRaste" Type="Int32" />
-          <Property Name="IDVahed" Type="Int32" />
-          <Property Name="IDYegan" Type="Int32" />
-          <Property Name="IDNiroo" Type="Int32" />
-          <NavigationProperty Name="NirooYeganVahedAmaliat" Relationship="Self.FK_ShahidAmaliat_NirooYeganVahedAmaliat" FromRole="ShahidAmaliat" ToRole="NirooYeganVahedAmaliat" />
-          <NavigationProperty Name="Raste" Relationship="Self.FK_ShahidAmaliat_Raste" FromRole="ShahidAmaliat" ToRole="Raste" />
-          <NavigationProperty Name="Shahid" Relationship="GolestanShohadaModel.FK_ShahidAmaliat_Shahid" FromRole="ShahidAmaliat" ToRole="Shahid" />
-          <NavigationProperty Name="Amaliat" Relationship="GolestanShohadaModel.FK_ShahidAmaliat_Amaliat" FromRole="ShahidAmaliat" ToRole="Amaliat" />
+          <NavigationProperty Name="ShahidAmaliats" Relationship="GolestanShohadaModel.FK_ShahidAmaliat_Raste" FromRole="Raste" ToRole="ShahidAmaliat" />
         </EntityType>
         <EntityType Name="ShahidRabete">
           <Key>
@@ -1325,17 +1348,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           <NavigationProperty Name="Shahid" Relationship="GolestanShohadaModel.FK_ShahidRabete_Shahid" FromRole="ShahidRabete" ToRole="Shahid" />
           <NavigationProperty Name="Shahid1" Relationship="GolestanShohadaModel.FK_ShahidRabete_Shahid1" FromRole="ShahidRabete" ToRole="Shahid" />
           </EntityType>
-        <EntityType Name="Shahrestan">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="UserID" Type="Guid" />
-          <Property Name="IDOstan" Type="Int32" />
-          <NavigationProperty Name="Bakhshes" Relationship="Self.FK_Bakhsh_Shahrestan" FromRole="Shahrestan" ToRole="Bakhsh" />
-          <NavigationProperty Name="Ostan" Relationship="Self.FK_Shahrestan_Ostan" FromRole="Shahrestan" ToRole="Ostan" />
-        </EntityType>
         <EntityType Name="Vahed">
           <Key>
             <PropertyRef Name="ID" />
@@ -1343,9 +1355,9 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SharheFaliat" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="NirooYeganVahedAmaliats" Relationship="Self.FK_NirooYeganVahedAmaliat_Vahed" FromRole="Vahed" ToRole="NirooYeganVahedAmaliat" />
           <NavigationProperty Name="Rastes" Relationship="Self.RasteVahed" FromRole="Vahed" ToRole="Raste" />
           <NavigationProperty Name="Yegans" Relationship="Self.YeganVahed" FromRole="Vahed" ToRole="Yegan" />
+          <NavigationProperty Name="NirooYeganVahedAmaliats" Relationship="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Vahed" FromRole="Vahed" ToRole="NirooYeganVahedAmaliat" />
         </EntityType>
         <EntityType Name="Vaziat">
           <Key>
@@ -1361,9 +1373,9 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="NirooYeganVahedAmaliats" Relationship="Self.FK_NirooYeganVahedAmaliat_Yegan" FromRole="Yegan" ToRole="NirooYeganVahedAmaliat" />
           <NavigationProperty Name="Niroos" Relationship="Self.NirooYegan" FromRole="Yegan" ToRole="Niroo" />
           <NavigationProperty Name="Vaheds" Relationship="Self.YeganVahed" FromRole="Yegan" ToRole="Vahed" />
+          <NavigationProperty Name="NirooYeganVahedAmaliats" Relationship="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Yegan" FromRole="Yegan" ToRole="NirooYeganVahedAmaliat" />
         </EntityType>
         <EntityType Name="ViewNirooVahed">
           <Key>
@@ -1387,20 +1399,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             </Principal>
             <Dependent Role="Ashnayan">
               <PropertyRef Name="IDNoeRabete" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Bakhsh_Shahrestan">
-          <End Role="Shahrestan" Type="Self.Shahrestan" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Bakhsh" Type="Self.Bakhsh" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Shahrestan">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Bakhsh">
-              <PropertyRef Name="IDShahrestan" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1440,60 +1438,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_NirooYeganVahedAmaliat_Niroo">
-          <End Role="Niroo" Type="Self.Niroo" Multiplicity="1" />
-          <End Role="NirooYeganVahedAmaliat" Type="Self.NirooYeganVahedAmaliat" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Niroo">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="NirooYeganVahedAmaliat">
-              <PropertyRef Name="IDNiroo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_NirooYeganVahedAmaliat_Vahed">
-          <End Role="Vahed" Type="Self.Vahed" Multiplicity="1" />
-          <End Role="NirooYeganVahedAmaliat" Type="Self.NirooYeganVahedAmaliat" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Vahed">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="NirooYeganVahedAmaliat">
-              <PropertyRef Name="IDVahed" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_NirooYeganVahedAmaliat_Yegan">
-          <End Role="Yegan" Type="Self.Yegan" Multiplicity="1" />
-          <End Role="NirooYeganVahedAmaliat" Type="Self.NirooYeganVahedAmaliat" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Yegan">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="NirooYeganVahedAmaliat">
-              <PropertyRef Name="IDYegan" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ShahidAmaliat_NirooYeganVahedAmaliat">
-          <End Role="NirooYeganVahedAmaliat" Type="Self.NirooYeganVahedAmaliat" Multiplicity="0..1" />
-          <End Role="ShahidAmaliat" Type="Self.ShahidAmaliat" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NirooYeganVahedAmaliat">
-              <PropertyRef Name="IDNiroo" />
-              <PropertyRef Name="IDYegan" />
-              <PropertyRef Name="IDAmaliat" />
-              <PropertyRef Name="IDVahed" />
-            </Principal>
-            <Dependent Role="ShahidAmaliat">
-              <PropertyRef Name="IDNiroo" />
-              <PropertyRef Name="IDYegan" />
-              <PropertyRef Name="IDAmaliat" />
-              <PropertyRef Name="IDVahed" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ShahidRabete_Rabete">
           <End Role="NoeRabete" Type="Self.NoeRabete" Multiplicity="1" />
           <End Role="ShahidRabete" Type="Self.ShahidRabete" Multiplicity="*" />
@@ -1503,30 +1447,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             </Principal>
             <Dependent Role="ShahidRabete">
               <PropertyRef Name="IDNoeRabete" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Shahrestan_Ostan">
-          <End Role="Ostan" Type="Self.Ostan" Multiplicity="0..1" />
-          <End Role="Shahrestan" Type="Self.Shahrestan" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Ostan">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Shahrestan">
-              <PropertyRef Name="IDOstan" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ShahidAmaliat_Raste">
-          <End Role="Raste" Type="Self.Raste" Multiplicity="0..1" />
-          <End Role="ShahidAmaliat" Type="Self.ShahidAmaliat" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Raste">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ShahidAmaliat">
-              <PropertyRef Name="IDRaste" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1549,22 +1469,18 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
         <EntityContainer Name="GolestanShohadaEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AfzoodaneEtelaats" EntityType="Self.AfzoodaneEtelaat" />
           <EntitySet Name="Ashnayans" EntityType="Self.Ashnayan" />
-          <EntitySet Name="Bakhshes" EntityType="Self.Bakhsh" />
           <EntitySet Name="Ghates" EntityType="Self.Ghate" />
           <EntitySet Name="Maghbares" EntityType="Self.Maghbare" />
           <EntitySet Name="Mantaghes" EntityType="Self.Mantaghe" />
           <EntitySet Name="MatalebEzafes" EntityType="Self.MatalebEzafe" />
           <EntitySet Name="Mogheyats" EntityType="Self.Mogheyat" />
           <EntitySet Name="Niroos" EntityType="Self.Niroo" />
-          <EntitySet Name="NirooYeganVahedAmaliats" EntityType="Self.NirooYeganVahedAmaliat" />
           <EntitySet Name="NoeMatlabs" EntityType="Self.NoeMatlab" />
           <EntitySet Name="NoeRabetes" EntityType="Self.NoeRabete" />
           <EntitySet Name="NoghteAsars" EntityType="Self.NoghteAsar" />
           <EntitySet Name="Ostans" EntityType="Self.Ostan" />
           <EntitySet Name="Rastes" EntityType="Self.Raste" />
-          <EntitySet Name="ShahidAmaliats" EntityType="Self.ShahidAmaliat" />
           <EntitySet Name="ShahidRabetes" EntityType="Self.ShahidRabete" />
-          <EntitySet Name="Shahrestans" EntityType="Self.Shahrestan" />
           <EntitySet Name="Vaheds" EntityType="Self.Vahed" />
           <EntitySet Name="Vaziats" EntityType="Self.Vaziat" />
           <EntitySet Name="Yegans" EntityType="Self.Yegan" />
@@ -1572,10 +1488,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           <AssociationSet Name="FK_Ashnayan_Rabete" Association="Self.FK_Ashnayan_Rabete">
             <End Role="NoeRabete" EntitySet="NoeRabetes" />
             <End Role="Ashnayan" EntitySet="Ashnayans" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Bakhsh_Shahrestan" Association="Self.FK_Bakhsh_Shahrestan">
-            <End Role="Shahrestan" EntitySet="Shahrestans" />
-            <End Role="Bakhsh" EntitySet="Bakhshes" />
           </AssociationSet>
           <AssociationSet Name="FK_Maghbare_Ghate" Association="Self.FK_Maghbare_Ghate">
             <End Role="Ghate" EntitySet="Ghates" />
@@ -1589,33 +1501,9 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             <End Role="NoeMatlab" EntitySet="NoeMatlabs" />
             <End Role="MatalebEzafe" EntitySet="MatalebEzafes" />
           </AssociationSet>
-          <AssociationSet Name="FK_NirooYeganVahedAmaliat_Niroo" Association="Self.FK_NirooYeganVahedAmaliat_Niroo">
-            <End Role="Niroo" EntitySet="Niroos" />
-            <End Role="NirooYeganVahedAmaliat" EntitySet="NirooYeganVahedAmaliats" />
-          </AssociationSet>
-          <AssociationSet Name="FK_NirooYeganVahedAmaliat_Vahed" Association="Self.FK_NirooYeganVahedAmaliat_Vahed">
-            <End Role="Vahed" EntitySet="Vaheds" />
-            <End Role="NirooYeganVahedAmaliat" EntitySet="NirooYeganVahedAmaliats" />
-          </AssociationSet>
-          <AssociationSet Name="FK_NirooYeganVahedAmaliat_Yegan" Association="Self.FK_NirooYeganVahedAmaliat_Yegan">
-            <End Role="Yegan" EntitySet="Yegans" />
-            <End Role="NirooYeganVahedAmaliat" EntitySet="NirooYeganVahedAmaliats" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ShahidAmaliat_NirooYeganVahedAmaliat" Association="Self.FK_ShahidAmaliat_NirooYeganVahedAmaliat">
-            <End Role="NirooYeganVahedAmaliat" EntitySet="NirooYeganVahedAmaliats" />
-            <End Role="ShahidAmaliat" EntitySet="ShahidAmaliats" />
-          </AssociationSet>
           <AssociationSet Name="FK_ShahidRabete_Rabete" Association="Self.FK_ShahidRabete_Rabete">
             <End Role="NoeRabete" EntitySet="NoeRabetes" />
             <End Role="ShahidRabete" EntitySet="ShahidRabetes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Shahrestan_Ostan" Association="Self.FK_Shahrestan_Ostan">
-            <End Role="Ostan" EntitySet="Ostans" />
-            <End Role="Shahrestan" EntitySet="Shahrestans" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ShahidAmaliat_Raste" Association="Self.FK_ShahidAmaliat_Raste">
-            <End Role="Raste" EntitySet="Rastes" />
-            <End Role="ShahidAmaliat" EntitySet="ShahidAmaliats" />
           </AssociationSet>
           <AssociationSet Name="NirooYegan" Association="Self.NirooYegan">
             <End Role="Niroo" EntitySet="Niroos" />
@@ -1644,10 +1532,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             <End Role="Shahid" EntitySet="Shahids" />
             <End Role="AfzoodaneEtelaat" EntitySet="AfzoodaneEtelaats" />
           </AssociationSet>
-          <AssociationSet Name="FK_Shahid_Bakhsh" Association="GolestanShohadaModel.FK_Shahid_Bakhsh">
-            <End Role="Bakhsh" EntitySet="Bakhshes" />
-            <End Role="Shahid" EntitySet="Shahids" />
-          </AssociationSet>
           <AssociationSet Name="FK_Maghbare_Shahid" Association="GolestanShohadaModel.FK_Maghbare_Shahid">
             <End Role="Shahid" EntitySet="Shahids" />
             <End Role="Maghbare" EntitySet="Maghbares" />
@@ -1660,10 +1544,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             <End Role="Vaziat" EntitySet="Vaziats" />
             <End Role="Shahid" EntitySet="Shahids" />
           </AssociationSet>
-          <AssociationSet Name="FK_ShahidAmaliat_Shahid" Association="GolestanShohadaModel.FK_ShahidAmaliat_Shahid">
-            <End Role="Shahid" EntitySet="Shahids" />
-            <End Role="ShahidAmaliat" EntitySet="ShahidAmaliats" />
-          </AssociationSet>
           <AssociationSet Name="FK_ShahidRabete_Shahid" Association="GolestanShohadaModel.FK_ShahidRabete_Shahid">
             <End Role="Shahid" EntitySet="Shahids" />
             <End Role="ShahidRabete" EntitySet="ShahidRabetes" />
@@ -1672,25 +1552,70 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             <End Role="Shahid" EntitySet="Shahids" />
             <End Role="ShahidRabete" EntitySet="ShahidRabetes" />
           </AssociationSet>
-          <EntitySet Name="ViewShahids" EntityType="GolestanShohadaModel.ViewShahid" />
-          <EntitySet Name="ViewShahidAmaliats" EntityType="GolestanShohadaModel.ViewShahidAmaliat" />
           <FunctionImport Name="sp_SearchShahidAmaliat" EntitySet="ViewShahidAmaliats" ReturnType="Collection(GolestanShohadaModel.ViewShahidAmaliat)">
           <Parameter Name="WhereParameter" Mode="In" Type="String" />
           </FunctionImport>
           <EntitySet Name="Amaliats" EntityType="GolestanShohadaModel.Amaliat" />
           <EntitySet Name="ViewAmaliats" EntityType="GolestanShohadaModel.ViewAmaliat" />
-          <AssociationSet Name="FK_NirooYeganVahedAmaliat_Amaliat" Association="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Amaliat">
-            <End Role="Amaliat" EntitySet="Amaliats" />
-            <End Role="NirooYeganVahedAmaliat" EntitySet="NirooYeganVahedAmaliats" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ShahidAmaliat_Amaliat" Association="GolestanShohadaModel.FK_ShahidAmaliat_Amaliat">
-            <End Role="Amaliat" EntitySet="Amaliats" />
-            <End Role="ShahidAmaliat" EntitySet="ShahidAmaliats" />
-          </AssociationSet>
           <AssociationSet Name="AmaliatNoghteAsar" Association="GolestanShohadaModel.AmaliatNoghteAsar">
             <End Role="Amaliat" EntitySet="Amaliats" />
             <End Role="NoghteAsar" EntitySet="NoghteAsars" />
           </AssociationSet>
+          <EntitySet Name="ViewShahidMatalebEzafes" EntityType="GolestanShohadaModel.ViewShahidMatalebEzafe" />
+          <EntitySet Name="ViewShahidRabetes" EntityType="GolestanShohadaModel.ViewShahidRabete" />
+          <FunctionImport Name="sp_GetShahidAshena" EntitySet="ViewShahidAshenas" ReturnType="Collection(GolestanShohadaModel.ViewShahidAshena)">
+          <Parameter Name="WhereParameter" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetShahidMatalebEzafe" EntitySet="ViewShahidMatalebEzafes" ReturnType="Collection(GolestanShohadaModel.ViewShahidMatalebEzafe)">
+          <Parameter Name="WhereParameter" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Bakhshes" EntityType="GolestanShohadaModel.Bakhsh" />
+          <EntitySet Name="NirooYeganVahedAmaliats" EntityType="GolestanShohadaModel.NirooYeganVahedAmaliat" />
+          <EntitySet Name="ShahidAmaliats" EntityType="GolestanShohadaModel.ShahidAmaliat" />
+          <EntitySet Name="Shahrestans" EntityType="GolestanShohadaModel.Shahrestan" />
+          <AssociationSet Name="FK_NirooYeganVahedAmaliat_Amaliat" Association="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Amaliat">
+            <End Role="Amaliat" EntitySet="Amaliats" />
+            <End Role="NirooYeganVahedAmaliat" EntitySet="NirooYeganVahedAmaliats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bakhsh_Shahrestan" Association="GolestanShohadaModel.FK_Bakhsh_Shahrestan">
+            <End Role="Shahrestan" EntitySet="Shahrestans" />
+            <End Role="Bakhsh" EntitySet="Bakhshes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shahid_Bakhsh" Association="GolestanShohadaModel.FK_Shahid_Bakhsh">
+            <End Role="Bakhsh" EntitySet="Bakhshes" />
+            <End Role="Shahid" EntitySet="Shahids" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NirooYeganVahedAmaliat_Niroo" Association="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Niroo">
+            <End Role="Niroo" EntitySet="Niroos" />
+            <End Role="NirooYeganVahedAmaliat" EntitySet="NirooYeganVahedAmaliats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NirooYeganVahedAmaliat_Vahed" Association="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Vahed">
+            <End Role="Vahed" EntitySet="Vaheds" />
+            <End Role="NirooYeganVahedAmaliat" EntitySet="NirooYeganVahedAmaliats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NirooYeganVahedAmaliat_Yegan" Association="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Yegan">
+            <End Role="Yegan" EntitySet="Yegans" />
+            <End Role="NirooYeganVahedAmaliat" EntitySet="NirooYeganVahedAmaliats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ShahidAmaliat_NirooYeganVahedAmaliat" Association="GolestanShohadaModel.FK_ShahidAmaliat_NirooYeganVahedAmaliat">
+            <End Role="NirooYeganVahedAmaliat" EntitySet="NirooYeganVahedAmaliats" />
+            <End Role="ShahidAmaliat" EntitySet="ShahidAmaliats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shahrestan_Ostan" Association="GolestanShohadaModel.FK_Shahrestan_Ostan">
+            <End Role="Ostan" EntitySet="Ostans" />
+            <End Role="Shahrestan" EntitySet="Shahrestans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ShahidAmaliat_Raste" Association="GolestanShohadaModel.FK_ShahidAmaliat_Raste">
+            <End Role="Raste" EntitySet="Rastes" />
+            <End Role="ShahidAmaliat" EntitySet="ShahidAmaliats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ShahidAmaliat_Shahid" Association="GolestanShohadaModel.FK_ShahidAmaliat_Shahid">
+            <End Role="Shahid" EntitySet="Shahids" />
+            <End Role="ShahidAmaliat" EntitySet="ShahidAmaliats" />
+          </AssociationSet>
+          <EntitySet Name="ViewShahidAshenas" EntityType="GolestanShohadaModel.ViewShahidAshena" />
+          <EntitySet Name="ViewShahids" EntityType="GolestanShohadaModel.ViewShahid" />
+          <EntitySet Name="ViewShahidAmaliats" EntityType="GolestanShohadaModel.ViewShahidAmaliat" />
         </EntityContainer>
         <EntityType Name="Shahid">
           <Key>
@@ -1712,13 +1637,13 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           <Property Name="IDVaziat" Type="Int32" />
           <Property Name="Thumbnale" Type="Binary" MaxLength="50" FixedLength="false" />
           <NavigationProperty Name="AfzoodaneEtelaats" Relationship="GolestanShohadaModel.FK_AfzoodaneEtelaat_Shahid" FromRole="Shahid" ToRole="AfzoodaneEtelaat" />
-          <NavigationProperty Name="Bakhsh" Relationship="GolestanShohadaModel.FK_Shahid_Bakhsh" FromRole="Shahid" ToRole="Bakhsh" />
           <NavigationProperty Name="Maghbare" Relationship="GolestanShohadaModel.FK_Maghbare_Shahid" FromRole="Shahid" ToRole="Maghbare" />
           <NavigationProperty Name="MatalebEzafes" Relationship="GolestanShohadaModel.FK_MatalebEzafe_Shahid" FromRole="Shahid" ToRole="MatalebEzafe" />
           <NavigationProperty Name="Vaziat" Relationship="GolestanShohadaModel.FK_Shahid_Vaziat" FromRole="Shahid" ToRole="Vaziat" />
-          <NavigationProperty Name="ShahidAmaliats" Relationship="GolestanShohadaModel.FK_ShahidAmaliat_Shahid" FromRole="Shahid" ToRole="ShahidAmaliat" />
           <NavigationProperty Name="ShahidRabetes" Relationship="GolestanShohadaModel.FK_ShahidRabete_Shahid" FromRole="Shahid" ToRole="ShahidRabete" />
           <NavigationProperty Name="ShahidRabetes1" Relationship="GolestanShohadaModel.FK_ShahidRabete_Shahid1" FromRole="Shahid" ToRole="ShahidRabete" />
+          <NavigationProperty Name="Bakhsh" Relationship="GolestanShohadaModel.FK_Shahid_Bakhsh" FromRole="Shahid" ToRole="Bakhsh" />
+          <NavigationProperty Name="ShahidAmaliats" Relationship="GolestanShohadaModel.FK_ShahidAmaliat_Shahid" FromRole="Shahid" ToRole="ShahidAmaliat" />
         </EntityType>
         <Association Name="FK_AfzoodaneEtelaat_Shahid">
           <End Type="GolestanShohadaModel.Shahid" Role="Shahid" Multiplicity="0..1" />
@@ -1729,18 +1654,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             </Principal>
             <Dependent Role="AfzoodaneEtelaat">
               <PropertyRef Name="IDShahid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Shahid_Bakhsh">
-          <End Type="GolestanShohadaModel.Bakhsh" Role="Bakhsh" Multiplicity="0..1" />
-          <End Type="GolestanShohadaModel.Shahid" Role="Shahid" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Bakhsh">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Shahid">
-              <PropertyRef Name="IDBakhsheTavalod" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1782,18 +1695,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ShahidAmaliat_Shahid">
-          <End Type="GolestanShohadaModel.Shahid" Role="Shahid" Multiplicity="1" />
-          <End Type="GolestanShohadaModel.ShahidAmaliat" Role="ShahidAmaliat" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Shahid">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ShahidAmaliat">
-              <PropertyRef Name="IDShahid" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ShahidRabete_Shahid">
           <End Type="GolestanShohadaModel.Shahid" Role="Shahid" Multiplicity="1" />
           <End Type="GolestanShohadaModel.ShahidRabete" Role="ShahidRabete" Multiplicity="*" />
@@ -1818,109 +1719,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="ViewShahid">
-          <Key>
-            <PropertyRef Name="ID" />
-            <PropertyRef Name="GhateID" />
-            <PropertyRef Name="IDBakhsh" />
-            <PropertyRef Name="IDShahrestan" />
-            <PropertyRef Name="IDOstan" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="CodeMeli" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TarikheTavalod" Type="DateTime" Precision="3" />
-          <Property Name="TarikheShahadat" Type="DateTime" Precision="3" />
-          <Property Name="NamePedar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Jensiat" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
-          <Property Name="Shoghl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="QRCode" Type="Binary" MaxLength="50" FixedLength="true" />
-          <Property Name="IDBakhsheTavalod" Type="Int32" />
-          <Property Name="AttachID" Type="Guid" />
-          <Property Name="VaziateShahid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NameBakhash" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NameShahrestan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NameOstan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ShomareShenasname" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="GhateID" Type="Int32" Nullable="false" />
-          <Property Name="SangNeveshte" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NameGhate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IDBakhsh" Type="Int32" Nullable="false" />
-          <Property Name="IDShahrestan" Type="Int32" Nullable="false" />
-          <Property Name="IDOstan" Type="Int32" Nullable="false" />
-          <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="FileExtension" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="ContentLength" Type="Int64" />
-          <Property Name="ContentType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="VirtualAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ServerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="ViewShahidAmaliat">
-          <Key>
-            <PropertyRef Name="IDAmaliat" />
-            <PropertyRef Name="IDShahid" />
-            <PropertyRef Name="IDYegan" />
-            <PropertyRef Name="IDNiroo" />
-            <PropertyRef Name="IDRaste" />
-            <PropertyRef Name="IDVahed" />
-            <PropertyRef Name="IDBakhsh" />
-            <PropertyRef Name="IDOstan" />
-            <PropertyRef Name="IDShahrestan" />
-            <PropertyRef Name="GhateID" />
-          </Key>
-          <Property Name="IDAmaliat" Type="Int32" Nullable="false" />
-          <Property Name="NameAmaliat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TarikheShoroo" Type="DateTime" Precision="3" />
-          <Property Name="TarikhePayan" Type="DateTime" Precision="3" />
-          <Property Name="Tozihat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="NameRaste" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NameNiroo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NameYegan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NameVahed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CodeMeli" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TarikheTavalod" Type="DateTime" Precision="3" />
-          <Property Name="TarikheShahadat" Type="DateTime" Precision="3" />
-          <Property Name="NamePedar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Jensiat" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
-          <Property Name="Shoghl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="QRCode" Type="Binary" MaxLength="50" FixedLength="true" />
-          <Property Name="NameOstan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NameShahrestan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NameBakhash" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="VaziateShahid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IDShahid" Type="Int32" Nullable="false" />
-          <Property Name="ShomareShenasname" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="Ramz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IDYegan" Type="Int32" Nullable="false" />
-          <Property Name="IDNiroo" Type="Int32" Nullable="false" />
-          <Property Name="IDRaste" Type="Int32" Nullable="false" />
-          <Property Name="IDVahed" Type="Int32" Nullable="false" />
-          <Property Name="IDBakhsh" Type="Int32" Nullable="false" />
-          <Property Name="IDOstan" Type="Int32" Nullable="false" />
-          <Property Name="IDShahrestan" Type="Int32" Nullable="false" />
-          <Property Name="NameGhate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="GhateID" Type="Int32" Nullable="false" />
-          <Property Name="SangNeveshte" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IDNoghteAsar" Type="Int32" />
-          <Property Name="NameNoghteAsar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="X" Type="Double" />
-          <Property Name="Y" Type="Double" />
-          <Property Name="NameMogheyat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TozihateMogheyat" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="IDMantaghe" Type="Int32" />
-          <Property Name="NameMantaghe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TozihateMantaghe" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="FileExtension" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="ContentLength" Type="Int64" />
-          <Property Name="ContentType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="VirtualAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ServerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ISMonjarBeShahadat" Type="Boolean" />
-        </EntityType>
         <EntityType Name="Amaliat">
           <Key>
             <PropertyRef Name="ID" />
@@ -1934,9 +1732,8 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           <Property Name="Kholase" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Thumbnale" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="AttachID" Type="Guid" />
-          <NavigationProperty Name="NirooYeganVahedAmaliats" Relationship="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Amaliat" FromRole="Amaliat" ToRole="NirooYeganVahedAmaliat" />
-          <NavigationProperty Name="ShahidAmaliats" Relationship="GolestanShohadaModel.FK_ShahidAmaliat_Amaliat" FromRole="Amaliat" ToRole="ShahidAmaliat" />
           <NavigationProperty Name="NoghteAsars" Relationship="GolestanShohadaModel.AmaliatNoghteAsar" FromRole="Amaliat" ToRole="NoghteAsar" />
+          <NavigationProperty Name="NirooYeganVahedAmaliats" Relationship="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Amaliat" FromRole="Amaliat" ToRole="NirooYeganVahedAmaliat" />
         </EntityType>
         <EntityType Name="ViewAmaliat">
           <Key>
@@ -1974,6 +1771,98 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           <Property Name="ServerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="UploadedTime" Type="DateTime" Precision="3" />
         </EntityType>
+        <Association Name="AmaliatNoghteAsar">
+          <End Type="GolestanShohadaModel.Amaliat" Role="Amaliat" Multiplicity="*" />
+          <End Type="GolestanShohadaModel.NoghteAsar" Role="NoghteAsar" Multiplicity="*" />
+        </Association>
+        <EntityType Name="ViewShahidMatalebEzafe">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kholase" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDNoeMatlab" Type="Int32" />
+          <Property Name="Tozihat" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Expr1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NoeInSystem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ViewShahidRabete">
+          <Key>
+            <PropertyRef Name="IDShahid1" />
+            <PropertyRef Name="IDShahid2" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDShahid1" Type="Int32" Nullable="false" />
+          <Property Name="IDShahid2" Type="Int32" Nullable="false" />
+          <Property Name="Name2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameRabete" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NoeInSystem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Bakhsh">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="faal" Type="Boolean" />
+          <Property Name="dateupdate" Type="DateTime" Precision="3" />
+          <Property Name="UserID" Type="Guid" />
+          <Property Name="IDShahrestan" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Shahrestan" Relationship="GolestanShohadaModel.FK_Bakhsh_Shahrestan" FromRole="Bakhsh" ToRole="Shahrestan" />
+          <NavigationProperty Name="Shahids" Relationship="GolestanShohadaModel.FK_Shahid_Bakhsh" FromRole="Bakhsh" ToRole="Shahid" />
+        </EntityType>
+        <EntityType Name="NirooYeganVahedAmaliat">
+          <Key>
+            <PropertyRef Name="IDNiroo" />
+            <PropertyRef Name="IDYegan" />
+            <PropertyRef Name="IDAmaliat" />
+            <PropertyRef Name="IDVahed" />
+          </Key>
+          <Property Name="IDNiroo" Type="Int32" Nullable="false" />
+          <Property Name="IDYegan" Type="Int32" Nullable="false" />
+          <Property Name="IDAmaliat" Type="Int32" Nullable="false" />
+          <Property Name="IDVahed" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Amaliat" Relationship="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Amaliat" FromRole="NirooYeganVahedAmaliat" ToRole="Amaliat" />
+          <NavigationProperty Name="Niroo" Relationship="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Niroo" FromRole="NirooYeganVahedAmaliat" ToRole="Niroo" />
+          <NavigationProperty Name="Vahed" Relationship="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Vahed" FromRole="NirooYeganVahedAmaliat" ToRole="Vahed" />
+          <NavigationProperty Name="Yegan" Relationship="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Yegan" FromRole="NirooYeganVahedAmaliat" ToRole="Yegan" />
+          <NavigationProperty Name="ShahidAmaliats" Relationship="GolestanShohadaModel.FK_ShahidAmaliat_NirooYeganVahedAmaliat" FromRole="NirooYeganVahedAmaliat" ToRole="ShahidAmaliat" />
+        </EntityType>
+        <EntityType Name="ShahidAmaliat">
+          <Key>
+            <PropertyRef Name="IDAmaliat" />
+            <PropertyRef Name="IDShahid" />
+            <PropertyRef Name="IDRaste" />
+            <PropertyRef Name="IDVahed" />
+            <PropertyRef Name="IDYegan" />
+            <PropertyRef Name="IDNiroo" />
+          </Key>
+          <Property Name="IDAmaliat" Type="Int32" Nullable="false" />
+          <Property Name="IDShahid" Type="Int32" Nullable="false" />
+          <Property Name="ISMonjarBeShahadat" Type="Boolean" />
+          <Property Name="IDRaste" Type="Int32" Nullable="false" />
+          <Property Name="IDVahed" Type="Int32" Nullable="false" />
+          <Property Name="IDYegan" Type="Int32" Nullable="false" />
+          <Property Name="IDNiroo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="NirooYeganVahedAmaliat" Relationship="GolestanShohadaModel.FK_ShahidAmaliat_NirooYeganVahedAmaliat" FromRole="ShahidAmaliat" ToRole="NirooYeganVahedAmaliat" />
+          <NavigationProperty Name="Raste" Relationship="GolestanShohadaModel.FK_ShahidAmaliat_Raste" FromRole="ShahidAmaliat" ToRole="Raste" />
+          <NavigationProperty Name="Shahid" Relationship="GolestanShohadaModel.FK_ShahidAmaliat_Shahid" FromRole="ShahidAmaliat" ToRole="Shahid" />
+        </EntityType>
+        <EntityType Name="Shahrestan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="Guid" />
+          <Property Name="IDOstan" Type="Int32" />
+          <NavigationProperty Name="Bakhshes" Relationship="GolestanShohadaModel.FK_Bakhsh_Shahrestan" FromRole="Shahrestan" ToRole="Bakhsh" />
+          <NavigationProperty Name="Ostan" Relationship="GolestanShohadaModel.FK_Shahrestan_Ostan" FromRole="Shahrestan" ToRole="Ostan" />
+        </EntityType>
         <Association Name="FK_NirooYeganVahedAmaliat_Amaliat">
           <End Type="GolestanShohadaModel.Amaliat" Role="Amaliat" Multiplicity="1" />
           <End Type="GolestanShohadaModel.NirooYeganVahedAmaliat" Role="NirooYeganVahedAmaliat" Multiplicity="*" />
@@ -1986,22 +1875,229 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ShahidAmaliat_Amaliat">
-          <End Type="GolestanShohadaModel.Amaliat" Role="Amaliat" Multiplicity="1" />
-          <End Type="GolestanShohadaModel.ShahidAmaliat" Role="ShahidAmaliat" Multiplicity="*" />
+        <Association Name="FK_Bakhsh_Shahrestan">
+          <End Type="GolestanShohadaModel.Shahrestan" Role="Shahrestan" Multiplicity="1" />
+          <End Type="GolestanShohadaModel.Bakhsh" Role="Bakhsh" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Amaliat">
+            <Principal Role="Shahrestan">
               <PropertyRef Name="ID" />
             </Principal>
-            <Dependent Role="ShahidAmaliat">
-              <PropertyRef Name="IDAmaliat" />
+            <Dependent Role="Bakhsh">
+              <PropertyRef Name="IDShahrestan" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="AmaliatNoghteAsar">
-          <End Type="GolestanShohadaModel.Amaliat" Role="Amaliat" Multiplicity="*" />
-          <End Type="GolestanShohadaModel.NoghteAsar" Role="NoghteAsar" Multiplicity="*" />
+        <Association Name="FK_Shahid_Bakhsh">
+          <End Type="GolestanShohadaModel.Bakhsh" Role="Bakhsh" Multiplicity="0..1" />
+          <End Type="GolestanShohadaModel.Shahid" Role="Shahid" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bakhsh">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Shahid">
+              <PropertyRef Name="IDBakhsheTavalod" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
+        <Association Name="FK_NirooYeganVahedAmaliat_Niroo">
+          <End Type="GolestanShohadaModel.Niroo" Role="Niroo" Multiplicity="1" />
+          <End Type="GolestanShohadaModel.NirooYeganVahedAmaliat" Role="NirooYeganVahedAmaliat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Niroo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="NirooYeganVahedAmaliat">
+              <PropertyRef Name="IDNiroo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NirooYeganVahedAmaliat_Vahed">
+          <End Type="GolestanShohadaModel.Vahed" Role="Vahed" Multiplicity="1" />
+          <End Type="GolestanShohadaModel.NirooYeganVahedAmaliat" Role="NirooYeganVahedAmaliat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vahed">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="NirooYeganVahedAmaliat">
+              <PropertyRef Name="IDVahed" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NirooYeganVahedAmaliat_Yegan">
+          <End Type="GolestanShohadaModel.Yegan" Role="Yegan" Multiplicity="1" />
+          <End Type="GolestanShohadaModel.NirooYeganVahedAmaliat" Role="NirooYeganVahedAmaliat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Yegan">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="NirooYeganVahedAmaliat">
+              <PropertyRef Name="IDYegan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ShahidAmaliat_NirooYeganVahedAmaliat">
+          <End Type="GolestanShohadaModel.NirooYeganVahedAmaliat" Role="NirooYeganVahedAmaliat" Multiplicity="1" />
+          <End Type="GolestanShohadaModel.ShahidAmaliat" Role="ShahidAmaliat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NirooYeganVahedAmaliat">
+              <PropertyRef Name="IDNiroo" />
+              <PropertyRef Name="IDYegan" />
+              <PropertyRef Name="IDAmaliat" />
+              <PropertyRef Name="IDVahed" />
+            </Principal>
+            <Dependent Role="ShahidAmaliat">
+              <PropertyRef Name="IDNiroo" />
+              <PropertyRef Name="IDYegan" />
+              <PropertyRef Name="IDAmaliat" />
+              <PropertyRef Name="IDVahed" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shahrestan_Ostan">
+          <End Type="GolestanShohadaModel.Ostan" Role="Ostan" Multiplicity="0..1" />
+          <End Type="GolestanShohadaModel.Shahrestan" Role="Shahrestan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ostan">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Shahrestan">
+              <PropertyRef Name="IDOstan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ShahidAmaliat_Raste">
+          <End Type="GolestanShohadaModel.Raste" Role="Raste" Multiplicity="1" />
+          <End Type="GolestanShohadaModel.ShahidAmaliat" Role="ShahidAmaliat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Raste">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ShahidAmaliat">
+              <PropertyRef Name="IDRaste" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ShahidAmaliat_Shahid">
+          <End Type="GolestanShohadaModel.Shahid" Role="Shahid" Multiplicity="1" />
+          <End Type="GolestanShohadaModel.ShahidAmaliat" Role="ShahidAmaliat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shahid">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ShahidAmaliat">
+              <PropertyRef Name="IDShahid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ViewShahidAshena">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="NameAhena" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FamilAshena" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tozihat" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Kholase" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDNoeRabete" Type="Int32" />
+          <Property Name="NameRabete" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameShahid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FamilShahid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ViewShahid">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GhateID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="CodeMeli" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TarikheTavalod" Type="DateTime" Precision="3" />
+          <Property Name="TarikheShahadat" Type="DateTime" Precision="3" />
+          <Property Name="NamePedar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Jensiat" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Shoghl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="QRCode" Type="Binary" MaxLength="50" FixedLength="true" />
+          <Property Name="IDBakhsheTavalod" Type="Int32" />
+          <Property Name="AttachID" Type="Guid" />
+          <Property Name="VaziateShahid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameBakhash" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameShahrestan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameOstan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShomareShenasname" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="GhateID" Type="Int32" Nullable="false" />
+          <Property Name="SangNeveshte" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameGhate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDBakhsh" Type="Int32" />
+          <Property Name="IDShahrestan" Type="Int32" />
+          <Property Name="IDOstan" Type="Int32" />
+          <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FileExtension" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ContentLength" Type="Int64" />
+          <Property Name="ContentType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="VirtualAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ServerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ViewShahidAmaliat">
+          <Key>
+            <PropertyRef Name="IDShahid" />
+            <PropertyRef Name="IDBakhsh" />
+            <PropertyRef Name="IDOstan" />
+            <PropertyRef Name="IDShahrestan" />
+            <PropertyRef Name="GhateID" />
+          </Key>
+          <Property Name="IDAmaliat" Type="Int32" />
+          <Property Name="NameAmaliat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TarikheShoroo" Type="DateTime" Precision="3" />
+          <Property Name="TarikhePayan" Type="DateTime" Precision="3" />
+          <Property Name="Tozihat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameRaste" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameNiroo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameYegan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameVahed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CodeMeli" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Family" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TarikheTavalod" Type="DateTime" Precision="3" />
+          <Property Name="TarikheShahadat" Type="DateTime" Precision="3" />
+          <Property Name="NamePedar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Jensiat" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Shoghl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="QRCode" Type="Binary" MaxLength="50" FixedLength="true" />
+          <Property Name="NameOstan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameShahrestan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameBakhash" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VaziateShahid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDShahid" Type="Int32" Nullable="false" />
+          <Property Name="ShomareShenasname" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ramz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDYegan" Type="Int32" />
+          <Property Name="IDNiroo" Type="Int32" />
+          <Property Name="IDRaste" Type="Int32" />
+          <Property Name="IDVahed" Type="Int32" />
+          <Property Name="IDBakhsh" Type="Int32" Nullable="false" />
+          <Property Name="IDOstan" Type="Int32" Nullable="false" />
+          <Property Name="IDShahrestan" Type="Int32" Nullable="false" />
+          <Property Name="NameGhate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GhateID" Type="Int32" Nullable="false" />
+          <Property Name="SangNeveshte" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDNoghteAsar" Type="Int32" />
+          <Property Name="NameNoghteAsar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="X" Type="Double" />
+          <Property Name="Y" Type="Double" />
+          <Property Name="NameMogheyat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TozihateMogheyat" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="IDMantaghe" Type="Int32" />
+          <Property Name="NameMantaghe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TozihateMantaghe" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FileExtension" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ContentLength" Type="Int64" />
+          <Property Name="ContentType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="VirtualAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ServerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ISMonjarBeShahadat" Type="Boolean" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2032,18 +2128,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
                 <ScalarProperty Name="Kholase" ColumnName="Kholase" />
                 <ScalarProperty Name="IDShahid" ColumnName="IDShahid" />
                 <ScalarProperty Name="IDNoeRabete" ColumnName="IDNoeRabete" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Bakhshes">
-            <EntityTypeMapping TypeName="GolestanShohadaModel.Bakhsh">
-              <MappingFragment StoreEntitySet="Bakhsh">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="faal" ColumnName="faal" />
-                <ScalarProperty Name="dateupdate" ColumnName="dateupdate" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-                <ScalarProperty Name="IDShahrestan" ColumnName="IDShahrestan" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2102,16 +2186,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="NirooYeganVahedAmaliats">
-            <EntityTypeMapping TypeName="GolestanShohadaModel.NirooYeganVahedAmaliat">
-              <MappingFragment StoreEntitySet="NirooYeganVahedAmaliat">
-                <ScalarProperty Name="IDNiroo" ColumnName="IDNiroo" />
-                <ScalarProperty Name="IDYegan" ColumnName="IDYegan" />
-                <ScalarProperty Name="IDAmaliat" ColumnName="IDAmaliat" />
-                <ScalarProperty Name="IDVahed" ColumnName="IDVahed" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="NoeMatlabs">
             <EntityTypeMapping TypeName="GolestanShohadaModel.NoeMatlab">
               <MappingFragment StoreEntitySet="NoeMatlab">
@@ -2159,35 +2233,12 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ShahidAmaliats">
-            <EntityTypeMapping TypeName="GolestanShohadaModel.ShahidAmaliat">
-              <MappingFragment StoreEntitySet="ShahidAmaliat">
-                <ScalarProperty Name="IDAmaliat" ColumnName="IDAmaliat" />
-                <ScalarProperty Name="IDShahid" ColumnName="IDShahid" />
-                <ScalarProperty Name="ISMonjarBeShahadat" ColumnName="ISMonjarBeShahadat" />
-                <ScalarProperty Name="IDRaste" ColumnName="IDRaste" />
-                <ScalarProperty Name="IDVahed" ColumnName="IDVahed" />
-                <ScalarProperty Name="IDYegan" ColumnName="IDYegan" />
-                <ScalarProperty Name="IDNiroo" ColumnName="IDNiroo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="ShahidRabetes">
             <EntityTypeMapping TypeName="GolestanShohadaModel.ShahidRabete">
               <MappingFragment StoreEntitySet="ShahidRabete">
                 <ScalarProperty Name="IDShahid1" ColumnName="IDShahid1" />
                 <ScalarProperty Name="IDShahid2" ColumnName="IDShahid2" />
                 <ScalarProperty Name="IDNoeRabete" ColumnName="IDNoeRabete" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Shahrestans">
-            <EntityTypeMapping TypeName="GolestanShohadaModel.Shahrestan">
-              <MappingFragment StoreEntitySet="Shahrestan">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-                <ScalarProperty Name="IDOstan" ColumnName="IDOstan" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2283,6 +2334,156 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_SearchShahidAmaliat" FunctionName="GolestanShohadaModel.Store.sp_SearchShahidAmaliat" />
+          <EntitySetMapping Name="Amaliats">
+            <EntityTypeMapping TypeName="GolestanShohadaModel.Amaliat">
+              <MappingFragment StoreEntitySet="Amaliat">
+                <ScalarProperty Name="AttachID" ColumnName="AttachID" />
+                <ScalarProperty Name="Thumbnale" ColumnName="Thumbnale" />
+                <ScalarProperty Name="Kholase" ColumnName="Kholase" />
+                <ScalarProperty Name="Tozihat" ColumnName="Tozihat" />
+                <ScalarProperty Name="TarikhePayan" ColumnName="TarikhePayan" />
+                <ScalarProperty Name="TarikheShoroo" ColumnName="TarikheShoroo" />
+                <ScalarProperty Name="Ramz" ColumnName="Ramz" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewAmaliats">
+            <EntityTypeMapping TypeName="GolestanShohadaModel.ViewAmaliat">
+              <MappingFragment StoreEntitySet="ViewAmaliat">
+                <ScalarProperty Name="UploadedTime" ColumnName="UploadedTime" />
+                <ScalarProperty Name="ServerAddress" ColumnName="ServerAddress" />
+                <ScalarProperty Name="VirtualAddress" ColumnName="VirtualAddress" />
+                <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+                <ScalarProperty Name="ContentLength" ColumnName="ContentLength" />
+                <ScalarProperty Name="FileExtension" ColumnName="FileExtension" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="AttachID" ColumnName="AttachID" />
+                <ScalarProperty Name="NameMantaghe" ColumnName="NameMantaghe" />
+                <ScalarProperty Name="IDMantaghe" ColumnName="IDMantaghe" />
+                <ScalarProperty Name="ToziahtMogheyat" ColumnName="ToziahtMogheyat" />
+                <ScalarProperty Name="NameMogheyat" ColumnName="NameMogheyat" />
+                <ScalarProperty Name="IDNoghteAsar" ColumnName="IDNoghteAsar" />
+                <ScalarProperty Name="IDMogheyat" ColumnName="IDMogheyat" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Kholase" ColumnName="Kholase" />
+                <ScalarProperty Name="Tozihat" ColumnName="Tozihat" />
+                <ScalarProperty Name="TarikhePayan" ColumnName="TarikhePayan" />
+                <ScalarProperty Name="TarikheShoroo" ColumnName="TarikheShoroo" />
+                <ScalarProperty Name="Ramz" ColumnName="Ramz" />
+                <ScalarProperty Name="IDAmaliat" ColumnName="IDAmaliat" />
+                <ScalarProperty Name="NameAmaliat" ColumnName="NameAmaliat" />
+                <ScalarProperty Name="NameNoghteAsar" ColumnName="NameNoghteAsar" />
+                <ScalarProperty Name="NameNiroo" ColumnName="NameNiroo" />
+                <ScalarProperty Name="NameYegan" ColumnName="NameYegan" />
+                <ScalarProperty Name="NameVahed" ColumnName="NameVahed" />
+                <ScalarProperty Name="IDVahed" ColumnName="IDVahed" />
+                <ScalarProperty Name="IDYegan" ColumnName="IDYegan" />
+                <ScalarProperty Name="IDNiroo" ColumnName="IDNiroo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AmaliatNoghteAsar" TypeName="GolestanShohadaModel.AmaliatNoghteAsar" StoreEntitySet="AmaliatNoghteAsar">
+            <EndProperty Name="NoghteAsar">
+              <ScalarProperty Name="ID" ColumnName="IDNoghteAsar" />
+            </EndProperty>
+            <EndProperty Name="Amaliat">
+              <ScalarProperty Name="ID" ColumnName="IDAmaliat" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="ViewShahidMatalebEzafes">
+            <EntityTypeMapping TypeName="GolestanShohadaModel.ViewShahidMatalebEzafe">
+              <MappingFragment StoreEntitySet="ViewShahidMatalebEzafe">
+                <ScalarProperty Name="NoeInSystem" ColumnName="NoeInSystem" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="Tozihat" ColumnName="Tozihat" />
+                <ScalarProperty Name="IDNoeMatlab" ColumnName="IDNoeMatlab" />
+                <ScalarProperty Name="Kholase" ColumnName="Kholase" />
+                <ScalarProperty Name="Family" ColumnName="Family" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewShahidRabetes">
+            <EntityTypeMapping TypeName="GolestanShohadaModel.ViewShahidRabete">
+              <MappingFragment StoreEntitySet="ViewShahidRabete">
+                <ScalarProperty Name="NoeInSystem" ColumnName="NoeInSystem" />
+                <ScalarProperty Name="NameRabete" ColumnName="NameRabete" />
+                <ScalarProperty Name="Name3" ColumnName="Name3" />
+                <ScalarProperty Name="Name2" ColumnName="Name2" />
+                <ScalarProperty Name="IDShahid2" ColumnName="IDShahid2" />
+                <ScalarProperty Name="IDShahid1" ColumnName="IDShahid1" />
+                <ScalarProperty Name="Family" ColumnName="Family" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetShahidAshena" FunctionName="GolestanShohadaModel.Store.sp_GetShahidAshena" />
+          <FunctionImportMapping FunctionImportName="sp_GetShahidMatalebEzafe" FunctionName="GolestanShohadaModel.Store.sp_GetShahidMatalebEzafe" />
+          <EntitySetMapping Name="Bakhshes">
+            <EntityTypeMapping TypeName="GolestanShohadaModel.Bakhsh">
+              <MappingFragment StoreEntitySet="Bakhsh">
+                <ScalarProperty Name="IDShahrestan" ColumnName="IDShahrestan" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="dateupdate" ColumnName="dateupdate" />
+                <ScalarProperty Name="faal" ColumnName="faal" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NirooYeganVahedAmaliats">
+            <EntityTypeMapping TypeName="GolestanShohadaModel.NirooYeganVahedAmaliat">
+              <MappingFragment StoreEntitySet="NirooYeganVahedAmaliat">
+                <ScalarProperty Name="IDVahed" ColumnName="IDVahed" />
+                <ScalarProperty Name="IDAmaliat" ColumnName="IDAmaliat" />
+                <ScalarProperty Name="IDYegan" ColumnName="IDYegan" />
+                <ScalarProperty Name="IDNiroo" ColumnName="IDNiroo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShahidAmaliats">
+            <EntityTypeMapping TypeName="GolestanShohadaModel.ShahidAmaliat">
+              <MappingFragment StoreEntitySet="ShahidAmaliat">
+                <ScalarProperty Name="IDNiroo" ColumnName="IDNiroo" />
+                <ScalarProperty Name="IDYegan" ColumnName="IDYegan" />
+                <ScalarProperty Name="IDVahed" ColumnName="IDVahed" />
+                <ScalarProperty Name="IDRaste" ColumnName="IDRaste" />
+                <ScalarProperty Name="ISMonjarBeShahadat" ColumnName="ISMonjarBeShahadat" />
+                <ScalarProperty Name="IDShahid" ColumnName="IDShahid" />
+                <ScalarProperty Name="IDAmaliat" ColumnName="IDAmaliat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shahrestans">
+            <EntityTypeMapping TypeName="GolestanShohadaModel.Shahrestan">
+              <MappingFragment StoreEntitySet="Shahrestan">
+                <ScalarProperty Name="IDOstan" ColumnName="IDOstan" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewShahidAshenas">
+            <EntityTypeMapping TypeName="GolestanShohadaModel.ViewShahidAshena">
+              <MappingFragment StoreEntitySet="ViewShahidAshena">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FamilShahid" ColumnName="FamilShahid" />
+                <ScalarProperty Name="NameShahid" ColumnName="NameShahid" />
+                <ScalarProperty Name="NameRabete" ColumnName="NameRabete" />
+                <ScalarProperty Name="IDNoeRabete" ColumnName="IDNoeRabete" />
+                <ScalarProperty Name="Kholase" ColumnName="Kholase" />
+                <ScalarProperty Name="Tozihat" ColumnName="Tozihat" />
+                <ScalarProperty Name="FamilAshena" ColumnName="FamilAshena" />
+                <ScalarProperty Name="NameAhena" ColumnName="NameAhena" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="ViewShahids">
             <EntityTypeMapping TypeName="GolestanShohadaModel.ViewShahid">
               <MappingFragment StoreEntitySet="ViewShahid">
@@ -2375,66 +2576,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="sp_SearchShahidAmaliat" FunctionName="GolestanShohadaModel.Store.sp_SearchShahidAmaliat" />
-          <EntitySetMapping Name="Amaliats">
-            <EntityTypeMapping TypeName="GolestanShohadaModel.Amaliat">
-              <MappingFragment StoreEntitySet="Amaliat">
-                <ScalarProperty Name="AttachID" ColumnName="AttachID" />
-                <ScalarProperty Name="Thumbnale" ColumnName="Thumbnale" />
-                <ScalarProperty Name="Kholase" ColumnName="Kholase" />
-                <ScalarProperty Name="Tozihat" ColumnName="Tozihat" />
-                <ScalarProperty Name="TarikhePayan" ColumnName="TarikhePayan" />
-                <ScalarProperty Name="TarikheShoroo" ColumnName="TarikheShoroo" />
-                <ScalarProperty Name="Ramz" ColumnName="Ramz" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ViewAmaliats">
-            <EntityTypeMapping TypeName="GolestanShohadaModel.ViewAmaliat">
-              <MappingFragment StoreEntitySet="ViewAmaliat">
-                <ScalarProperty Name="UploadedTime" ColumnName="UploadedTime" />
-                <ScalarProperty Name="ServerAddress" ColumnName="ServerAddress" />
-                <ScalarProperty Name="VirtualAddress" ColumnName="VirtualAddress" />
-                <ScalarProperty Name="ContentType" ColumnName="ContentType" />
-                <ScalarProperty Name="ContentLength" ColumnName="ContentLength" />
-                <ScalarProperty Name="FileExtension" ColumnName="FileExtension" />
-                <ScalarProperty Name="FileName" ColumnName="FileName" />
-                <ScalarProperty Name="AttachID" ColumnName="AttachID" />
-                <ScalarProperty Name="NameMantaghe" ColumnName="NameMantaghe" />
-                <ScalarProperty Name="IDMantaghe" ColumnName="IDMantaghe" />
-                <ScalarProperty Name="ToziahtMogheyat" ColumnName="ToziahtMogheyat" />
-                <ScalarProperty Name="NameMogheyat" ColumnName="NameMogheyat" />
-                <ScalarProperty Name="IDNoghteAsar" ColumnName="IDNoghteAsar" />
-                <ScalarProperty Name="IDMogheyat" ColumnName="IDMogheyat" />
-                <ScalarProperty Name="Y" ColumnName="Y" />
-                <ScalarProperty Name="X" ColumnName="X" />
-                <ScalarProperty Name="Kholase" ColumnName="Kholase" />
-                <ScalarProperty Name="Tozihat" ColumnName="Tozihat" />
-                <ScalarProperty Name="TarikhePayan" ColumnName="TarikhePayan" />
-                <ScalarProperty Name="TarikheShoroo" ColumnName="TarikheShoroo" />
-                <ScalarProperty Name="Ramz" ColumnName="Ramz" />
-                <ScalarProperty Name="IDAmaliat" ColumnName="IDAmaliat" />
-                <ScalarProperty Name="NameAmaliat" ColumnName="NameAmaliat" />
-                <ScalarProperty Name="NameNoghteAsar" ColumnName="NameNoghteAsar" />
-                <ScalarProperty Name="NameNiroo" ColumnName="NameNiroo" />
-                <ScalarProperty Name="NameYegan" ColumnName="NameYegan" />
-                <ScalarProperty Name="NameVahed" ColumnName="NameVahed" />
-                <ScalarProperty Name="IDVahed" ColumnName="IDVahed" />
-                <ScalarProperty Name="IDYegan" ColumnName="IDYegan" />
-                <ScalarProperty Name="IDNiroo" ColumnName="IDNiroo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <AssociationSetMapping Name="AmaliatNoghteAsar" TypeName="GolestanShohadaModel.AmaliatNoghteAsar" StoreEntitySet="AmaliatNoghteAsar">
-            <EndProperty Name="NoghteAsar">
-              <ScalarProperty Name="ID" ColumnName="IDNoghteAsar" />
-            </EndProperty>
-            <EndProperty Name="Amaliat">
-              <ScalarProperty Name="ID" ColumnName="IDAmaliat" />
-            </EndProperty>
-          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

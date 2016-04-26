@@ -32,6 +32,8 @@ namespace CMS.GolestaneShohada.Design.fa
             if (shahidID == int.MinValue)
                 return;
             var Myshahid = new Golestan.Helpers.InterFace().GetShahidAmaliatByID(shahidID);
+            if (Myshahid == null)
+                return;
             lblName.Text = Myshahid.Name;
            lblFamily.Text = Myshahid.Family;
            Title = string.Format("{0} {1}", Myshahid.Name, Myshahid.Family);

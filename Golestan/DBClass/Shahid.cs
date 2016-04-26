@@ -127,5 +127,23 @@ namespace Golestan.Model
                 return myen.sp_SearchShahidByQuery(fulltextquery).ToList<ViewShahid>();
             }
         }
+        internal List<ViewShahidAshena> GetShahidAshnayan(int id)
+        {
+            using (var myen = Golestan.Helpers.ContextHelper.GetContext)
+            {
+                string query=string.Format("ID = {0}" ,id);
+                return myen.sp_GetShahidAshena(query).ToList<ViewShahidAshena>();
+            }
+        }
+
+        internal List<ViewShahidMatalebEzafe> GetShahidMatalebEzafe(int id)
+        {
+            using (var myen = Golestan.Helpers.ContextHelper.GetContext)
+            {
+                string query = string.Format("ID = {0}", id);
+                return myen.sp_GetShahidMatalebEzafe(query).ToList<ViewShahidMatalebEzafe>();
+            }
+        }
+
     }
 }

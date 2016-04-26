@@ -14,7 +14,7 @@ namespace Golestan.Model
     
     public partial class ViewShahidAmaliat
     {
-        public int IDAmaliat { get; set; }
+        public Nullable<int> IDAmaliat { get; set; }
         public string NameAmaliat { get; set; }
         public Nullable<System.DateTime> TarikheShoroo { get; set; }
         public Nullable<System.DateTime> TarikhePayan { get; set; }
@@ -39,10 +39,10 @@ namespace Golestan.Model
         public int IDShahid { get; set; }
         public string ShomareShenasname { get; set; }
         public string Ramz { get; set; }
-        public int IDYegan { get; set; }
-        public int IDNiroo { get; set; }
-        public int IDRaste { get; set; }
-        public int IDVahed { get; set; }
+        public Nullable<int> IDYegan { get; set; }
+        public Nullable<int> IDNiroo { get; set; }
+        public Nullable<int> IDRaste { get; set; }
+        public Nullable<int> IDVahed { get; set; }
         public int IDBakhsh { get; set; }
         public int IDOstan { get; set; }
         public int IDShahrestan { get; set; }

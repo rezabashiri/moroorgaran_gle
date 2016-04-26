@@ -35,8 +35,7 @@ namespace Golestan.Model
 
             [Display(AutoGenerateField=false)]
             public virtual ICollection<NirooYeganVahedAmaliat> NirooYeganVahedAmaliats { get; set; }
-            [Display(AutoGenerateField = false)]            
-            public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
+            
              
             public virtual ICollection<NoghteAsar> NoghteAsars { get; set; }
         }

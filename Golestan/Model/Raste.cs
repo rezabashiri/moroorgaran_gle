@@ -17,8 +17,8 @@ namespace Golestan.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Raste()
         {
-            this.ShahidAmaliats = new HashSet<ShahidAmaliat>();
             this.Vaheds = new HashSet<Vahed>();
+            this.ShahidAmaliats = new HashSet<ShahidAmaliat>();
         }
     
         public int ID { get; set; }
@@ -26,8 +26,8 @@ namespace Golestan.Model
         public string Tozihat { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Vahed> Vaheds { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
     }
 }

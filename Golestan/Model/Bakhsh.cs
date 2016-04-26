@@ -25,7 +25,7 @@ namespace Golestan.Model
         public Nullable<bool> faal { get; set; }
         public Nullable<System.DateTime> dateupdate { get; set; }
         public Nullable<System.Guid> UserID { get; set; }
-        public Nullable<int> IDShahrestan { get; set; }
+        public int IDShahrestan { get; set; }
     
         public virtual Shahrestan Shahrestan { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

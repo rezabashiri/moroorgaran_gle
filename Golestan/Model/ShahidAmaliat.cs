@@ -17,14 +17,13 @@ namespace Golestan.Model
         public int IDAmaliat { get; set; }
         public int IDShahid { get; set; }
         public Nullable<bool> ISMonjarBeShahadat { get; set; }
-        public Nullable<int> IDRaste { get; set; }
-        public Nullable<int> IDVahed { get; set; }
-        public Nullable<int> IDYegan { get; set; }
-        public Nullable<int> IDNiroo { get; set; }
+        public int IDRaste { get; set; }
+        public int IDVahed { get; set; }
+        public int IDYegan { get; set; }
+        public int IDNiroo { get; set; }
     
         public virtual NirooYeganVahedAmaliat NirooYeganVahedAmaliat { get; set; }
         public virtual Raste Raste { get; set; }
         public virtual Shahid Shahid { get; set; }
-        public virtual Amaliat Amaliat { get; set; }
     }
 }

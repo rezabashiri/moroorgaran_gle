@@ -29,31 +29,34 @@ namespace Golestan.Model
     
         public virtual DbSet<AfzoodaneEtelaat> AfzoodaneEtelaats { get; set; }
         public virtual DbSet<Ashnayan> Ashnayans { get; set; }
-        public virtual DbSet<Bakhsh> Bakhshes { get; set; }
         public virtual DbSet<Ghate> Ghates { get; set; }
         public virtual DbSet<Maghbare> Maghbares { get; set; }
         public virtual DbSet<Mantaghe> Mantaghes { get; set; }
         public virtual DbSet<MatalebEzafe> MatalebEzafes { get; set; }
         public virtual DbSet<Mogheyat> Mogheyats { get; set; }
         public virtual DbSet<Niroo> Niroos { get; set; }
-        public virtual DbSet<NirooYeganVahedAmaliat> NirooYeganVahedAmaliats { get; set; }
         public virtual DbSet<NoeMatlab> NoeMatlabs { get; set; }
         public virtual DbSet<NoeRabete> NoeRabetes { get; set; }
         public virtual DbSet<NoghteAsar> NoghteAsars { get; set; }
         public virtual DbSet<Ostan> Ostans { get; set; }
         public virtual DbSet<Raste> Rastes { get; set; }
-        public virtual DbSet<ShahidAmaliat> ShahidAmaliats { get; set; }
         public virtual DbSet<ShahidRabete> ShahidRabetes { get; set; }
-        public virtual DbSet<Shahrestan> Shahrestans { get; set; }
         public virtual DbSet<Vahed> Vaheds { get; set; }
         public virtual DbSet<Vaziat> Vaziats { get; set; }
         public virtual DbSet<Yegan> Yegans { get; set; }
         public virtual DbSet<ViewNirooVahed> ViewNirooVaheds { get; set; }
         public virtual DbSet<Shahid> Shahids { get; set; }
-        public virtual DbSet<ViewShahid> ViewShahids { get; set; }
-        public virtual DbSet<ViewShahidAmaliat> ViewShahidAmaliats { get; set; }
         public virtual DbSet<Amaliat> Amaliats { get; set; }
         public virtual DbSet<ViewAmaliat> ViewAmaliats { get; set; }
+        public virtual DbSet<ViewShahidMatalebEzafe> ViewShahidMatalebEzafes { get; set; }
+        public virtual DbSet<ViewShahidRabete> ViewShahidRabetes { get; set; }
+        public virtual DbSet<Bakhsh> Bakhshes { get; set; }
+        public virtual DbSet<NirooYeganVahedAmaliat> NirooYeganVahedAmaliats { get; set; }
+        public virtual DbSet<ShahidAmaliat> ShahidAmaliats { get; set; }
+        public virtual DbSet<Shahrestan> Shahrestans { get; set; }
+        public virtual DbSet<ViewShahidAshena> ViewShahidAshenas { get; set; }
+        public virtual DbSet<ViewShahid> ViewShahids { get; set; }
+        public virtual DbSet<ViewShahidAmaliat> ViewShahidAmaliats { get; set; }
     
         public virtual ObjectResult<ViewShahid> sp_SearchSahid(string whereParameter)
         {
@@ -107,6 +110,42 @@ namespace Golestan.Model
                 new ObjectParameter("WhereParameter", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewShahidAmaliat>("sp_SearchShahidAmaliat", mergeOption, whereParameterParameter);
+        }
+    
+        public virtual ObjectResult<ViewShahidAshena> sp_GetShahidAshena(string whereParameter)
+        {
+            var whereParameterParameter = whereParameter != null ?
+                new ObjectParameter("WhereParameter", whereParameter) :
+                new ObjectParameter("WhereParameter", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewShahidAshena>("sp_GetShahidAshena", whereParameterParameter);
+        }
+    
+        public virtual ObjectResult<ViewShahidAshena> sp_GetShahidAshena(string whereParameter, MergeOption mergeOption)
+        {
+            var whereParameterParameter = whereParameter != null ?
+                new ObjectParameter("WhereParameter", whereParameter) :
+                new ObjectParameter("WhereParameter", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewShahidAshena>("sp_GetShahidAshena", mergeOption, whereParameterParameter);
+        }
+    
+        public virtual ObjectResult<ViewShahidMatalebEzafe> sp_GetShahidMatalebEzafe(string whereParameter)
+        {
+            var whereParameterParameter = whereParameter != null ?
+                new ObjectParameter("WhereParameter", whereParameter) :
+                new ObjectParameter("WhereParameter", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewShahidMatalebEzafe>("sp_GetShahidMatalebEzafe", whereParameterParameter);
+        }
+    
+        public virtual ObjectResult<ViewShahidMatalebEzafe> sp_GetShahidMatalebEzafe(string whereParameter, MergeOption mergeOption)
+        {
+            var whereParameterParameter = whereParameter != null ?
+                new ObjectParameter("WhereParameter", whereParameter) :
+                new ObjectParameter("WhereParameter", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewShahidMatalebEzafe>("sp_GetShahidMatalebEzafe", mergeOption, whereParameterParameter);
         }
     }
 }

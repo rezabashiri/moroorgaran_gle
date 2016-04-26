@@ -17,16 +17,16 @@ namespace Golestan.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Niroo()
         {
-            this.NirooYeganVahedAmaliats = new HashSet<NirooYeganVahedAmaliat>();
             this.Yegans = new HashSet<Yegan>();
+            this.NirooYeganVahedAmaliats = new HashSet<NirooYeganVahedAmaliat>();
         }
     
         public int ID { get; set; }
         public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NirooYeganVahedAmaliat> NirooYeganVahedAmaliats { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Yegan> Yegans { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NirooYeganVahedAmaliat> NirooYeganVahedAmaliats { get; set; }
     }
 }

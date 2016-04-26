@@ -19,9 +19,9 @@ namespace Golestan.Model
         {
             this.AfzoodaneEtelaats = new HashSet<AfzoodaneEtelaat>();
             this.MatalebEzafes = new HashSet<MatalebEzafe>();
-            this.ShahidAmaliats = new HashSet<ShahidAmaliat>();
             this.ShahidRabetes = new HashSet<ShahidRabete>();
             this.ShahidRabetes1 = new HashSet<ShahidRabete>();
+            this.ShahidAmaliats = new HashSet<ShahidAmaliat>();
         }
     
         public int ID { get; set; }
@@ -42,16 +42,16 @@ namespace Golestan.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AfzoodaneEtelaat> AfzoodaneEtelaats { get; set; }
-        public virtual Bakhsh Bakhsh { get; set; }
         public virtual Maghbare Maghbare { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MatalebEzafe> MatalebEzafes { get; set; }
         public virtual Vaziat Vaziat { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ShahidRabete> ShahidRabetes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ShahidRabete> ShahidRabetes1 { get; set; }
+        public virtual Bakhsh Bakhsh { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
     }
 }

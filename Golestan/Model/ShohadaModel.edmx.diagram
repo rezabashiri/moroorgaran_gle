@@ -7,58 +7,60 @@
       <Diagram DiagramId="05ab5fb40f624f6ebeefe5cc271aebc1" Name="Diagram1">
         <EntityTypeShape EntityType="GolestanShohadaModel.AfzoodaneEtelaat" Width="1.5" PointX="9.75" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.Ashnayan" Width="1.5" PointX="12.75" PointY="18.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="GolestanShohadaModel.Bakhsh" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.Ghate" Width="1.5" PointX="10.5" PointY="11.875" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.Maghbare" Width="1.5" PointX="12.75" PointY="8.625" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.Mantaghe" Width="1.5" PointX="8.25" PointY="24.25" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.MatalebEzafe" Width="1.5" PointX="12.75" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.Mogheyat" Width="1.5" PointX="10.5" PointY="24" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.Niroo" Width="1.5" PointX="5.25" PointY="17.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="GolestanShohadaModel.NirooYeganVahedAmaliat" Width="1.5" PointX="7.5" PointY="19.75" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.NoeMatlab" Width="1.5" PointX="10.5" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.NoeRabete" Width="1.5" PointX="10.5" PointY="14.625" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.NoghteAsar" Width="1.5" PointX="12.75" PointY="14.875" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.Ostan" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.Raste" Width="1.5" PointX="3" PointY="20" IsExpanded="true" />
-        <EntityTypeShape EntityType="GolestanShohadaModel.ShahidAmaliat" Width="1.5" PointX="9.75" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.ShahidRabete" Width="1.5" PointX="12.75" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="GolestanShohadaModel.Shahrestan" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.Vahed" Width="1.5" PointX="5.25" PointY="20" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.Vaziat" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.Yegan" Width="1.5" PointX="5.25" PointY="22.875" IsExpanded="true" />
         <EntityTypeShape EntityType="GolestanShohadaModel.ViewNirooVahed" Width="1.5" PointX="2.75" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="GolestanShohadaModel.FK_Ashnayan_Rabete" ManuallyRouted="false" />
-        <AssociationConnector Association="GolestanShohadaModel.FK_Bakhsh_Shahrestan" ManuallyRouted="false" />
         <AssociationConnector Association="GolestanShohadaModel.FK_Maghbare_Ghate" ManuallyRouted="false" />
         <AssociationConnector Association="GolestanShohadaModel.FK_Mogheyat_Mantaghe" ManuallyRouted="false" />
         <AssociationConnector Association="GolestanShohadaModel.FK_MatalebEzafe_MatalebEzafe" ManuallyRouted="false" />
-        <AssociationConnector Association="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Niroo" ManuallyRouted="false" />
-        <AssociationConnector Association="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Vahed" ManuallyRouted="false" />
-        <AssociationConnector Association="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Yegan" ManuallyRouted="false" />
-        <AssociationConnector Association="GolestanShohadaModel.FK_ShahidAmaliat_NirooYeganVahedAmaliat" ManuallyRouted="false" />
         <AssociationConnector Association="GolestanShohadaModel.FK_ShahidRabete_Rabete" ManuallyRouted="false" />
-        <AssociationConnector Association="GolestanShohadaModel.FK_Shahrestan_Ostan" ManuallyRouted="false" />
-        <AssociationConnector Association="GolestanShohadaModel.FK_ShahidAmaliat_Raste" ManuallyRouted="false" />
         <AssociationConnector Association="GolestanShohadaModel.NirooYegan" ManuallyRouted="false" />
         <AssociationConnector Association="GolestanShohadaModel.NoghteAsarMogheyat" ManuallyRouted="false" />
         <AssociationConnector Association="GolestanShohadaModel.RasteVahed" ManuallyRouted="false" />
         <AssociationConnector Association="GolestanShohadaModel.YeganVahed" ManuallyRouted="false" />
         <EntityTypeShape EntityType="GolestanShohadaModel.Shahid" Width="1.5" PointX="7.875" PointY="5.625" />
         <AssociationConnector Association="GolestanShohadaModel.FK_AfzoodaneEtelaat_Shahid" />
-        <AssociationConnector Association="GolestanShohadaModel.FK_Shahid_Bakhsh" />
         <AssociationConnector Association="GolestanShohadaModel.FK_Maghbare_Shahid" />
         <AssociationConnector Association="GolestanShohadaModel.FK_MatalebEzafe_Shahid" />
         <AssociationConnector Association="GolestanShohadaModel.FK_Shahid_Vaziat" />
-        <AssociationConnector Association="GolestanShohadaModel.FK_ShahidAmaliat_Shahid" />
         <AssociationConnector Association="GolestanShohadaModel.FK_ShahidRabete_Shahid" />
         <AssociationConnector Association="GolestanShohadaModel.FK_ShahidRabete_Shahid1" />
-        <EntityTypeShape EntityType="GolestanShohadaModel.ViewShahid" Width="1.5" PointX="15.375" PointY="0.75" />
-        <EntityTypeShape EntityType="GolestanShohadaModel.ViewShahidAmaliat" Width="1.5" PointX="15.375" PointY="8.75" />
         <EntityTypeShape EntityType="GolestanShohadaModel.Amaliat" Width="1.5" PointX="5.625" PointY="11.625" />
         <EntityTypeShape EntityType="GolestanShohadaModel.ViewAmaliat" Width="1.5" PointX="0.75" PointY="11.75" />
-        <AssociationConnector Association="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Amaliat" />
-        <AssociationConnector Association="GolestanShohadaModel.FK_ShahidAmaliat_Amaliat" />
         <AssociationConnector Association="GolestanShohadaModel.AmaliatNoghteAsar" />
+        <EntityTypeShape EntityType="GolestanShohadaModel.ViewShahidMatalebEzafe" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="GolestanShohadaModel.ViewShahidRabete" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="GolestanShohadaModel.Bakhsh" Width="1.5" PointX="5.625" PointY="26.125" />
+        <EntityTypeShape EntityType="GolestanShohadaModel.NirooYeganVahedAmaliat" Width="1.5" PointX="7.875" PointY="16.875" />
+        <EntityTypeShape EntityType="GolestanShohadaModel.ShahidAmaliat" Width="1.5" PointX="10.125" PointY="17.375" />
+        <EntityTypeShape EntityType="GolestanShohadaModel.Shahrestan" Width="1.5" PointX="3.375" PointY="26.25" />
+        <AssociationConnector Association="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Amaliat" />
+        <AssociationConnector Association="GolestanShohadaModel.FK_Bakhsh_Shahrestan" />
+        <AssociationConnector Association="GolestanShohadaModel.FK_Shahid_Bakhsh" />
+        <AssociationConnector Association="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Niroo" />
+        <AssociationConnector Association="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Vahed" />
+        <AssociationConnector Association="GolestanShohadaModel.FK_NirooYeganVahedAmaliat_Yegan" />
+        <AssociationConnector Association="GolestanShohadaModel.FK_ShahidAmaliat_NirooYeganVahedAmaliat" />
+        <AssociationConnector Association="GolestanShohadaModel.FK_Shahrestan_Ostan" />
+        <AssociationConnector Association="GolestanShohadaModel.FK_ShahidAmaliat_Raste" />
+        <AssociationConnector Association="GolestanShohadaModel.FK_ShahidAmaliat_Shahid" />
+        <EntityTypeShape EntityType="GolestanShohadaModel.ViewShahidAshena" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="GolestanShohadaModel.ViewShahid" Width="1.5" PointX="15.375" PointY="0.75" />
+        <EntityTypeShape EntityType="GolestanShohadaModel.ViewShahidAmaliat" Width="1.5" PointX="15.375" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
