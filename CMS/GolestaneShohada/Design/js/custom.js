@@ -77,8 +77,13 @@ jQuery(document).ready(function ($) {
   			mode: 'fade',
   			autoControls: true
 			});
-		}
-	
+    }
+
+    //Event Timer Home Page 
+    if ($('#DateCountdown').length) {
+        $("#DateCountdown").TimeCircles();
+    }
+
 
     //Content Slider Home page
     if ($('#slider1').length) {
@@ -254,10 +259,6 @@ jQuery(document).ready(function ($) {
     }
 	
 
-		//Event Timer Home Page 
-		if ($('#DateCountdown').length) {
-		 $("#DateCountdown").TimeCircles();
-		}
 
 
     //Function End 

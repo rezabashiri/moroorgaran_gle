@@ -124,7 +124,7 @@
             <div class="collapse navbar-collapse">
               <nav>
                 <ul id="nav">
-                  <li class="active"><a href="Default.aspx">خانه</a></li>
+                  <li class="active"><a href="../Default.aspx">خانه</a></li>
                   <li><a href="#">درباره ما</a></li>
                   <li><a href="#">منو یک</a>
                     <ul>
@@ -258,34 +258,34 @@
         </div>
     </form>
 <!--Jquery 1.11.3--> 
-<script src="../js/jquery-1.11.3.min.js"></script> 
+<script src="../Js/jquery-1.11.3.min.js"></script> 
 <!--Bootstrap Js--> 
-<script src="../js/bootstrap.js"></script> 
+<script src="../Js/bootstrap.js"></script> 
 <!--Respond Js--> 
-<script src="../js/respond.js" ></script> 
+<script src="../Js/respond.js" ></script> 
 <!--Next Event Countdown--> 
-<script src="../js/kinetic.js"></script> 
+<script src="../Js/kinetic.js"></script> 
 <!--Next Event Countdown--> 
-<script src="../js/jquery.final-countdown.js"></script> 
+<script src="../Js/jquery.final-countdown.js"></script> 
 <!--Parallax Effect Js--> 
-<script src="../js/jquery.stellar.min.js"></script> 
+<script src="../Js/jquery.stellar.min.js"></script> 
 <!--Latest Event Contdown Js--> 
-<script src="../js/jquery.plugin.js"></script> 
+<script src="../Js/jquery.plugin.js"></script> 
 <!--Latest Event Contdown Js--> 
-<script src="../js/jquery.countdown.js"></script> 
+<script src="../Js/jquery.countdown.js"></script> 
 <!--Bxslider Js--> 
-<script src="../js/jquery.bxslider.min.js"></script> 
+<script src="../Js/jquery.bxslider.min.js"></script> 
 <!--Content Slider Js--> 
-<script src="../js/jquery.content_slider.min.js"></script> 
+<script src="../Js/jquery.content_slider.min.js"></script> 
 <!-- Style Switcher --> 
-<script src="../js/styleswitch.js"></script> 
-<script src="../js/jquery.tabSlideOut.v1.3.js"></script> 
+<script src="../Js/styleswitch.js"></script> 
+<script src="../Js/jquery.tabSlideOut.v1.3.js"></script> 
 <!--MP3 Player JS--> 
-<script src="../js/audioplayer.js"></script> 
+<script src="../Js/audioplayer.js"></script> 
 <!--Event Timer Js--> 
-<script type="text/javascript" src="../js/TimeCircles.js"></script> 
+<script type="text/javascript" src="../Js/TimeCircles.js"></script> 
 <!--Custome Js--> 
-<script src="../js/custom.js"></script>
+<script src="../Js/custom.js"></script>
 <script type="text/javascript">/* <![CDATA[ */(function (d, s, a, i, j, r, l, m, t) { try { l = d.getElementsByTagName('a'); t = d.createElement('textarea'); for (i = 0; l.length - i; i++) { try { a = l[i].href; s = a.indexOf('/cdn-cgi/l/email-protection'); m = a.length; if (a && s > -1 && m > 28) { j = 28 + s; s = ''; if (j < m) { r = '0x' + a.substr(j, 2) | 0; for (j += 2; j < m && a.charAt(j) != 'X'; j += 2) s += '%' + ('0' + ('0x' + a.substr(j, 2) ^ r).toString(16)).slice(-2); j++; s = decodeURIComponent(s) + a.substr(j, m - j) } t.innerHTML = s.replace(/</g, '&lt;').replace(/>/g, '&gt;'); l[i].href = 'mailto:' + t.value } } catch (e) { } } } catch (e) { } })(document);/* ]]> */</script>
 
 </body>
