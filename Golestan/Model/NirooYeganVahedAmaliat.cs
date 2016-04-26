@@ -28,7 +28,7 @@ namespace Golestan.Model
         public virtual Niroo Niroo { get; set; }
         public virtual Vahed Vahed { get; set; }
         public virtual Yegan Yegan { get; set; }
-       
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
         public virtual Amaliat Amaliat { get; set; }
     }

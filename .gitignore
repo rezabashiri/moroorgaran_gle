@@ -4,6 +4,5 @@ CMS/App_Data/
 obj/
 CMS/bin/
 Golestan/bin/
-
- 
+UpgradeLog* 
 CMS/CMS.csproj

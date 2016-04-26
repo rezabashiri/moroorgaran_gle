@@ -500,7 +500,10 @@ public class MyClass
     {
         get
         {
-            return AccessManagementService.Access.AccessControl.LoggenInUser.ID;
+            var user = global::AccessManagementService.Access.AccessControl.LoggenInUser;
+            if (user == null)
+                new AccessManagementService.Access.Login().RemoveSessions();
+            return user.ID;
         }
     }
 }

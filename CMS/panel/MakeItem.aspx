@@ -5,10 +5,10 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="head">
     <title>ایجاد و ویرایش مطلب جدید</title>
-    <meta name="robots" content="nosnippet">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="مرورگران">
+    <meta name="robots" content="nosnippet"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="مرورگران"/>
 
     <script type="text/javascript" src="../js/tinymce/tinymce.min.js"></script>
    <script type="text/javascript">
