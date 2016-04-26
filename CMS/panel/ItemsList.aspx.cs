@@ -198,7 +198,7 @@ public partial class panel_ItemsList : System.Web.UI.Page
         if (e.CommandName == "EditC")
         {
             //if (Part() != 4)
-            Response.Redirect("MakeItem.aspx?&ItemId=" + e.CommandArgument);
+            Response.Redirect("MakeItem.aspx?ItemId=" + e.CommandArgument);
             //else if (Part() == 4)
             //    Response.Redirect("PictureBoard.aspx?ItemId=" + e.CommandArgument);
         }

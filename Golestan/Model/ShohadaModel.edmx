@@ -371,9 +371,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
         <EntityType Name="ViewShahidAmaliat">
           <Key>
             <PropertyRef Name="IDShahid" />
-            <PropertyRef Name="IDBakhsh" />
-            <PropertyRef Name="IDOstan" />
-            <PropertyRef Name="IDShahrestan" />
             <PropertyRef Name="GhateID" />
           </Key>
           <Property Name="IDAmaliat" Type="int" />
@@ -405,9 +402,9 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidAmaliat' does not ha
           <Property Name="IDNiroo" Type="int" />
           <Property Name="IDRaste" Type="int" />
           <Property Name="IDVahed" Type="int" />
-          <Property Name="IDBakhsh" Type="int" Nullable="false" />
-          <Property Name="IDOstan" Type="int" Nullable="false" />
-          <Property Name="IDShahrestan" Type="int" Nullable="false" />
+          <Property Name="IDBakhsh" Type="int" />
+          <Property Name="IDOstan" Type="int" />
+          <Property Name="IDShahrestan" Type="int" />
           <Property Name="NameGhate" Type="nvarchar" MaxLength="50" />
           <Property Name="GhateID" Type="int" Nullable="false" />
           <Property Name="SangNeveshte" Type="nvarchar" MaxLength="50" />
@@ -2041,9 +2038,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
         <EntityType Name="ViewShahidAmaliat">
           <Key>
             <PropertyRef Name="IDShahid" />
-            <PropertyRef Name="IDBakhsh" />
-            <PropertyRef Name="IDOstan" />
-            <PropertyRef Name="IDShahrestan" />
             <PropertyRef Name="GhateID" />
           </Key>
           <Property Name="IDAmaliat" Type="Int32" />
@@ -2075,9 +2069,9 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
           <Property Name="IDNiroo" Type="Int32" />
           <Property Name="IDRaste" Type="Int32" />
           <Property Name="IDVahed" Type="Int32" />
-          <Property Name="IDBakhsh" Type="Int32" Nullable="false" />
-          <Property Name="IDOstan" Type="Int32" Nullable="false" />
-          <Property Name="IDShahrestan" Type="Int32" Nullable="false" />
+          <Property Name="IDBakhsh" Type="Int32" />
+          <Property Name="IDOstan" Type="Int32" />
+          <Property Name="IDShahrestan" Type="Int32" />
           <Property Name="NameGhate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="GhateID" Type="Int32" Nullable="false" />
           <Property Name="SangNeveshte" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />

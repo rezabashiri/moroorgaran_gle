@@ -43,9 +43,9 @@ namespace Golestan.Model
         public Nullable<int> IDNiroo { get; set; }
         public Nullable<int> IDRaste { get; set; }
         public Nullable<int> IDVahed { get; set; }
-        public int IDBakhsh { get; set; }
-        public int IDOstan { get; set; }
-        public int IDShahrestan { get; set; }
+        public Nullable<int> IDBakhsh { get; set; }
+        public Nullable<int> IDOstan { get; set; }
+        public Nullable<int> IDShahrestan { get; set; }
         public string NameGhate { get; set; }
         public int GhateID { get; set; }
         public string SangNeveshte { get; set; }
