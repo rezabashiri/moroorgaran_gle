@@ -407,6 +407,8 @@
     <Content Include="GolestaneShohada\Design\css\prettyPhoto.css" />
     <Content Include="GolestaneShohada\Design\css\responsive.css" />
     <Content Include="GolestaneShohada\Design\Default.aspx" />
+    <Content Include="GolestaneShohada\Design\fa\eventarchive.aspx" />
+    <Content Include="GolestaneShohada\Design\fa\newsarchive.aspx" />
     <Content Include="GolestaneShohada\Design\fa\images\404-bg.png" />
     <Content Include="GolestaneShohada\Design\fa\images\about-img.jpg" />
     <Content Include="GolestaneShohada\Design\fa\images\author-img.png" />
@@ -1574,6 +1576,20 @@
     </Compile>
     <Compile Include="GolestaneShohada\Design\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\eventarchive.aspx.cs">
+      <DependentUpon>eventarchive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\eventarchive.aspx.designer.cs">
+      <DependentUpon>eventarchive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\newsarchive.aspx.cs">
+      <DependentUpon>newsarchive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\newsarchive.aspx.designer.cs">
+      <DependentUpon>newsarchive.aspx</DependentUpon>
     </Compile>
     <Compile Include="GolestaneShohada\Design\fa\pershahid.aspx.cs">
       <DependentUpon>PerShahid.aspx</DependentUpon>

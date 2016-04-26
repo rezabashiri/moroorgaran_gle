@@ -32,7 +32,7 @@
 <link href="css/content_slider_style.css" rel="stylesheet" type="text/css" />
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.Js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <!-- Color Css Files Start -->
 <link rel="alternate stylesheet" type="text/css" href="css/color-3.css" title="styles3" media="screen" />
@@ -352,11 +352,16 @@
                   </div>
                 </div>
                 <div class="inner-area">
-                    <br />
-
+                    <div class="timer-box">
+                    <div class="defaultCountdown is-countdown"><span class="countdown-row countdown-show4">
+                        <span class="countdown-section"><span class="countdown-amount"><%# DataBinder.Eval(Container.DataItem, "dayE") %></span><span class="countdown-period">Day</span></span>
+                        <span class="countdown-section"><span class="countdown-amount"><%# DataBinder.Eval(Container.DataItem, "HourE") %></span><span class="countdown-period">Hrs</span></span>
+                        <span class="countdown-section"><span class="countdown-amount"><%# DataBinder.Eval(Container.DataItem, "minE") %></span><span class="countdown-period">Mins</span></span>
+                        <span class="countdown-section"><span class="countdown-amount">12</span><span class="countdown-period">Sec</span></span></span></div>
+                  </div>
                   <div class="text-area"> <strong class="title"><%# DataBinder.Eval(Container.DataItem, "ItemTopic") %></strong>
                     <ul>
-                      <li><span><i class="fa fa-calendar"></i></span><strong><%# MyClass.GetFarsiDate(Eval("ShowDate")) %></strong></li>
+                      <li><span><i class="fa fa-calendar"></i></span><strong><%# MyClass.GetFarsiDate(Eval("EventDate")) %></strong></li>
                     </ul>
                     <a href="fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>" class="btn-participate">بیشتر</a> </div>
                 </div>
@@ -367,11 +372,11 @@
             </asp:ListView>
           
         </div>
-        <a href="#" class="view-calender">مشاهده همه رویدادها</a> </div>
+        <a href="fa/eventarchive.aspx" class="view-calender">مشاهده همه رویدادها</a> </div>
     </section>
     <!-- Latest Event Box End--> 
     <!-- Home Blog Posts Start-->
-    <section class="blog-posts">
+    <section class="blog-posts disNone">
       <div class="container">
         <h3>بلاگ</h3>
         <div class="row">
@@ -574,34 +579,34 @@
 </div>
 <!--Wrapper End--> 
 <!--Jquery 1.11.3--> 
-<script src="js/jquery-1.11.3.min.js"></script> 
+<script src="Js/jquery-1.11.3.min.js"></script> 
 <!--Bootstrap Js--> 
-<script src="js/bootstrap.js"></script> 
+<script src="Js/bootstrap.js"></script> 
 <!--Respond Js--> 
-<script src="js/respond.js" ></script> 
+<script src="Js/respond.js" ></script> 
 <!--Next Event Countdown--> 
-<script src="js/kinetic.js"></script> 
+<script src="Js/kinetic.js"></script> 
 <!--Next Event Countdown--> 
-<script src="js/jquery.final-countdown.js"></script> 
+<script src="Js/jquery.final-countdown.js"></script> 
 <!--Parallax Effect Js--> 
-<script src="js/jquery.stellar.min.js"></script> 
+<script src="Js/jquery.stellar.min.js"></script> 
 <!--Latest Event Contdown Js--> 
-<script src="js/jquery.plugin.js"></script> 
+<script src="Js/jquery.plugin.js"></script> 
 <!--Latest Event Contdown Js--> 
-<script src="js/jquery.countdown.js"></script> 
+<script src="Js/jquery.countdown.js"></script> 
 <!--Bxslider Js--> 
-<script src="js/jquery.bxslider.min.js"></script> 
+<script src="Js/jquery.bxslider.min.js"></script> 
 <!--Content Slider Js--> 
-<script src="js/jquery.content_slider.js"></script> 
+<script src="Js/jquery.content_slider.js"></script> 
 <!-- Style Switcher --> 
-<script src="js/styleswitch.js"></script> 
-<script src="js/jquery.tabSlideOut.v1.3.js"></script> 
+<script src="Js/styleswitch.js"></script> 
+<script src="Js/jquery.tabSlideOut.v1.3.js"></script> 
 <!--MP3 Player JS--> 
-<script src="js/audioplayer.js"></script> 
+<script src="Js/audioplayer.js"></script> 
 <!--Event Timer Js--> 
-<script type="text/javascript" src="js/TimeCircles.js"></script> 
+<script type="text/javascript" src="Js/TimeCircles.js"></script> 
 <!--Custome Js--> 
-<script src="js/custom.js"></script>
+<script src="Js/custom.js"></script>
 <script type="text/javascript">/* <![CDATA[ */(function (d, s, a, i, j, r, l, m, t) { try { l = d.getElementsByTagName('a'); t = d.createElement('textarea'); for (i = 0; l.length - i; i++) { try { a = l[i].href; s = a.indexOf('/cdn-cgi/l/email-protection'); m = a.length; if (a && s > -1 && m > 28) { j = 28 + s; s = ''; if (j < m) { r = '0x' + a.substr(j, 2) | 0; for (j += 2; j < m && a.charAt(j) != 'X'; j += 2) s += '%' + ('0' + ('0x' + a.substr(j, 2) ^ r).toString(16)).slice(-2); j++; s = decodeURIComponent(s) + a.substr(j, m - j) } t.innerHTML = s.replace(/</g, '&lt;').replace(/>/g, '&gt;'); l[i].href = 'mailto:' + t.value } } catch (e) { } } } catch (e) { } })(document);/* ]]> */</script></body>
 
 <!-- Mirrored from html.crunchpress.com/prayer/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Apr 2016 06:56:30 GMT -->

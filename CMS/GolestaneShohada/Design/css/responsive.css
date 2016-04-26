@@ -872,7 +872,8 @@ span.colun-1, span.colun-2, span.colun-3{
 	min-width: 390px;
 }
 .event-listing-box .frame {
-	width:auto;
+	/*width:auto;*/
+    max-width:360px;
 	margin: 0 30px 0 0;
 }
 .event-listing-box .text-box {

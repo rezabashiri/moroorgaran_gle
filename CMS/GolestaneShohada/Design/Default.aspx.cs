@@ -50,7 +50,9 @@ namespace CMS.GolestaneShohada.Design
         {
             try
             {
-                sql = "SELECT     TOP (4)  dbo.TItems.ItemTopic, dbo.TItems.PhotoName, dbo.TItems.SummaryTxt, dbo.TItems.ItemID, dbo.TItems.ShowDate " +
+                sql = "SELECT     TOP (4)  dbo.TItems.ItemTopic, dbo.TItems.PhotoName, dbo.TItems.SummaryTxt, dbo.TItems.ItemID, dbo.TItems.EventDate, " +
+                    "DATEDIFF(day, GETDATE(), EventDate) as dayE, DATEDIFF(day, DATEPART(HOUR, GETDATE()), DATEPART(HOUR, EventDate)) as HourE, "+
+                    " DATEDIFF(day, DATEPART(minute, GETDATE()), DATEPART(minute, EventDate)) as minE "+
                     "FROM         dbo.TItems INNER JOIN " +
                     "dbo.TGroups ON dbo.TItems.GrpID = dbo.TGroups.GrpID INNER JOIN " +
                     "dbo.TParts ON dbo.TGroups.PartID = dbo.TParts.PartID " +
