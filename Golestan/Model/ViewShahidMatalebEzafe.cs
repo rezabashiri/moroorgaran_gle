@@ -14,13 +14,14 @@ namespace Golestan.Model
     
     public partial class ViewShahidMatalebEzafe
     {
+        public long Row { get; set; }
         public int ID { get; set; }
         public string Name { get; set; }
         public string Family { get; set; }
         public string Kholase { get; set; }
         public Nullable<int> IDNoeMatlab { get; set; }
         public string Tozihat { get; set; }
-        public string Expr1 { get; set; }
+        public string NameNoeMatlab { get; set; }
         public string NoeInSystem { get; set; }
     }
 }

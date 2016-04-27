@@ -42,7 +42,7 @@
 
         <script type="text/javascript">
             var map;
-            var myLatlng = new google.maps.LatLng(<%= X %>, <%= Y %>);
+            var myLatlng = new google.maps.LatLng( <%= Y %>,<%= X %>);
             function initialize() {
                 var mapOptions = {
                     zoom: 8,
@@ -102,7 +102,7 @@
     <div class="lineH blog-detail">
         <asp:ListView ID="ListView1" runat="server">
             <ItemTemplate>
-                <h2><%# DataBinder.Eval(Container.DataItem, "Expr1") %></h2>
+                <h2><%# DataBinder.Eval(Container.DataItem, "NameNoeMatlab") %></h2>
                 <blockquote><q><%# DataBinder.Eval(Container.DataItem, "Kholase") %></q> </blockquote>
                 <p><%# DataBinder.Eval(Container.DataItem, "Tozihat") %></p>
             </ItemTemplate>

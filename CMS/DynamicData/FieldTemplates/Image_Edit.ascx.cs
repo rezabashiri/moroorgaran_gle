@@ -49,12 +49,14 @@ namespace CMS
         protected override void OnDataBinding(EventArgs e)
         {
             base.OnDataBinding(e);
-
+            if (Mode == DataBoundControlMode.Insert)
+                return;
             //check if image exists
             if (FieldValue == null)
             {
                 return;
             }
+  
 
             //get metadata
             int width = 100;

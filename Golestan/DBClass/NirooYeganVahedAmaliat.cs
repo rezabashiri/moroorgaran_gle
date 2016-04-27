@@ -41,6 +41,8 @@ namespace Golestan.Model
                 name = string.Format("{0} {1}" ,name,Yegan.Name);
             if (Vahed != null)
                 name = string.Format("{0} {1}", name, Vahed.Name);
+            if (Amaliat != null )
+                name = string.Format("{0} {1}", name, Amaliat.Name);
             return name;
         }
     }

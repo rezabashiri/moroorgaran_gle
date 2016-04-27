@@ -17,7 +17,7 @@ namespace Golestan.Model
             public string Kholase { get; set; }
             public Nullable<int> IDNoeMatlab { get; set; }
             public string Tozihat { get; set; }
-            public string Expr1 { get; set; }
+          
             public string NoeInSystem { get; set; }
         }
     }
