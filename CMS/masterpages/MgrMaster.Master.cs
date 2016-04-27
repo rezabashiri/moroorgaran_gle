@@ -17,8 +17,7 @@ namespace CMS.masterpages
         PersianCalendar pc = new PersianCalendar();
         public int Customer()
         {
-            int CstID = Convert.ToInt32(Session["CustomerID"]);
-            return CstID;
+            return MyClass.CustomerId;
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -129,8 +128,7 @@ namespace CMS.masterpages
         }
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            Session["CustomerID"] = "";
-            Response.Redirect("../panel/MgrLogin.aspx");
+            new AccessManagementService.Access.Login().RemoveSessions();
         }
     }
 }

@@ -1869,6 +1869,7 @@
     <Content Include="GolestaneShohada\Design\GolestanMap\img\Thumbs.db" />
     <Content Include="GolestaneShohada\Design\Js\openseadragon.min.js.map" />
     <Content Include="GolestaneShohada\Design\MasterPage\WebMaster.Master" />
+    <None Include="Properties\PublishProfiles\GolestanShohada.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
