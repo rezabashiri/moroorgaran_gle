@@ -66,6 +66,8 @@ namespace CMS.GolestaneShohada.Design.fa
             ListView2.DataSource = new Golestan.Helpers.InterFace().GetShahidAshenayan(shahidID);
             ListView2.DataBind();
 
+         
+
         }
     }
 }

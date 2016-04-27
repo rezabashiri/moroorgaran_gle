@@ -25,17 +25,37 @@
                 <div class="sidebar-latest-news">
                   <h3>سخن آشنایان</h3>
                   <ul>
-                      <asp:ListView ID="ListView2" runat="server">
+                      <asp:ListView ID="ListView2" runat="server" OnItemDataBound="ListView2_ItemDataBound">
                           <ItemTemplate>
                                 <li>
                       <div class="text-box">
                           <strong class="title"><%# DataBinder.Eval(Container.DataItem, "NameAhena")%>&nbsp;<%# DataBinder.Eval(Container.DataItem, "FamilAshena")%></strong><p><%# DataBinder.Eval(Container.DataItem, "Kholase")%></p>
-                        <a href="otherstalk.aspx?ID=<%# DataBinder.Eval(Container.DataItem, "ID")%>" class="readmore">ادامه</a></div>
+                        <a href="#" class="readmore" data-toggle="modal" data-target="#ShowMoreModal" data-AshnaID='<%# DataBinder.Eval(Container.DataItem, "ID")%>'>ادامه</a></div>
                     </li>
                           </ItemTemplate>
                       </asp:ListView>
                   </ul>
                 </div>
+<div class="modal fade" id="ShowMoreModal" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-lg" role="document" id="modalDrag">
+<div class="modal-content persian">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h5 class="modal-title"><i class="fa fa-pencil"></i>&nbsp;ادامه سخن</h5>
+<input id="lblashna" runat="server" type="hidden" class="english form-control AshID">
+</div>
+<div class="modal-body">
+<div class="box-body">
+    <p>
+        <asp:Label ID="lblMore" runat="server" Text="Label"></asp:Label></p>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+</div>
+</div>
+</div>
+</div>
     </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2DiT3FNLpHAw407Iph1GNo8OT12ijhQg"></script>

@@ -5961,3 +5961,6 @@ span.colun-3 {
 .disNone{
     display:none;
 }
+.persian{
+    direction:rtl;
+}
