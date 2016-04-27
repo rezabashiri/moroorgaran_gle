@@ -166,7 +166,18 @@
           <aside>
             <div class="col-md-3 col-sm-5">
               <div class="sidebar"> 
-               
+                  <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        <div class="sidebar-latest-news">
+                  <h3>عنوان اضافه</h3>
+                  <ul>
+                    <li>
+                      <div class="text-box"> <strong class="title">عنوان خبر در اینجا نوشته شود</strong> <strong class="post">25 فروردین 1395</strong>
+                        <p>خلاصه خبر در اینجا نوشته می شود. خلاصه خبر در اینجا نوشته می شود. خلاصه خبر در اینجا نوشته می شود. </p>
+                        <a href="#" class="readmore">ادامه خبر</a></div>
+                    </li>
+                  </ul>
+                </div>
+                  </asp:ContentPlaceHolder>
                 <!--Recent Post Start-->
                 <div class="recent-post">
                   <h3>بیشتر بدانید</h3>

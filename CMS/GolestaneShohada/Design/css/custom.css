@@ -4128,7 +4128,7 @@ span.colun-3 {
 	width: 100%;
 }
 .sidebar-latest-news .text-box {
-	float: left;
+	float: right;
 }
 .sidebar-latest-news .text-box strong.title {
 	font: 400 16px/16px 'Noto Serif', serif;
@@ -4353,10 +4353,12 @@ span.colun-3 {
 	position: relative;
 }
 .blog-detail blockquote q {
-	font: italic 400 18px/28px 'Open Sans', sans-serif;
-	color: #333;
+	font-size:14px;
+    font-style:italic;
+	color: #6f6f6f;
 	text-align: center;
 	display: block;
+    direction:rtl;
 }
 .blog-detail blockquote:before {
 	content: '';

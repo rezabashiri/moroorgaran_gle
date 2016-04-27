@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using tkv.Utility;
+
 namespace CMS.GolestaneShohada.Design.fa
 {
     public partial class pershahid : System.Web.UI.Page
@@ -12,7 +13,8 @@ namespace CMS.GolestaneShohada.Design.fa
         MyClass mc = new MyClass();
         public double X
         {
-            get;set;
+            get;
+            set;
         }
         public double Y
         {
@@ -35,8 +37,8 @@ namespace CMS.GolestaneShohada.Design.fa
             if (Myshahid == null)
                 return;
             lblName.Text = Myshahid.Name;
-           lblFamily.Text = Myshahid.Family;
-           Title = string.Format("{0} {1}", Myshahid.Name, Myshahid.Family);
+            lblFamily.Text = Myshahid.Family;
+            Title = string.Format("{0} {1}", Myshahid.Name, Myshahid.Family);
             if (Myshahid.TarikheShahadat.HasValue)
             {
                 lbldayofWeek.Text = Myshahid.TarikheShahadat.Value.PersianDayOfWeek();
@@ -44,24 +46,26 @@ namespace CMS.GolestaneShohada.Design.fa
                 lblMonth.Text = mc.GetFarsiDate2(Convert.ToDateTime(Myshahid.TarikheShahadat), 3);
                 lblyear.Text = Myshahid.TarikheShahadat.Value.ToPersianDate().Year.ToString();
             }
-            lblTavalod.Text =  Myshahid.TarikheTavalod.HasValue ?  Myshahid.TarikheTavalod.Value.ToPersianDate().ToShortDateString() : string.Empty;
-            lblFather.Text = Myshahid.NamePedar ;
-            lblShahr.Text = Myshahid.NameShahrestan ;
-            lblGhete.Text = Myshahid.NameGhate ;
+            lblTavalod.Text = Myshahid.TarikheTavalod.HasValue ? Myshahid.TarikheTavalod.Value.ToPersianDate().ToShortDateString() : string.Empty;
+            lblFather.Text = Myshahid.NamePedar;
+            lblShahr.Text = Myshahid.NameShahrestan;
+            lblGhete.Text = Myshahid.NameGhate;
             UscShahidMaghbare.GhateID = Myshahid.GhateID.ToString();
             X = Myshahid.X ?? 0;
             Y = Myshahid.Y ?? 0;
-            lblamaliat.Text = Myshahid.NameAmaliat ;
-            lblSemat.Text = Myshahid.NameRaste ;
-            lblYegan.Text = Myshahid.NameYegan ;
-            lblNiroo.Text = Myshahid.NameNiroo ;
-            Image1.ImageUrl = Myshahid.VirtualAddress ;
-            Image1.AlternateText = "درباره شهید" + " " + Myshahid.Name  + " " + Myshahid.Family ;
-            Image1.ToolTip = Myshahid.Name  + " " + Myshahid.Family ;
+            lblamaliat.Text = Myshahid.NameAmaliat;
+            lblSemat.Text = Myshahid.NameRaste;
+            lblYegan.Text = Myshahid.NameYegan;
+            lblNiroo.Text = Myshahid.NameNiroo;
+            Image1.ImageUrl = Myshahid.VirtualAddress;
+            Image1.AlternateText = "درباره شهید" + " " + Myshahid.Name + " " + Myshahid.Family;
+            Image1.ToolTip = Myshahid.Name + " " + Myshahid.Family;
 
-            
+            ListView1.DataSource = new Golestan.Helpers.InterFace().GetShahidMatalebEzafe(shahidID);
+            ListView1.DataBind();
+            ListView2.DataSource = new Golestan.Helpers.InterFace().GetShahidAshenayan(shahidID);
+            ListView2.DataBind();
 
-            // image will be added.
         }
     }
 }

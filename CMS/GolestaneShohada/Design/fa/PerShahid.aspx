@@ -21,6 +21,22 @@
 
     <h1><i class="fa fa-bookmark"></i> شهید <asp:Label ID="lblName" runat="server" ></asp:Label>&nbsp;<asp:Label ID="lblFamily" runat="server" ></asp:Label></h1>        
 </asp:Content>
+<asp:Content ID="Content3" runat="server" contentplaceholderid="ContentPlaceHolder2">
+                <div class="sidebar-latest-news">
+                  <h3>سخن آشنایان</h3>
+                  <ul>
+                      <asp:ListView ID="ListView2" runat="server">
+                          <ItemTemplate>
+                                <li>
+                      <div class="text-box">
+                          <strong class="title"><%# DataBinder.Eval(Container.DataItem, "NameAhena")%>&nbsp;<%# DataBinder.Eval(Container.DataItem, "FamilAshena")%></strong><p><%# DataBinder.Eval(Container.DataItem, "Kholase")%></p>
+                        <a href="otherstalk.aspx?ID=<%# DataBinder.Eval(Container.DataItem, "ID")%>" class="readmore">ادامه</a></div>
+                    </li>
+                          </ItemTemplate>
+                      </asp:ListView>
+                  </ul>
+                </div>
+    </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2DiT3FNLpHAw407Iph1GNo8OT12ijhQg"></script>
 
@@ -83,10 +99,14 @@
                 </div>
               </div>
             </div>
-    <div class="lineH">
-            <p>درباره شهید در اینجا نوشته می شود. درباره شهید در اینجا نوشته می شود. درباره شهید در اینجا نوشته می شود. درباره شهید در اینجا نوشته می شود. درباره شهید در اینجا نوشته می شود. 
-                درباره شهید در اینجا نوشته می شود. درباره شهید در اینجا نوشته می شود. درباره شهید در اینجا نوشته می شود. درباره شهید در اینجا نوشته می شود. 
-            </p>
+    <div class="lineH blog-detail">
+        <asp:ListView ID="ListView1" runat="server">
+            <ItemTemplate>
+                <h2><%# DataBinder.Eval(Container.DataItem, "Expr1") %></h2>
+                <blockquote><q><%# DataBinder.Eval(Container.DataItem, "Kholase") %></q> </blockquote>
+                <p><%# DataBinder.Eval(Container.DataItem, "Tozihat") %></p>
+            </ItemTemplate>
+        </asp:ListView>
         </div>
 
 </asp:Content>
