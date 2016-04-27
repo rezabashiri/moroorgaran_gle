@@ -43,48 +43,48 @@
     <div class="clear">
     </div>
     <div id="main_content">
-        <div class="row heigh_30">
-            <div class="Rcolumn width_15">
+        <div class="row  ">
+            <div class="col-sm-2 text-left">
                 عنوان مطلب<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
-                    ControlToValidate="txtTopic" ErrorMessage="*" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    ControlToValidate="txtTopic" Text="*" ErrorMessage="عنوان مطلب را وارد کنید" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                 :
             </div>
-            <div class="Lcolumn width_84">
-                <asp:TextBox ID="txtTopic" runat="server" CssClass="Mytxt persian"
+            <div class="col-sm-8 text-right">
+                <asp:TextBox ID="txtTopic" runat="server" CssClass="Mytxt persian form-control"
                     Width="500px" MaxLength="100"></asp:TextBox>
             </div>
         </div>
         <!-- end of row -->
-        <div class="row heigh_30">
-            <div class="Rcolumn width_15">
+        <div class="row  ">
+            <div class="col-sm-2 text-left">
                 گروه:
             </div>
-            <div class="Lcolumn width_84">
-                <asp:DropDownList ID="drpGrpNews" runat="server" CssClass="Mydrp">
+            <div class="col-sm-8 text-right">
+                <asp:DropDownList ID="drpGrpNews" runat="server" CssClass="Mydrp form-control">
                 </asp:DropDownList>
             </div>
         </div>
         <!-- end of row -->
         <div class="clear">
         </div>
-        <div class="row height_auto" id="DivPhoto" runat="server" visible="false">
-            <div class="Rcolumn width_15">
+        <div class="row  " id="DivPhoto" runat="server" visible="false">
+            <div class="col-sm-2 text-left">
                 تصویر فعلی:
             </div>
-            <div class="Lcolumn width_84">
+            <div class="col-sm-8 text-right">
                 <asp:Image ID="imgItem" runat="server" Height="150px" Width="220px" />
             </div>
         </div>
         <!-- end of row -->
         <div class="clear">
         </div>
-        <div class="row height_auto">
-            <div class="Rcolumn width_15">
+        <div class="row  ">
+            <div class="col-sm-2 text-left">
                 <asp:Label ID="lblPhoto" runat="server" Text="تصویر مطلب:" Font-Size="13px"></asp:Label>
                 <br />
                 <asp:Label ID="Label1" runat="server" Text="حداکثر حجم 150 کیلوبایت"></asp:Label>
             </div>
-            <div class="Lcolumn width_84">
+            <div class="col-sm-8 text-right">
              <%--   <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="Server" />--%>
                 <asp:AsyncFileUpload ID="AsyncFileUpload1" runat="server" />
             </div>
@@ -92,48 +92,48 @@
         <div class="clear">
         </div>
         <!-- end of row -->
-        <div class="row height_auto">
-            <div class="Rcolumn width_15">
+        <div class="row  ">
+            <div class="col-sm-2 text-left">
                 <asp:Label ID="lblSummary" runat="server" Text="خلاصه مطلب" Font-Size="12px"></asp:Label>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSummary"
-                    ErrorMessage="*" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    ErrorMessage="خلاصه مطلب را وارد کنید" Text="*" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                 :
             </div>
-            <div class="Lcolumn width_84">
-                <asp:TextBox ID="txtSummary" runat="server" CssClass="Mytxt persian" Height="50px" TextMode="MultiLine"
+            <div class="col-sm-8 text-right">
+                <asp:TextBox ID="txtSummary" runat="server" CssClass="Mytxt persian form-control" Height="50px" TextMode="MultiLine"
                     Width="97%"></asp:TextBox>
             </div>
         </div>
         <!-- end of row -->
         <div class="clear">
         </div>
-        <div class="row height_auto" id="DivBody" runat="server">
-            <div class="Rcolumn width_15">
+        <div class="row " id="DivBody" runat="server">
+            <div class="col-sm-2 text-left">
                 متن کامل
                 :
             </div>
-            <div class="Lcolumn width_84">
+            <div class="col-sm-8 text-right">
                     <textarea id="editor" class="MyEditor" runat="server" name="content" style="width: 100%;height:500px;"></textarea>
             </div>
         </div>
         <!-- end of row -->
         <div class="clear">
         </div>
-        <div class="row height_auto" id="DivExFile" runat="server">
-            <div class="Rcolumn width_15">
+        <div class="row "  id="DivExFile" runat="server">
+            <div class="col-sm-2 text-left">
                 فایل فعلی:
             </div>
-            <div class="Lcolumn width_84">
+            <div class="col-sm-8 text-right">
                 <asp:LinkButton ID="lnkBtnExFile" runat="server" OnClick="lnkBtnExFile_Click"></asp:LinkButton>
             </div>
         </div>
         <div class="clear">
         </div>
-        <div class="row heigh_30" id="DivUplode" runat="server">
-            <div class="Rcolumn width_15">
+        <div class="row  " id="DivUplode" runat="server">
+            <div class="col-sm-2 text-left">
                 <asp:Label ID="lblFile" runat="server" Text="فایل جهت دانلود:"></asp:Label>
             </div>
-            <div class="Lcolumn width_84">
+            <div class="col-sm-8 text-right">
                 <asp:AsyncFileUpload ID="AsyncFileUpload2" runat="server" />
                 <br />
             </div>
@@ -144,32 +144,32 @@
         <div class="first_row color1">
             وضعیت مطلب
         </div>
-        <div class="row heigh_30">
-            <div class="Rcolumn width_15">
+        <div class="row  ">
+            <div class="col-sm-2 text-left">
                 نمایش در صفحه اول:
             </div>
-            <div class="Lcolumn width_84">
-                <asp:DropDownList ID="drpFreshStat" runat="server" CssClass="Mydrp persian">
+            <div class="col-sm-8 text-right">
+                <asp:DropDownList ID="drpFreshStat" runat="server" CssClass="Mydrp persian form-control">
                 </asp:DropDownList>
             </div>
         </div>
         <!-- end of row -->
-        <div class="row heigh_30">
-            <div class="Rcolumn width_15">
+        <div class="row  ">
+            <div class="col-sm-2 text-left">
                 وضعیت نظردهی:
             </div>
-            <div class="Lcolumn width_84">
-                <asp:DropDownList ID="drpCommentStat" runat="server" CssClass="Mydrp persian">
+            <div class="col-sm-8 text-right">
+                <asp:DropDownList ID="drpCommentStat" runat="server" CssClass="Mydrp persian form-control">
                 </asp:DropDownList>
             </div>
         </div>
         <!-- end of row -->
-        <div class="row heigh_30">
-            <div class="Rcolumn width_15">
+        <div class="row  ">
+            <div class="col-sm-2 text-left">
                 وضعیت انتشار:
             </div>
-            <div class="Lcolumn width_84">
-                <asp:DropDownList ID="drpPubStat" runat="server" CssClass="Mydrp persian">
+            <div class="col-sm-8 text-right">
+                <asp:DropDownList ID="drpPubStat" runat="server" CssClass="Mydrp persian form-control">
                 </asp:DropDownList>
             </div>
         </div>
@@ -177,11 +177,11 @@
         <div class="first_row color1">
             زمان و تاریخ انتشار مطلب
         </div>
-        <div class="row heigh_30">
-            <div class="Rcolumn width_15">
+        <div class="row  ">
+            <div class="col-sm-2 text-left">
                 تاریخ انتشار:
             </div>
-            <div class="Lcolumn width_84">
+            <div class="col-sm-8 text-right">
                 <asp:TextBox ID="txtDayPub" runat="server" CssClass="Mytxt persian" Width="25px"
                     MaxLength="2"></asp:TextBox>
                 /
@@ -193,11 +193,11 @@
             </div>
         </div>
         <!-- end of row -->
-        <div class="row heigh_30">
-            <div class="Rcolumn width_15">
+        <div class="row  ">
+            <div class="col-sm-2 text-left">
                 زمان انتشار:
             </div>
-            <div class="Lcolumn width_84">
+            <div class="col-sm-8 text-right">
                 <MKB:TimeSelector ID="TimeSelector1" runat="server" CssClass="english right" SelectedTimeFormat="TwentyFour"
                     DisplaySeconds="False">
                 </MKB:TimeSelector>
@@ -205,7 +205,7 @@
         </div>
         <!-- end of row -->
         <div class="last_row color3">
-            <asp:Button ID="btnSubmit" runat="server" Text="درج مطلب" CssClass="Mybtn" Style="float: left; margin-left: 10px;" OnClick="btnSubmit_Click1"/>
+            <asp:Button ID="btnSubmit" runat="server" Text="درج مطلب" CssClass="btn btn-theme03" Style="float: left; margin-left: 10px;" OnClick="btnSubmit_Click1"/>
         </div>
     </div>
 </asp:Content>

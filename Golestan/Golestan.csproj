@@ -144,6 +144,9 @@
     <Compile Include="DBClass\ViewNirooVahed.cs" />
     <Compile Include="DBClass\ViewShahid.cs" />
     <Compile Include="DBClass\ViewShahidAmaliat.cs" />
+    <Compile Include="DBClass\ViewShahidAshena.cs" />
+    <Compile Include="DBClass\ViewShahidMatalebEzafe.cs" />
+    <Compile Include="DBClass\ViewShahidRabete.cs" />
     <Compile Include="DBClass\Yegan.cs" />
     <Compile Include="Helpers\ContextHelper.cs" />
     <Compile Include="Helpers\InterFace.cs" />
