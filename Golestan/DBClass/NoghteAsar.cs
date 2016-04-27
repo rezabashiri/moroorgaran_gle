@@ -23,14 +23,17 @@ namespace Golestan.Model
             [Display(Name="نام نقطه اثر_یادمان")]
             public string Name { get; set; }
            
+            [Display(Name="X یا E")]
             public Nullable<double> X { get; set; }
+            [Display (Name="Y یا N")]
             public Nullable<double> Y { get; set; }
-            [Display(AutoGenerateField=false)]
+            [Display(Name="مدیا")]
+            [UIHint("FileUpload")]
             public Nullable<System.Guid> AttachID { get; set; }
 
-
+            [Display(Name="موقعیت")]
             public virtual ICollection<Mogheyat> Mogheyats { get; set; }
-
+            [Display(AutoGenerateField=false)]
             public virtual ICollection<Amaliat> Amaliats { get; set; }
         }
         public List<NoghteAsar> SelectNoghteAsarByMogheyat(int IDMogheyat)

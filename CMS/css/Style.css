@@ -6,8 +6,8 @@
 .row{width:100%;font:12px tahoma,arial;}
 .Rcolumn{width:24%;float:right;text-align:left; direction:rtl;padding-top:7px;}
 .Lcolumn{width:75%;float:left;text-align:right; direction:rtl;padding-top:7px;}
-.Mytxt{width:250px;height:15px;background-color:#f8f5ec;font:12px tahoma,arial;padding:5px 10px 5px 5px;}
-.Mydrp{width:270px;height:25px;background-color:#f8f5ec;font:12px tahoma,arial;}
+.Mytxt{width:250px; font:12px tahoma,arial;padding:5px 10px 5px 5px;}
+.Mydrp{width:270px; font:12px tahoma,arial;}
 .clear_1{clear:both;margin:0;padding:0;height:1px;}
 .first_row{text-align:right;direction:rtl;padding:1%;width:98%;height:12px;font:12px tahoma;}
 .last_row{text-align:center;padding:1% 0% 1% 2%;width:97.5%; float:left;margin-top:5px;}

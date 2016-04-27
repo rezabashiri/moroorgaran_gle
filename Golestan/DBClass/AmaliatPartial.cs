@@ -36,7 +36,7 @@ namespace Golestan.Model
             [Display(AutoGenerateField=false)]
             public virtual ICollection<NirooYeganVahedAmaliat> NirooYeganVahedAmaliats { get; set; }
             
-             
+             [Display(Name="نقطه اثر _ یادمان")]
             public virtual ICollection<NoghteAsar> NoghteAsars { get; set; }
         }
     }
