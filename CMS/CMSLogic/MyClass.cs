@@ -36,7 +36,7 @@ public class MyClass
     // 3. -----
 
 
-    public int dbID = 2;
+    public int dbID = 3;
 
     public void SpecifyingDB()
     {
@@ -55,6 +55,14 @@ public class MyClass
                     database = "GolestanShohada";
                     user = "sa";
                     pass = "946744";
+
+                } break;
+            case 3:
+                {
+                    server = ".";
+                    database = "GolestanShohada";
+                    user = "golestan";
+                    pass = "golestan95";
 
                 } break;
         }
