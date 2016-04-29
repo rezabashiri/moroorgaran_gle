@@ -531,7 +531,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/27/2016 20:32:48</publishTime>
     </File>
     <File Include="bin/App_Web_logincontrol.ascx.cc671b29.dll">
+<<<<<<< HEAD
       <publishTime>04/27/2016 11:47:35</publishTime>
+=======
+      <publishTime>04/27/2016 09:46:59</publishTime>
+>>>>>>> 11cfa00a6357635a75771229a0db0195710293d8
     </File>
     <File Include="bin/App_Web_uscfileupload.ascx.cc671b29.dll">
       <publishTime>04/24/2016 17:15:03</publishTime>
@@ -549,7 +553,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/21/2016 10:26:22</publishTime>
     </File>
     <File Include="bin/CMS.dll">
+<<<<<<< HEAD
       <publishTime>04/27/2016 20:32:24</publishTime>
+=======
+      <publishTime>04/28/2016 09:02:49</publishTime>
+>>>>>>> 11cfa00a6357635a75771229a0db0195710293d8
     </File>
     <File Include="bin/DropDownCheckBoxes.dll">
       <publishTime>04/19/2016 19:46:52</publishTime>
@@ -564,7 +572,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/19/2016 19:47:02</publishTime>
     </File>
     <File Include="bin/Golestan.dll">
+<<<<<<< HEAD
       <publishTime>04/27/2016 20:32:21</publishTime>
+=======
+      <publishTime>04/28/2016 09:02:45</publishTime>
+>>>>>>> 11cfa00a6357635a75771229a0db0195710293d8
     </File>
     <File Include="bin/Heidarpour.WebControlUI.dll">
       <publishTime>04/19/2016 19:47:05</publishTime>
@@ -666,7 +678,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/19/2016 19:46:46</publishTime>
     </File>
     <File Include="css/Style.css">
+<<<<<<< HEAD
       <publishTime>04/27/2016 11:58:35</publishTime>
+=======
+      <publishTime>04/27/2016 10:16:18</publishTime>
+>>>>>>> 11cfa00a6357635a75771229a0db0195710293d8
     </File>
     <File Include="DynamicData/Content/GridViewPager.ascx">
       <publishTime>04/19/2016 19:46:39</publishTime>
@@ -741,7 +757,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/19/2016 19:46:40</publishTime>
     </File>
     <File Include="DynamicData/FieldTemplates/ForeignKey_Edit.ascx">
+<<<<<<< HEAD
       <publishTime>04/27/2016 20:01:36</publishTime>
+=======
+      <publishTime>04/27/2016 13:42:37</publishTime>
+>>>>>>> 11cfa00a6357635a75771229a0db0195710293d8
     </File>
     <File Include="DynamicData/FieldTemplates/Image.ascx">
       <publishTime>04/19/2016 19:46:40</publishTime>
@@ -852,13 +872,21 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/27/2016 11:47:15</publishTime>
     </File>
     <File Include="GolestaneShohada/Controls/UscShahidMaghbare.ascx">
+<<<<<<< HEAD
       <publishTime>04/27/2016 11:47:15</publishTime>
+=======
+      <publishTime>04/27/2016 18:05:39</publishTime>
+>>>>>>> 11cfa00a6357635a75771229a0db0195710293d8
     </File>
     <File Include="GolestaneShohada/Design/css/audioplayer.css">
       <publishTime>04/21/2016 11:11:24</publishTime>
     </File>
     <File Include="GolestaneShohada/Design/css/bootstrap.css">
+<<<<<<< HEAD
       <publishTime>04/27/2016 20:01:37</publishTime>
+=======
+      <publishTime>04/27/2016 17:30:38</publishTime>
+>>>>>>> 11cfa00a6357635a75771229a0db0195710293d8
     </File>
     <File Include="GolestaneShohada/Design/css/bootstrap.min.css">
       <publishTime>04/24/2016 17:15:03</publishTime>
@@ -873,7 +901,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/21/2016 11:11:24</publishTime>
     </File>
     <File Include="GolestaneShohada/Design/css/custom.css">
+<<<<<<< HEAD
       <publishTime>04/27/2016 20:01:37</publishTime>
+=======
+      <publishTime>04/27/2016 17:30:38</publishTime>
+>>>>>>> 11cfa00a6357635a75771229a0db0195710293d8
     </File>
     <File Include="GolestaneShohada/Design/css/font-awesome.min.css">
       <publishTime>04/21/2016 11:11:24</publishTime>
@@ -1593,7 +1625,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/27/2016 11:47:15</publishTime>
     </File>
     <File Include="GolestaneShohada/Design/fa/PerShahid.aspx">
+<<<<<<< HEAD
       <publishTime>04/27/2016 20:01:37</publishTime>
+=======
+      <publishTime>04/27/2016 18:02:50</publishTime>
+>>>>>>> 11cfa00a6357635a75771229a0db0195710293d8
     </File>
     <File Include="GolestaneShohada/Design/fa/readitem.aspx">
       <publishTime>04/24/2016 13:42:10</publishTime>
@@ -2910,7 +2946,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/21/2016 11:11:24</publishTime>
     </File>
     <File Include="GolestaneShohada/Design/MasterPage/WebMaster.Master">
+<<<<<<< HEAD
       <publishTime>04/27/2016 20:01:37</publishTime>
+=======
+      <publishTime>04/27/2016 17:30:38</publishTime>
+>>>>>>> 11cfa00a6357635a75771229a0db0195710293d8
     </File>
     <File Include="GolestaneShohada/Media/Shahid/hemmat.jpg">
       <publishTime>04/24/2016 13:42:11</publishTime>
@@ -3513,7 +3553,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/19/2016 19:46:49</publishTime>
     </File>
     <File Include="panel/MakeItem.aspx">
+<<<<<<< HEAD
       <publishTime>04/27/2016 11:58:35</publishTime>
+=======
+      <publishTime>04/27/2016 10:38:01</publishTime>
+>>>>>>> 11cfa00a6357635a75771229a0db0195710293d8
     </File>
     <File Include="panel/MakeResume.aspx">
       <publishTime>04/19/2016 19:46:49</publishTime>
@@ -3534,7 +3578,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/27/2016 20:32:35</publishTime>
     </File>
     <File Include="Web.config">
+<<<<<<< HEAD
       <publishTime>04/27/2016 20:32:25</publishTime>
+=======
+      <publishTime>04/28/2016 09:02:56</publishTime>
+>>>>>>> 11cfa00a6357635a75771229a0db0195710293d8
     </File>
   </ItemGroup>
 </Project>

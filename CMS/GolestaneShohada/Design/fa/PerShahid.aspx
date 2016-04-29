@@ -38,27 +38,7 @@
                 </div>
     </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2DiT3FNLpHAw407Iph1GNo8OT12ijhQg"></script>
 
-        <script type="text/javascript">
-            var map;
-            var myLatlng = new google.maps.LatLng( <%= Y %>,<%= X %>);
-            function initialize() {
-                var mapOptions = {
-                    zoom: 8,
-                    center: myLatlng
-                }
-                var doc = document.getElementById('map-canvas');
-                map = new google.maps.Map(document.getElementById('map-canvas'),
-                    mapOptions);
-                marker = new google.maps.Marker({
-                    position: myLatlng,
-                    map: map
-                });
-            }
-
-            google.maps.event.addDomListener(window, 'load', initialize);
-</script>
             <div class="fram-holder">
               <div class="right">
                 <div class="date-box"><strong class="title">تاریخ شهادت</strong> <strong class="day">
@@ -108,5 +88,25 @@
             </ItemTemplate>
         </asp:ListView>
         </div>
+        <script type="text/javascript"   src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2DiT3FNLpHAw407Iph1GNo8OT12ijhQg"></script>
 
+        <script type="text/javascript" >
+            var map;
+            var myLatlng = new google.maps.LatLng( <%= Y %>,<%= X %>);
+            function initialize() {
+                var mapOptions = {
+                    zoom: 8,
+                    center: myLatlng
+                }
+                var doc = document.getElementById('map-canvas');
+                map = new google.maps.Map(document.getElementById('map-canvas'),
+                    mapOptions);
+                marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map
+                });
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 </asp:Content>

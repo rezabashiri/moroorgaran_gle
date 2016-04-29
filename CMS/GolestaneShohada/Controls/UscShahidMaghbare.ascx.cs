@@ -16,7 +16,7 @@ namespace CMS.GolestaneShohada.Controls
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            GhateID = "1";
+    
         }
     }
 }

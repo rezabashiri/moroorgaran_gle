@@ -13,7 +13,7 @@ namespace CMS
         {
             var res = new Golestan.Helpers.InterFace().GetShahidCloserToDeath(3);
             var res1 = new Golestan.Helpers.InterFace().GetShahidAshenayan(3);
-            var res2 = new Golestan.Helpers.InterFace().GetShahidMatalebEzafe(3);
+            var res2 = new Golestan.Helpers.InterFace().GetShahidAttachments(2);
         }
     }
 }

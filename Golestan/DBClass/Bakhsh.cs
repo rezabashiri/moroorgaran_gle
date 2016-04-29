@@ -42,5 +42,17 @@ namespace Golestan.Model
                 return myen.Bakhshes.Where(x => x.IDShahrestan == IDShahrestan).ToList();
             }
         }
+        public override string ToString()
+        {
+            string name = string.Empty;
+            if (this.Shahrestan != null)
+            {
+                if (this.Shahrestan.Ostan != null)
+                    name = this.Shahrestan.Ostan.Name;
+                name = string.Format("{0} {1}",name,this.Shahrestan.Name);
+            }
+            name = string.Format("{0} {1}",name,Name);
+            return name;
+        }
     }
 }

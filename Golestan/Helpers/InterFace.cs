@@ -44,5 +44,15 @@ namespace Golestan.Helpers
             Shahid _shahid = new Shahid();
             return _shahid.GetShahidMatalebEzafe(idshahid);
         }
+        public List<ViewShahidAmaliat> GetShahidHamrazman(int idshahid)
+        {
+            Shahid _shahid = new Shahid();
+            return _shahid.GetShahidHamrazman(idshahid);
+        }
+        public List<ViewAttach> GetShahidAttachments(int IDShahid)
+        {
+            Shahid _shahid = new Shahid();
+            return _shahid.GetShahidAttachments(IDShahid);
+        }
     }
 }
