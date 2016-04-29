@@ -23,5 +23,6 @@ namespace Golestan.Model
         public Nullable<int> IDNoeRabete { get; set; }
     
         public virtual NoeRabete NoeRabete { get; set; }
+        public virtual Shahid Shahid { get; set; }
     }
 }

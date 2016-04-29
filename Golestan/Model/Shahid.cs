@@ -22,6 +22,7 @@ namespace Golestan.Model
             this.ShahidRabetes = new HashSet<ShahidRabete>();
             this.ShahidRabetes1 = new HashSet<ShahidRabete>();
             this.ShahidAmaliats = new HashSet<ShahidAmaliat>();
+            this.Ashnayans = new HashSet<Ashnayan>();
         }
     
         public int ID { get; set; }
@@ -53,5 +54,7 @@ namespace Golestan.Model
         public virtual Bakhsh Bakhsh { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ShahidAmaliat> ShahidAmaliats { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Ashnayan> Ashnayans { get; set; }
     }
 }

@@ -17,8 +17,8 @@ namespace Golestan.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NoeRabete()
         {
-            this.Ashnayans = new HashSet<Ashnayan>();
             this.ShahidRabetes = new HashSet<ShahidRabete>();
+            this.Ashnayans = new HashSet<Ashnayan>();
         }
     
         public int ID { get; set; }
@@ -26,8 +26,8 @@ namespace Golestan.Model
         public string NoeInSystem { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Ashnayan> Ashnayans { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ShahidRabete> ShahidRabetes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Ashnayan> Ashnayans { get; set; }
     }
 }

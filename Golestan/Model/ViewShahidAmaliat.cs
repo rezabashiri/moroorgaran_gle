@@ -47,7 +47,7 @@ namespace Golestan.Model
         public Nullable<int> IDOstan { get; set; }
         public Nullable<int> IDShahrestan { get; set; }
         public string NameGhate { get; set; }
-        public int GhateID { get; set; }
+        public Nullable<int> GhateID { get; set; }
         public string SangNeveshte { get; set; }
         public Nullable<int> IDNoghteAsar { get; set; }
         public string NameNoghteAsar { get; set; }
@@ -58,12 +58,7 @@ namespace Golestan.Model
         public Nullable<int> IDMantaghe { get; set; }
         public string NameMantaghe { get; set; }
         public string TozihateMantaghe { get; set; }
-        public string FileName { get; set; }
-        public string FileExtension { get; set; }
-        public Nullable<long> ContentLength { get; set; }
-        public string ContentType { get; set; }
         public string VirtualAddress { get; set; }
-        public string ServerAddress { get; set; }
         public Nullable<bool> ISMonjarBeShahadat { get; set; }
     }
 }

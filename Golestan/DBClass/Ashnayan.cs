@@ -25,7 +25,7 @@ namespace Golestan.Model
             public string Family { get; set; }
             [Display(Name="توضیحات")]
             public string Tozihat { get; set; }
-            [Display(Name="خلاسه")]
+            [Display(Name="خلاصه")]
             public string Kholase { get; set; }
             public Nullable<int> IDShahid { get; set; }
             public Nullable<int> IDNoeRabete { get; set; }

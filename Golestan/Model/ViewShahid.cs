@@ -31,17 +31,12 @@ namespace Golestan.Model
         public string NameShahrestan { get; set; }
         public string NameOstan { get; set; }
         public string ShomareShenasname { get; set; }
-        public int GhateID { get; set; }
+        public Nullable<int> GhateID { get; set; }
         public string SangNeveshte { get; set; }
         public string NameGhate { get; set; }
         public Nullable<int> IDBakhsh { get; set; }
         public Nullable<int> IDShahrestan { get; set; }
         public Nullable<int> IDOstan { get; set; }
-        public string FileName { get; set; }
-        public string FileExtension { get; set; }
-        public Nullable<long> ContentLength { get; set; }
-        public string ContentType { get; set; }
         public string VirtualAddress { get; set; }
-        public string ServerAddress { get; set; }
     }
 }
