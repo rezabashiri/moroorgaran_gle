@@ -88,6 +88,17 @@ namespace Golestan.Model
                 return myen.sp_SearchShahidAmaliat(WhereParameter).ToList<ViewShahidAmaliat>();
             }
         }
+        internal List<ViewShahidAmaliat> GetShahidHamrazman(int IDDShahid)
+        {
+            var monjarbshahdat = GetShahid_AmaliatMonjarBeShahadatByIDShahid(IDDShahid);
+            if (monjarbshahdat != null)
+            {
+                string query = string.Format(" IDAmaliat = {0} ", monjarbshahdat.IDAmaliat);
+                return SearchShahidAmaliatByParameter(query);
+            }
+            return null;
+        }
+
         /// <summary>
         /// select viewshahidamaliat witch is couse to death
         /// </summary>
