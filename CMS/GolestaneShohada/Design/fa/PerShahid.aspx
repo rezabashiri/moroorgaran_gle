@@ -5,7 +5,12 @@
 
 <asp:Content ID="content0" runat ="server" ContentPlaceHolderID="head">
     <script type="text/javascript" src="/GolestaneShohada/Design/Js/seadragon-min.js" lang="ja"></script>
-
+    <!--Bxslider Css-->
+<link href="../css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+<!--Content Slider Css-->
+<link href="../css/content_slider_style.css" rel="stylesheet" type="text/css" />
+<!--Pretty Photo Css-->
+<link rel="stylesheet" href="../css/prettyPhoto.css" type="text/css" media="screen"/>
 
     <style type="text/css" >
         #map-canvas {
@@ -25,7 +30,7 @@
                 <div class="sidebar-latest-news">
                   <h3>سخن آشنایان</h3>
                   <ul>
-                      <asp:ListView ID="ListView2" runat="server" OnItemDataBound="ListView2_ItemDataBound">
+                      <asp:ListView ID="ListView2" runat="server">
                           <ItemTemplate>
                                 <li>
                       <div class="text-box">
@@ -56,9 +61,61 @@
 </div>
 </div>
 </div>
+
+    <div class="popular-sermons">
+                  <h3>Popular Sermons</h3>
+                  <ul>
+                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
+                      <div class="text-box"> <strong class="title">Proin gravida nibh vel </strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
+                    </li>
+                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
+                      <div class="text-box"> <strong class="title">Lorem Ipsum gravida</strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
+                    </li>
+                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
+                      <div class="text-box"> <strong class="title">Aenean sollicitudin</strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
+                    </li>
+                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
+                      <div class="text-box"> <strong class="title">Lorem quis bibendum</strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
+                    </li>
+                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
+                      <div class="text-box"> <strong class="title">Nec sagittis sem nibh</strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
+                    </li>
+                  </ul>
+                </div>
+    <div class="flickr-photo">
+                  <h3>Flikr Photos</h3>
+                  <ul>
+                    <li><a href="#">
+                      <div class="frame"><img src="images/flickr-photo/flickr-img-1.jpg" alt="img"></div>
+                      </a></li>
+                    <li><a href="#">
+                      <div class="frame"><img src="images/flickr-photo/flickr-img-2.jpg" alt="img"></div>
+                      </a></li>
+                    <li><a href="#">
+                      <div class="frame"><img src="images/flickr-photo/flickr-img-3.jpg" alt="img"></div>
+                      </a></li>
+                    <li><a href="#">
+                      <div class="frame"><img src="images/flickr-photo/flickr-img-4.jpg" alt="img"></div>
+                      </a></li>
+                    <li><a href="#">
+                      <div class="frame"><img src="images/flickr-photo/flickr-img-5.jpg" alt="img"></div>
+                      </a></li>
+                    <li><a href="#">
+                      <div class="frame"><img src="images/flickr-photo/flickr-img-6.jpg" alt="img"></div>
+                      </a></li>
+                    <li><a href="#">
+                      <div class="frame"><img src="images/flickr-photo/flickr-img-7.jpg" alt="img"></div>
+                      </a></li>
+                    <li><a href="#">
+                      <div class="frame"><img src="images/flickr-photo/flickr-img-8.jpg" alt="img"></div>
+                      </a></li>
+                    <li><a href="#">
+                      <div class="frame"><img src="images/flickr-photo/flickr-img-9.jpg" alt="img"></div>
+                      </a></li>
+                  </ul>
+                </div>
     </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
-
             <div class="fram-holder">
               <div class="right">
                 <div class="date-box"><strong class="title">تاریخ شهادت</strong> <strong class="day">
@@ -103,13 +160,13 @@
         <asp:ListView ID="ListView1" runat="server">
             <ItemTemplate>
                 <h2><%# DataBinder.Eval(Container.DataItem, "NameNoeMatlab") %></h2>
-                <blockquote><q><%# DataBinder.Eval(Container.DataItem, "Kholase") %></q> </blockquote>
                 <p><%# DataBinder.Eval(Container.DataItem, "Tozihat") %></p>
             </ItemTemplate>
         </asp:ListView>
         </div>
-        <script type="text/javascript"   src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2DiT3FNLpHAw407Iph1GNo8OT12ijhQg"></script>
-
+</asp:Content>
+<asp:Content ID="content4" runat ="server" ContentPlaceHolderID="CPHfooter">
+  <script type="text/javascript"   src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2DiT3FNLpHAw407Iph1GNo8OT12ijhQg"></script>
         <script type="text/javascript" >
             var map;
             var myLatlng = new google.maps.LatLng( <%= Y %>,<%= X %>);
