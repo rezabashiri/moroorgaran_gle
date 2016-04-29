@@ -155,6 +155,14 @@ namespace Golestan.Model
                 return myen.sp_GetShahidMatalebEzafe(query).ToList<ViewShahidMatalebEzafe>();
             }
         }
+        internal List<ViewAttach> GetShahidAttachments(int IDShahid)
+        {
+            using (var myen = Golestan.Helpers.ContextHelper.GetContext)
+            {
+              
+                return myen.sp_SearchAttachment(IDShahid,null).ToList<ViewAttach>();
+            }
+        }
 
     }
 }

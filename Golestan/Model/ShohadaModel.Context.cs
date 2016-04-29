@@ -57,6 +57,7 @@ namespace Golestan.Model
         public virtual DbSet<ViewShahid> ViewShahids { get; set; }
         public virtual DbSet<ViewShahidMatalebEzafe> ViewShahidMatalebEzafes { get; set; }
         public virtual DbSet<ViewShahidAmaliat> ViewShahidAmaliats { get; set; }
+        public virtual DbSet<ViewAttach> ViewAttaches { get; set; }
     
         public virtual ObjectResult<ViewShahid> sp_SearchSahid(string whereParameter)
         {
@@ -146,6 +147,32 @@ namespace Golestan.Model
                 new ObjectParameter("WhereParameter", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewShahidMatalebEzafe>("sp_GetShahidMatalebEzafe", mergeOption, whereParameterParameter);
+        }
+    
+        public virtual ObjectResult<ViewAttach> sp_SearchAttachment(Nullable<int> iDShahid, Nullable<int> iDAmaliat)
+        {
+            var iDShahidParameter = iDShahid.HasValue ?
+                new ObjectParameter("IDShahid", iDShahid) :
+                new ObjectParameter("IDShahid", typeof(int));
+    
+            var iDAmaliatParameter = iDAmaliat.HasValue ?
+                new ObjectParameter("IDAmaliat", iDAmaliat) :
+                new ObjectParameter("IDAmaliat", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewAttach>("sp_SearchAttachment", iDShahidParameter, iDAmaliatParameter);
+        }
+    
+        public virtual ObjectResult<ViewAttach> sp_SearchAttachment(Nullable<int> iDShahid, Nullable<int> iDAmaliat, MergeOption mergeOption)
+        {
+            var iDShahidParameter = iDShahid.HasValue ?
+                new ObjectParameter("IDShahid", iDShahid) :
+                new ObjectParameter("IDShahid", typeof(int));
+    
+            var iDAmaliatParameter = iDAmaliat.HasValue ?
+                new ObjectParameter("IDAmaliat", iDAmaliat) :
+                new ObjectParameter("IDAmaliat", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewAttach>("sp_SearchAttachment", mergeOption, iDShahidParameter, iDAmaliatParameter);
         }
     }
 }

@@ -225,6 +225,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ShohadaModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\sp_SearchAttachment_Result.cs">
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Vahed.cs">
       <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
@@ -232,6 +235,9 @@
       <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ViewAmaliat.cs">
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ViewAttach.cs">
       <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ViewNirooVahed.cs">

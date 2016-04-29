@@ -24,7 +24,7 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Ramz" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ramz" Type="nvarchar" MaxLength="150" />
           <Property Name="TarikheShoroo" Type="datetime" />
           <Property Name="TarikhePayan" Type="datetime" />
           <Property Name="Tozihat" Type="nvarchar(max)" />
@@ -93,8 +93,8 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IDShahid" Type="int" />
           <Property Name="IDNoeMatlab" Type="int" />
-          <Property Name="Tozihat" Type="nvarchar" MaxLength="200" />
-          <Property Name="Kholase" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tozihat" Type="nvarchar(max)" />
+          <Property Name="Kholase" Type="nvarchar" MaxLength="150" />
         </EntityType>
         <EntityType Name="Mogheyat">
           <Key>
@@ -313,6 +313,25 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewAmaliat' does not have a p
           <Property Name="VirtualAddress" Type="nvarchar(max)" />
           <Property Name="ServerAddress" Type="nvarchar(max)" />
           <Property Name="UploadedTime" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'GolestanShohada.dbo.ViewAttach' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ViewAttach">
+          <Key>
+            <PropertyRef Name="AttachID" />
+          </Key>
+          <Property Name="IDShahid" Type="int" />
+          <Property Name="AttachID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FileName" Type="nvarchar(max)" />
+          <Property Name="FileExtension" Type="varchar" MaxLength="20" />
+          <Property Name="UploadedTime" Type="datetime" />
+          <Property Name="ServerAddress" Type="nvarchar(max)" />
+          <Property Name="VirtualAddress" Type="nvarchar(max)" />
+          <Property Name="ContentType" Type="varchar(max)" />
+          <Property Name="ContentLength" Type="bigint" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="RoleId" Type="int" />
+          <Property Name="IDAmaliat" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'GolestanShohada.dbo.ViewNirooVahed' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -869,6 +888,10 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
         <Function Name="sp_GetShahidMatalebEzafe" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="gle">
           <Parameter Name="WhereParameter" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="sp_SearchAttachment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="gle">
+          <Parameter Name="IDShahid" Type="int" Mode="In" />
+          <Parameter Name="IDAmaliat" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_SearchSahid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="gle">
           <Parameter Name="WhereParameter" Type="nvarchar" Mode="In" />
         </Function>
@@ -937,6 +960,22 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
     [ViewAmaliat].[ServerAddress] AS [ServerAddress], 
     [ViewAmaliat].[UploadedTime] AS [UploadedTime]
     FROM [dbo].[ViewAmaliat] AS [ViewAmaliat]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ViewAttach" EntityType="Self.ViewAttach" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ViewAttach].[IDShahid] AS [IDShahid], 
+    [ViewAttach].[AttachID] AS [AttachID], 
+    [ViewAttach].[FileName] AS [FileName], 
+    [ViewAttach].[FileExtension] AS [FileExtension], 
+    [ViewAttach].[UploadedTime] AS [UploadedTime], 
+    [ViewAttach].[ServerAddress] AS [ServerAddress], 
+    [ViewAttach].[VirtualAddress] AS [VirtualAddress], 
+    [ViewAttach].[ContentType] AS [ContentType], 
+    [ViewAttach].[ContentLength] AS [ContentLength], 
+    [ViewAttach].[UserId] AS [UserId], 
+    [ViewAttach].[RoleId] AS [RoleId], 
+    [ViewAttach].[IDAmaliat] AS [IDAmaliat]
+    FROM [dbo].[ViewAttach] AS [ViewAttach]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="ViewNirooVahed" EntityType="Self.ViewNirooVahed" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -1245,8 +1284,8 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IDShahid" Type="Int32" />
           <Property Name="IDNoeMatlab" Type="Int32" />
-          <Property Name="Tozihat" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Kholase" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tozihat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Kholase" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="NoeMatlab" Relationship="Self.FK_MatalebEzafe_MatalebEzafe" FromRole="MatalebEzafe" ToRole="NoeMatlab" />
           <NavigationProperty Name="Shahid" Relationship="GolestanShohadaModel.FK_MatalebEzafe_Shahid" FromRole="MatalebEzafe" ToRole="Shahid" />
         </EntityType>
@@ -1593,6 +1632,11 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
           <EntitySet Name="ViewShahids" EntityType="GolestanShohadaModel.ViewShahid" />
           <EntitySet Name="ViewShahidMatalebEzafes" EntityType="GolestanShohadaModel.ViewShahidMatalebEzafe" />
           <EntitySet Name="ViewShahidAmaliats" EntityType="GolestanShohadaModel.ViewShahidAmaliat" />
+          <EntitySet Name="ViewAttaches" EntityType="GolestanShohadaModel.ViewAttach" />
+          <FunctionImport Name="sp_SearchAttachment" EntitySet="ViewAttaches" ReturnType="Collection(GolestanShohadaModel.ViewAttach)">
+            <Parameter Name="IDShahid" Mode="In" Type="Int32" />
+            <Parameter Name="IDAmaliat" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="Shahid">
           <Key>
@@ -1703,7 +1747,7 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Ramz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ramz" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="TarikheShoroo" Type="DateTime" Precision="3" />
           <Property Name="TarikhePayan" Type="DateTime" Precision="3" />
           <Property Name="Tozihat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -2101,6 +2145,37 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
           <Property Name="VirtualAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ISMonjarBeShahadat" Type="Boolean" />
         </EntityType>
+        <EntityType Name="ViewAttach">
+          <Key>
+            <PropertyRef Name="AttachID" />
+          </Key>
+          <Property Name="IDShahid" Type="Int32" />
+          <Property Name="AttachID" Type="Guid" Nullable="false" />
+          <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FileExtension" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UploadedTime" Type="DateTime" Precision="3" />
+          <Property Name="ServerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VirtualAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContentType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ContentLength" Type="Int64" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="RoleId" Type="Int32" />
+          <Property Name="IDAmaliat" Type="Int32" />
+        </EntityType>
+        <ComplexType Name="sp_SearchAttachment_Result">
+          <Property Type="Int32" Name="IDShahid" Nullable="true" />
+          <Property Type="Guid" Name="AttachID" Nullable="false" />
+          <Property Type="String" Name="FileName" Nullable="true" />
+          <Property Type="String" Name="FileExtension" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="UploadedTime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ServerAddress" Nullable="true" />
+          <Property Type="String" Name="VirtualAddress" Nullable="true" />
+          <Property Type="String" Name="ContentType" Nullable="true" />
+          <Property Type="Int64" Name="ContentLength" Nullable="true" />
+          <Property Type="Int32" Name="UserId" Nullable="true" />
+          <Property Type="Int32" Name="RoleId" Nullable="true" />
+          <Property Type="Int32" Name="IDAmaliat" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2570,6 +2645,26 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ViewAttaches">
+            <EntityTypeMapping TypeName="GolestanShohadaModel.ViewAttach">
+              <MappingFragment StoreEntitySet="ViewAttach">
+                <ScalarProperty Name="IDAmaliat" ColumnName="IDAmaliat" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ContentLength" ColumnName="ContentLength" />
+                <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+                <ScalarProperty Name="VirtualAddress" ColumnName="VirtualAddress" />
+                <ScalarProperty Name="ServerAddress" ColumnName="ServerAddress" />
+                <ScalarProperty Name="UploadedTime" ColumnName="UploadedTime" />
+                <ScalarProperty Name="FileExtension" ColumnName="FileExtension" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="AttachID" ColumnName="AttachID" />
+                <ScalarProperty Name="IDShahid" ColumnName="IDShahid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_SearchAttachment" FunctionName="GolestanShohadaModel.Store.sp_SearchAttachment">
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
