@@ -16,10 +16,10 @@ namespace Golestan.Model
             public string Name { get; set; }
             [Display(Name="رمز")]
             public string Ramz { get; set; }
-            [UIHint("PersianDate")]
+            [UIHint("PersianDateTime")]
             [Display(Name="تاریخ شروع")]
             public Nullable<System.DateTime> TarikheShoroo { get; set; }
-            [UIHint("PersianDate")]
+            [UIHint("PersianDateTime")]
             [Display(Name="تاریخ پایان")]
             public Nullable<System.DateTime> TarikhePayan { get; set; }
             [Display(Name="توضیحات")]
@@ -38,6 +38,13 @@ namespace Golestan.Model
             
              [Display(Name="نقطه اثر _ یادمان")]
             public virtual ICollection<NoghteAsar> NoghteAsars { get; set; }
+        }
+        internal Amaliat NearestAmaliatToNow()
+        {
+            using (var myen = Helpers.ContextHelper.GetContext)
+            {
+                return myen.GetTheNearestAmaliat().FirstOrDefault() ?? new Amaliat() { ID=-1};
+            }
         }
     }
 }
