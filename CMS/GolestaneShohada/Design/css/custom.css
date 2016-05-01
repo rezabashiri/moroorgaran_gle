@@ -3843,9 +3843,8 @@ span.colun-3 {
 	margin: 0 0 22px 0;
 }
 .popular-sermons h3 {
-	font: 400 22px 'Noto Serif', serif !important;
-	margin: 0 0 3px 0 !important;
-	word-spacing: -4px;
+	margin: 0 0 18px 0 !important;
+	word-spacing: -2px;
 }
 .popular-sermons ul {
 	padding: 0;
@@ -3859,13 +3858,13 @@ span.colun-3 {
 	border-bottom: 1px solid #ccc;
 }
 .popular-sermons a.play {
-	float: left;
+	float: right;
 	width: 52px;
 	height: 52px;
 	border: 1px solid #999;
 	border-radius: 100%;
 	text-decoration: none;
-	margin: 0 16px 0 0;
+	margin: 0 0 0 16px;
 	background-color: #fff;
 }
 .popular-sermons a.play .fa {
@@ -3876,11 +3875,11 @@ span.colun-3 {
 	display: block;
 }
 .popular-sermons .text-box {
-	float: left;
+	/*float: left;*/
 	width: auto !important;
 }
 .popular-sermons .text-box strong.title {
-	font: 400 16px 'Noto Serif', serif;
+	font-size:14px;
 	color: #333;
 	display: block;
 	padding: 0 0 10px 0;
@@ -3902,14 +3901,16 @@ span.colun-3 {
 	font: italic 400 12px 'Open Sans', sans-serif;
 	color: #999;
 	text-decoration: none;
-	float: left;
-	margin: 0 25px 0 0;
+	float: right;
+	margin: 0 0 0 20px;
+    text-align:right;
+    direction:rtl;
 }
 .popular-sermons .text-box a.user .fa {
-	float: left;
+	float: right;
 	font-size: 12px;
 	color: #999;
-	padding: 0 5px 0 0;
+	padding: 0 0 0 5px;
 }
 .popular-sermons .text-box a.calendar {
 	font: italic 400 12px 'Open Sans', sans-serif;
@@ -3919,10 +3920,10 @@ span.colun-3 {
 	margin: 0;
 }
 .popular-sermons .text-box a.calendar .fa {
-	float: left;
+	float: right;
 	font-size: 12px;
 	color: #999;
-	padding: 0 5px 0 0;
+	padding: 0 0 0 5px;
 }
 .popular-sermons ul li:hover .fa-play-circle {
 	color: #fff;
@@ -4152,14 +4153,16 @@ span.colun-3 {
 	margin: 0 0 6px 0;
 }
 .sidebar-latest-news .text-box a.readmore {
-	font: italic 400 14px 'Noto Serif', serif;
 	color: #333;
 	float: right;
 	text-decoration: none;
-	padding: 0 15px 0 0;
+	padding: 4px 7px;
 	position: relative;
+    border:1px solid #34b500;
+    border-radius:4px;
+    font-size:11px;
 }
-.sidebar-latest-news .text-box a.readmore:after {
+/*.sidebar-latest-news .text-box a.readmore:after {
 	content: '';
 	position: absolute;
 	right: 0;
@@ -4220,9 +4223,7 @@ span.colun-3 {
 	margin: 0 0 18px 0;
 }
 .flickr-photo h3 {
-	font: 400 22px/22px 'Noto Serif', serif !important;
 	margin: 0 0 17px 0 !important;
-	letter-spacing: -1px;
 }
 .flickr-photo ul {
 	padding: 0;
@@ -4244,6 +4245,9 @@ span.colun-3 {
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
 	margin: 0 !important;
 	border: 0 !important;
+}
+.flickr-photo .frame img{
+    max-width:81px;
 }
 /*Fliker Photos End*/
 
@@ -4334,9 +4338,11 @@ span.colun-3 {
 	font-style: italic;
 }
 .blog-detail p {
-	font: 400 14px/20px 'Open Sans', sans-serif;
 	color: #666;
 	margin: 0 0 20px 0;
+    line-height:28px;
+    font-size:13px;
+    text-align:justify;
 }
 .blog-detail blockquote {
 	border: 0;
@@ -5551,6 +5557,20 @@ span.colun-3 {
 }
 .sermon-page ul li:hover .text-box h2 {
 }
+
+.sermon-page ul li.files {
+	float: left;
+	padding: 0 0 35px 0;
+	width: 100%;
+    direction:rtl;
+    text-align:left !important;
+}
+.sermon-page ul li.files:hover .frame {
+	opacity: 0.7;
+}
+.sermon-page ul li.files:hover .text-box h2 {
+}
+
 .sermon-box {
 	float: left;
 	width: 100%;
@@ -5960,4 +5980,10 @@ span.colun-3 {
 
 .disNone{
     display:none;
+}
+.persian{
+    direction:rtl;
+}
+.maxwdt1{
+    max-width:67px;
 }

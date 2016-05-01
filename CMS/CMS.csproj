@@ -186,8 +186,7 @@
     <Reference Include="WebGrease">
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
-    <Reference Include="WebUtilityv2, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="WebUtilityv2">
       <HintPath>..\packages\WebUtilityv2.dll</HintPath>
     </Reference>
   </ItemGroup>
