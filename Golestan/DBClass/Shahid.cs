@@ -88,13 +88,15 @@ namespace Golestan.Model
                 return myen.sp_SearchShahidAmaliat(WhereParameter).ToList<ViewShahidAmaliat>();
             }
         }
-        internal List<ViewShahidAmaliat> GetShahidHamrazman(int IDDShahid)
+        internal List<ViewShahidAmaliat> GetShahidHamrazman(int IDShahid)
         {
-            var monjarbshahdat = GetShahid_AmaliatMonjarBeShahadatByIDShahid(IDDShahid);
+            var monjarbshahdat = GetShahid_AmaliatMonjarBeShahadatByIDShahid(IDShahid);
             if (monjarbshahdat != null)
             {
                 string query = string.Format(" IDAmaliat = {0} ", monjarbshahdat.IDAmaliat);
-                return SearchShahidAmaliatByParameter(query);
+                var hamrazm =  SearchShahidAmaliatByParameter(query);
+                if (hamrazm != null)
+                    return hamrazm.Where(x=>x.IDShahid != idD
             }
             return null;
         }
