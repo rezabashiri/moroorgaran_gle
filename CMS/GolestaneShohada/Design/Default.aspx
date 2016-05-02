@@ -241,7 +241,7 @@
               <div class="round"><i class="fa fa-users"></i></div>
               <h3>شهدا</h3>
               <p>شهید خود را بر اساس اطلاعات شخصی جستجو کنیم و افکارش را بیشتر بشناسیم.</p>
-              <a href="#" class="btn-widget">جستجو</a> </div>
+              <a href="fa/shohadalist.aspx" class="btn-widget">جستجو</a> </div>
           </div>
         </div>
       </div>
