@@ -66,8 +66,22 @@ namespace CMS.GolestaneShohada.Design.fa
             ListView2.DataSource = new Golestan.Helpers.InterFace().GetShahidAshenayan(shahidID);
             ListView2.DataBind();
 
-         
+            ListView5.DataSource = new Golestan.Helpers.InterFace().GetShahidHamrazman(shahidID);
+            ListView5.DataBind();
 
+            FillMultimedia(shahidID);
+
+
+        }
+
+        public void FillMultimedia(int shahidID)
+        {
+            var mylist = new Golestan.Helpers.InterFace().GetShahidAttachments(shahidID);
+            ListView3.DataSource = mylist.Where(x => !(x.ContentType.Contains("image")));
+            ListView3.DataBind();
+
+            ListView4.DataSource = mylist.Where(x => x.ContentType.Contains("image"));
+            ListView4.DataBind();
         }
     }
 }

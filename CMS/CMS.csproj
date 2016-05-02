@@ -183,6 +183,9 @@
     <Reference Include="WebGrease">
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
+    <Reference Include="WebUtilityv2">
+      <HintPath>..\packages\WebUtilityv2.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\bootstrap.css" />
@@ -1907,10 +1910,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\component\WebUtility_v2\WebUtility.csproj">
-      <Project>{d78f6bdc-6d1c-4511-add2-44b116d77cd8}</Project>
-      <Name>WebUtility</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Golestan\Golestan.csproj">
       <Project>{d856aa46-0e36-4f13-b330-9401b74d0fdc}</Project>
       <Name>Golestan</Name>

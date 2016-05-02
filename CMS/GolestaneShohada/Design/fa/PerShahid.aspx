@@ -35,7 +35,7 @@
                                 <li>
                       <div class="text-box">
                           <strong class="title"><%# DataBinder.Eval(Container.DataItem, "NameAhena")%>&nbsp;<%# DataBinder.Eval(Container.DataItem, "FamilAshena")%></strong><p><%# DataBinder.Eval(Container.DataItem, "Kholase")%></p>
-                        <a href="#" class="readmore" data-toggle="modal" data-target="#ShowMoreModal" data-AshnaID='<%# DataBinder.Eval(Container.DataItem, "ID")%>'>ادامه</a></div>
+                        <a href="#" class="readmore" data-toggle="modal" data-target="#ShowMoreModal" data-fulltext='<%# DataBinder.Eval(Container.DataItem, "Tozihat")%>'>ادامه</a></div>
                     </li>
                           </ItemTemplate>
                       </asp:ListView>
@@ -51,8 +51,7 @@
 </div>
 <div class="modal-body">
 <div class="box-body">
-    <p>
-        <asp:Label ID="lblMore" runat="server" Text="Label"></asp:Label></p>
+    <p><label class="more"></label></p>
 </div>
 </div>
 <div class="modal-footer">
@@ -62,56 +61,50 @@
 </div>
 </div>
 
-    <div class="popular-sermons">
-                  <h3>Popular Sermons</h3>
+        <!--Recent Post Start-->
+                <div class="recent-post">
+                  <h3>هم رزمان</h3>
                   <ul>
-                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
-                      <div class="text-box"> <strong class="title">Proin gravida nibh vel </strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
+                      <asp:ListView ID="ListView5" runat="server">
+                          <ItemTemplate>
+                              <li>
+                      <div class="frame"><a href="PerShahid.aspx?shahidid=<%# DataBinder.Eval(Container.DataItem, "IDShahid")%>">
+                          <asp:Image ID="Image3" runat="server" CssClass="maxwdt1" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "VirtualAddress") %>' AlternateText='<%# DataBinder.Eval(Container.DataItem, "Family") %>' /></a></div>
+                      <div class="text-box"> <a href="PerShahid.aspx?shahidid=<%# DataBinder.Eval(Container.DataItem, "IDShahid")%>" class="title"><%# DataBinder.Eval(Container.DataItem, "Name") %>&nbsp;<%# DataBinder.Eval(Container.DataItem, "Family") %></a></div>
                     </li>
-                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
-                      <div class="text-box"> <strong class="title">Lorem Ipsum gravida</strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
+                          </ItemTemplate>
+                      </asp:ListView>
+                    
+                  </ul>
+                </div>
+                <!--Recent Post End--> 
+    <div class="popular-sermons">
+                  <h3>فیلم و صوت شهید</h3>
+                  <ul>
+                      <asp:ListView ID="ListView3" runat="server">
+                          <ItemTemplate>
+                              <li>
+                                  <asp:HyperLink ID="HyperLink1" runat="server" CssClass="play" NavigateUrl='<%# DataBinder.Eval(Container.DataItem, "VirtualAddress") %>'> 
+                                      <i class='<%# MyClass.BackIconTag(Eval("ContentType")) %>'></i></asp:HyperLink> 
+                      <div class="text-box"> <strong class="title"><%# DataBinder.Eval(Container.DataItem, "FileName") %></strong></div>
                     </li>
-                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
-                      <div class="text-box"> <strong class="title">Aenean sollicitudin</strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
-                    </li>
-                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
-                      <div class="text-box"> <strong class="title">Lorem quis bibendum</strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
-                    </li>
-                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
-                      <div class="text-box"> <strong class="title">Nec sagittis sem nibh</strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
-                    </li>
+                          </ItemTemplate>
+                      </asp:ListView>
                   </ul>
                 </div>
     <div class="flickr-photo">
-                  <h3>Flikr Photos</h3>
+                  <h3>تصاویر شهید</h3>
                   <ul>
-                    <li><a href="#">
-                      <div class="frame"><img src="images/flickr-photo/flickr-img-1.jpg" alt="img"></div>
+                      <asp:ListView ID="ListView4" runat="server">
+                          <ItemTemplate>
+                              <li><a href='<%# string.Format(DataBinder.Eval(Container.DataItem, "VirtualAddress").ToString().Replace("~/GolestaneShohada/","../../")) %>'
+                                   class="zoom" data-rel="prettyPhoto[gallery1]" rel="prettyPhoto[gallery1]">
+                      <div class="frame">
+                          <asp:Image ID="Image2" runat="server" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "VirtualAddress") %>' AlternateText='<%# DataBinder.Eval(Container.DataItem, "FileName") %>' />
+                          </div>
                       </a></li>
-                    <li><a href="#">
-                      <div class="frame"><img src="images/flickr-photo/flickr-img-2.jpg" alt="img"></div>
-                      </a></li>
-                    <li><a href="#">
-                      <div class="frame"><img src="images/flickr-photo/flickr-img-3.jpg" alt="img"></div>
-                      </a></li>
-                    <li><a href="#">
-                      <div class="frame"><img src="images/flickr-photo/flickr-img-4.jpg" alt="img"></div>
-                      </a></li>
-                    <li><a href="#">
-                      <div class="frame"><img src="images/flickr-photo/flickr-img-5.jpg" alt="img"></div>
-                      </a></li>
-                    <li><a href="#">
-                      <div class="frame"><img src="images/flickr-photo/flickr-img-6.jpg" alt="img"></div>
-                      </a></li>
-                    <li><a href="#">
-                      <div class="frame"><img src="images/flickr-photo/flickr-img-7.jpg" alt="img"></div>
-                      </a></li>
-                    <li><a href="#">
-                      <div class="frame"><img src="images/flickr-photo/flickr-img-8.jpg" alt="img"></div>
-                      </a></li>
-                    <li><a href="#">
-                      <div class="frame"><img src="images/flickr-photo/flickr-img-9.jpg" alt="img"></div>
-                      </a></li>
+                          </ItemTemplate>
+                      </asp:ListView>
                   </ul>
                 </div>
     </asp:Content>
@@ -128,10 +121,10 @@
                   <li><span><i class="fa fa-user"></i>فرزند <asp:Label ID="lblFather" runat="server" ></asp:Label></span></li>
                   <li><span><i class="fa fa-map"></i>اهل <asp:Label ID="lblShahr" runat="server"></asp:Label></span></li>
                   <li><span><i class="fa fa-map-marker"></i>قطعه <asp:Label ID="lblGhete" runat="server"></asp:Label></span></li>
-                  <li><span><i class="fa fa-map-marker"></i>عملیات منجر به شهادت: <asp:Label ID="lblamaliat" runat="server"></asp:Label></span></li>
-                    <li><span><i class="fa fa-map-marker"></i><asp:Label ID="lblSemat" runat="server"></asp:Label></span></li>
-                    <li><span><i class="fa fa-map-marker"></i><asp:Label ID="lblYegan" runat="server"></asp:Label></span></li>
-                    <li><span><i class="fa fa-map-marker"></i><asp:Label ID="lblNiroo" runat="server"></asp:Label></span></li>
+                  <li><span><i class="fa fa-gear"></i>عملیات منجر به شهادت: <asp:Label ID="lblamaliat" runat="server"></asp:Label></span></li>
+                    <li><span><i class="fa fa-sitemap"></i><asp:Label ID="lblSemat" runat="server"></asp:Label></span></li>
+                    <li><span><i class="fa fa-rocket"></i><asp:Label ID="lblYegan" runat="server"></asp:Label></span></li>
+                    <li><span><i class="fa fa-users"></i><asp:Label ID="lblNiroo" runat="server"></asp:Label></span></li>
                 </ul></div>
               <div class="event-frame"> <a href="#">
                   <asp:Image ID="Image1" runat="server" /></a>
@@ -166,6 +159,24 @@
         </div>
 </asp:Content>
 <asp:Content ID="content4" runat ="server" ContentPlaceHolderID="CPHfooter">
+    <!--Pretty Photo Js--> 
+<script src="../Js/jquery.prettyPhoto.js"></script>
+    <script>
+        //Pretty Photo
+        if ($('.flickr-photo').length) {
+            $(".flickr-photo:first a[rel^='prettyPhoto']").prettyPhoto({
+                animation_speed: 'normal',
+                theme: 'light_square',
+                slideshow: 3000,
+                autoplay_slideshow: true
+            });
+            $(".flickr-photo:gt(0) a[rel^='prettyPhoto']").prettyPhoto({
+                animation_speed: 'fast',
+                slideshow: 10000,
+                hideflash: true
+            });
+        }
+    </script>
   <script type="text/javascript"   src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2DiT3FNLpHAw407Iph1GNo8OT12ijhQg"></script>
         <script type="text/javascript" >
             var map;
@@ -186,4 +197,12 @@
 
             google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+    <script>
+        $("#ShowMoreModal").on("show.bs.modal", function (a) { 
+            var d = $(a.relatedTarget); 
+            var ft = d.data("fulltext");
+            var m = $(this);
+            m.find(".modal-body label.more").text(ft);
+        });
+    </script>
 </asp:Content>
