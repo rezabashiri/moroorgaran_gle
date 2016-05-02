@@ -56,6 +56,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\App_Web_logincontrol.ascx.cc671b29.dll</HintPath>
     </Reference>
+    <Reference Include="App_Web_uscdatetime.ascx.cc671b29">
+      <HintPath>..\packages\App_Web_uscdatetime.ascx.cc671b29.dll</HintPath>
+    </Reference>
     <Reference Include="App_Web_uscfileupload.ascx.cc671b29">
       <HintPath>..\packages\App_Web_uscfileupload.ascx.cc671b29.dll</HintPath>
     </Reference>
@@ -179,10 +182,6 @@
     </Reference>
     <Reference Include="WebGrease">
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
-    </Reference>
-    <Reference Include="WebUtilityv2, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\WebUtilityv2.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -371,6 +370,8 @@
     <Content Include="DynamicData\FieldTemplates\Password.ascx" />
     <Content Include="DynamicData\FieldTemplates\Password_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\PersianDate.ascx" />
+    <Content Include="DynamicData\FieldTemplates\PersianDateTime.ascx" />
+    <Content Include="DynamicData\FieldTemplates\PersianDateTime_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\PersianDate_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Text.ascx" />
     <Content Include="DynamicData\FieldTemplates\Text_Edit.ascx" />
@@ -1447,6 +1448,20 @@
     <Compile Include="DynamicData\FieldTemplates\PersianDate.ascx.designer.cs">
       <DependentUpon>PersianDate.ascx</DependentUpon>
     </Compile>
+    <Compile Include="DynamicData\FieldTemplates\PersianDateTime.ascx.cs">
+      <DependentUpon>PersianDateTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\PersianDateTime.ascx.designer.cs">
+      <DependentUpon>PersianDateTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\PersianDateTime_Edit.ascx.cs">
+      <DependentUpon>PersianDateTime_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\PersianDateTime_Edit.ascx.designer.cs">
+      <DependentUpon>PersianDateTime_Edit.ascx</DependentUpon>
+    </Compile>
     <Compile Include="DynamicData\FieldTemplates\PersianDate_Edit.ascx.cs">
       <DependentUpon>PersianDate_Edit.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1892,6 +1907,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\component\WebUtility_v2\WebUtility.csproj">
+      <Project>{d78f6bdc-6d1c-4511-add2-44b116d77cd8}</Project>
+      <Name>WebUtility</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Golestan\Golestan.csproj">
       <Project>{d856aa46-0e36-4f13-b330-9401b74d0fdc}</Project>
       <Name>Golestan</Name>

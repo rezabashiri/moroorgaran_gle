@@ -54,5 +54,10 @@ namespace Golestan.Helpers
             Shahid _shahid = new Shahid();
             return _shahid.GetShahidAttachments(IDShahid);
         }
+        public Amaliat GetTheNearestAmaliat()
+        {
+            Amaliat _am = new Amaliat();
+            return _am.NearestAmaliatToNow();
+        }
     }
 }

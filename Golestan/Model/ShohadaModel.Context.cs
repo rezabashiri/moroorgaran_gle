@@ -174,5 +174,15 @@ namespace Golestan.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewAttach>("sp_SearchAttachment", mergeOption, iDShahidParameter, iDAmaliatParameter);
         }
+    
+        public virtual ObjectResult<Amaliat> GetTheNearestAmaliat()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Amaliat>("GetTheNearestAmaliat");
+        }
+    
+        public virtual ObjectResult<Amaliat> GetTheNearestAmaliat(MergeOption mergeOption)
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Amaliat>("GetTheNearestAmaliat", mergeOption);
+        }
     }
 }
