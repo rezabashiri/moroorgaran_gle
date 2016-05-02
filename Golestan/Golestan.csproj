@@ -141,6 +141,7 @@
     <Compile Include="DBClass\Vahed.cs" />
     <Compile Include="DBClass\Vaziat.cs" />
     <Compile Include="DBClass\ViewAmaliat.cs" />
+    <Compile Include="DBClass\ViewAttach.cs" />
     <Compile Include="DBClass\ViewNirooVahed.cs" />
     <Compile Include="DBClass\ViewShahid.cs" />
     <Compile Include="DBClass\ViewShahidAmaliat.cs" />
@@ -160,6 +161,9 @@
       <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Bakhsh.cs">
+      <DependentUpon>ShohadaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GetTheNearestAmaliat_Result.cs">
       <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Ghate.cs">

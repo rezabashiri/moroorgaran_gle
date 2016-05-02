@@ -882,6 +882,7 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
         <Function Name="sp_SearchShahidAmaliat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="WhereParameter" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="GetTheNearestAmaliat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="gle" />
         <Function Name="sp_GetShahidAshena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="gle">
           <Parameter Name="WhereParameter" Type="nvarchar" Mode="In" />
         </Function>
@@ -1637,6 +1638,7 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
             <Parameter Name="IDShahid" Mode="In" Type="Int32" />
             <Parameter Name="IDAmaliat" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="GetTheNearestAmaliat" EntitySet="Amaliats" ReturnType="Collection(GolestanShohadaModel.Amaliat)" />
         </EntityContainer>
         <EntityType Name="Shahid">
           <Key>
@@ -2176,6 +2178,17 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
           <Property Type="Int32" Name="RoleId" Nullable="true" />
           <Property Type="Int32" Name="IDAmaliat" Nullable="true" />
         </ComplexType>
+        <ComplexType Name="GetTheNearestAmaliat_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Ramz" Nullable="true" MaxLength="150" />
+          <Property Type="DateTime" Name="TarikheShoroo" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="TarikhePayan" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Tozihat" Nullable="true" />
+          <Property Type="String" Name="Kholase" Nullable="true" MaxLength="50" />
+          <Property Type="Binary" Name="Thumbnale" Nullable="true" />
+          <Property Type="Guid" Name="AttachID" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2664,6 +2677,8 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="sp_SearchAttachment" FunctionName="GolestanShohadaModel.Store.sp_SearchAttachment">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetTheNearestAmaliat" FunctionName="GolestanShohadaModel.Store.GetTheNearestAmaliat">
           </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
