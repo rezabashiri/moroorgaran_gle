@@ -96,7 +96,8 @@ namespace Golestan.Model
                 string query = string.Format(" IDAmaliat = {0} ", monjarbshahdat.IDAmaliat);
                 var hamrazm =  SearchShahidAmaliatByParameter(query);
                 if (hamrazm != null)
-                    return hamrazm.Where(x=>x.IDShahid != idD
+                    return hamrazm.Where(x => x.IDShahid != IDShahid).ToList<ViewShahidAmaliat>();
+                return null;
             }
             return null;
         }

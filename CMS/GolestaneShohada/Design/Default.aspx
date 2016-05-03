@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Prayer Church</title>
+<title>فرهنگستان پایداری اصفهان</title>
 <!--Custom Css-->
 <link href="css/custom.css" rel="stylesheet" type="text/css"/>
 <!--Bootstrap 3.1.1 Css-->
@@ -27,7 +27,7 @@
 <%--<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600' rel='stylesheet' type='text/css'>--%>
 <!--Bxslider Css-->
-<link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css" />
 <!--Content Slider Css-->
 <link href="css/content_slider_style.css" rel="stylesheet" type="text/css" />
 <!--[if lt IE 9]>
@@ -50,7 +50,7 @@
         <div class="right">
           <a id="active-btn" href="#" class="btn-search"><i class="fa fa-search"></i></a> <a href="#" class="btn-login"><i class="fa fa-user"></i></a> </div>
         <form action="#" id="search-box-form" class="search-box">
-          <input type="text" class="topbar-search-input" placeholder="Search for...">
+          <input type="text" class="topbar-search-input" placeholder="Search for..."/>
           <button value="" class="topbar-btn-search"><i class="fa fa-search"></i></button>
           <a href="#" class="crose"><i class="fa fa-times"></i></a>
         </form>
@@ -161,7 +161,7 @@
             <ItemTemplate>
                  <li> <img src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>' 
                      alt='<%# DataBinder.Eval(Container.DataItem, "ItemTopic") %>' >
-        <div class="caption">
+     <%--   <div class="caption">
           <div class="container">
             <div class="holder">
               <h2><%# DataBinder.Eval(Container.DataItem, "ItemTopic") %></h2>
@@ -170,7 +170,7 @@
               </div>
               <a href="fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>" class="btn-detail">بیشتر بخوانید</a></div>
           </div>
-        </div>
+        </div>--%>
       </li>
             </ItemTemplate>
         </asp:ListView>
@@ -361,7 +361,7 @@
                   </div>
                   <div class="text-area"> <strong class="title"><%# DataBinder.Eval(Container.DataItem, "ItemTopic") %></strong>
                     <ul>
-                      <li><span><i class="fa fa-calendar"></i></span><strong><%# MyClass.GetFarsiDate(Eval("EventDate")) %></strong></li>
+                      <li><span><i class="fa fa-calendar"></i></span><strong><%# new tkv.Utility.DateConversion().Object_dateconversiontosolar( (Eval("EventDate")) ) %></strong></li>
                     </ul>
                     <a href="fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>" class="btn-participate">بیشتر</a> </div>
                 </div>

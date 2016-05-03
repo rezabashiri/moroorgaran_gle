@@ -318,8 +318,10 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewAmaliat' does not have a p
 warning 6002: The table/view 'GolestanShohada.dbo.ViewAttach' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="ViewAttach">
           <Key>
+            <PropertyRef Name="Row" />
             <PropertyRef Name="AttachID" />
           </Key>
+          <Property Name="Row" Type="bigint" Nullable="false" />
           <Property Name="IDShahid" Type="int" />
           <Property Name="AttachID" Type="uniqueidentifier" Nullable="false" />
           <Property Name="FileName" Type="nvarchar(max)" />
@@ -964,6 +966,7 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
           </EntitySet>
           <EntitySet Name="ViewAttach" EntityType="Self.ViewAttach" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
+    [ViewAttach].[Row] AS [Row], 
     [ViewAttach].[IDShahid] AS [IDShahid], 
     [ViewAttach].[AttachID] AS [AttachID], 
     [ViewAttach].[FileName] AS [FileName], 
@@ -1633,12 +1636,12 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
           <EntitySet Name="ViewShahids" EntityType="GolestanShohadaModel.ViewShahid" />
           <EntitySet Name="ViewShahidMatalebEzafes" EntityType="GolestanShohadaModel.ViewShahidMatalebEzafe" />
           <EntitySet Name="ViewShahidAmaliats" EntityType="GolestanShohadaModel.ViewShahidAmaliat" />
-          <EntitySet Name="ViewAttaches" EntityType="GolestanShohadaModel.ViewAttach" />
           <FunctionImport Name="sp_SearchAttachment" EntitySet="ViewAttaches" ReturnType="Collection(GolestanShohadaModel.ViewAttach)">
             <Parameter Name="IDShahid" Mode="In" Type="Int32" />
             <Parameter Name="IDAmaliat" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetTheNearestAmaliat" EntitySet="Amaliats" ReturnType="Collection(GolestanShohadaModel.Amaliat)" />
+          <EntitySet Name="ViewAttaches" EntityType="GolestanShohadaModel.ViewAttach" />
         </EntityContainer>
         <EntityType Name="Shahid">
           <Key>
@@ -2147,23 +2150,6 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
           <Property Name="VirtualAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ISMonjarBeShahadat" Type="Boolean" />
         </EntityType>
-        <EntityType Name="ViewAttach">
-          <Key>
-            <PropertyRef Name="AttachID" />
-          </Key>
-          <Property Name="IDShahid" Type="Int32" />
-          <Property Name="AttachID" Type="Guid" Nullable="false" />
-          <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="FileExtension" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="UploadedTime" Type="DateTime" Precision="3" />
-          <Property Name="ServerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="VirtualAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ContentType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="ContentLength" Type="Int64" />
-          <Property Name="UserId" Type="Int32" />
-          <Property Name="RoleId" Type="Int32" />
-          <Property Name="IDAmaliat" Type="Int32" />
-        </EntityType>
         <ComplexType Name="sp_SearchAttachment_Result">
           <Property Type="Int32" Name="IDShahid" Nullable="true" />
           <Property Type="Guid" Name="AttachID" Nullable="false" />
@@ -2189,6 +2175,25 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
           <Property Type="Binary" Name="Thumbnale" Nullable="true" />
           <Property Type="Guid" Name="AttachID" Nullable="true" />
         </ComplexType>
+        <EntityType Name="ViewAttach">
+          <Key>
+            <PropertyRef Name="Row" />
+            <PropertyRef Name="AttachID" />
+          </Key>
+          <Property Name="Row" Type="Int64" Nullable="false" />
+          <Property Name="IDShahid" Type="Int32" />
+          <Property Name="AttachID" Type="Guid" Nullable="false" />
+          <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FileExtension" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UploadedTime" Type="DateTime" Precision="3" />
+          <Property Name="ServerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VirtualAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContentType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ContentLength" Type="Int64" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="RoleId" Type="Int32" />
+          <Property Name="IDAmaliat" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2658,6 +2663,10 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_SearchAttachment" FunctionName="GolestanShohadaModel.Store.sp_SearchAttachment">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetTheNearestAmaliat" FunctionName="GolestanShohadaModel.Store.GetTheNearestAmaliat">
+          </FunctionImportMapping>
           <EntitySetMapping Name="ViewAttaches">
             <EntityTypeMapping TypeName="GolestanShohadaModel.ViewAttach">
               <MappingFragment StoreEntitySet="ViewAttach">
@@ -2673,13 +2682,10 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
                 <ScalarProperty Name="FileName" ColumnName="FileName" />
                 <ScalarProperty Name="AttachID" ColumnName="AttachID" />
                 <ScalarProperty Name="IDShahid" ColumnName="IDShahid" />
+                <ScalarProperty Name="Row" ColumnName="Row" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="sp_SearchAttachment" FunctionName="GolestanShohadaModel.Store.sp_SearchAttachment">
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="GetTheNearestAmaliat" FunctionName="GolestanShohadaModel.Store.GetTheNearestAmaliat">
-          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

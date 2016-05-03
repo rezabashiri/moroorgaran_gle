@@ -14,6 +14,7 @@ namespace Golestan.Model
     
     public partial class ViewAttach
     {
+        public long Row { get; set; }
         public Nullable<int> IDShahid { get; set; }
         public System.Guid AttachID { get; set; }
         public string FileName { get; set; }
