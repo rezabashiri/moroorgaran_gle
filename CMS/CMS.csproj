@@ -997,6 +997,7 @@
     <Content Include="GolestaneShohada\Design\GolestanMap\img\zoomout_rest.png" />
     <Content Include="GolestaneShohada\Design\GolestanMap\library.html" />
     <Content Include="GolestaneShohada\Design\GolestanMap\readme.txt" />
+    <Content Include="GolestaneShohada\Design\Image\animate-number-bg.png" />
     <Content Include="GolestaneShohada\Design\Image\innder-heading-bg.jpg" />
     <Content Include="GolestaneShohada\Design\Image\sample-photo.jpg" />
     <Content Include="GolestaneShohada\Design\Image\thumb-sample.jpg" />
