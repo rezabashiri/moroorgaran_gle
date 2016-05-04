@@ -13,6 +13,7 @@ namespace CMS.GolestaneShohada.Design
         MyClass mc = new MyClass();
         DataTable dt = new DataTable();
         string sql = "";
+          
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -22,7 +23,31 @@ namespace CMS.GolestaneShohada.Design
                 FillBlog();
                 FillNews();
                 //FillComming();
-                
+                SetNearestAmalit();
+            }
+        }
+        public DateTime StartAmaliat
+        {
+            get;
+            set;
+        }
+        public DateTime EndAmaliat
+        {
+            get;
+            set;
+        }
+        public void SetNearestAmalit()
+        {
+            var amaliat = new Golestan.Helpers.InterFace().GetTheNearestAmaliat();
+            if (amaliat != null)
+            {
+                StartAmaliat = amaliat.TarikheShoroo ?? DateTime.Now;
+                EndAmaliat = amaliat.TarikhePayan ?? DateTime.Now;
+
+                StartAmaliat = new DateTime(DateTime.Now.Year, StartAmaliat.Month, StartAmaliat.Day, StartAmaliat.Hour, StartAmaliat.Minute, 0);
+                EndAmaliat = new DateTime(DateTime.Now.Year, EndAmaliat.Month, EndAmaliat.Day, EndAmaliat.Hour, EndAmaliat.Minute, 0);
+
+                lblAmaliat.Text = string.Format("عملیات {0} شروع خواهد شد", amaliat.Name);
             }
         }
         public void FillSlider()
@@ -52,7 +77,7 @@ namespace CMS.GolestaneShohada.Design
             {
                 sql = "SELECT     TOP (4)  dbo.TItems.ItemTopic, dbo.TItems.PhotoName, dbo.TItems.SummaryTxt, dbo.TItems.ItemID, dbo.TItems.EventDate, " +
                     "DATEDIFF(day, GETDATE(), EventDate) as dayE, DATEDIFF(day, DATEPART(HOUR, GETDATE()), DATEPART(HOUR, EventDate)) as HourE, "+
-                    " DATEDIFF(day, DATEPART(minute, GETDATE()), DATEPART(minute, EventDate)) as minE "+
+                    " abs( DATEDIFF(day, DATEPART(minute, GETDATE()), DATEPART(minute, EventDate))) as minE "+
                     "FROM         dbo.TItems INNER JOIN " +
                     "dbo.TGroups ON dbo.TItems.GrpID = dbo.TGroups.GrpID INNER JOIN " +
                     "dbo.TParts ON dbo.TGroups.PartID = dbo.TParts.PartID " +
