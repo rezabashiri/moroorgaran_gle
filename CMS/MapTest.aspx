@@ -80,6 +80,7 @@
     </table>  
           <%--<uc2:UscShahidMaghbare runat="server" ID="UscShahidMaghbare" />--%>        
         <uc2:UscNaghsheGolestanShohada runat="server" id="UscNaghsheGolestanShohada" />
+        <asp:Image ID="Image1" runat="server" />
         <%--<ajaxToolkit:Seadragon SourceUrl="~/GolestaneShohada/Design/GolestanMap/dzc_output.xml" ID="Seadragon1" runat="server"></ajaxToolkit:Seadragon>--%>
     </form>
 </body>

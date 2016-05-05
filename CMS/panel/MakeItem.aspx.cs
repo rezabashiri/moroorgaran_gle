@@ -198,7 +198,7 @@ public partial class panel_MakeItem : System.Web.UI.Page
             int hourPub = Convert.ToInt32(TimeSelector1.Hour);
             int MinPub = Convert.ToInt32(TimeSelector1.Minute);
             DateTime ShowDate = pc.ToDateTime(yearPub, monthPub, dayPub, hourPub, MinPub, 0, 0);
-
+            DateTime dt = new DateTime(yearPub, monthPub, dayPub, hourPub, MinPub, 0, 0);
             int PubStat = Convert.ToInt32(drpPubStat.SelectedValue);
 
             string msg = "";

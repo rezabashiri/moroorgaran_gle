@@ -68,6 +68,7 @@ namespace CMS
             }
 
             //set image properties
+            
             Image1.ImageUrl = sb.ToString();
         }
     }

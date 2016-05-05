@@ -31,7 +31,7 @@ namespace CMS
 
         void Application_BeginRequest(object sender, EventArgs e)
         {
-            System.Threading.Thread.CurrentThread.CurrentCulture = new tkv.Utility.CultureHelpers().GetCulture();
+           // System.Threading.Thread.CurrentThread.CurrentCulture = new tkv.Utility.CultureHelpers().GetCulture();
         }
 
         

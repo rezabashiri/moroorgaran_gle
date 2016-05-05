@@ -683,7 +683,7 @@ span.colun-3 {
 .featured-sermon {
 	float: left;
 	width: 100%;
-	background-image: url(../images/featured-sermon-pattren.png);
+	background-image: url(/GolestaneShohada/Design/Image/featured-sermon-pattren.png);
 	background-repeat: repeat;
 	background-position: left top;
 	padding: 0 0 20px 0;
@@ -879,7 +879,7 @@ span.colun-3 {
 .home-widget-box {
 	float: left;
 	width: 100%;
-	background: url(../images/home-wedigt-img.jpg) no-repeat left top/cover;
+	background: url(/GolestaneShohada/Design/Image/home-wedigt-img.jpg) no-repeat left top/cover;
 	margin: 0 0 35px 0;
 	overflow: hidden;
 }
@@ -1161,9 +1161,9 @@ span.colun-3 {
 .quote-box {
 	float: left;
 	width: 100%;
-	background-image: url(../images/quote-message-img-1.png);
+	background-image: url(/GolestaneShohada/Design/Image/animate-number-bg.png);
 	background-repeat: repeat;
-	background-position: left top;
+	background-position: 50% 50%;
 	padding: 67px 0 79px 0;
 }
 .quote-box h3 {
@@ -1563,7 +1563,7 @@ span.colun-3 {
 .purchase-section {
 	float: left;
 	width: 100%;
-	background-image: url(../images/purchase-section-bg.png);
+	background-image: url(/GolestaneShohada/Design/fa/images/purchase-section-bg.png);
 	background-repeat: repeat;
 	background-position: left top;
 	padding: 60px 0;
