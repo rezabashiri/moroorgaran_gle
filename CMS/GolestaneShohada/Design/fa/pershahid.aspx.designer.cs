@@ -40,6 +40,42 @@ namespace CMS.GolestaneShohada.Design.fa {
         protected global::System.Web.UI.WebControls.ListView ListView2;
         
         /// <summary>
+        /// lblashna control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden lblashna;
+        
+        /// <summary>
+        /// ListView5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView ListView5;
+        
+        /// <summary>
+        /// ListView3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView ListView3;
+        
+        /// <summary>
+        /// ListView4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView ListView4;
+        
+        /// <summary>
         /// lbldayofWeek control.
         /// </summary>
         /// <remarks>

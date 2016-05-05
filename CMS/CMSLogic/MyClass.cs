@@ -514,6 +514,15 @@ public class MyClass
             return user.ID;
         }
     }
+    public static string BackIconTag(object cntType)
+    {
+        string format = cntType.ToString();
+        if (format.Contains("audio"))
+            return "fa fa-play";
+        else if (format.Contains("video"))
+            return "fa fa-video-camera";
+        else return "fa fa-file";
+    }
 }
 
 

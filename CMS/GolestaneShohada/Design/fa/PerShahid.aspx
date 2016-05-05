@@ -5,7 +5,12 @@
 
 <asp:Content ID="content0" runat ="server" ContentPlaceHolderID="head">
     <script type="text/javascript" src="/GolestaneShohada/Design/Js/seadragon-min.js" lang="ja"></script>
-
+    <!--Bxslider Css-->
+<link href="../css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+<!--Content Slider Css-->
+<link href="../css/content_slider_style.css" rel="stylesheet" type="text/css" />
+<!--Pretty Photo Css-->
+<link rel="stylesheet" href="../css/prettyPhoto.css" type="text/css" media="screen"/>
 
     <style type="text/css" >
         #map-canvas {
@@ -30,15 +35,80 @@
                                 <li>
                       <div class="text-box">
                           <strong class="title"><%# DataBinder.Eval(Container.DataItem, "NameAhena")%>&nbsp;<%# DataBinder.Eval(Container.DataItem, "FamilAshena")%></strong><p><%# DataBinder.Eval(Container.DataItem, "Kholase")%></p>
-                        <a href="otherstalk.aspx?ID=<%# DataBinder.Eval(Container.DataItem, "ID")%>" class="readmore">ادامه</a></div>
+                        <a href="#" class="readmore" data-toggle="modal" data-target="#ShowMoreModal" data-fulltext='<%# DataBinder.Eval(Container.DataItem, "Tozihat")%>'>ادامه</a></div>
                     </li>
+                          </ItemTemplate>
+                      </asp:ListView>
+                  </ul>
+                </div>
+<div class="modal fade" id="ShowMoreModal" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-lg" role="document" id="modalDrag">
+<div class="modal-content persian">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h5 class="modal-title"><i class="fa fa-pencil"></i>&nbsp;ادامه سخن</h5>
+<input id="lblashna" runat="server" type="hidden" class="english form-control AshID">
+</div>
+<div class="modal-body">
+<div class="box-body">
+    <p><label class="more"></label></p>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+</div>
+</div>
+</div>
+</div>
+
+        <!--Recent Post Start-->
+                <div class="recent-post">
+                  <h3>هم رزمان</h3>
+                  <ul>
+                      <asp:ListView ID="ListView5" runat="server">
+                          <ItemTemplate>
+                              <li>
+                      <div class="frame"><a href="PerShahid.aspx?shahidid=<%# DataBinder.Eval(Container.DataItem, "IDShahid")%>">
+                          <asp:Image ID="Image3" runat="server" CssClass="maxwdt1" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "VirtualAddress") %>' AlternateText='<%# DataBinder.Eval(Container.DataItem, "Family") %>' /></a></div>
+                      <div class="text-box"> <a href="PerShahid.aspx?shahidid=<%# DataBinder.Eval(Container.DataItem, "IDShahid")%>" class="title"><%# DataBinder.Eval(Container.DataItem, "Name") %>&nbsp;<%# DataBinder.Eval(Container.DataItem, "Family") %></a></div>
+                    </li>
+                          </ItemTemplate>
+                      </asp:ListView>
+                    
+                  </ul>
+                </div>
+                <!--Recent Post End--> 
+    <div class="popular-sermons">
+                  <h3>فیلم و صوت شهید</h3>
+                  <ul>
+                      <asp:ListView ID="ListView3" runat="server">
+                          <ItemTemplate>
+                              <li>
+                                  <asp:HyperLink ID="HyperLink1" runat="server" CssClass="play" NavigateUrl='<%# DataBinder.Eval(Container.DataItem, "VirtualAddress") %>'> 
+                                      <i class='<%# MyClass.BackIconTag(Eval("ContentType")) %>'></i></asp:HyperLink> 
+                      <div class="text-box"> <strong class="title"><%# DataBinder.Eval(Container.DataItem, "FileName") %></strong></div>
+                    </li>
+                          </ItemTemplate>
+                      </asp:ListView>
+                  </ul>
+                </div>
+    <div class="flickr-photo">
+                  <h3>تصاویر شهید</h3>
+                  <ul>
+                      <asp:ListView ID="ListView4" runat="server">
+                          <ItemTemplate>
+                              <li><a href='<%# string.Format(DataBinder.Eval(Container.DataItem, "VirtualAddress").ToString().Replace("~/GolestaneShohada/","../../")) %>'
+                                   class="zoom" data-rel="prettyPhoto[gallery1]" rel="prettyPhoto[gallery1]">
+                      <div class="frame">
+                          <asp:Image ID="Image2" runat="server" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "VirtualAddress") %>' AlternateText='<%# DataBinder.Eval(Container.DataItem, "FileName") %>' />
+                          </div>
+                      </a></li>
                           </ItemTemplate>
                       </asp:ListView>
                   </ul>
                 </div>
     </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
-
             <div class="fram-holder">
               <div class="right">
                 <div class="date-box"><strong class="title">تاریخ شهادت</strong> <strong class="day">
@@ -51,10 +121,10 @@
                   <li><span><i class="fa fa-user"></i>فرزند <asp:Label ID="lblFather" runat="server" ></asp:Label></span></li>
                   <li><span><i class="fa fa-map"></i>اهل <asp:Label ID="lblShahr" runat="server"></asp:Label></span></li>
                   <li><span><i class="fa fa-map-marker"></i>قطعه <asp:Label ID="lblGhete" runat="server"></asp:Label></span></li>
-                  <li><span><i class="fa fa-map-marker"></i>عملیات منجر به شهادت: <asp:Label ID="lblamaliat" runat="server"></asp:Label></span></li>
-                    <li><span><i class="fa fa-map-marker"></i><asp:Label ID="lblSemat" runat="server"></asp:Label></span></li>
-                    <li><span><i class="fa fa-map-marker"></i><asp:Label ID="lblYegan" runat="server"></asp:Label></span></li>
-                    <li><span><i class="fa fa-map-marker"></i><asp:Label ID="lblNiroo" runat="server"></asp:Label></span></li>
+                  <li><span><i class="fa fa-gear"></i>عملیات منجر به شهادت: <asp:Label ID="lblamaliat" runat="server"></asp:Label></span></li>
+                    <li><span><i class="fa fa-sitemap"></i><asp:Label ID="lblSemat" runat="server"></asp:Label></span></li>
+                    <li><span><i class="fa fa-rocket"></i><asp:Label ID="lblYegan" runat="server"></asp:Label></span></li>
+                    <li><span><i class="fa fa-users"></i><asp:Label ID="lblNiroo" runat="server"></asp:Label></span></li>
                 </ul></div>
               <div class="event-frame"> <a href="#">
                   <asp:Image ID="Image1" runat="server" /></a>
@@ -83,13 +153,31 @@
         <asp:ListView ID="ListView1" runat="server">
             <ItemTemplate>
                 <h2><%# DataBinder.Eval(Container.DataItem, "NameNoeMatlab") %></h2>
-                <blockquote><q><%# DataBinder.Eval(Container.DataItem, "Kholase") %></q> </blockquote>
                 <p><%# DataBinder.Eval(Container.DataItem, "Tozihat") %></p>
             </ItemTemplate>
         </asp:ListView>
         </div>
-        <script type="text/javascript"   src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2DiT3FNLpHAw407Iph1GNo8OT12ijhQg"></script>
-
+</asp:Content>
+<asp:Content ID="content4" runat ="server" ContentPlaceHolderID="CPHfooter">
+    <!--Pretty Photo Js--> 
+<script src="../Js/jquery.prettyPhoto.js"></script>
+    <script>
+        //Pretty Photo
+        if ($('.flickr-photo').length) {
+            $(".flickr-photo:first a[rel^='prettyPhoto']").prettyPhoto({
+                animation_speed: 'normal',
+                theme: 'light_square',
+                slideshow: 3000,
+                autoplay_slideshow: true
+            });
+            $(".flickr-photo:gt(0) a[rel^='prettyPhoto']").prettyPhoto({
+                animation_speed: 'fast',
+                slideshow: 10000,
+                hideflash: true
+            });
+        }
+    </script>
+  <script type="text/javascript"   src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2DiT3FNLpHAw407Iph1GNo8OT12ijhQg"></script>
         <script type="text/javascript" >
             var map;
             var myLatlng = new google.maps.LatLng( <%= Y %>,<%= X %>);
@@ -109,4 +197,12 @@
 
             google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+    <script>
+        $("#ShowMoreModal").on("show.bs.modal", function (a) { 
+            var d = $(a.relatedTarget); 
+            var ft = d.data("fulltext");
+            var m = $(this);
+            m.find(".modal-body label.more").text(ft);
+        });
+    </script>
 </asp:Content>
