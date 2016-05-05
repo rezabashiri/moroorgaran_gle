@@ -5612,8 +5612,9 @@ span.colun-3 {
 	width:100%;
 }
 .sermon-box .frame img {
-	width: 100%;
+	max-width:225px;
 	display: block;
+    margin:0 auto;
 }
 .sermon-box .text-box {
 	float: right;
@@ -5640,6 +5641,7 @@ span.colun-3 {
 	border-top: 1px solid #ccc;
 	padding: 8px 0 6px 0;
 	margin: 0 0 20px 0;
+
 }
 .sermon-box .text-box .detail-row ul {
 	padding: 0;
@@ -5647,23 +5649,33 @@ span.colun-3 {
 	list-style: none;
 }
 .sermon-box .text-box .detail-row ul li {
-	float: left;
-	padding: 0 0 0 19px;
-	width: auto;
+	float: right;
+	padding: 5px 0 ;
+	/*width: auto;*/
 }
 .sermon-box .text-box .detail-row ul li:first-child {
 	padding: 0;
 }
 .sermon-box .text-box .detail-row li a {
 	color: #999999;
-	float: left;
-	font: 400 12px 'Open Sans', sans-serif;
+	float: right;
+	font-size:11px;
 	text-decoration: none;
 }
 .sermon-box .text-box .detail-row li a .fa {
-	float: left;
+	float: right;
 	line-height: 15px;
-	padding: 0 7px 0 0;
+	padding: 0 0 0 7px;
+}
+.sermon-box .text-box a.readmore {
+	color: #333;
+	float: right;
+	text-decoration: none;
+	padding: 6px 10px;
+	position: relative;
+    border:1px solid #C83200;
+    border-radius:4px;
+    font-size:12px;
 }
 .sermon-box .text-box .list-area {
 	float: right;

@@ -7,7 +7,7 @@
     <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!--Custom Css-->
-<link href="../css/custom.css" rel="stylesheet" type="text/css"/>
+<link href="../css/custom.css?ver=1.0.1" rel="stylesheet" type="text/css"/>
 <!--Bootstrap 3.1.1 Css-->
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
 <!--RESPONSIVE Css-->
@@ -168,13 +168,18 @@
               <div class="sidebar"> 
                   <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
                         <div class="sidebar-latest-news">
-                  <h3>عنوان اضافه</h3>
+                  <h3>تازه ترین ها</h3>
                   <ul>
-                    <li>
-                      <div class="text-box"> <strong class="title">عنوان خبر در اینجا نوشته شود</strong> <strong class="post">25 فروردین 1395</strong>
-                        <p>خلاصه خبر در اینجا نوشته می شود. خلاصه خبر در اینجا نوشته می شود. خلاصه خبر در اینجا نوشته می شود. </p>
-                        <a href="#" class="readmore">ادامه خبر</a></div>
+                      <asp:ListView ID="ListView1" runat="server">
+                          <ItemTemplate>
+                                <li>
+                      <div class="text-box"> <strong class="title"><%#  DataBinder.Eval(Container.DataItem, "ItemTopic") %></strong> 
+                          <strong class="post"><%# MyClass.GetFarsiDate(Eval("ShowDate")) %></strong>
+                        <p><%#  DataBinder.Eval(Container.DataItem, "SummaryTxt") %></p>
+                        <a href="../fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>" class="readmore">ادامه خبر</a></div>
                     </li>
+                          </ItemTemplate>
+                      </asp:ListView>
                   </ul>
                 </div>
                   </asp:ContentPlaceHolder>
