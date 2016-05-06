@@ -31,9 +31,9 @@ jQuery(document).ready(function ($) {
     });
 
     //Next Event Countdown on Heared 
-    if ($('.countdown').length) {
-        $('.countdown').final_countdown();
-    }
+    //if ($('.countdown').length) {
+    //    $('.countdown').final_countdown();
+    //}
 
     //Parallax Effect
     $(window).stellar();

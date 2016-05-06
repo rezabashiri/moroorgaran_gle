@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="shohadalist.aspx.cs" Inherits="CMS.GolestaneShohada.Design.fa.shohadalist" MasterPageFile="~/GolestaneShohada/Design/MasterPage/WebMaster.Master"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Title="جستجوی شهدا" CodeBehind="shohadalist.aspx.cs" Inherits="CMS.GolestaneShohada.Design.fa.shohadalist" MasterPageFile="~/GolestaneShohada/Design/MasterPage/WebMaster.Master"%>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPageHeading">
     <h1>لیست شهدا</h1>
         <p>جهت جستجوی شهید مورد نظر خود از فرم زیر استفاده نمایید.</p>
