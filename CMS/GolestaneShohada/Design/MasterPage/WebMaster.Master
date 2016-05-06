@@ -46,7 +46,7 @@
     <!--Head Topbar Start-->
     <section class="head-topbar">
       <div class="container holder">
-        <div class="left"> <strong class="ph"><i class="fa fa-phone"></i>(123) 456 7980</strong> <a href="mailto:" class="email"><i class="fa fa-envelope"></i><span class="__cf_email__" data-cfemail="7a13141c153a0a081b031f0854191517">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function (t, e, r, n, c, a, p) { try { t = document.currentScript || function () { for (t = document.getElementsByTagName('script'), e = t.length; e--;) if (t[e].getAttribute('data-cfhash')) return t[e] }(); if (t && (c = t.previousSibling)) { p = t.parentNode; if (a = c.getAttribute('data-cfemail')) { for (e = '', r = '0x' + a.substr(0, 2) | 0, n = 2; a.length - n; n += 2) e += '%' + ('0' + ('0x' + a.substr(n, 2) ^ r).toString(16)).slice(-2); p.replaceChild(document.createTextNode(decodeURIComponent(e)), c) } p.removeChild(t) } } catch (u) { } }()/* ]]> */</script></a> </div>
+        <div class="left"> <strong class="ph"><i class="fa fa-phone"></i>(031) 456 7980</strong> <strong class="ph"><i class="fa fa-envelope"></i>info@golestan.com</strong> </div>
       </div>
     </section>
     <!--Head Topbar End--> 

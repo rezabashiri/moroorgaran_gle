@@ -1,4 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Title="جستجوی شهدا" CodeBehind="shohadalist.aspx.cs" Inherits="CMS.GolestaneShohada.Design.fa.shohadalist" MasterPageFile="~/GolestaneShohada/Design/MasterPage/WebMaster.Master"%>
+<asp:Content ID="Content3" runat="server" contentplaceholderid="head">
+<link href="../css/bootstrap-list-rtl.css" type="text/css" rel="stylesheet" />
+</asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPageHeading">
     <h1>لیست شهدا</h1>
         <p>جهت جستجوی شهید مورد نظر خود از فرم زیر استفاده نمایید.</p>
@@ -21,10 +24,10 @@
                         <li><a href="#"><i class="fa fa-map-pin"></i>متولد: <%#  DataBinder.Eval(Container.DataItem, "NameShahrestan") %></a></li>
                           <li><a href="#"><i class="fa fa-calendar"></i>تاریخ تولد: <%# MyClass.GetFarsiDate(Eval("TarikheTavalod")) %></a></li>
                         <li><a href="#"><i class="fa fa-tint"></i>تاریخ شهادت: <%# MyClass.GetFarsiDate(Eval("TarikheShahadat")) %></a></li>
-                          <li><a href="#"><i class="fa fa-map-marker"></i>متولد: <%#  DataBinder.Eval(Container.DataItem, "NameShahrestan") %></a></li>
+                          <li><a href="#"><i class="fa fa-map-marker"></i>محل شهادت: <%#  DataBinder.Eval(Container.DataItem, "NameShahrestan") %></a></li>
                       </ul>
                     </div>
-                    <a href="#" class="readmore">بیشتر بدانید</a>
+                       <asp:HyperLink NavigateUrl='<%# CreateLink(Eval("ID")) %>' ID="HyperLink1" runat="server"  CssClass="readmore">بیشتر بدانید</asp:HyperLink>
                   </div>
                 </div>
                                   </asp:HyperLink>

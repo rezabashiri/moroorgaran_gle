@@ -1,15 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UscSearchShahid.ascx.cs" Inherits="Golestan.Control.UscSearchShahid" %>
         <%@ Register Assembly="Heidarpour.WebControlUI" Namespace="Heidarpour.WebControlUI" TagPrefix="rhp" %>
-
-<style>
-    @media(min-width: 768px) {
-        .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
-            float: right;
-            text-align: right;
-            direction: rtl;
-        }
-    }
-</style>
 <div>
 
 

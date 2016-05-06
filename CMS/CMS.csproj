@@ -401,6 +401,7 @@
     <Content Include="GolestaneShohada\Controls\UscNaghsheGolestanShohada.ascx" />
     <Content Include="GolestaneShohada\Controls\UscShahidMaghbare.ascx" />
     <Content Include="GolestaneShohada\Design\css\audioplayer.css" />
+    <Content Include="GolestaneShohada\Design\css\bootstrap-list-rtl.css" />
     <Content Include="GolestaneShohada\Design\css\bootstrap.css" />
     <Content Include="GolestaneShohada\Design\css\bootstrap.min.css" />
     <Content Include="GolestaneShohada\Design\css\color-4.css" />

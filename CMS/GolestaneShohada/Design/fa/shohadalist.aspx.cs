@@ -12,7 +12,7 @@ namespace CMS.GolestaneShohada.Design.fa
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Uscshahidsearch.OnDataBind += Uscshahidsearch_OnDataBind;  //این کار نمیکند؟! ها
+            Uscshahidsearch.OnDataBind += Uscshahidsearch_OnDataBind; 
         }
 
         void Uscshahidsearch_OnDataBind(List<Golestan.Model.ViewShahid> DataSource)
@@ -63,13 +63,13 @@ namespace CMS.GolestaneShohada.Design.fa
         protected void lnkbtnnext_Click(object sender, EventArgs e)
         {
             CurrentPage += 1;
-            Uscshahidsearch.OnDataBind += Uscshahidsearch_OnDataBind;
+            // should call search button again
         }
 
         protected void lnkbtnPrev_Click(object sender, EventArgs e)
         {
             CurrentPage -= 1;
-            Uscshahidsearch.OnDataBind += Uscshahidsearch_OnDataBind;
+            // should call search button again   
         }
     }
 }
