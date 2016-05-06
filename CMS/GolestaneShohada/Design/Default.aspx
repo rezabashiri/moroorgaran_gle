@@ -61,11 +61,8 @@
     <!--Logo Row Star-->
     <section class="logo-row">
       <div class="container">
-        <div class="event-timer"> <strong class="title">Next Event:</strong>
+        <div class="event-timer"> <strong class="title"><asp:Label ForeColor="Black" ID="lblAmaliat" runat="server" ></asp:Label></strong>   <!--jQuery Final Countdown -->
           <div class="countdown countdown-container "
-     data-start="1362139200"
-     data-end="1388461320"
-     data-now="1387461319"
      data-border-color="rgba(255, 255, 255,1)">
             <div class="clock">
               <div class="clock-item clock-days countdown-time-value">
@@ -74,7 +71,7 @@
                     <div id="canvas-days" class="clock-canvas"></div>
                     <div class="text">
                       <p class="val">0</p>
-                      <p class="type-days type-time">DAYS</p>
+                      <p class="type-days type-time">روز</p>
                     </div>
                   </div>
                 </div>
@@ -85,7 +82,7 @@
                     <div id="canvas-hours" class="clock-canvas"></div>
                     <div class="text">
                       <p class="val">0</p>
-                      <p class="type-hours type-time">HRS</p>
+                      <p class="type-hours type-time">ساعت</p>
                     </div>
                   </div>
                 </div>
@@ -96,7 +93,7 @@
                     <div id="canvas-minutes" class="clock-canvas"></div>
                     <div class="text">
                       <p class="val">0</p>
-                      <p class="type-minutes type-time">MNTS</p>
+                      <p class="type-minutes type-time">دقیقه</p>
                     </div>
                   </div>
                 </div>
@@ -107,7 +104,7 @@
                     <div id="canvas-seconds" class="clock-canvas"></div>
                     <div class="text">
                       <p class="val">0</p>
-                      <p class="type-seconds type-time">SECS</p>
+                      <p class="type-seconds type-time">ثانیه</p>
                     </div>
                   </div>
                 </div>
@@ -206,7 +203,9 @@
         <div class="holder">
           <h2><span class="color"><strong>یاران</strong></span> پای در راه نهیم که این راه رفتنی است و نه گفتنی</h2>
             </br>
-          <h2><span class="color"></span>الزمالة.
+             <h2><span class="color">fellowship , set your food in the way , this way is the way to go not to say </span></h2>
+            </br>
+          <h2><span class="color"></span>الزمالة,
 وضعنا القدم على الطريق
 المشي
   ويقول</h2>
@@ -358,10 +357,10 @@
                 <div class="inner-area">
                     <div class="timer-box">
                     <div class="defaultCountdown is-countdown"><span class="countdown-row countdown-show4">
-                        <span class="countdown-section"><span class="countdown-amount"><%# DataBinder.Eval(Container.DataItem, "dayE") %></span><span class="countdown-period">Day</span></span>
-                        <span class="countdown-section"><span class="countdown-amount"><%# DataBinder.Eval(Container.DataItem, "HourE") %></span><span class="countdown-period">Hrs</span></span>
-                        <span class="countdown-section"><span class="countdown-amount"><%# DataBinder.Eval(Container.DataItem, "minE") %></span><span class="countdown-period">Mins</span></span>
-                        <span class="countdown-section"><span class="countdown-amount">12</span><span class="countdown-period">Sec</span></span></span></div>
+                        <span class="countdown-section"><span class="countdown-amount"><%# DataBinder.Eval(Container.DataItem, "dayE") %></span><span class="countdown-period">روز</span></span>
+                        <span class="countdown-section"><span class="countdown-amount"><%# DataBinder.Eval(Container.DataItem, "HourE") %></span><span class="countdown-period">ساعت</span></span>
+                        <span class="countdown-section"><span class="countdown-amount"><%# DataBinder.Eval(Container.DataItem, "minE") %></span><span class="countdown-period">دقیقه</span></span>
+                        
                   </div>
                   <div class="text-area"> <strong class="title"><%# DataBinder.Eval(Container.DataItem, "ItemTopic") %></strong>
                     <ul>
@@ -612,6 +611,26 @@
 <!--Custome Js--> 
 <script src="Js/custom.js"></script>
 <script type="text/javascript">/* <![CDATA[ */(function (d, s, a, i, j, r, l, m, t) { try { l = d.getElementsByTagName('a'); t = d.createElement('textarea'); for (i = 0; l.length - i; i++) { try { a = l[i].href; s = a.indexOf('/cdn-cgi/l/email-protection'); m = a.length; if (a && s > -1 && m > 28) { j = 28 + s; s = ''; if (j < m) { r = '0x' + a.substr(j, 2) | 0; for (j += 2; j < m && a.charAt(j) != 'X'; j += 2) s += '%' + ('0' + ('0x' + a.substr(j, 2) ^ r).toString(16)).slice(-2); j++; s = decodeURIComponent(s) + a.substr(j, m - j) } t.innerHTML = s.replace(/</g, '&lt;').replace(/>/g, '&gt;'); l[i].href = 'mailto:' + t.value } } catch (e) { } } } catch (e) { } })(document);/* ]]> */</script></body>
+    <script type="text/javascript">
+        var date=(new Date("11/01/2015 13:30")) ;
 
+        var end = Math.floor((new Date("<%= this.EndAmaliat.ToString() %>")).getTime() / 1000);
+
+
+        var start = Math.floor((new Date("1/1/2010")).getTime() / 1000);
+      
+        var now = Math.floor((new Date).getTime() / 1000);
+ 
+        $(document).ready(function (){
+            if ($('.countdown').length) {
+                $('.countdown').final_countdown({
+                    'start': start,
+                    'end': end,
+                    'now':now
+                });
+            }
+    
+        })
+    </script>
 <!-- Mirrored from html.crunchpress.com/prayer/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Apr 2016 06:56:30 GMT -->
 </html>
