@@ -146,14 +146,14 @@
     <!--Navigation Row End--> 
   </header>
   <!--Header End--> 
-    <asp:ContentPlaceHolder ID="ContentPageHeading" runat="server">
+
   <div id="main"> 
           <!--Inner Pages Heading Area Start-->
     <section class="inner-headding">
       <div class="container">
-          
+          <asp:ContentPlaceHolder ID="ContentPageHeading" runat="server">
 
-         
+          </asp:ContentPlaceHolder>
       </div>
     </section>
     <!--Inner Pages Heading Area End--> 
@@ -221,7 +221,6 @@
     </section>
     <!--Sermon Page End--> 
     </div>
-  </asp:ContentPlaceHolder>
      <!-- Footer Area Start-->
   <footer id="footer">
     <section class="footer-section">

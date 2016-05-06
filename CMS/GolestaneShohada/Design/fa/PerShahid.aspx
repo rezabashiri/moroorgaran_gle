@@ -27,10 +27,6 @@
     <h1><i class="fa fa-bookmark"></i> شهید <asp:Label ID="lblName" runat="server" ></asp:Label>&nbsp;<asp:Label ID="lblFamily" runat="server" ></asp:Label></h1>        
 </asp:Content>
 <asp:Content ID="Content3" runat="server" contentplaceholderid="ContentPlaceHolder2">
-     <div id="main"> 
-          <!--Inner Pages Heading Area Start-->
-    <section class="inner-headding">
-      <div class="container">
                 <div class="sidebar-latest-news">
                   <h3>سخن آشنایان</h3>
                   <ul>

@@ -413,7 +413,6 @@
     <Content Include="GolestaneShohada\Design\css\jquery.bxslider.css" />
     <Content Include="GolestaneShohada\Design\css\prettyPhoto.css" />
     <Content Include="GolestaneShohada\Design\css\responsive.css" />
-    <Content Include="GolestaneShohada\Design\Default1 - Copy.aspx" />
     <Content Include="GolestaneShohada\Design\Default.aspx" />
     <Content Include="GolestaneShohada\Design\fa\eventarchive.aspx" />
     <Content Include="GolestaneShohada\Design\fa\newsarchive.aspx" />
@@ -1592,13 +1591,6 @@
     </Compile>
     <Compile Include="GolestaneShohada\Controls\UscShahidMaghbare.ascx.designer.cs">
       <DependentUpon>UscShahidMaghbare.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="GolestaneShohada\Design\Default1 - Copy.aspx.cs">
-      <DependentUpon>Default1 - Copy.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GolestaneShohada\Design\Default1 - Copy.aspx.designer.cs">
-      <DependentUpon>Default1 - Copy.aspx</DependentUpon>
     </Compile>
     <Compile Include="GolestaneShohada\Design\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

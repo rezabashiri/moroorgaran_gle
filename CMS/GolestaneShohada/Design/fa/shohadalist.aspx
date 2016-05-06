@@ -5,10 +5,6 @@
            <uc1:FullShahidSearch runat="server" ID="Uscshahidsearch"></uc1:FullShahidSearch>
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">  
-     <div id="main"> 
-          <!--Inner Pages Heading Area Start-->
-    <section class="inner-headding">
-      <div class="container">
             <ul>
                 <asp:ListView ID="ListView1" runat="server">
                     <ItemTemplate>

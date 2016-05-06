@@ -1,8 +1,157 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CMS.GolestaneShohada.Design.Default" MasterPageFile="~/GolestaneShohada/Design/MasterPage/WebMaster.Master" %>
-<asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPageHeading">
-</asp:Content>
-<asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder2">
-      <!--Banner Start-->
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default1.aspx.cs" Inherits="CMS.GolestaneShohada.Design.Default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from html.crunchpress.com/prayer/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Apr 2016 06:51:01 GMT -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>فرهنگستان پایداری اصفهان</title>
+<!--Custom Css-->
+<link href="css/custom.css" rel="stylesheet" type="text/css"/>
+<!--Bootstrap 3.1.1 Css-->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<!--RESPONSIVE Css-->
+<link rel="stylesheet" href="css/responsive.css" />
+<!--Audio Player Css-->
+<link rel="stylesheet" href="css/audioplayer.css" />
+<!--Color Css-->
+<link href="css/color.css" rel="stylesheet" type="text/css"/>
+<!--Font Awesome-->
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<!--Fevicon-->
+<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+<!--Google Fonts-->
+<%--<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600' rel='stylesheet' type='text/css'>--%>
+<!--Bxslider Css-->
+<link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css" />
+<!--Content Slider Css-->
+<link href="css/content_slider_style.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.Js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- Color Css Files Start -->
+<link rel="alternate stylesheet" type="text/css" href="css/color-3.css" title="styles3" media="screen" />
+<!-- Color Css Files End -->
+</head>
+<body>
+<!--Wrapper Start-->
+<div id="wrapper"> 
+  <!--Header Start-->
+  <header id="header"> 
+    <!--Head Topbar Start-->
+    <section class="head-topbar">
+      <div class="container holder">
+        <div class="left"> <strong class="ph"><i class="fa fa-phone"></i>(123) 456 7980</strong> <a href="mailto:" class="email"><i class="fa fa-envelope"></i><span class="__cf_email__" data-cfemail="7a13141c153a0a081b031f0854191517">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function (t, e, r, n, c, a, p) { try { t = document.currentScript || function () { for (t = document.getElementsByTagName('script'), e = t.length; e--;) if (t[e].getAttribute('data-cfhash')) return t[e] }(); if (t && (c = t.previousSibling)) { p = t.parentNode; if (a = c.getAttribute('data-cfemail')) { for (e = '', r = '0x' + a.substr(0, 2) | 0, n = 2; a.length - n; n += 2) e += '%' + ('0' + ('0x' + a.substr(n, 2) ^ r).toString(16)).slice(-2); p.replaceChild(document.createTextNode(decodeURIComponent(e)), c) } p.removeChild(t) } } catch (u) { } }()/* ]]> */</script></a> </div>
+        <div class="right">
+          <a id="active-btn" href="#" class="btn-search"><i class="fa fa-search"></i></a> <a href="#" class="btn-login"><i class="fa fa-user"></i></a> </div>
+        <form action="#" id="search-box-form" class="search-box">
+          <input type="text" class="topbar-search-input" placeholder="Search for..."/>
+          <button value="" class="topbar-btn-search"><i class="fa fa-search"></i></button>
+          <a href="#" class="crose"><i class="fa fa-times"></i></a>
+        </form>
+      </div>
+    </section>
+    <!--Head Topbar End--> 
+    
+    <!--Logo Row Star-->
+    <section class="logo-row">
+      <div class="container">
+        <div class="event-timer"> <strong class="title"><asp:Label ForeColor="Black" ID="lblAmaliat" runat="server" ></asp:Label></strong>   <!--jQuery Final Countdown -->
+          <div class="countdown countdown-container "
+     data-border-color="rgba(255, 255, 255,1)">
+            <div class="clock">
+              <div class="clock-item clock-days countdown-time-value">
+                <div class="wrap">
+                  <div class="inner">
+                    <div id="canvas-days" class="clock-canvas"></div>
+                    <div class="text">
+                      <p class="val">0</p>
+                      <p class="type-days type-time">روز</p>
+                    </div>
+                  </div>
+                </div>
+                <span class="colun-1">:</span> </div>
+              <div class="clock-item clock-hours countdown-time-value">
+                <div class="wrap">
+                  <div class="inner">
+                    <div id="canvas-hours" class="clock-canvas"></div>
+                    <div class="text">
+                      <p class="val">0</p>
+                      <p class="type-hours type-time">ساعت</p>
+                    </div>
+                  </div>
+                </div>
+                <span class="colun-2">:</span> </div>
+              <div class="clock-item clock-minutes countdown-time-value">
+                <div class="wrap">
+                  <div class="inner">
+                    <div id="canvas-minutes" class="clock-canvas"></div>
+                    <div class="text">
+                      <p class="val">0</p>
+                      <p class="type-minutes type-time">دقیقه</p>
+                    </div>
+                  </div>
+                </div>
+                <span class="colun-3">:</span> </div>
+              <div class="clock-item clock-seconds countdown-time-value">
+                <div class="wrap">
+                  <div class="inner">
+                    <div id="canvas-seconds" class="clock-canvas"></div>
+                    <div class="text">
+                      <p class="val">0</p>
+                      <p class="type-seconds type-time">ثانیه</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <strong class="logo"><a href="index.html"><img src="/GolestaneShohada/Design/fa/images/logo.png" alt="logo1"/></a></strong>
+      </div>
+    </section>
+    <!--Logo Row End--> 
+    
+    <!--Navigation Row Start-->
+    <section class="navigation-row">
+      <div class="container">
+        <div role="navigation" class="navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+              <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+            <div class="collapse navbar-collapse">
+              <nav>
+                <ul id="nav">
+                  <li class="active"><a href="Default.aspx">خانه</a></li>
+                  <li><a href="#">درباره ما</a></li>
+                  <li><a href="#">منو یک</a>
+                    <ul>
+                      <li><a href="#">زیر منو یک</a></li>
+                      <li><a href="#">زیر منو دو</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">اخبار</a></li>
+                  <li><a href="#">بلاگ</a></li>
+                  <li><a href="#">ارتباط با ما</a></li>
+                </ul>
+              </nav>
+            </div>
+            <!--/.nav-collapse --> 
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Navigation Row End--> 
+  </header>
+  <!--Header End--> 
+  
+  <!--Banner Start-->
   <section id="banner">
     <ul id="home-banner">
         <asp:ListView ID="ListView1" runat="server">
@@ -380,5 +529,109 @@
     
   </div>
   <!-- Main End--> 
-</asp:Content>
+  
+  <!-- Footer Area Start-->
+  <footer id="footer">
+    <section class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <div class="footer-box-1">
+              <h4>درباره ما</h4>
+              <p>یک پاراگراف در مورد فعالیت سایت در اسنجا نوشته می شود. یک پاراگراف در مورد فعالیت سایت در اسنجا نوشته می شود. یک پاراگراف در مورد فعالیت سایت در اسنجا نوشته می شود. یک پاراگراف در مورد فعالیت سایت در اسنجا نوشته می شود. یک پاراگراف در مورد فعالیت سایت در اسنجا نوشته می شود. </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            
+          </div>
+          <div class="col-md-3 col-sm-6">
+         
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="footer-box-1">
+              <h4>ارتباط</h4>
+              <address>
+              <p>آدرس<br></p>
+              <ul>
+                <li><i class="fa fa-phone"></i>03112345678</li>
+                <li><i class="fa fa-print"></i>03112345678</li>
+                <li><i class="fa fa-envelope-o"></i>info@golestan.com</li>
+              </ul>
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Footer Social Row Start-->
+    <section class="footer-social">
+      <div class="container">
+        <ul>
+          <li><a href="#" class="social-color-3"><i class="fa fa-linkedin"></i></a></li>
+          
+        </ul>
+      </div>
+    </section>
+    <!--Footer Social Row End--> 
+    <!-- Copyrights Section Start-->
+    <section class="copyrights-section">
+      <div class="container"> <strong class="copy"><span class="bold"></span> </strong> </div>
+    </section>
+    <!-- Copyrights Section End--> 
+  </footer>
+  <!-- Footer Area End--> 
+</div>
+<!--Wrapper End--> 
+<!--Jquery 1.11.3--> 
+<script src="Js/jquery-1.11.3.min.js"></script> 
+<!--Bootstrap Js--> 
+<script src="Js/bootstrap.js"></script> 
+<!--Respond Js--> 
+<script src="Js/respond.js" ></script> 
+<!--Next Event Countdown--> 
+<script src="Js/kinetic.js"></script> 
+<!--Next Event Countdown--> 
+<script src="Js/jquery.final-countdown.js"></script> 
+<!--Parallax Effect Js--> 
+<script src="Js/jquery.stellar.min.js"></script> 
+<!--Latest Event Contdown Js--> 
+<script src="Js/jquery.plugin.js"></script> 
+<!--Latest Event Contdown Js--> 
+<script src="Js/jquery.countdown.js"></script> 
+<!--Bxslider Js--> 
+<script src="Js/jquery.bxslider.min.js"></script> 
+<!--Content Slider Js--> 
+<script src="Js/jquery.content_slider.js"></script> 
+<!-- Style Switcher --> 
+<script src="Js/styleswitch.js"></script> 
+<script src="Js/jquery.tabSlideOut.v1.3.js"></script> 
+<!--MP3 Player JS--> 
+<script src="Js/audioplayer.js"></script> 
+<!--Event Timer Js--> 
+<script type="text/javascript" src="Js/TimeCircles.js"></script> 
+<!--Custome Js--> 
+<script src="Js/custom.js"></script>
+<script type="text/javascript">/* <![CDATA[ */(function (d, s, a, i, j, r, l, m, t) { try { l = d.getElementsByTagName('a'); t = d.createElement('textarea'); for (i = 0; l.length - i; i++) { try { a = l[i].href; s = a.indexOf('/cdn-cgi/l/email-protection'); m = a.length; if (a && s > -1 && m > 28) { j = 28 + s; s = ''; if (j < m) { r = '0x' + a.substr(j, 2) | 0; for (j += 2; j < m && a.charAt(j) != 'X'; j += 2) s += '%' + ('0' + ('0x' + a.substr(j, 2) ^ r).toString(16)).slice(-2); j++; s = decodeURIComponent(s) + a.substr(j, m - j) } t.innerHTML = s.replace(/</g, '&lt;').replace(/>/g, '&gt;'); l[i].href = 'mailto:' + t.value } } catch (e) { } } } catch (e) { } })(document);/* ]]> */</script></body>
+    <script type="text/javascript">
+        var date = (new Date("11/01/2015 13:30"));
 
+        var end = Math.floor((new Date("<%= this.EndAmaliat.ToString() %>")).getTime() / 1000);
+
+
+        var start = Math.floor((new Date("1/1/2010")).getTime() / 1000);
+
+        var now = Math.floor((new Date).getTime() / 1000);
+
+        $(document).ready(function () {
+            if ($('.countdown').length) {
+                $('.countdown').final_countdown({
+                    'start': start,
+                    'end': end,
+                    'now': now
+                });
+            }
+
+        })
+    </script>
+<!-- Mirrored from html.crunchpress.com/prayer/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Apr 2016 06:56:30 GMT -->
+</html>
