@@ -3,6 +3,10 @@
 
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
+     <div id="main"> 
+          <!--Inner Pages Heading Area Start-->
+    <section class="inner-headding">
+      <div class="container">
             <ul>
                 <asp:ListView ID="ListView1" runat="server">
                     <ItemTemplate>

@@ -6,6 +6,10 @@
             <asp:Label ID="lblDate" runat="server" ></asp:Label></span> <span><i class="fa fa-pencil"></i> <asp:Label ID="lblGrp" runat="server"></asp:Label> </span></p>
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
+     <div id="main"> 
+          <!--Inner Pages Heading Area Start-->
+    <section class="inner-headding">
+      <div class="container">
             <div class="text-box lineH">
               <div class="right" id="DivItem" runat="server">
               </div>

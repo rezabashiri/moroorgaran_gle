@@ -2,6 +2,10 @@
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPageHeading">
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
+     <div id="main"> 
+          <!--Inner Pages Heading Area Start-->
+    <section class="inner-headding">
+      <div class="container">
             <!-- Latest Event Box Start-->
             <ul>
                 <asp:ListView ID="ListView1" runat="server">
@@ -47,4 +51,7 @@
             </div>
             <!--Pagination End--> 
             <!-- Latest Event Box End--> 
+          </div>
+    </section>
+         </div>
 </asp:Content>
