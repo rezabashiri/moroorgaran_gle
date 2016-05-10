@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Title="جستجوی شهدا" CodeBehind="shohadalist.aspx.cs" Inherits="CMS.GolestaneShohada.Design.fa.shohadalist" MasterPageFile="~/GolestaneShohada/Design/MasterPage/WebMaster.Master"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MaintainScrollPositionOnPostback="true" Title="جستجوی شهدا" CodeBehind="shohadalist.aspx.cs" Inherits="CMS.GolestaneShohada.Design.fa.shohadalist" MasterPageFile="~/GolestaneShohada/Design/MasterPage/WebMaster.Master"%>
 <asp:Content ID="Content3" runat="server" contentplaceholderid="head">
 <link href="../css/bootstrap-list-rtl.css" type="text/css" rel="stylesheet" />
 </asp:Content>
@@ -23,8 +23,8 @@
                       <ul>
                         <li><a href="#"><i class="fa fa-map-pin"></i>متولد: <%#  DataBinder.Eval(Container.DataItem, "NameShahrestan") %></a></li>
                           <li><a href="#"><i class="fa fa-calendar"></i>تاریخ تولد: <%# MyClass.GetFarsiDate(Eval("TarikheTavalod")) %></a></li>
+                          <li><a href="#"><i class="fa fa-map-marker"></i>شغل: <%#  DataBinder.Eval(Container.DataItem, "Shoghl") %></a></li>
                         <li><a href="#"><i class="fa fa-tint"></i>تاریخ شهادت: <%# MyClass.GetFarsiDate(Eval("TarikheShahadat")) %></a></li>
-                          <li><a href="#"><i class="fa fa-map-marker"></i>محل شهادت: <%#  DataBinder.Eval(Container.DataItem, "NameShahrestan") %></a></li>
                       </ul>
                     </div>
                        <asp:HyperLink NavigateUrl='<%# CreateLink(Eval("ID")) %>' ID="HyperLink1" runat="server"  CssClass="readmore">بیشتر بدانید</asp:HyperLink>
@@ -38,12 +38,17 @@
             <!--Pagination Start-->
             <div class="pagination-all pagination">
               <ul>
-                <li class="disabled">
-                    <asp:LinkButton ID="lnkbtnPrev" runat="server" OnClick="lnkbtnPrev_Click"><i class="fa fa-angle-left"></i></asp:LinkButton></li>
+                       <li>
+                    <asp:LinkButton ID="lnkbtnnext" runat="server" OnClick="lnkbtnnext_Click"><i class="fa fa-angle-left"></i></asp:LinkButton>
+
+                </li>
+             
                 <li class="active">
                     <asp:Label ID="lblCurrentPage" runat="server" Text="0"></asp:Label></li>
-                <li>
-                    <asp:LinkButton ID="lnkbtnnext" runat="server" OnClick="lnkbtnnext_Click"><i class="fa fa-angle-right"></i></asp:LinkButton></li>
+              <li class="disabled">
+                    <asp:LinkButton ID="lnkbtnPrev" runat="server" OnClick="lnkbtnPrev_Click"><i class="fa fa-angle-right "></i></asp:LinkButton>
+
+                </li>
               </ul>
             </div>
             <!--Pagination End--> 

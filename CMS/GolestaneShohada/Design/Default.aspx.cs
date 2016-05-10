@@ -24,17 +24,31 @@ namespace CMS.GolestaneShohada.Design
                 FillNews();
                 //FillComming();
                 SetNearestAmalit();
+        
             }
         }
+  
         public DateTime StartAmaliat
         {
-            get;
-            set;
+            get
+            {
+                return ViewState["__StartAmaliat"] as Nullable<DateTime> ?? DateTime.Now;
+            }
+            set
+            {
+                ViewState["__StartAmaliat"] = value;
+            }
         }
         public DateTime EndAmaliat
         {
-            get;
-            set;
+            get
+            {
+                return ViewState["__EndAmaliat"] as Nullable<DateTime> ?? DateTime.Now;
+            }
+            set
+            {
+                ViewState["__EndAmaliat"] = value;
+            }
         }
         public void SetNearestAmalit()
         {
@@ -45,7 +59,7 @@ namespace CMS.GolestaneShohada.Design
                 EndAmaliat = amaliat.TarikhePayan ?? DateTime.Now;
 
                 StartAmaliat = new DateTime(DateTime.Now.Year, StartAmaliat.Month, StartAmaliat.Day, StartAmaliat.Hour, StartAmaliat.Minute, 0);
-                EndAmaliat = new DateTime(DateTime.Now.Year, EndAmaliat.Month, EndAmaliat.Day, EndAmaliat.Hour, EndAmaliat.Minute, 0);
+                EndAmaliat =   new DateTime(DateTime.Now.Year, EndAmaliat.Month, EndAmaliat.Day, EndAmaliat.Hour, EndAmaliat.Minute, 0);
 
                 lblAmaliat.Text = string.Format("عملیات {0} شروع خواهد شد", amaliat.Name);
             }
@@ -63,12 +77,15 @@ namespace CMS.GolestaneShohada.Design
                 sql = string.Format(sql, mc.GetCustomer());
                 mc.connect();
                 dt = mc.select(sql);
-                mc.disconnect();
                 ListView1.DataSource = dt;
                 ListView1.DataBind();
             }
             catch (Exception)
             {
+            }
+            finally
+            {
+              mc.disconnect();
             }
         }
         public void FillEvent()
@@ -141,6 +158,12 @@ namespace CMS.GolestaneShohada.Design
         {
             //ListView222 = new Golestan.Helpers.InterFace().GetShahidCloserToDeath(10);
             
+        }
+ 
+
+        protected void XmlDataSource1_Transforming(object sender, EventArgs e)
+        {
+            var s = sender as XmlDataSource;
         }
     }
 }

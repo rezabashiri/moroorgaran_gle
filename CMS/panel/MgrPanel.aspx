@@ -21,25 +21,36 @@
         
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
-                <div>
-                </div>
-                <div class="RemarkDiv">
-                    <p class="titleremark">
-                        دفترچه یادداشت:</p>
-                    <div class="confirmMSG" id="confirmDiv" visible="false" runat="server" style="margin:0 auto; width:auto;">
+             <div class="showback">
+
+            
+                <div class="row">
+                    <div class="col-sm-2 white-header">
+                  <h5> دفترچه یادداشت:</h5> 
+                    </div>
+                   
+                    <div class="col-sm-2" id="confirmDiv" visible="false" runat="server" style="margin:0 auto; width:auto;">
                         <asp:Label ID="lblOk" runat="server"></asp:Label></div>
                     <div class="clearFloat">
                     </div>
-                    <div class="errorMSG" id="errorDiv" runat="server" visible="false">
+                    <div class="col-sm-2" id="errorDiv" runat="server" visible="false">
                         <asp:Label ID="lblError" runat="server"></asp:Label></div>
                     <div class="clear">
                     </div>
-                    <asp:TextBox ID="txtRemark" runat="server" CssClass="Remarktxt persian" TextMode="MultiLine"></asp:TextBox>
+                    </div>
+                     <div class="row">
+                           <div class="col-sm-12">
+                    <asp:TextBox ID="txtRemark" Width="100%" runat="server" CssClass="Remarktxt persian" TextMode="MultiLine"></asp:TextBox>
+                               </div>
+                             </div>
+                    <div class="row">
+                           <div class="col-sm-12 text-center">
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="یادداشت کن"
-                        CssClass="Mybtn" Style="float: left; font-size: 11px; border-radius: 5px;" Height="20px"
-                        Width="60px" />
+                        CssClass="btn btn-warning"   />
+                               </div>
                 </div>
-        
+         </div>
+               
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>

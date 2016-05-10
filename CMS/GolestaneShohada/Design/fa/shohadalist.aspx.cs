@@ -20,7 +20,7 @@ namespace CMS.GolestaneShohada.Design.fa
             PagedDataSource pds = new PagedDataSource();
             pds.DataSource = DataSource;
             pds.AllowPaging = true;
-            pds.PageSize = 2;
+            pds.PageSize = 10;
 
             pds.CurrentPageIndex = CurrentPage;
             int count = pds.PageCount;
@@ -63,12 +63,14 @@ namespace CMS.GolestaneShohada.Design.fa
         protected void lnkbtnnext_Click(object sender, EventArgs e)
         {
             CurrentPage += 1;
+            Uscshahidsearch.SearchShahid();
             // should call search button again
         }
 
         protected void lnkbtnPrev_Click(object sender, EventArgs e)
         {
             CurrentPage -= 1;
+            Uscshahidsearch.SearchShahid();
             // should call search button again   
         }
     }

@@ -19,7 +19,15 @@ namespace CMS
             WebUtility.AppStart.ConfigRoutes.RegisterModelRoutes(RouteTable.Routes, Golestan.AppStart.DynamicDataConfig.GolestanModel);
             WebUtility.AppStart.EntityModelHelpers.RegisterEntityModel(global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel, new global::AccessManagementService.Model.AccessEntities());
             WebUtility.AppStart.ConfigRoutes.RegisterModelRoutes(RouteTable.Routes, global::AccessManagementService.AppStart.DynamicDataConfig.AccessManagementModel);
-        
+            RegisterRoute(RouteTable.Routes);
+
+
+        }
+
+        private void RegisterRoute(RouteCollection rc)
+        {
+            rc.MapPageRoute("Home", "", "~/GolestaneShohada/Design/Default.aspx");
+            rc.MapPageRoute("locale", "fa/SearchShahid", "~/GolestaneShohada/Design/fa/shohadalist.aspx");
         }
 
         protected void Session_Start(object sender, EventArgs e)

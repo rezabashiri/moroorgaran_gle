@@ -7,8 +7,8 @@
     <div class="errorMSG" id="errorDiv" runat="server" visible="false">
         <asp:Label ID="lblError" runat="server"></asp:Label></div>
        	
-     <div class="row mt col-md-offset-1">
-         <div class="col-md-12">
+     <div class="row ">
+         <div class="col-sm-10">
                   <div class="form-panel">
                   	  <h4 class="mb"><i class="fa fa-angle-left"></i> اطلاعات منو</h4>
                       <div class="form-horizontal style-form" >
@@ -40,20 +40,17 @@
                       </div>
                   </div>
           		</div><!-- col-lg-12-->  
-                  <div class="col-md-12">
+                  <div class="col-sm-10">
                       <div class="content-panel">
-	                  	  	  <hr>
+	                  	  	  <hr/>
                           <asp:GridView ID="GridView1" CssClass="table table-striped table-advance table-hover" runat="server" AutoGenerateColumns="False" OnRowCommand="GridView1_RowCommand" OnRowDataBound="GridView1_RowDataBound">
                               <AlternatingRowStyle CssClass="table table-striped table-advance table-hover"></AlternatingRowStyle>
                               <Columns>
-<asp:BoundField HeaderText="شماره" DataField="MenuItemID" Visible="False"></asp:BoundField>
-                                  <asp:BoundField HeaderText="عنوان" DataField="MenuTitle" />
-                                  <asp:BoundField HeaderText="آدرس" DataField="LinkAddress" />
-                                  <asp:BoundField HeaderText="از شاخه" DataField="FatherName" />
-                                     <asp:TemplateField HeaderText="ایجاد زیر شاخه">
+                               
+                                      <asp:TemplateField HeaderText="حذف">
                         <ItemTemplate>
-                           <asp:ImageButton ID="ImageButton5" runat="server" CommandArgument='<%# Eval("MenuItemID").ToString() %>'
-                                CommandName="AddSubC" ImageUrl="../images/previous.png" CausesValidation="False" />
+                            <asp:ImageButton ID="imgbtnDel" runat="server" CommandArgument='<%# Eval("MenuItemID").ToString() %>'
+                                CommandName="DelC" ImageUrl="../images/delete.png" CausesValidation="False" />
                         </ItemTemplate>
                     </asp:TemplateField>
                                   <asp:TemplateField HeaderText="ویرایش">
@@ -62,13 +59,17 @@
                                 CommandName="EditC" ImageUrl="../images/Edit.png" CausesValidation="False" />
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="حذف">
+                  <asp:TemplateField HeaderText="ایجاد زیر شاخه">
                         <ItemTemplate>
-                            <asp:ImageButton ID="imgbtnDel" runat="server" CommandArgument='<%# Eval("MenuItemID").ToString() %>'
-                                CommandName="DelC" ImageUrl="../images/delete.png" CausesValidation="False" />
+                           <asp:ImageButton ID="ImageButton5" runat="server" CommandArgument='<%# Eval("MenuItemID").ToString() %>'
+                                CommandName="AddSubC" ImageUrl="../images/previous.png" CausesValidation="False" />
                         </ItemTemplate>
                     </asp:TemplateField>
-                 
+                             
+                   <asp:BoundField HeaderText="شماره" DataField="MenuItemID" Visible="False"></asp:BoundField>
+                                  <asp:BoundField HeaderText="عنوان" DataField="MenuTitle" />
+                                  <asp:BoundField HeaderText="آدرس" DataField="LinkAddress" />
+                                  <asp:BoundField HeaderText="از شاخه" DataField="FatherName" />
 
                               </Columns>
                           </asp:GridView>

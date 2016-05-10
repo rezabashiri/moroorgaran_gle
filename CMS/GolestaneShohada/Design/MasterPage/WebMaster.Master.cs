@@ -18,6 +18,43 @@ namespace CMS.GolestaneShohada.Design.MasterPage
             if (!IsPostBack)
             {
                 FillNews();
+                SetNearestAmalit();
+            }
+        }
+        public DateTime StartAmaliat
+        {
+            get
+            {
+               return ViewState["__StartAmaliat"] as Nullable< DateTime >?? DateTime.Now;
+            }
+            set
+            {
+                ViewState["__StartAmaliat"] = value;
+            }
+        }
+        public DateTime EndAmaliat
+        {
+            get
+            {
+                return ViewState["__EndAmaliat"] as Nullable< DateTime >?? DateTime.Now;
+            }
+            set
+            {
+                ViewState["__EndAmaliat"] = value;
+            }
+        }
+        public void SetNearestAmalit()
+        {
+            var amaliat = new Golestan.Helpers.InterFace().GetTheNearestAmaliat();
+            if (amaliat != null)
+            {
+                StartAmaliat = amaliat.TarikheShoroo ?? DateTime.Now;
+                EndAmaliat = amaliat.TarikhePayan ?? DateTime.Now;
+
+                StartAmaliat = new DateTime(DateTime.Now.Year, StartAmaliat.Month, StartAmaliat.Day, StartAmaliat.Hour, StartAmaliat.Minute, 0);
+                EndAmaliat = new DateTime(DateTime.Now.Year, EndAmaliat.Month, EndAmaliat.Day, EndAmaliat.Hour, EndAmaliat.Minute, 0);
+
+                lblAmaliat.Text = string.Format("عملیات {0} شروع خواهد شد", amaliat.Name);
             }
         }
         public void FillNews()

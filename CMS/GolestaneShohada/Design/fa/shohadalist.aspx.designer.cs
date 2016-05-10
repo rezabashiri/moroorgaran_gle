@@ -31,13 +31,13 @@ namespace CMS.GolestaneShohada.Design.fa {
         protected global::System.Web.UI.WebControls.ListView ListView1;
         
         /// <summary>
-        /// lnkbtnPrev control.
+        /// lnkbtnnext control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkbtnPrev;
+        protected global::System.Web.UI.WebControls.LinkButton lnkbtnnext;
         
         /// <summary>
         /// lblCurrentPage control.
@@ -49,12 +49,12 @@ namespace CMS.GolestaneShohada.Design.fa {
         protected global::System.Web.UI.WebControls.Label lblCurrentPage;
         
         /// <summary>
-        /// lnkbtnnext control.
+        /// lnkbtnPrev control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkbtnnext;
+        protected global::System.Web.UI.WebControls.LinkButton lnkbtnPrev;
     }
 }

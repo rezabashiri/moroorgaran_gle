@@ -110,7 +110,15 @@ public class MyClass
         return dt;
     }
 
-
+    public DataSet selectDataSet(string strsql)
+    {
+        DataSet ds = new DataSet();
+        cm.CommandType = CommandType.Text;
+        cm.CommandText = strsql;
+        ds.Clear();
+        da.Fill(ds);
+        return ds;
+    }
 
     public DataView vselect(string Sqlstr)
     {
