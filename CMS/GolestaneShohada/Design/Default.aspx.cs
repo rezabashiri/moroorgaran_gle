@@ -165,5 +165,13 @@ namespace CMS.GolestaneShohada.Design
         {
             var s = sender as XmlDataSource;
         }
+
+        protected void hprDownlaod_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Clear();
+            Response.ContentType = "application/vnd.android.package-archive";
+            Response.WriteFile("~/GolestaneShohada/App/asemaniha.apk", true);
+            Response.End();
+        }
     }
 }

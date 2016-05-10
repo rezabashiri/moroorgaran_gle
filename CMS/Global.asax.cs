@@ -28,6 +28,7 @@ namespace CMS
         {
             rc.MapPageRoute("Home", "", "~/GolestaneShohada/Design/Default.aspx");
             rc.MapPageRoute("locale", "fa/SearchShahid", "~/GolestaneShohada/Design/fa/shohadalist.aspx");
+            rc.MapPageRoute("admin", "admin", "~/LoginUser.aspx");
         }
 
         protected void Session_Start(object sender, EventArgs e)

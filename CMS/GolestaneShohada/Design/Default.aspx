@@ -12,7 +12,7 @@
 <head runat="server">
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>فرهنگستان پایداری اصفهان</title>
+<title>فرهنگسرای پایداری اصفهان</title>
 <!--Custom Css-->
 <link href="/GolestaneShohada/Design/css/custom.css" rel="stylesheet" type="text/css"/>
 <!--Bootstrap 3.1.1 Css-->
@@ -323,14 +323,15 @@
     <!-- Latest Sermons Box End--> 
     
     <!--Quote Message Box Start-->
-    <section class="quote-box slide" id="slide1"  data-slide="1" >
+    <section class="quote-box slide" id="slide1"   >
       <div class="container">
         <h3>ما را با اندروید دنبال کنید</h3>
         <p>
             نرم افزار کانال آسمانیها
         </p>
           <p>
-          <a href="/GolestaneShohada/App/asemaniha.apk"    target="_blank"><img src="/GolestaneShohada/Design/Image/Android-Apps.png" /></a> 
+
+          <a href="/GolestaneShohada/App/asemaniha.apk"  ><img src="/GolestaneShohada/Design/Image/Android-Apps.png" /></a> 
           </p>
       </div>
     </section>
@@ -462,7 +463,7 @@
                 <li> <img src="/GolestaneShohada/Design/Image/sample-photo.jpg" alt="img" />
                 </li>
               </ul>
-              <div id="bx-pager"> <a data-slide-index="0" href="#"><img src="Image/thumb-sample.jpg" alt="img" /></a> <a data-slide-index="1" href="#"><img src="Image/thumb-sample.jpg" alt="img" /></a> <a data-slide-index="2" href="#"><img src="Image/thumb-sample.jpg" alt="img" /></a> </div>
+              <div id="bx-pager"> <a data-slide-index="0" href="#"><img src="/GolestaneShohada/Design/Image/thumb-sample.jpg" alt="img" /></a> <a data-slide-index="1" href="#"><img src="/GolestaneShohada/Design/Image/thumb-sample.jpg" alt="img" /></a> <a data-slide-index="2" href="#"><img src="/GolestaneShohada/Design/Image/thumb-sample.jpg" alt="img" /></a> </div>
             </div>
           </div>
         </div>
