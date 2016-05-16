@@ -46,7 +46,6 @@ namespace Golestan.Model
         public virtual DbSet<ViewNirooVahed> ViewNirooVaheds { get; set; }
         public virtual DbSet<Shahid> Shahids { get; set; }
         public virtual DbSet<Amaliat> Amaliats { get; set; }
-        public virtual DbSet<ViewAmaliat> ViewAmaliats { get; set; }
         public virtual DbSet<ViewShahidRabete> ViewShahidRabetes { get; set; }
         public virtual DbSet<Bakhsh> Bakhshes { get; set; }
         public virtual DbSet<NirooYeganVahedAmaliat> NirooYeganVahedAmaliats { get; set; }
@@ -58,6 +57,7 @@ namespace Golestan.Model
         public virtual DbSet<ViewShahidMatalebEzafe> ViewShahidMatalebEzafes { get; set; }
         public virtual DbSet<ViewShahidAmaliat> ViewShahidAmaliats { get; set; }
         public virtual DbSet<ViewAttach> ViewAttaches { get; set; }
+        public virtual DbSet<ViewAmaliat> ViewAmaliats { get; set; }
     
         public virtual ObjectResult<ViewShahid> sp_SearchSahid(string whereParameter)
         {
@@ -183,6 +183,24 @@ namespace Golestan.Model
         public virtual ObjectResult<Amaliat> GetTheNearestAmaliat(MergeOption mergeOption)
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Amaliat>("GetTheNearestAmaliat", mergeOption);
+        }
+    
+        public virtual ObjectResult<ViewAmaliat> sp_SearchAmaliatByQuery(string query)
+        {
+            var queryParameter = query != null ?
+                new ObjectParameter("query", query) :
+                new ObjectParameter("query", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewAmaliat>("sp_SearchAmaliatByQuery", queryParameter);
+        }
+    
+        public virtual ObjectResult<ViewAmaliat> sp_SearchAmaliatByQuery(string query, MergeOption mergeOption)
+        {
+            var queryParameter = query != null ?
+                new ObjectParameter("query", query) :
+                new ObjectParameter("query", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewAmaliat>("sp_SearchAmaliatByQuery", mergeOption, queryParameter);
         }
     }
 }

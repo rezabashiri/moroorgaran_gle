@@ -117,7 +117,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font-size: 100%;
 	vertical-align: baseline;
 }
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video ,a {
     font-family:'iransans' !important;
 }
 /* HTML5 display-role reset for older browsers */
@@ -1168,7 +1168,7 @@ span.colun-3 {
 .quote-box {
 	float: left;
 	width: 100%;
-	background-image: url(/GolestaneShohada/Design/Image/animate-number-bg.jpg);
+	background-image: url(/GolestaneShohada/Design/Image/animate-number-bg.png);
 	background-repeat: repeat;
 	background-position: 50% 50%;
 	padding: 67px 0 79px 0;
@@ -5729,7 +5729,8 @@ span.colun-3 {
 	width: 100%;
 }
 .footer-box-1 h4 {
-	font: 400 28px/28px 'Noto Serif', serif;
+	font: 400 20px iransans;
+    
 	color: #ccc;
 	margin: 0 0 13px 0;
 	letter-spacing: -1px;

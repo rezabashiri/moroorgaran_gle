@@ -7,19 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CMS {
+namespace CMS.GolestaneShohada.Design.fa {
     
     
-    public partial class MapTest {
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+    public partial class GolestanMap {
         
         /// <summary>
         /// UscNaghsheGolestanShohada control.
@@ -29,14 +20,5 @@ namespace CMS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::CMS.GolestaneShohada.Controls.UscNaghsheGolestanShohada UscNaghsheGolestanShohada;
-        
-        /// <summary>
-        /// usc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Golestan.Control.FullSearchAmaliat usc;
     }
 }

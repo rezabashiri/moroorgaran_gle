@@ -7,36 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CMS {
+namespace Golestan.Control {
     
     
-    public partial class MapTest {
+    public partial class UscFullSearchAmaliat {
         
         /// <summary>
-        /// form1 control.
+        /// UscSearchAmaliat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::Golestan.Control.UscSearchAmaliat UscSearchAmaliat;
         
         /// <summary>
-        /// UscNaghsheGolestanShohada control.
+        /// UscSearchNiroo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CMS.GolestaneShohada.Controls.UscNaghsheGolestanShohada UscNaghsheGolestanShohada;
+        protected global::Golestan.Control.UscSearchNiroo UscSearchNiroo;
         
         /// <summary>
-        /// usc control.
+        /// btnSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Golestan.Control.FullSearchAmaliat usc;
+        protected global::System.Web.UI.WebControls.Button btnSearch;
     }
 }

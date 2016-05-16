@@ -1,13 +1,13 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UscNaghsheGolestanShohada.ascx.cs" Inherits="CMS.GolestaneShohada.Controls.UscNaghsheGolestanShohada" %>
 
-
-   <script type="text/javascript" src="GolestaneShohada/Design/Js/MapCalculation.js" lang="ja"></script>
+<script type="text/javascript" src="/GolestaneShohada/Design/Js/seadragon-min.js" lang="ja"></script>
+   <script type="text/javascript" src="/GolestaneShohada/Design/Js/MapCalculation.js" lang="ja"></script>
  
    <style type="text/css">
             #container
             {
-                width: 600px;
-                height: 400px;
+                width: 800px;
+                height: 700px;
                 background-color: black;
                 border: 1px solid black;
                 color: white;   /* for error messages, etc. */

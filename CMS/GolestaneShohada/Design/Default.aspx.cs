@@ -18,6 +18,7 @@ namespace CMS.GolestaneShohada.Design
         {
             if (!IsPostBack)
             {
+                dt = new CMSLogic.DateBaseHelprs().GetItemsByparameter("10", string.Empty);
                 FillSlider();
                 FillEvent();
                 FillBlog();
@@ -68,19 +69,13 @@ namespace CMS.GolestaneShohada.Design
         {
             try
             {
-                sql = "SELECT     TOP (3)  dbo.TItems.ItemTopic, dbo.TItems.PhotoName, dbo.TItems.SummaryTxt, dbo.TItems.ItemID, dbo.TItems.ShowDate " +
-                    "FROM         dbo.TItems INNER JOIN " +
-                    "dbo.TGroups ON dbo.TItems.GrpID = dbo.TGroups.GrpID INNER JOIN " +
-                    "dbo.TParts ON dbo.TGroups.PartID = dbo.TParts.PartID " +
-                    "WHERE   (dbo.TParts.PartID=1) and (dbo.TItems.FreshStat = 3) AND (dbo.TItems.PubStat = 9) AND (dbo.TGroups.CustomerID = {0}) AND (GETDATE() >= dbo.TItems.ShowDate) " +
-                    "ORDER BY dbo.TItems.ShowDate DESC";
-                sql = string.Format(sql, mc.GetCustomer());
-                mc.connect();
-                dt = mc.select(sql);
-                ListView1.DataSource = dt;
+
+                var rows=dt.Select("PartID=1");
+          
+                ListView1.DataSource = mc.GetRowsDefaultView(rows,dt) ;
                 ListView1.DataBind();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
             }
             finally
@@ -92,19 +87,8 @@ namespace CMS.GolestaneShohada.Design
         {
             try
             {
-                sql = "SELECT     TOP (4)  dbo.TItems.ItemTopic, dbo.TItems.PhotoName, dbo.TItems.SummaryTxt, dbo.TItems.ItemID, dbo.TItems.EventDate, " +
-                    "DATEDIFF(day, GETDATE(), EventDate) as dayE, DATEDIFF(day, DATEPART(HOUR, GETDATE()), DATEPART(HOUR, EventDate)) as HourE, "+
-                    " abs( DATEDIFF(day, DATEPART(minute, GETDATE()), DATEPART(minute, EventDate))) as minE "+
-                    "FROM         dbo.TItems INNER JOIN " +
-                    "dbo.TGroups ON dbo.TItems.GrpID = dbo.TGroups.GrpID INNER JOIN " +
-                    "dbo.TParts ON dbo.TGroups.PartID = dbo.TParts.PartID " +
-                    "WHERE   (dbo.TParts.PartID=3) and (dbo.TItems.FreshStat = 3) AND (dbo.TItems.PubStat = 9) AND (dbo.TGroups.CustomerID = {0}) AND (GETDATE() >= dbo.TItems.ShowDate) " +
-                    "ORDER BY dbo.TItems.ShowDate DESC";
-                sql = string.Format(sql, mc.GetCustomer());
-                mc.connect();
-                dt = mc.select(sql);
-                mc.disconnect();
-                ListView2.DataSource = dt;
+                var rows = dt.Select("PartID=3");
+                ListView2.DataSource =mc.GetRowsDefaultView(rows,dt)  ;
                 ListView2.DataBind();
             }
             catch (Exception)
@@ -115,17 +99,8 @@ namespace CMS.GolestaneShohada.Design
         {
             try
             {
-                sql = "SELECT     TOP (2)  dbo.TItems.ItemTopic, dbo.TItems.PhotoName, dbo.TItems.SummaryTxt, dbo.TItems.ItemID, dbo.TItems.ShowDate " +
-                    "FROM         dbo.TItems INNER JOIN " +
-                    "dbo.TGroups ON dbo.TItems.GrpID = dbo.TGroups.GrpID INNER JOIN " +
-                    "dbo.TParts ON dbo.TGroups.PartID = dbo.TParts.PartID " +
-                    "WHERE   (dbo.TParts.PartID=4) and (dbo.TItems.FreshStat = 3) AND (dbo.TItems.PubStat = 9) AND (dbo.TGroups.CustomerID = {0}) AND (GETDATE() >= dbo.TItems.ShowDate) " +
-                    "ORDER BY dbo.TItems.ShowDate DESC";
-                sql = string.Format(sql, mc.GetCustomer());
-                mc.connect();
-                dt = mc.select(sql);
-                mc.disconnect();
-                ListView3.DataSource = dt;
+                var rows = dt.Select("PartID=4");
+                ListView3.DataSource = mc.GetRowsDefaultView(rows, dt);
                 ListView3.DataBind();
             }
             catch (Exception)
@@ -136,17 +111,8 @@ namespace CMS.GolestaneShohada.Design
         {
             try
             {
-                sql = "SELECT     TOP (2)  dbo.TItems.ItemTopic, dbo.TItems.PhotoName, dbo.TItems.SummaryTxt, dbo.TItems.ItemID, dbo.TItems.ShowDate " +
-                    "FROM         dbo.TItems INNER JOIN " +
-                    "dbo.TGroups ON dbo.TItems.GrpID = dbo.TGroups.GrpID INNER JOIN " +
-                    "dbo.TParts ON dbo.TGroups.PartID = dbo.TParts.PartID " +
-                    "WHERE   (dbo.TParts.PartID=2) and (dbo.TItems.FreshStat = 3) AND (dbo.TItems.PubStat = 9) AND (dbo.TGroups.CustomerID = {0}) AND (GETDATE() >= dbo.TItems.ShowDate) " +
-                    "ORDER BY dbo.TItems.ShowDate DESC";
-                sql = string.Format(sql, mc.GetCustomer());
-                mc.connect();
-                dt = mc.select(sql);
-                mc.disconnect();
-                ListView4.DataSource = dt;
+                var rows = dt.Select("PartID=2");
+                ListView4.DataSource = mc.GetRowsDefaultView(rows, dt).Take(2);
                 ListView4.DataBind();
             }
             catch (Exception)
@@ -161,17 +127,8 @@ namespace CMS.GolestaneShohada.Design
         }
  
 
-        protected void XmlDataSource1_Transforming(object sender, EventArgs e)
-        {
-            var s = sender as XmlDataSource;
-        }
+     
 
-        protected void hprDownlaod_Click(object sender, ImageClickEventArgs e)
-        {
-            Response.Clear();
-            Response.ContentType = "application/vnd.android.package-archive";
-            Response.WriteFile("~/GolestaneShohada/App/asemaniha.apk", true);
-            Response.End();
-        }
+    
     }
 }

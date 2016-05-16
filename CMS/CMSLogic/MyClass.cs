@@ -12,6 +12,7 @@ using System.Security.Cryptography;
 using System.IO;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.Collections.Generic;
 
 
 
@@ -522,6 +523,19 @@ public class MyClass
         else if (format.Contains("video"))
             return "fa fa-video-camera";
         else return "fa fa-file";
+    }
+    public List<DataRowView> GetRowsDefaultView(DataRow[] rows, DataTable dt)
+    {
+        if (rows == null)
+            return null;
+        List<DataRowView> dev = new List<DataRowView>();
+        int i = 0;
+        foreach (DataRow dr in rows)
+        {
+            dev.Add(dt.DefaultView[dt.Rows.IndexOf(dr)]);
+            i++;
+        }
+        return dev;
     }
 }
 

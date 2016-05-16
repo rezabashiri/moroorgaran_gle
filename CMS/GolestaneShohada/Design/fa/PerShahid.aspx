@@ -6,11 +6,11 @@
 <asp:Content ID="content0" runat ="server" ContentPlaceHolderID="head">
     <script type="text/javascript" src="/GolestaneShohada/Design/Js/seadragon-min.js" lang="ja"></script>
     <!--Bxslider Css-->
-<link href="../css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+<link href="/GolestaneShohada/Design/css/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
 <!--Content Slider Css-->
-<link href="../css/content_slider_style.css" rel="stylesheet" type="text/css" />
+<link href="/GolestaneShohada/Design/css/content_slider_style.css" rel="stylesheet" type="text/css" />
 <!--Pretty Photo Css-->
-<link rel="stylesheet" href="../css/prettyPhoto.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="/GolestaneShohada/Design/css/prettyPhoto.css" type="text/css" media="screen"/>
 
     <style type="text/css" >
         #map-canvas {
@@ -51,7 +51,7 @@
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal">&times;</button>
 <h5 class="modal-title"><i class="fa fa-pencil"></i>&nbsp;ادامه سخن</h5>
-<input id="lblashna" runat="server" type="hidden" class="english form-control AshID">
+<input id="lblashna" runat="server" type="hidden" class="english form-control AshID" />
 </div>
 <div class="modal-body">
 <div class="box-body">

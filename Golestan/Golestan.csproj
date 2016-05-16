@@ -82,14 +82,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Control\UscFullSearchAmaliat.ascx" />
     <Content Include="Control\UscFullSearchShahid.ascx" />
     <Content Include="Control\UscSearchAmaliat.ascx" />
     <Content Include="Control\UscSearchNiroo.ascx" />
     <Content Include="Control\UscSearchShahid.ascx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\DynamicDataConfig.cs" />
+    <Compile Include="Control\UscFullSearchAmaliat.ascx.cs">
+      <DependentUpon>UscFullSearchAmaliat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\UscFullSearchAmaliat.ascx.designer.cs">
+      <DependentUpon>UscFullSearchAmaliat.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Control\UscFullSearchShahid.ascx.cs">
       <DependentUpon>UscFullSearchShahid.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -266,6 +275,13 @@
       <DependentUpon>ShohadaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

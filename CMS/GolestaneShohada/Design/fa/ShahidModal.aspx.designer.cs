@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CMS {
+namespace CMS.GolestaneShohada.Design.fa {
     
     
-    public partial class MapTest {
+    public partial class ShahidModal {
         
         /// <summary>
         /// form1 control.
@@ -22,21 +22,21 @@ namespace CMS {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// UscNaghsheGolestanShohada control.
+        /// RadScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CMS.GolestaneShohada.Controls.UscNaghsheGolestanShohada UscNaghsheGolestanShohada;
+        protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
         
         /// <summary>
-        /// usc control.
+        /// RadListView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Golestan.Control.FullSearchAmaliat usc;
+        protected global::Telerik.Web.UI.RadListView RadListView1;
     }
 }

@@ -11,44 +11,12 @@
 <head runat="server">
     <title></title>
     <script src="/assets/js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="GolestaneShohada/Design/Js/seadragon-min.js" lang="ja"></script>
-    <%--<script type="text/javascript" src="GolestaneShohada/Design/Js/MapCalculation.js" lang="ja"></script>--%>
-    <%--   <script type="text/javascript"
-              src="http://seadragon.com/ajax/0.8/seadragon-min.js">
-        </script>--%>
-      <script type="text/javascript">
-       
-    </script>
+    <%--<script type="text/javascript" src="GolestaneShohada/Design/Js/seadragon-min.js" lang="ja"></script>--%>
+ 
+  
 </head>
 <body>
-     <style type="text/css">
-            #container
-            {
-                width: 600px;
-                height: 400px;
-                background-color: black;
-                border: 1px solid black;
-                color: white;   /* for error messages, etc. */
-            }
-              #output
-      {
-        width: 500px;
-        border: none;
-        margin: 1em 0em;
-      }
-      #output td
-      {
-        width: 50%;
-      }
-      #output .outputLabel
-      {
-        font-weight: bold;
-      }
-          .overlay
-      {
-        border: 1px solid white;
-      }
-        </style>
+  
     <form id="form1" runat="server">
     
        
@@ -78,10 +46,9 @@
 
       </tr>
     </table>  
-          <%--<uc2:UscShahidMaghbare runat="server" ID="UscShahidMaghbare" />--%>        
-        <uc2:UscNaghsheGolestanShohada runat="server" id="UscNaghsheGolestanShohada" />
-        <asp:Image ID="Image1" runat="server" />
-        <%--<ajaxToolkit:Seadragon SourceUrl="~/GolestaneShohada/Design/GolestanMap/dzc_output.xml" ID="Seadragon1" runat="server"></ajaxToolkit:Seadragon>--%>
+              
+        <uc2:UscNaghsheGolestanShohada runat="server" ID="UscNaghsheGolestanShohada" />
+        <uc1:FullSearchAmaliat ID="usc" runat="server"></uc1:FullSearchAmaliat>
     </form>
 </body>
 </html>

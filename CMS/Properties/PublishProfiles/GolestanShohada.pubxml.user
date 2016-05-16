@@ -512,7 +512,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/18/2016 12:49:14</publishTime>
     </File>
     <File Include="bin/AccessManagementService.dll">
-      <publishTime>01/06/2016 17:19:41</publishTime>
+      <publishTime>04/27/2016 09:46:41</publishTime>
     </File>
     <File Include="bin/AjaxControlToolkit.dll">
       <publishTime>12/14/2013 08:04:04</publishTime>
@@ -545,7 +545,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2016 20:21:49</publishTime>
     </File>
     <File Include="bin/CMS.dll">
-      <publishTime>05/10/2016 14:46:31</publishTime>
+      <publishTime>05/11/2016 09:42:40</publishTime>
     </File>
     <File Include="bin/DropDownCheckBoxes.dll">
       <publishTime>04/18/2016 13:03:19</publishTime>
@@ -560,7 +560,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/03/2016 14:40:15</publishTime>
     </File>
     <File Include="bin/Golestan.dll">
-      <publishTime>05/10/2016 12:05:27</publishTime>
+      <publishTime>05/10/2016 16:22:55</publishTime>
     </File>
     <File Include="bin/Heidarpour.WebControlUI.dll">
       <publishTime>04/18/2016 13:03:19</publishTime>
@@ -854,7 +854,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/18/2016 13:03:17</publishTime>
     </File>
     <File Include="GolestaneShohada/App/asemaniha.apk">
-      <publishTime>05/09/2016 19:58:11</publishTime>
+      <publishTime>05/10/2016 20:22:48</publishTime>
     </File>
     <File Include="GolestaneShohada/Controls/UscNaghsheGolestanShohada.ascx">
       <publishTime>04/25/2016 09:50:24</publishTime>
@@ -884,7 +884,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2016 10:17:05</publishTime>
     </File>
     <File Include="GolestaneShohada/Design/css/custom.css">
-      <publishTime>05/10/2016 14:21:59</publishTime>
+      <publishTime>05/11/2016 09:34:54</publishTime>
     </File>
     <File Include="GolestaneShohada/Design/css/font-awesome.min.css">
       <publishTime>04/23/2016 10:17:05</publishTime>
@@ -950,7 +950,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2016 10:17:05</publishTime>
     </File>
     <File Include="GolestaneShohada/Design/css/jquery.bxslider.css">
-      <publishTime>04/23/2016 10:17:05</publishTime>
+      <publishTime>05/10/2016 14:20:05</publishTime>
     </File>
     <File Include="GolestaneShohada/Design/css/prettyPhoto.css">
       <publishTime>05/01/2016 15:50:14</publishTime>
@@ -959,7 +959,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/07/2016 09:54:47</publishTime>
     </File>
     <File Include="GolestaneShohada/Design/Default.aspx">
-      <publishTime>05/10/2016 14:46:09</publishTime>
+      <publishTime>05/10/2016 21:18:20</publishTime>
     </File>
     <File Include="GolestaneShohada/Design/fa/eventarchive.aspx">
       <publishTime>04/26/2016 18:58:09</publishTime>
@@ -3364,6 +3364,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="GolestaneShohada/Design/Image/animate-number-bg.png">
       <publishTime>05/04/2016 09:49:16</publishTime>
     </File>
+    <File Include="GolestaneShohada/Design/Image/bx_loader.gif">
+      <publishTime>04/23/2016 10:17:05</publishTime>
+    </File>
     <File Include="GolestaneShohada/Design/Image/featured-sermon-pattren.png">
       <publishTime>04/23/2016 10:17:05</publishTime>
     </File>
@@ -3378,6 +3381,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="GolestaneShohada/Design/Image/fullpage_rest.png">
       <publishTime>04/18/2016 13:03:18</publishTime>
+    </File>
+    <File Include="GolestaneShohada/Design/Image/header-pattren-1.jpg">
+      <publishTime>05/10/2016 21:47:56</publishTime>
     </File>
     <File Include="GolestaneShohada/Design/Image/header-pattren-1.png">
       <publishTime>04/24/2016 18:31:51</publishTime>
@@ -3403,6 +3409,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="GolestaneShohada/Design/Image/innder-heading-bg.jpg">
       <publishTime>04/24/2016 13:10:35</publishTime>
     </File>
+    <File Include="GolestaneShohada/Design/Image/left-arrow.png">
+      <publishTime>04/23/2016 10:17:05</publishTime>
+    </File>
     <File Include="GolestaneShohada/Design/Image/logo.png">
       <publishTime>05/10/2016 09:35:46</publishTime>
     </File>
@@ -3411,6 +3420,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="GolestaneShohada/Design/Image/pin-map.png">
       <publishTime>05/10/2016 10:12:34</publishTime>
+    </File>
+    <File Include="GolestaneShohada/Design/Image/right-arrow.png">
+      <publishTime>04/23/2016 10:17:05</publishTime>
     </File>
     <File Include="GolestaneShohada/Design/Image/sample-photo.jpg">
       <publishTime>04/24/2016 21:36:29</publishTime>
@@ -3584,7 +3596,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2016 10:17:05</publishTime>
     </File>
     <File Include="GolestaneShohada/Design/MasterPage/WebMaster.Master">
-      <publishTime>05/10/2016 13:27:48</publishTime>
+      <publishTime>05/10/2016 20:34:06</publishTime>
     </File>
     <File Include="GolestaneShohada/Media/Amaliats/3/فتح المبین نقشه.jpg">
       <publishTime>04/27/2016 12:27:20</publishTime>
@@ -3606,6 +3618,33 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="GolestaneShohada/Media/Shahids/1/Download-Icon.png">
       <publishTime>04/24/2016 13:10:20</publishTime>
+    </File>
+    <File Include="GolestaneShohada/Media/Shahids/1/اصغر اميني.jpg">
+      <publishTime>04/27/2016 13:32:59</publishTime>
+    </File>
+    <File Include="GolestaneShohada/Media/Shahids/2/00030.jpg">
+      <publishTime>04/27/2016 13:32:09</publishTime>
+    </File>
+    <File Include="GolestaneShohada/Media/Shahids/2/00056.jpg">
+      <publishTime>04/27/2016 13:32:18</publishTime>
+    </File>
+    <File Include="GolestaneShohada/Media/Shahids/2/00076.jpg">
+      <publishTime>04/27/2016 13:32:18</publishTime>
+    </File>
+    <File Include="GolestaneShohada/Media/Shahids/2/00190.jpg">
+      <publishTime>04/27/2016 13:32:18</publishTime>
+    </File>
+    <File Include="GolestaneShohada/Media/Shahids/3/00001.jpg">
+      <publishTime>04/27/2016 19:20:12</publishTime>
+    </File>
+    <File Include="GolestaneShohada/Media/Shahids/3/00003.jpg">
+      <publishTime>04/27/2016 19:20:13</publishTime>
+    </File>
+    <File Include="GolestaneShohada/Media/Shahids/3/1179297KAKA003-001.jpg">
+      <publishTime>05/10/2016 22:06:28</publishTime>
+    </File>
+    <File Include="GolestaneShohada/Media/Shahids/3/1179297KAKA005-001.jpg">
+      <publishTime>04/27/2016 19:20:13</publishTime>
     </File>
     <File Include="GolestaneShohada/WebServices/GolestanWebservice.asmx">
       <publishTime>04/20/2016 21:52:46</publishTime>
@@ -3873,6 +3912,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="images/User_Icon.png">
       <publishTime>10/17/2013 12:10:51</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>05/10/2016 16:08:59</publishTime>
     </File>
     <File Include="js/calendar.js">
       <publishTime>04/18/2016 13:03:19</publishTime>
@@ -4202,7 +4244,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/18/2016 12:49:15</publishTime>
     </File>
     <File Include="panel/MakeItem.aspx">
-      <publishTime>04/27/2016 10:38:01</publishTime>
+      <publishTime>05/10/2016 15:31:21</publishTime>
     </File>
     <File Include="panel/MakeResume.aspx">
       <publishTime>04/18/2016 13:34:55</publishTime>
@@ -4214,7 +4256,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/18/2016 12:49:15</publishTime>
     </File>
     <File Include="panel/MgrPanel.aspx">
-      <publishTime>04/30/2016 17:40:10</publishTime>
+      <publishTime>05/10/2016 15:30:15</publishTime>
     </File>
     <File Include="panel/PictureBoard.aspx">
       <publishTime>04/18/2016 13:34:54</publishTime>
@@ -4223,7 +4265,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/09/2016 11:23:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/10/2016 14:46:40</publishTime>
+      <publishTime>05/11/2016 09:42:44</publishTime>
     </File>
   </ItemGroup>
 </Project>

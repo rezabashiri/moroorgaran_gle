@@ -37,7 +37,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.Js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <!-- Color Css Files Start -->
-<link rel="alternate stylesheet" type="text/css" href="/GolestaneShohada/Design/css/color-4.css" title="styles3" media="screen" />
+<%--<link rel="alternate stylesheet" type="text/css" href="/GolestaneShohada/Design/css/color-4.css" title="styles3" media="screen" />--%>
 <!-- Color Css Files End -->
 </head>
 <body>
@@ -155,8 +155,8 @@
     <ul id="home-banner">
         <asp:ListView ID="ListView1" runat="server">
             <ItemTemplate>
-                 <li> <img src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>' 
-                     alt='<%# DataBinder.Eval(Container.DataItem, "ItemTopic") %>' >
+                 <li> <img src='<%# "/files/photoItems/"+ DataBinder.Eval(Container.DataItem, "PhotoName") %>' 
+                     alt='<%#  Eval( "ItemTopic") %>' >
      <%--   <div class="caption">
           <div class="container">
             <div class="holder">
@@ -415,16 +415,16 @@
     <!-- Home Blog Posts Start--> 
     
     <!--Purchase Section Start-->
-    <section class="purchase-section slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
+    <section class="purchase-section slide" id="slide2"  data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="holder">
           <div class="heading-1">
             <h4>نقشه گلستان شهدا اصفهان</h4>
-          </div>
+          </div> 
           <div class="heading-2">
             <h5>شهدا را بر اساس محل مزار جستجو نمایید</h5>
           </div>
-          <a href="#" class="btn-purchase">جستجو</a> </div>
+          <a href="/GolestaneShohada/Design/fa/GolestanMap.aspx" class="btn-purchase">جستجو</a> </div>
       </div>
     </section>
     <!--Purchase Section End--> 
@@ -440,7 +440,7 @@
                     <ItemTemplate>
                         <div class="latest-news">
                 <div class="frame"><a href="fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
-                    <img src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
+                    <img style="max-width:262px;max-height:264px" src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
                                alt='<%# DataBinder.Eval(Container.DataItem, "ItemTopic") %>'></a></div>
                 <div class="text-box"> <strong class="title"><%# DataBinder.Eval(Container.DataItem, "ItemTopic") %></strong>
                   <div class="date-row"> <a class="link"><i class="fa fa-calendar"></i><%# MyClass.GetFarsiDate(Eval("ShowDate")) %></a>  </div>

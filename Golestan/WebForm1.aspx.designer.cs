@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CMS {
+namespace Golestan {
     
     
-    public partial class MapTest {
+    public partial class WebForm1 {
         
         /// <summary>
         /// form1 control.
@@ -22,21 +22,12 @@ namespace CMS {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// UscNaghsheGolestanShohada control.
+        /// UscFullSearchAmaliat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CMS.GolestaneShohada.Controls.UscNaghsheGolestanShohada UscNaghsheGolestanShohada;
-        
-        /// <summary>
-        /// usc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Golestan.Control.FullSearchAmaliat usc;
+        protected global::Golestan.Control.UscFullSearchAmaliat UscFullSearchAmaliat;
     }
 }
