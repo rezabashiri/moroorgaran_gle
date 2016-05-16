@@ -2,10 +2,7 @@
     MasterPageFile="~/masterpages/MgrMaster.Master" Codebehind="ItemsList.aspx.cs" %>
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="TitleContentPH">
-    <div id="roadmap">
-    </div>
-    <div class="clear">
-    </div>
+    
     <div class="confirmMSG" id="confirmDiv" visible="false" runat="server">
         <asp:Label ID="lblOk" runat="server"></asp:Label></div>
     <div class="clearFloat">

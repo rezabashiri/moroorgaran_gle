@@ -13,7 +13,15 @@ jQuery(document).ready(function ($) {
   hideControlOnEnd: true
 });
 	}
-	
+    //Latest Event Contdown
+	if ($('.defaultCountdown').length) {
+	    var austDay = new Date();
+	    austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
+	    $('.defaultCountdown').countdown({
+	        until: austDay
+	    });
+	    $('#year').text(austDay.getFullYear());
+	}
 	
     //Audio
     if ($('audio').length) {
@@ -38,15 +46,7 @@ jQuery(document).ready(function ($) {
     //Parallax Effect
     $(window).stellar();
 
-    //Latest Event Contdown
-    if ($('.defaultCountdown').length) {
-        var austDay = new Date();
-        austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
-        $('.defaultCountdown').countdown({
-            until: austDay
-        });
-        $('#year').text(austDay.getFullYear());
-    }
+
 
 
     //Home Timelines Slider

@@ -3,8 +3,8 @@
  <%--<script type="text/javascript" src="GolestaneShohada/Design/Js/seadragon-min.js" lang="ja"></script>--%>
     <script type="text/javascript" src="/GolestaneShohada/Design/Js/MaghbareShahid.js" lang="ja"></script>
 <script type="text/javascript">
-   
-    var id =   <%= GhateID %> ;
+    
+        var id =   <%= GhateID %> ;
    
         setnum(id);
     

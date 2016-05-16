@@ -161,7 +161,7 @@ body {
 #header {
 	float: left;
 	width: 100%;
-	background-image: url(../fa/images/header-pattren-top.png);
+	background-image: url(/GolestaneShohada/Design/Image/header-pattren-top.png);
 }
 /*Head Topbar Start*/
 .head-topbar {
@@ -313,7 +313,7 @@ body {
 .logo-row {
 	float: left;
 	width: 100%;
-	background-image: url(../fa/images/header-pattren-1.png);
+	background-image: url(/GolestaneShohada/Design/Image/header-pattren-1.png);
 	position: relative;
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3) inset;
 	-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3) inset;
@@ -498,6 +498,13 @@ span.colun-3 {
 	list-style: none;
 	float: right;
 }
+.nav {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	float: right;
+}
 .navigation-row .navbar-collapse.in{
 	overflow:inherit;
 }
@@ -618,11 +625,11 @@ span.colun-3 {
 	text-decoration: none;
 }
 #banner .bx-wrapper .bx-next {
-	background: url(../images/right-arrow.png) no-repeat left top;
+	background: url(/GolestaneShohada/Design/Image/right-arrow.png) no-repeat left top;
 	right: 0;
 }
 #banner .bx-wrapper .bx-prev {
-	background: url(../images/left-arrow.png) no-repeat left top;
+	background: url(/GolestaneShohada/Design/Image/left-arrow.png) no-repeat left top;
 	left: 20px;
 }
 #banner .caption {
@@ -5612,8 +5619,9 @@ span.colun-3 {
 	width:100%;
 }
 .sermon-box .frame img {
-	width: 100%;
+	max-width:225px;
 	display: block;
+    margin:0 auto;
 }
 .sermon-box .text-box {
 	float: right;
@@ -5640,6 +5648,7 @@ span.colun-3 {
 	border-top: 1px solid #ccc;
 	padding: 8px 0 6px 0;
 	margin: 0 0 20px 0;
+
 }
 .sermon-box .text-box .detail-row ul {
 	padding: 0;
@@ -5647,23 +5656,33 @@ span.colun-3 {
 	list-style: none;
 }
 .sermon-box .text-box .detail-row ul li {
-	float: left;
-	padding: 0 0 0 19px;
-	width: auto;
+	float: right;
+	padding: 5px 0 ;
+	/*width: auto;*/
 }
 .sermon-box .text-box .detail-row ul li:first-child {
 	padding: 0;
 }
 .sermon-box .text-box .detail-row li a {
 	color: #999999;
-	float: left;
-	font: 400 12px 'Open Sans', sans-serif;
+	float: right;
+	font-size:11px;
 	text-decoration: none;
 }
 .sermon-box .text-box .detail-row li a .fa {
-	float: left;
+	float: right;
 	line-height: 15px;
-	padding: 0 7px 0 0;
+	padding: 0 0 0 7px;
+}
+.sermon-box .text-box a.readmore {
+	color: #333;
+	float: right;
+	text-decoration: none;
+	padding: 6px 10px;
+	position: relative;
+    border:1px solid #C83200;
+    border-radius:4px;
+    font-size:12px;
 }
 .sermon-box .text-box .list-area {
 	float: right;
@@ -5778,7 +5797,7 @@ span.colun-3 {
 	padding: 0;
 	margin: 12px 0 0 0;
 	list-style: none;
-	float: left;
+	float: right;
 }
 .footer-box-1 address ul li {
 	padding: 0 0 6px 0;
@@ -5787,7 +5806,7 @@ span.colun-3 {
 	color: #ccc;
 }
 .footer-box-1 address ul li .fa {
-	float: left;
+	float: right;
 	padding: 0 15px 0 0;
 	line-height: 20px;
 }

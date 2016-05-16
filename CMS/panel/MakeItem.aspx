@@ -20,8 +20,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="TitleContentPH">
-    <div id="roadmap">
-    </div>
+     
     <div class="clear">
     </div>
     <div class="confirmMSG" id="confirmDiv" visible="false" runat="server">
@@ -42,7 +41,7 @@
     </div>
     <div class="clear">
     </div>
-    <div id="main_content">
+    <div id="showback">
         <div class="row  ">
             <div class="col-sm-2 text-left">
                 عنوان مطلب<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"

@@ -9,25 +9,25 @@
 
 
 <ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" href="#home">شهید</a></li>
-  <li><a data-toggle="tab" href="#menu1">عملیات</a></li>
   <li><a data-toggle="tab" href="#menu2">یگان</a></li>
+    <li><a data-toggle="tab" href="#menu1">عملیات</a></li>
+    <li class="active"><a data-toggle="tab" href="#home">شهید</a></li>
 </ul>
 
 <div class="tab-content">
   <div id="home" class="tab-pane fade in active">
    <div class="tab-text-box">
-    <p><uc1:UscSearchShahid runat="server" ID="UscSearchShahid" /></p>
+    <p><uc1:UscSearchShahid runat="server" ID="UscSearchShahid" />
        </div>
   </div>
   <div id="menu1" class="tab-pane fade">
       <div class="tab-text-box">
-    <p><uc1:UscSearchAmaliat runat="server" ID="UscSearchAmaliat" /></p>
+    <p><uc1:UscSearchAmaliat runat="server" ID="UscSearchAmaliat" />
           </div>
   </div>
   <div id="menu2" class="tab-pane fade">
       <div class="tab-text-box">
-    <p><uc1:UscSearchNiroo runat="server" ID="UscSearchNiroo" /></p>
+    <p><uc1:UscSearchNiroo runat="server" ID="UscSearchNiroo" />
           </div>
   </div>
 </div>

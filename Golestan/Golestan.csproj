@@ -280,6 +280,7 @@
     </Content>
     <Content Include="Model\ShohadaModel.edmx.diagram">
       <DependentUpon>ShohadaModel.edmx</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Model\ShohadaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

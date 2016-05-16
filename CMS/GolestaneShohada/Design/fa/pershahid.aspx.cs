@@ -66,6 +66,7 @@ namespace CMS.GolestaneShohada.Design.fa
             ListView2.DataSource = new Golestan.Helpers.InterFace().GetShahidAshenayan(shahidID);
             ListView2.DataBind();
 
+            //ListView5.DataSource = new Golestan.Helpers.InterFace().GetShahidHamrazman(shahidID).Where(x => !(x.IDShahid.Equals(shahidID)));
             ListView5.DataSource = new Golestan.Helpers.InterFace().GetShahidHamrazman(shahidID);
             ListView5.DataBind();
 

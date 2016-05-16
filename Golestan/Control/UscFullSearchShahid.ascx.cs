@@ -20,6 +20,10 @@ namespace Golestan.Control
             get;
             set;
         }
+        public void SearchShahid()
+        {
+            btnSearch_Click(null, null);
+        }
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             Shahid _shahid = new Shahid();

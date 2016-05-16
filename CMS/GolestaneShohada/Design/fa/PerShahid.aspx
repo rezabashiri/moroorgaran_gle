@@ -18,6 +18,10 @@
             height:152px;
            
         }
+        .pin-map 
+        {
+            width:64px !important;
+        }
     </style>
 </asp:Content>
 
@@ -161,48 +165,48 @@
 <asp:Content ID="content4" runat ="server" ContentPlaceHolderID="CPHfooter">
     <!--Pretty Photo Js--> 
 <script src="../Js/jquery.prettyPhoto.js"></script>
-    <script>
-        //Pretty Photo
-        if ($('.flickr-photo').length) {
-            $(".flickr-photo:first a[rel^='prettyPhoto']").prettyPhoto({
-                animation_speed: 'normal',
-                theme: 'light_square',
-                slideshow: 3000,
-                autoplay_slideshow: true
-            });
-            $(".flickr-photo:gt(0) a[rel^='prettyPhoto']").prettyPhoto({
-                animation_speed: 'fast',
-                slideshow: 10000,
-                hideflash: true
-            });
-        }
-    </script>
   <script type="text/javascript"   src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2DiT3FNLpHAw407Iph1GNo8OT12ijhQg"></script>
         <script type="text/javascript" >
-            var map;
-            var myLatlng = new google.maps.LatLng( <%= Y %>,<%= X %>);
-            function initialize() {
-                var mapOptions = {
-                    zoom: 8,
-                    center: myLatlng
+         
+                var map;
+                var myLatlng = new google.maps.LatLng( <%= Y %>,<%= X %>);
+                function initialize() {
+                    var mapOptions = {
+                        zoom: 8,
+                        center: myLatlng
+                    }
+                    var doc = document.getElementById('map-canvas');
+                    map = new google.maps.Map(document.getElementById('map-canvas'),
+                        mapOptions);
+                    marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map
+                    });
                 }
-                var doc = document.getElementById('map-canvas');
-                map = new google.maps.Map(document.getElementById('map-canvas'),
-                    mapOptions);
-                marker = new google.maps.Marker({
-                    position: myLatlng,
-                    map: map
-                });
-            }
 
-            google.maps.event.addDomListener(window, 'load', initialize);
+                google.maps.event.addDomListener(window, 'load', initialize);
+
+                $("#ShowMoreModal").on("show.bs.modal", function (a) { 
+                    var d = $(a.relatedTarget); 
+                    var ft = d.data("fulltext");
+                    var m = $(this);
+                    m.find(".modal-body label.more").text(ft);
+                });
+
+                if ($('.flickr-photo').length) {
+                    $(".flickr-photo:first a[rel^='prettyPhoto']").prettyPhoto({
+                        animation_speed: 'normal',
+                        theme: 'light_square',
+                        slideshow: 3000,
+                        autoplay_slideshow: true
+                    });
+                    $(".flickr-photo:gt(0) a[rel^='prettyPhoto']").prettyPhoto({
+                        animation_speed: 'fast',
+                        slideshow: 10000,
+                        hideflash: true
+                    });
+                }
+           
 </script>
-    <script>
-        $("#ShowMoreModal").on("show.bs.modal", function (a) { 
-            var d = $(a.relatedTarget); 
-            var ft = d.data("fulltext");
-            var m = $(this);
-            m.find(".modal-body label.more").text(ft);
-        });
-    </script>
+ 
 </asp:Content>

@@ -850,7 +850,8 @@ span.colun-1, span.colun-2, span.colun-3{
 	width:auto;
 }
 .sermon-box .text-box {
-	max-width: 435px;
+	/*max-width: 435px;*/
+    max-width:562px;
 	padding: 17px 0 0 0;
 }
 .sermon-detail blockquote .fa-quote-right {

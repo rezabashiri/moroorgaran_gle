@@ -28,41 +28,31 @@ namespace CMS.panel
                 ViewState["Menufather"] = 0;
             }
         }
-        protected void CheckCustomer()
+
+        protected void FirstGroup()
         {
             try
             {
-                int CustomerID = Convert.ToInt32(Session["CustomerID"]);
-                string sql = "select Count(*) from TCustomers where CustomerID={0} and Enable=1";
-                sql = string.Format(sql, CustomerID);
+                sql = "select count(*) from TMenu";
+                sql = string.Format(sql, Customer());
                 mc.connect();
-                int Cnt = Convert.ToInt32(mc.docommandScalar(sql));
-                mc.disconnect();
-                if (Cnt != 1)
+                int itemNo = Convert.ToInt32(mc.docommandScalar(sql));
+                if (itemNo == 0)
                 {
-                    Session["CustomerID"] = "";
-                    Response.Redirect("MgrLogin.aspx");
+                    string name = "صفحه نخست";
+                    sql = "insert into TMenu (MenuTitle,LinkAddress,Root,FatherID,CustomerID) values (N'{0}',N'{1}',{2},{3},{4})";
+                    sql = string.Format(sql, name, "/", 0, 0, Customer());
+                    mc.docommand(sql);
                 }
             }
-            catch (Exception)
+            catch
             {
-                Response.Redirect("MgrLogin.aspx");
+
             }
-        }
-        protected void FirstGroup()
-        {
-            sql = "select count(*) from TMenu where customerid={0}";
-            sql = string.Format(sql, Customer());
-            mc.connect();
-            int itemNo = Convert.ToInt32(mc.docommandScalar(sql));
-            if (itemNo == 0)
+            finally
             {
-                string name = "صفحه نخست";
-                sql = "insert into TMenu (MenuTitle,LinkAddress,Root,FatherID,CustomerID) values (N'{0}',N'{1}',{2},{3},{4})";
-                sql = string.Format(sql, name, "/", 0, 0, Customer());
-                mc.docommand(sql);
+                mc.disconnect();
             }
-            mc.disconnect();
         }
         protected void AddMenuItem()
         {
@@ -105,14 +95,21 @@ namespace CMS.panel
             //    " FROM            dbo.TMenu LEFT OUTER JOIN  dbo.TMenu AS TMenu_1 ON dbo.TMenu.FatherID = TMenu_1.MenuItemID "+
             //    " WHERE        (dbo.TMenu.CustomerID = {0}) AND (dbo.TMenu.FatherID = {1})";
             sql = "SELECT        dbo.TMenu.MenuItemID, dbo.TMenu.MenuTitle, dbo.TMenu.LinkAddress, TMenu_1.MenuTitle AS FatherName " +
-              " FROM            dbo.TMenu LEFT OUTER JOIN  dbo.TMenu AS TMenu_1 ON dbo.TMenu.FatherID = TMenu_1.MenuItemID " +
-              " WHERE        (dbo.TMenu.CustomerID = {0})";
-            sql = string.Format(sql, Customer());
-            mc.connect();
-            dt = mc.select(sql);
-            mc.disconnect();
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
+              " FROM            dbo.TMenu LEFT OUTER JOIN  dbo.TMenu AS TMenu_1 ON dbo.TMenu.FatherID = TMenu_1.MenuItemID ";
+            try
+            {
+                mc.connect();
+                dt = mc.select(sql);
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+            }
+            catch
+            {
+            }
+            finally
+            {
+                mc.disconnect();
+            }
         }
         protected void EditMenuItem(int mnID)
         {
