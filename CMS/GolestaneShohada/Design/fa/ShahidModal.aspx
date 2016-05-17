@@ -39,14 +39,14 @@
                     data: '{"IDGhate":"' + ghateid + '"}',
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
-
+                    crossDomain: true,
                     success: function (msg) {
                         var grid = $find('<%= RadListView1.ClientID %>');
                         grid.set_dataSource(msg.d);
                         grid.dataBind();
 
                         },
-                        error: function (xhr, status, error) {
+                   error: function (xhr, status, error) {
 
                             //alert(xhr.responseText);
 

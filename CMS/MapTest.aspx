@@ -2,6 +2,8 @@
 
 <%@ Register Src="~/GolestaneShohada/Controls/UscShahidMaghbare.ascx" TagPrefix="uc2" TagName="UscShahidMaghbare" %>
 <%@ Register Src="~/GolestaneShohada/Controls/UscNaghsheGolestanShohada.ascx" TagPrefix="uc2" TagName="UscNaghsheGolestanShohada" %>
+<%@ Register Src="~/GolestaneShohada/Controls/UscNaghsheManategheJangi.ascx" TagPrefix="uc2" TagName="UscNaghsheManategheJangi" %>
+
 
 
 
@@ -12,8 +14,7 @@
     <title></title>
     <script src="/assets/js/jquery-1.8.3.min.js"></script>
     <%--<script type="text/javascript" src="GolestaneShohada/Design/Js/seadragon-min.js" lang="ja"></script>--%>
- 
-  
+
 </head>
 <body>
   
@@ -47,8 +48,10 @@
       </tr>
     </table>  
               
-        <uc2:UscNaghsheGolestanShohada runat="server" ID="UscNaghsheGolestanShohada" />
-        <uc1:FullSearchAmaliat ID="usc" runat="server"></uc1:FullSearchAmaliat>
+      <%--  <uc2:UscNaghsheGolestanShohada runat="server" ID="UscNaghsheGolestanShohada" />
+        <uc1:FullSearchAmaliat ID="usc" runat="server"></uc1:FullSearchAmaliat>--%>
+
+        <uc2:UscNaghsheManategheJangi runat="server" id="UscNaghsheManategheJangi" />
     </form>
 </body>
 </html>

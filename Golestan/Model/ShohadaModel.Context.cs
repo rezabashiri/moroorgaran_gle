@@ -58,6 +58,7 @@ namespace Golestan.Model
         public virtual DbSet<ViewShahidAmaliat> ViewShahidAmaliats { get; set; }
         public virtual DbSet<ViewAttach> ViewAttaches { get; set; }
         public virtual DbSet<ViewAmaliat> ViewAmaliats { get; set; }
+        public virtual DbSet<ViewAmaliatMantaghe> ViewAmaliatMantaghes { get; set; }
     
         public virtual ObjectResult<ViewShahid> sp_SearchSahid(string whereParameter)
         {
@@ -201,6 +202,24 @@ namespace Golestan.Model
                 new ObjectParameter("query", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewAmaliat>("sp_SearchAmaliatByQuery", mergeOption, queryParameter);
+        }
+    
+        public virtual ObjectResult<ViewAmaliatMantaghe> sp_GetAmaliatNoghteAsarByIdAmaliat(Nullable<int> iDAmaliat)
+        {
+            var iDAmaliatParameter = iDAmaliat.HasValue ?
+                new ObjectParameter("IDAmaliat", iDAmaliat) :
+                new ObjectParameter("IDAmaliat", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewAmaliatMantaghe>("sp_GetAmaliatNoghteAsarByIdAmaliat", iDAmaliatParameter);
+        }
+    
+        public virtual ObjectResult<ViewAmaliatMantaghe> sp_GetAmaliatNoghteAsarByIdAmaliat(Nullable<int> iDAmaliat, MergeOption mergeOption)
+        {
+            var iDAmaliatParameter = iDAmaliat.HasValue ?
+                new ObjectParameter("IDAmaliat", iDAmaliat) :
+                new ObjectParameter("IDAmaliat", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ViewAmaliatMantaghe>("sp_GetAmaliatNoghteAsarByIdAmaliat", mergeOption, iDAmaliatParameter);
         }
     }
 }

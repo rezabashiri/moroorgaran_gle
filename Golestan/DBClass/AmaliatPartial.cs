@@ -53,5 +53,12 @@ namespace Golestan.Model
                 return myen.sp_SearchAmaliatByQuery(query).ToList < ViewAmaliat>();
             }
         }
+        internal List<ViewAmaliatMantaghe> GetAmaliatManatagheByIDAmaliat(int? IDAmaliat)
+        {
+            using (var myen = Helpers.ContextHelper.GetContext)
+            {
+                return myen.sp_GetAmaliatNoghteAsarByIdAmaliat(IDAmaliat).ToList<ViewAmaliatMantaghe>();
+            }
+        }
     }
 }

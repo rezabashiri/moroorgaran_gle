@@ -59,5 +59,10 @@ namespace Golestan.Helpers
             Amaliat _am = new Amaliat();
             return _am.NearestAmaliatToNow();
         }
+        public List<ViewAmaliatMantaghe> GetAmaliatMantagheByIDAmaliat(int? IDAmaliat)
+        {
+            Amaliat _am = new Amaliat();
+            return _am.GetAmaliatManatagheByIDAmaliat(IDAmaliat);
+        }
     }
 }

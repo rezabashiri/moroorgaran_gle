@@ -7,27 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CMS {
+namespace CMS.DynamicData.FieldTemplates {
     
     
-    public partial class MapTest {
+    public partial class GoogleMap {
         
         /// <summary>
-        /// form1 control.
+        /// plhMap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// UscNaghsheManategheJangi control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::CMS.GolestaneShohada.Controls.UscNaghsheManategheJangi UscNaghsheManategheJangi;
+        protected global::System.Web.UI.WebControls.Panel plhMap;
     }
 }

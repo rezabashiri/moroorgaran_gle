@@ -24,8 +24,9 @@ namespace Golestan.Model
             public string Name { get; set; }
            
             [Display(Name="X یا E")]
+      
             public Nullable<double> X { get; set; }
-            [Display (Name="Y یا N")]
+            [Display (Name="Y یا N" )]
             public Nullable<double> Y { get; set; }
             [Display(Name="مدیا")]
             [UIHint("FileUpload")]

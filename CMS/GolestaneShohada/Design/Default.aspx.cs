@@ -61,7 +61,7 @@ namespace CMS.GolestaneShohada.Design
 
                 StartAmaliat = new DateTime(DateTime.Now.Year, StartAmaliat.Month, StartAmaliat.Day, StartAmaliat.Hour, StartAmaliat.Minute, 0);
                 EndAmaliat =   new DateTime(DateTime.Now.Year, EndAmaliat.Month, EndAmaliat.Day, EndAmaliat.Hour, EndAmaliat.Minute, 0);
-
+                 
                 lblAmaliat.Text = string.Format("عملیات {0} شروع خواهد شد", amaliat.Name);
             }
         }

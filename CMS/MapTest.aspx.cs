@@ -26,7 +26,7 @@ namespace CMS
             qrcode.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             var res5 = Convert.ToBase64String(ms.ToArray());
             var s = qrcode.ToString();
-            usc.OnDataBind += usc_OnDataBind;
+            //usc.OnDataBind += usc_OnDataBind;
             //Image1.ImageUrl= "data:image/gif;base64," + res5;
             //pictureBox1.Image = qrcode as Image;//Displays generated code in PictureBox
         }
