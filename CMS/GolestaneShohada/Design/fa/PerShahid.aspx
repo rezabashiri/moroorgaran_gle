@@ -164,7 +164,7 @@
 </asp:Content>
 <asp:Content ID="content4" runat ="server" ContentPlaceHolderID="CPHfooter">
     <!--Pretty Photo Js--> 
-<script src="GolestaneShohada/Design/Js/jquery.prettyPhoto.js"></script>
+<script src="/GolestaneShohada/Design/Js/jquery.prettyPhoto.js"></script>
   <script type="text/javascript"   src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2DiT3FNLpHAw407Iph1GNo8OT12ijhQg"></script>
         <script type="text/javascript" >
          
