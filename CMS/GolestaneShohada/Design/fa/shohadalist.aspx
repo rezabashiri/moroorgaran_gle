@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MaintainScrollPositionOnPostback="true" Title="جستجوی شهدا" CodeBehind="shohadalist.aspx.cs" Inherits="CMS.GolestaneShohada.Design.fa.shohadalist" MasterPageFile="~/GolestaneShohada/Design/MasterPage/WebMaster.Master"%>
 <asp:Content ID="Content3" runat="server" contentplaceholderid="head">
-<link href="../css/bootstrap-list-rtl.css" type="text/css" rel="stylesheet" />
+<link href="/GolestaneShohada/Design/css/bootstrap-list-rtl.css" type="text/css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPageHeading">
     <h1>لیست شهدا</h1>

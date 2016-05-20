@@ -5,14 +5,23 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-
+using tkv.Utility;
 namespace CMS.GolestaneShohada.Design.fa
 {
     public partial class shohadalist : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Uscshahidsearch.OnDataBind += Uscshahidsearch_OnDataBind; 
+            Uscshahidsearch.OnDataBind += Uscshahidsearch_OnDataBind;
+
+            if (!IsPostBack)
+            {
+                if (!string.IsNullOrEmpty(Helpers.QueryStringHelpers.GetGhateID()))
+                {
+                    Golestan.Helpers.InterFace _int = new Golestan.Helpers.InterFace();
+                   Uscshahidsearch_OnDataBind( _int.Search_SahidByGhateID(Helpers.QueryStringHelpers.GetGhateID().ToInt32()));
+                }
+            }
         }
 
         void Uscshahidsearch_OnDataBind(List<Golestan.Model.ViewShahid> DataSource)

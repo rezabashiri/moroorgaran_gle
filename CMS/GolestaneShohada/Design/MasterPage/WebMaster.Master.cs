@@ -53,29 +53,19 @@ namespace CMS.GolestaneShohada.Design.MasterPage
 
                 StartAmaliat = new DateTime(DateTime.Now.Year, StartAmaliat.Month, StartAmaliat.Day, StartAmaliat.Hour, StartAmaliat.Minute, 0);
                 EndAmaliat = new DateTime(DateTime.Now.Year, EndAmaliat.Month, EndAmaliat.Day, EndAmaliat.Hour, EndAmaliat.Minute, 0);
-
+                //if (!string.IsNullOrEmpty(amaliat.Name))
                 lblAmaliat.Text = string.Format("عملیات {0} شروع خواهد شد", amaliat.Name);
             }
+
         }
         public void FillNews()
         {
-            try
+
+
+            if (ListView1 != null)
             {
-                sql = "SELECT     TOP (10)  dbo.TItems.ItemTopic, dbo.TItems.SummaryTxt, dbo.TItems.ItemID, dbo.TItems.ShowDate " +
-                    "FROM         dbo.TItems INNER JOIN " +
-                    "dbo.TGroups ON dbo.TItems.GrpID = dbo.TGroups.GrpID INNER JOIN " +
-                    "dbo.TParts ON dbo.TGroups.PartID = dbo.TParts.PartID " +
-                    "WHERE   (dbo.TParts.PartID<>1) and (dbo.TItems.FreshStat = 3) AND (dbo.TItems.PubStat = 9) AND (dbo.TGroups.CustomerID = {0}) AND (GETDATE() >= dbo.TItems.ShowDate) " +
-                    "ORDER BY dbo.TItems.ShowDate DESC";
-                sql = string.Format(sql, mc.GetCustomer());
-                mc.connect();
-                dt = mc.select(sql);
-                mc.disconnect();
-                ListView1.DataSource = dt;
+                ListView1.DataSource = new CMSLogic.DateBaseHelprs().GetItemsByparameter("10", "PartID<>1");
                 ListView1.DataBind();
-            }
-            catch (Exception)
-            {
             }
         }
     }

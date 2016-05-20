@@ -14,13 +14,6 @@ namespace Golestan.Model
     
     public partial class ViewAmaliat
     {
-        public Nullable<int> IDNiroo { get; set; }
-        public Nullable<int> IDYegan { get; set; }
-        public Nullable<int> IDVahed { get; set; }
-        public string NameVahed { get; set; }
-        public string NameYegan { get; set; }
-        public string NameNiroo { get; set; }
-        public string NameNoghteAsar { get; set; }
         public string NameAmaliat { get; set; }
         public int IDAmaliat { get; set; }
         public string Ramz { get; set; }
@@ -28,21 +21,6 @@ namespace Golestan.Model
         public Nullable<System.DateTime> TarikhePayan { get; set; }
         public string Tozihat { get; set; }
         public string Kholase { get; set; }
-        public Nullable<double> X { get; set; }
-        public Nullable<double> Y { get; set; }
-        public Nullable<int> IDMogheyat { get; set; }
-        public Nullable<int> IDNoghteAsar { get; set; }
-        public string NameMogheyat { get; set; }
-        public string ToziahtMogheyat { get; set; }
-        public Nullable<int> IDMantaghe { get; set; }
-        public string NameMantaghe { get; set; }
-        public System.Guid AttachID { get; set; }
-        public string FileName { get; set; }
-        public string FileExtension { get; set; }
-        public Nullable<long> ContentLength { get; set; }
-        public string ContentType { get; set; }
         public string VirtualAddress { get; set; }
-        public string ServerAddress { get; set; }
-        public Nullable<System.DateTime> UploadedTime { get; set; }
     }
 }

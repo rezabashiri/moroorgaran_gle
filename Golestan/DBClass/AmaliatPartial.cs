@@ -46,5 +46,19 @@ namespace Golestan.Model
                 return myen.GetTheNearestAmaliat().FirstOrDefault() ?? new Amaliat() { ID=-1};
             }
         }
+        internal List<ViewAmaliat> SearchAmaliatByQuery(string query)
+        {
+            using (var myen = Helpers.ContextHelper.GetContext)
+            {
+                return myen.sp_SearchAmaliatByQuery(query).ToList < ViewAmaliat>();
+            }
+        }
+        internal List<ViewAmaliatMantaghe> GetAmaliatManatagheByIDAmaliat(int? IDAmaliat)
+        {
+            using (var myen = Helpers.ContextHelper.GetContext)
+            {
+                return myen.sp_GetAmaliatNoghteAsarByIdAmaliat(IDAmaliat).ToList<ViewAmaliatMantaghe>();
+            }
+        }
     }
 }

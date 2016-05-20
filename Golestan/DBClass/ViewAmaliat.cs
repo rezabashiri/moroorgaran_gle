@@ -19,22 +19,22 @@ namespace Golestan.Model
     {
         private class MetaData
         {
-            public int IDNiroo { get; set; }
-            public int IDYegan { get; set; }
-            public int IDVahed { get; set; }
-            public string NameVahed { get; set; }
-            public string NameYegan { get; set; }
-            public string NameNiroo { get; set; }
-            public string NameNoghteAsar { get; set; }
-            public string NameAmaliat { get; set; }
-            public int IDAmaliat { get; set; }
-            public string Ramz { get; set; }
-            public Nullable<System.DateTime> TarikheShoroo { get; set; }
-            public Nullable<System.DateTime> TarikhePayan { get; set; }
-            public string Tozihat { get; set; }
-            public string Kholase { get; set; }
-            public Nullable<double> X { get; set; }
-            public Nullable<double> Y { get; set; }
+            //public int IDNiroo { get; set; }
+            //public int IDYegan { get; set; }
+            //public int IDVahed { get; set; }
+            //public string NameVahed { get; set; }
+            //public string NameYegan { get; set; }
+            //public string NameNiroo { get; set; }
+            //public string NameNoghteAsar { get; set; }
+            //public string NameAmaliat { get; set; }
+            //public int IDAmaliat { get; set; }
+            //public string Ramz { get; set; }
+            //public Nullable<System.DateTime> TarikheShoroo { get; set; }
+            //public Nullable<System.DateTime> TarikhePayan { get; set; }
+            //public string Tozihat { get; set; }
+            //public string Kholase { get; set; }
+            //public Nullable<double> X { get; set; }
+            //public Nullable<double> Y { get; set; }
         }
     }
 }

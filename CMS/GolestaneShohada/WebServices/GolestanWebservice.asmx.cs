@@ -26,5 +26,12 @@ namespace CMS.GolestaneShohada.WebServices
             List<ViewShahid> res = new Golestan.Helpers.InterFace().Search_SahidByGhateID(id);
             return res;
         }
+        [WebMethod]
+        public List<ViewAmaliatMantaghe> GetAmaliaMantagheByIdAmaliat( )
+        {
+            
+            List<ViewAmaliatMantaghe> res = new Golestan.Helpers.InterFace().GetAmaliatMantagheByIDAmaliat(null);
+            return res;
+        }
     }
 }
