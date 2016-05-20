@@ -428,6 +428,7 @@
     <Content Include="GolestaneShohada\Design\fa\PerShahid.aspx" />
     <Content Include="GolestaneShohada\Design\fa\readitem.aspx" />
     <Content Include="GolestaneShohada\Design\fa\ShahidModal.aspx" />
+    <Content Include="GolestaneShohada\Design\fa\amliyatlist.aspx" />
     <Content Include="GolestaneShohada\Design\fa\shohadalist.aspx" />
     <Content Include="GolestaneShohada\Design\fa\WarMap.aspx" />
     <Content Include="GolestaneShohada\Design\GolestanMap\embed.html" />
@@ -1496,6 +1497,13 @@
     </Compile>
     <Compile Include="GolestaneShohada\Design\fa\ShahidModal.aspx.designer.cs">
       <DependentUpon>ShahidModal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\amliyatlist.aspx.cs">
+      <DependentUpon>amliyatlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\amliyatlist.aspx.designer.cs">
+      <DependentUpon>amliyatlist.aspx</DependentUpon>
     </Compile>
     <Compile Include="GolestaneShohada\Design\fa\shohadalist.aspx.cs">
       <DependentUpon>shohadalist.aspx</DependentUpon>
