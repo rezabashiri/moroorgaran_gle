@@ -385,6 +385,8 @@
     <Content Include="DynamicData\FieldTemplates\PersianDateTime.ascx" />
     <Content Include="DynamicData\FieldTemplates\PersianDateTime_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\PersianDate_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\QRCode.ascx" />
+    <Content Include="DynamicData\FieldTemplates\QRCode_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Text.ascx" />
     <Content Include="DynamicData\FieldTemplates\Text_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Url.ascx" />
@@ -1324,6 +1326,20 @@
     </Compile>
     <Compile Include="DynamicData\FieldTemplates\PersianDate_Edit.ascx.designer.cs">
       <DependentUpon>PersianDate_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\QRCode.ascx.cs">
+      <DependentUpon>QRCode.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\QRCode.ascx.designer.cs">
+      <DependentUpon>QRCode.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\QRCode_Edit.ascx.cs">
+      <DependentUpon>QRCode_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\QRCode_Edit.ascx.designer.cs">
+      <DependentUpon>QRCode_Edit.ascx</DependentUpon>
     </Compile>
     <Compile Include="DynamicData\FieldTemplates\Text.ascx.cs">
       <DependentUpon>Text.ascx</DependentUpon>

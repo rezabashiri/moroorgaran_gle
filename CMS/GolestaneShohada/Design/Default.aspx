@@ -216,27 +216,28 @@
     <section class="home-widget-box">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-sm-6">
-            <div class="widget-box">
-              <div class="round"><i class="fa fa-map"></i></div>
-              <h3>جستجوی مکانی</h3>
-              <p>برای آشنایی با شهدای هر منطقه با استفاده از نقشه مکان مورد نظر خود را پیدا نمایید.</p>
-              <a href="#" class="btn-widget">جستجو</a> </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
+              <div class="col-md-3 col-sm-6">
             <div class="widget-box active">
               <div class="round"><i class="fa fa-map-marker"></i></div>
               <h3>مناطق عملیاتی</h3>
               <p>مناطق عملیاتی در جنگ کدام ها بوده اند و چه شهدایی در این مناطق به شهادت رسیده اند.</p>
-              <a href="#" class="btn-widget">مناطق</a> </div>
+              <a href="/GolestaneShohada/Design/fa/WarMap.aspx" class="btn-widget">مناطق</a> </div>
           </div>
-          <div class="col-md-3 col-sm-6">
+               <div class="col-md-3 col-sm-6">
             <div class="widget-box active">
               <div class="round"><i class="fa fa-gears"></i></div>
               <h3>یگان های عملیاتی</h3>
-              <p>یگان های عملیاتی را جستجو نماییم و با شهدای آنها و رشادت هایشان بیشتر آشنا شویم.</p>
+              <p>یگان های عملیاتی را جستجو نماییم .</p>
               <a href="#" class="btn-widget">یگان ها</a> </div>
           </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="widget-box">
+              <div class="round"><i class="fa fa-map"></i></div>
+              <h3>جستجوی عملیاتها</h3>
+              <p> آشنایی با عملیاتهای انجام شده و نقطه اثر هر کدام از عملیاتها بر روی نقشه.</p>
+              <a href="#" class="btn-widget">جستجو</a> </div>
+          </div>
+       
           <div class="col-md-3 col-sm-6">
             <div class="widget-box active">
               <div class="round"><i class="fa fa-users"></i></div>

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Golestan.Model
 {
     [ScaffoldTable(false)]
-    public partial class ViewAttach
+    public partial class ViewAmaliatNiroo
     {
     }
 }
