@@ -31,6 +31,41 @@
     <h1><i class="fa fa-bookmark"></i> عملیات <asp:Label ID="lblName" runat="server" ></asp:Label></h1>        
 </asp:Content>
 <asp:Content ID="Content3" runat="server" contentplaceholderid="ContentPlaceHolder2">
+                    <div class="sidebar-latest-news">
+                  <h3>موقعیت های عملیات</h3>
+                  <ul>
+                      <asp:ListView ID="ListView2" runat="server">
+                          <ItemTemplate>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="play" > 
+                                      <i class="fa fa-map-marker"></i></asp:HyperLink> 
+                      <div class="text-box">
+                          <strong class="title"><%# DataBinder.Eval(Container.DataItem, "NameMogheyat")%>&nbsp;-&nbsp;<%# DataBinder.Eval(Container.DataItem, "NameMantaghe")%></strong>
+                        <a href="#" class="readmore" data-toggle="modal" data-target="#ShowMoreModal" data-fulltext='<%# DataBinder.Eval(Container.DataItem, "ToziahtMogheyat")%>'>ادامه</a></div>
+                    </li>
+                          </ItemTemplate>
+                      </asp:ListView>
+                  </ul>
+                </div>
+<div class="modal fade" id="ShowMoreModal" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-lg" role="document" id="modalDrag">
+<div class="modal-content persian">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h5 class="modal-title"><i class="fa fa-pencil"></i>&nbsp;ادامه سخن</h5>
+<input id="lblashna" runat="server" type="hidden" class="english form-control AshID" />
+</div>
+<div class="modal-body">
+<div class="box-body">
+    <p><label class="more"></label></p>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+</div>
+</div>
+</div>
+</div>
     </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
             <div class="fram-holder">
@@ -39,11 +74,6 @@
                   <li><span><i class="fa fa-calendar"></i>رمز عملیات <asp:Label ID="lblTavalod" runat="server"></asp:Label></span></li>
                   <li><span><i class="fa fa-user"></i>تاریخ شروع <asp:Label ID="lblFather" runat="server" ></asp:Label></span></li>
                   <li><span><i class="fa fa-map"></i>تاریخ پایان <asp:Label ID="lblShahr" runat="server"></asp:Label></span></li>
-                  <li><span><i class="fa fa-map-marker"></i>قطعه <asp:Label ID="lblGhete" runat="server"></asp:Label></span></li>
-                  <li><span><i class="fa fa-gear"></i>عملیات منجر به شهادت: <asp:Label ID="lblamaliat" runat="server"></asp:Label></span></li>
-                    <li><span><i class="fa fa-sitemap"></i><asp:Label ID="lblSemat" runat="server"></asp:Label></span></li>
-                    <li><span><i class="fa fa-rocket"></i><asp:Label ID="lblYegan" runat="server"></asp:Label></span></li>
-                    <li><span><i class="fa fa-users"></i><asp:Label ID="lblNiroo" runat="server"></asp:Label></span></li>
                 </ul></div>
               <div class="event-frame"> <a href="#">
                   <asp:Image ID="Image1" runat="server" /></a>
@@ -51,7 +81,7 @@
                      <div class="map-row">
                   <div class="event-detail-timer">
                       <strong class="title">
-                          محل شهادت
+                          محل عملیات
                       </strong>
                       <div >
                           <div class="map-box">
@@ -69,12 +99,8 @@
               </div>
             </div>
     <div class="lineH blog-detail">
-        <asp:ListView ID="ListView1" runat="server">
-            <ItemTemplate>
-                <h2><%# DataBinder.Eval(Container.DataItem, "NameNoeMatlab") %></h2>
-                <p><%# DataBinder.Eval(Container.DataItem, "Tozihat") %></p>
-            </ItemTemplate>
-        </asp:ListView>
+        <p>
+            <asp:Label ID="lblTozihat" runat="server" ></asp:Label></p>
         </div>
 </asp:Content>
 <asp:Content ID="content4" runat ="server" ContentPlaceHolderID="CPHfooter">
@@ -89,20 +115,6 @@
                     var m = $(this);
                     m.find(".modal-body label.more").text(ft);
                 });
-
-                if ($('.flickr-photo').length) {
-                    $(".flickr-photo:first a[rel^='prettyPhoto']").prettyPhoto({
-                        animation_speed: 'normal',
-                        theme: 'light_square',
-                        slideshow: 3000,
-                        autoplay_slideshow: true
-                    });
-                    $(".flickr-photo:gt(0) a[rel^='prettyPhoto']").prettyPhoto({
-                        animation_speed: 'fast',
-                        slideshow: 10000,
-                        hideflash: true
-                    });
-                }
            
 </script>
  
