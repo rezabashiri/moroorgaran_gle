@@ -13,7 +13,7 @@ namespace CMS.GolestaneShohada.Design
         MyClass mc = new MyClass();
         DataTable dt = new DataTable();
         string sql = "";
-          
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -25,10 +25,10 @@ namespace CMS.GolestaneShohada.Design
                 FillNews();
                 //FillComming();
                 SetNearestAmalit();
-        
+
             }
         }
-  
+
         public DateTime StartAmaliat
         {
             get
@@ -60,8 +60,8 @@ namespace CMS.GolestaneShohada.Design
                 EndAmaliat = amaliat.TarikhePayan ?? DateTime.Now;
 
                 StartAmaliat = new DateTime(DateTime.Now.Year, StartAmaliat.Month, StartAmaliat.Day, StartAmaliat.Hour, StartAmaliat.Minute, 0);
-                EndAmaliat =   new DateTime(DateTime.Now.Year, EndAmaliat.Month, EndAmaliat.Day, EndAmaliat.Hour, EndAmaliat.Minute, 0);
-                 
+                EndAmaliat = new DateTime(DateTime.Now.Year, EndAmaliat.Month, EndAmaliat.Day, EndAmaliat.Hour, EndAmaliat.Minute, 0);
+
                 lblAmaliat.Text = string.Format("عملیات {0} شروع خواهد شد", amaliat.Name);
             }
         }
@@ -70,9 +70,9 @@ namespace CMS.GolestaneShohada.Design
             try
             {
 
-                var rows=dt.Select("PartID=1");
-          
-                ListView1.DataSource = mc.GetRowsDefaultView(rows,dt) ;
+                var rows = dt.Select("PartID=1");
+
+                ListView1.DataSource = mc.GetRowsDefaultView(rows, dt);
                 ListView1.DataBind();
             }
             catch (Exception ex)
@@ -80,7 +80,7 @@ namespace CMS.GolestaneShohada.Design
             }
             finally
             {
-              mc.disconnect();
+                mc.disconnect();
             }
         }
         public void FillEvent()
@@ -88,7 +88,7 @@ namespace CMS.GolestaneShohada.Design
             try
             {
                 var rows = dt.Select("PartID=3");
-                ListView2.DataSource =mc.GetRowsDefaultView(rows,dt)  ;
+                ListView2.DataSource = mc.GetRowsDefaultView(rows, dt);
                 ListView2.DataBind();
             }
             catch (Exception)
@@ -119,16 +119,16 @@ namespace CMS.GolestaneShohada.Design
             {
             }
         }
-        
+
         public void FillComming()
         {
             //ListView222 = new Golestan.Helpers.InterFace().GetShahidCloserToDeath(10);
-            
+
         }
- 
 
-     
 
-    
+
+
+
     }
 }

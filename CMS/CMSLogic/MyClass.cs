@@ -545,6 +545,26 @@ public class MyClass
         }
         return dev;
     }
+    public DataTable SpComment(string MyId, string Stat)
+    {
+        DataSet ds = new DataSet();
+
+        cm.CommandType = CommandType.StoredProcedure;
+        cm.CommandText = "SpCommentList";
+        cm.Parameters.Clear();
+        cm.Parameters.Add("@ID", SqlDbType.NVarChar);
+        cm.Parameters.Add("@Stat", SqlDbType.NVarChar);
+
+        cm.Parameters["@ID"].Value = MyId;
+        cm.Parameters["@Stat"].Value = Stat;
+
+        da.SelectCommand = cm;
+        da.Fill(ds);
+
+        DataTable dt = ds.Tables[0];
+        return dt;
+    }
+
 }
 
 
