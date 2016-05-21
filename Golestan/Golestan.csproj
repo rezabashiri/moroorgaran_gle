@@ -150,6 +150,8 @@
     <Compile Include="DBClass\Vahed.cs" />
     <Compile Include="DBClass\Vaziat.cs" />
     <Compile Include="DBClass\ViewAmaliat.cs" />
+    <Compile Include="DBClass\ViewAmaliatMantaghe.cs" />
+    <Compile Include="DBClass\ViewAmaliatNiroo.cs" />
     <Compile Include="DBClass\ViewAttach.cs" />
     <Compile Include="DBClass\ViewNirooVahed.cs" />
     <Compile Include="DBClass\ViewShahid.cs" />

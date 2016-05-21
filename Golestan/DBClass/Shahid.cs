@@ -69,6 +69,18 @@ namespace Golestan.Model
             [Display (Name="اطلاعات رسیده مخاطبین")]
             public virtual ICollection<AfzoodaneEtelaat> AfzoodaneEtelaats { get; set; }
         }
+        [UIHint("QRCode")]
+        [Display(Name="QRCode")]
+        public string StringQRCode
+        {
+            get
+            {
+                tkv.Utility.QRCodeHelper _qr = new tkv.Utility.QRCodeHelper();
+                string value = string.Format("Name={1}-family={2}-id={0}", this.ID, this.Name, this.Family);
+                var v = _qr.EnCodeQRCodeToBase64String(value);
+               return  _qr.EnCodeQRCodeToBase64String(value);
+            }
+        }
         public override string ToString()
         {
             return string.Format("{0} {1}", this.Name, this.Family);
