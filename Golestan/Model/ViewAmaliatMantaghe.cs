@@ -30,5 +30,6 @@ namespace Golestan.Model
         public string ToziahtMogheyat { get; set; }
         public Nullable<int> IDMantaghe { get; set; }
         public string NameMantaghe { get; set; }
+        public string VirtualAddress { get; set; }
     }
 }
