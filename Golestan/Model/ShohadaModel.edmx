@@ -313,6 +313,27 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewAmaliatMantaghe' does not 
           <Property Name="ToziahtMogheyat" Type="nvarchar" MaxLength="150" />
           <Property Name="IDMantaghe" Type="int" />
           <Property Name="NameMantaghe" Type="nvarchar" MaxLength="50" />
+          <Property Name="VirtualAddress" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'GolestanShohada.dbo.ViewAmaliatNiroo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ViewAmaliatNiroo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Kholase" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tozihat" Type="nvarchar(max)" />
+          <Property Name="TarikhePayan" Type="datetime" />
+          <Property Name="TarikheShoroo" Type="datetime" />
+          <Property Name="Ramz" Type="nvarchar" MaxLength="150" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="IDNiroo" Type="int" />
+          <Property Name="IDYegan" Type="int" />
+          <Property Name="IDVahed" Type="int" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NameNiroo" Type="nvarchar" MaxLength="50" />
+          <Property Name="NameYegan" Type="nvarchar" MaxLength="50" />
+          <Property Name="NameVahed" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'GolestanShohada.dbo.ViewAttach' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -885,6 +906,9 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
           <Parameter Name="WhereParameter" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="GetTheNearestAmaliat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="gle" />
+        <Function Name="sp_GetAmaliatNirooByIdAmaliat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="gle">
+          <Parameter Name="IDAmaliat" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_GetAmaliatNoghteAsarByIdAmaliat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="gle">
           <Parameter Name="IDAmaliat" Type="int" Mode="In" />
         </Function>
@@ -965,8 +989,26 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
     [ViewAmaliatMantaghe].[NameMogheyat] AS [NameMogheyat], 
     [ViewAmaliatMantaghe].[ToziahtMogheyat] AS [ToziahtMogheyat], 
     [ViewAmaliatMantaghe].[IDMantaghe] AS [IDMantaghe], 
-    [ViewAmaliatMantaghe].[NameMantaghe] AS [NameMantaghe]
+    [ViewAmaliatMantaghe].[NameMantaghe] AS [NameMantaghe], 
+    [ViewAmaliatMantaghe].[VirtualAddress] AS [VirtualAddress]
     FROM [dbo].[ViewAmaliatMantaghe] AS [ViewAmaliatMantaghe]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ViewAmaliatNiroo" EntityType="Self.ViewAmaliatNiroo" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ViewAmaliatNiroo].[Kholase] AS [Kholase], 
+    [ViewAmaliatNiroo].[Tozihat] AS [Tozihat], 
+    [ViewAmaliatNiroo].[TarikhePayan] AS [TarikhePayan], 
+    [ViewAmaliatNiroo].[TarikheShoroo] AS [TarikheShoroo], 
+    [ViewAmaliatNiroo].[Ramz] AS [Ramz], 
+    [ViewAmaliatNiroo].[Name] AS [Name], 
+    [ViewAmaliatNiroo].[IDNiroo] AS [IDNiroo], 
+    [ViewAmaliatNiroo].[IDYegan] AS [IDYegan], 
+    [ViewAmaliatNiroo].[IDVahed] AS [IDVahed], 
+    [ViewAmaliatNiroo].[ID] AS [ID], 
+    [ViewAmaliatNiroo].[NameNiroo] AS [NameNiroo], 
+    [ViewAmaliatNiroo].[NameYegan] AS [NameYegan], 
+    [ViewAmaliatNiroo].[NameVahed] AS [NameVahed]
+    FROM [dbo].[ViewAmaliatNiroo] AS [ViewAmaliatNiroo]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="ViewAttach" EntityType="Self.ViewAttach" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -1653,6 +1695,10 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
           <Parameter Name="IDAmaliat" Mode="In" Type="Int32" />
           </FunctionImport>
           <EntitySet Name="ViewAmaliatMantaghes" EntityType="GolestanShohadaModel.ViewAmaliatMantaghe" />
+          <EntitySet Name="ViewAmaliatNiroos" EntityType="GolestanShohadaModel.ViewAmaliatNiroo" />
+          <FunctionImport Name="sp_GetAmaliatNirooByIdAmaliat" EntitySet="ViewAmaliatNiroos" ReturnType="Collection(GolestanShohadaModel.ViewAmaliatNiroo)">
+            <Parameter Name="IDAmaliat" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="Shahid">
           <Key>
@@ -2220,7 +2266,41 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
           <Property Name="ToziahtMogheyat" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="IDMantaghe" Type="Int32" />
           <Property Name="NameMantaghe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VirtualAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="ViewAmaliatNiroo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Kholase" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tozihat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TarikhePayan" Type="DateTime" Precision="3" />
+          <Property Name="TarikheShoroo" Type="DateTime" Precision="3" />
+          <Property Name="Ramz" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDNiroo" Type="Int32" />
+          <Property Name="IDYegan" Type="Int32" />
+          <Property Name="IDVahed" Type="Int32" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NameNiroo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameYegan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameVahed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="sp_GetAmaliatNirooByIdAmaliat_Result">
+          <Property Type="String" Name="Kholase" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Tozihat" Nullable="true" />
+          <Property Type="DateTime" Name="TarikhePayan" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="TarikheShoroo" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Ramz" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="IDNiroo" Nullable="true" />
+          <Property Type="Int32" Name="IDYegan" Nullable="true" />
+          <Property Type="Int32" Name="IDVahed" Nullable="true" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="NameNiroo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="NameYegan" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="NameVahed" Nullable="true" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2697,6 +2777,7 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
           <EntitySetMapping Name="ViewAmaliatMantaghes">
             <EntityTypeMapping TypeName="GolestanShohadaModel.ViewAmaliatMantaghe">
               <MappingFragment StoreEntitySet="ViewAmaliatMantaghe">
+                <ScalarProperty Name="VirtualAddress" ColumnName="VirtualAddress" />
                 <ScalarProperty Name="NameMantaghe" ColumnName="NameMantaghe" />
                 <ScalarProperty Name="IDMantaghe" ColumnName="IDMantaghe" />
                 <ScalarProperty Name="ToziahtMogheyat" ColumnName="ToziahtMogheyat" />
@@ -2716,6 +2797,27 @@ warning 6002: The table/view 'GolestanShohada.dbo.ViewShahidRabete' does not hav
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ViewAmaliatNiroos">
+            <EntityTypeMapping TypeName="GolestanShohadaModel.ViewAmaliatNiroo">
+              <MappingFragment StoreEntitySet="ViewAmaliatNiroo">
+                <ScalarProperty Name="NameVahed" ColumnName="NameVahed" />
+                <ScalarProperty Name="NameYegan" ColumnName="NameYegan" />
+                <ScalarProperty Name="NameNiroo" ColumnName="NameNiroo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDVahed" ColumnName="IDVahed" />
+                <ScalarProperty Name="IDYegan" ColumnName="IDYegan" />
+                <ScalarProperty Name="IDNiroo" ColumnName="IDNiroo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Ramz" ColumnName="Ramz" />
+                <ScalarProperty Name="TarikheShoroo" ColumnName="TarikheShoroo" />
+                <ScalarProperty Name="TarikhePayan" ColumnName="TarikhePayan" />
+                <ScalarProperty Name="Tozihat" ColumnName="Tozihat" />
+                <ScalarProperty Name="Kholase" ColumnName="Kholase" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetAmaliatNirooByIdAmaliat" FunctionName="GolestanShohadaModel.Store.sp_GetAmaliatNirooByIdAmaliat">
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

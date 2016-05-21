@@ -64,5 +64,10 @@ namespace Golestan.Helpers
             Amaliat _am = new Amaliat();
             return _am.GetAmaliatManatagheByIDAmaliat(IDAmaliat);
         }
+        public List<ViewAmaliatNiroo> GetAmaliatNirooByIDAmaliat(int? IDAmaliat)
+        {
+            Amaliat _am = new Amaliat();
+            return _am.GetAmaliatNirooByIDAmaliat(IDAmaliat);
+        }
     }
 }
