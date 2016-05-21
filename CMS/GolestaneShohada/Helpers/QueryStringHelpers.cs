@@ -10,7 +10,8 @@ namespace CMS.GolestaneShohada.Helpers
         public enum QueryStrings
         {
             shahidID,
-            GhateID
+            GhateID,
+            AmaliyatID
         }
         public enum ViewMode
         {

@@ -22,6 +22,11 @@
         {
             width:64px !important;
         }
+        @media (min-width: 1200px) {
+            .event-detail-timer {
+                width:651px !important;
+            }
+        }
     </style>
 </asp:Content>
 
@@ -37,11 +42,9 @@
                       <asp:ListView ID="ListView2" runat="server">
                           <ItemTemplate>
                                 <li>
-                                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="play" > 
-                                      <i class="fa fa-map-marker"></i></asp:HyperLink> 
                       <div class="text-box">
-                          <strong class="title"><%# DataBinder.Eval(Container.DataItem, "NameMogheyat")%>&nbsp;-&nbsp;<%# DataBinder.Eval(Container.DataItem, "NameMantaghe")%></strong>
-                        <a href="#" class="readmore" data-toggle="modal" data-target="#ShowMoreModal" data-fulltext='<%# DataBinder.Eval(Container.DataItem, "ToziahtMogheyat")%>'>ادامه</a></div>
+                          <strong class="title"><%# DataBinder.Eval(Container.DataItem, "NameMogheyat")%>&nbsp;|&nbsp;<%# DataBinder.Eval(Container.DataItem, "NameMantaghe")%></strong>
+                        <a href="#" class="readmore" data-toggle="modal" data-target="#ShowMoreModal" data-fulltext='<%# DataBinder.Eval(Container.DataItem, "ToziahtMogheyat")%>'>درباره</a></div>
                     </li>
                           </ItemTemplate>
                       </asp:ListView>
@@ -52,7 +55,7 @@
 <div class="modal-content persian">
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal">&times;</button>
-<h5 class="modal-title"><i class="fa fa-pencil"></i>&nbsp;ادامه سخن</h5>
+<h5 class="modal-title"><i class="fa fa-pencil"></i>&nbsp;درباره منطقه</h5>
 <input id="lblashna" runat="server" type="hidden" class="english form-control AshID" />
 </div>
 <div class="modal-body">
@@ -66,14 +69,30 @@
 </div>
 </div>
 </div>
+       <div class="sidebar-latest-news">
+                  <h3>یگان های عملیات</h3>
+                  <ul>
+                      <asp:ListView ID="ListView1" runat="server">
+                          <ItemTemplate>
+                                <li>
+                      <div class="text-box">
+                          <strong class="title">نیروی &nbsp;<%# DataBinder.Eval(Container.DataItem, "NameYegan")%>&nbsp;<%# DataBinder.Eval(Container.DataItem, "NameNiroo")%></strong>
+                          <div class="text-box"><p>رسته: <%# DataBinder.Eval(Container.DataItem, "NameVahed")%></p></div>
+
+                      </div>
+                    </li>
+                          </ItemTemplate>
+                      </asp:ListView>
+                  </ul>
+                </div>
     </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
             <div class="fram-holder">
               <div class="right">
                 <ul>
-                  <li><span><i class="fa fa-calendar"></i>رمز عملیات <asp:Label ID="lblTavalod" runat="server"></asp:Label></span></li>
-                  <li><span><i class="fa fa-user"></i>تاریخ شروع <asp:Label ID="lblFather" runat="server" ></asp:Label></span></li>
-                  <li><span><i class="fa fa-map"></i>تاریخ پایان <asp:Label ID="lblShahr" runat="server"></asp:Label></span></li>
+                  <li><span><i class="fa fa-calendar"></i>رمز عملیات:  <asp:Label ID="lblRmaz" runat="server"></asp:Label></span></li>
+                  <li><span><i class="fa fa-user"></i>تاریخ شروع:  <asp:Label ID="lblStart" runat="server" ></asp:Label></span></li>
+                  <li><span><i class="fa fa-map"></i>تاریخ پایان:  <asp:Label ID="lblend" runat="server"></asp:Label></span></li>
                 </ul></div>
               <div class="event-frame"> <a href="#">
                   <asp:Image ID="Image1" runat="server" /></a>
@@ -91,9 +110,6 @@
                    
                                </div>
                       </div>
-                  </div>
-                  <div class="map-box">
-                       <uc2:UscShahidMaghbare runat="server" ID="UscShahidMaghbare" />
                   </div>
                 </div>
               </div>

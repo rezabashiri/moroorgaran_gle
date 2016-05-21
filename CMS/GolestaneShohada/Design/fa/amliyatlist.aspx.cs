@@ -65,7 +65,7 @@ namespace CMS.GolestaneShohada.Design.fa
         {
             if (id != null)
             {
-                string link = string.Format("PerAmaliyat.aspx?{0}", Helpers.QueryStringHelpers.SetValue(Helpers.QueryStringHelpers.QueryStrings.shahidID, id.ToString()));
+                string link = string.Format("PerAmaliyat.aspx?{0}", Helpers.QueryStringHelpers.SetValue(Helpers.QueryStringHelpers.QueryStrings.AmaliyatID, id.ToString()));
                 return link;
             }
             return string.Empty;

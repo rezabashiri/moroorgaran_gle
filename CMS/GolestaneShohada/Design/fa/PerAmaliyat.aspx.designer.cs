@@ -40,31 +40,40 @@ namespace CMS.GolestaneShohada.Design.fa {
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden lblashna;
         
         /// <summary>
-        /// lblTavalod control.
+        /// ListView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTavalod;
+        protected global::System.Web.UI.WebControls.ListView ListView1;
         
         /// <summary>
-        /// lblFather control.
+        /// lblRmaz control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFather;
+        protected global::System.Web.UI.WebControls.Label lblRmaz;
         
         /// <summary>
-        /// lblShahr control.
+        /// lblStart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblShahr;
+        protected global::System.Web.UI.WebControls.Label lblStart;
+        
+        /// <summary>
+        /// lblend control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblend;
         
         /// <summary>
         /// Image1 control.
@@ -74,15 +83,6 @@ namespace CMS.GolestaneShohada.Design.fa {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image1;
-        
-        /// <summary>
-        /// UscShahidMaghbare control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::CMS.GolestaneShohada.Controls.UscShahidMaghbare UscShahidMaghbare;
         
         /// <summary>
         /// lblTozihat control.

@@ -12,9 +12,7 @@
                 <asp:ListView ID="ListView1" runat="server">
                     <ItemTemplate>
                         <li>
-                            <asp:HyperLink NavigateUrl='<%# CreateLink(Eval("IDAmaliat")) %>' ID="hpr" runat="server">
-
-                          
+              <asp:HyperLink NavigateUrl='<%# CreateLink(Eval("IDAmaliat")) %>' ID="hpr" runat="server">
                 <div class="sermon-box">
                   <div class="frame"> <asp:Image ImageUrl='<%# DataBinder.Eval( Container.DataItem,"VirtualAddress") %>' ID="imgShahid" runat="server" alt="img"></asp:Image></div>
                   <div class="text-box">
@@ -30,7 +28,7 @@
                        <asp:HyperLink NavigateUrl='<%# CreateLink(Eval("IDAmaliat")) %>' ID="HyperLink1" runat="server"  CssClass="readmore">بیشتر بدانید</asp:HyperLink>
                   </div>
                 </div>
-                                  </asp:HyperLink>
+             </asp:HyperLink>
               </li>
                     </ItemTemplate>
                 </asp:ListView>
