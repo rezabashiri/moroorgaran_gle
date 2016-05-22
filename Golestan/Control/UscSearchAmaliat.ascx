@@ -6,14 +6,14 @@
 <div class="row">
    
     <div class="col-sm-4">
-         <asp:TextBox ID="txtName" placeholder="نام عملیات" CssClass="comment-input" runat="server"></asp:TextBox>
+         <asp:TextBox ID="txtName" placeholder="نام عملیات" CssClass="comment-input form-control" runat="server"></asp:TextBox>
     </div>
   
     <div class="col-sm-4">
-        <asp:TextBox ID="txtRamz" placeholder="رمز عملیات" CssClass="comment-input" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtRamz" placeholder="رمز عملیات" CssClass="comment-input form-control" runat="server"></asp:TextBox>
     </div> 
       <div class="col-sm-4">
-        <asp:TextBox ID="txtYadmanName" placeholder="یادمان" CssClass="comment-input" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtYadmanName" placeholder="یادمان" CssClass="comment-input form-control" runat="server"></asp:TextBox>
     </div>
 </div>
 <div class="row">
@@ -22,7 +22,7 @@
          منطقه عملیات
     </div>
     <div class="col-sm-4">
-        <asp:DropDownList  ID="cmbMantaghe" SelectMethod="Mantaghe_getdata" AppendDataBoundItems="true"  AutoPostBack="true" OnSelectedIndexChanged="cmbMantaghe_SelectedIndexChanged" DataValueField="ID" DataTextField="Name" runat="server">
+        <asp:DropDownList  ID="cmbMantaghe" SelectMethod="Mantaghe_getdata" AppendDataBoundItems="true" CssClass="form-control"  AutoPostBack="true" OnSelectedIndexChanged="cmbMantaghe_SelectedIndexChanged" DataValueField="ID" DataTextField="Name" runat="server">
             <asp:ListItem Text="انتخاب کنید" Value=""></asp:ListItem>
         </asp:DropDownList>
     </div>
@@ -30,7 +30,7 @@
         موقعیت عملیات
     </div>
     <div class="col-sm-4">
-        <asp:DropDownList  ID="cmbMogheyat" AutoPostBack="true" AppendDataBoundItems="true" OnSelectedIndexChanged="cmbMogheyat_SelectedIndexChanged" DataTextField="Name" DataValueField="ID" runat="server">
+        <asp:DropDownList  ID="cmbMogheyat" AutoPostBack="true" AppendDataBoundItems="true" CssClass="form-control" OnSelectedIndexChanged="cmbMogheyat_SelectedIndexChanged" DataTextField="Name" DataValueField="ID" runat="server">
             <asp:ListItem Text="انتخاب کنید" Value=""></asp:ListItem>     
         </asp:DropDownList>
     </div>
@@ -42,7 +42,7 @@
     </div>
  
     <div class="col-sm-4">
-        <asp:DropDownList  ID="cmbNoghteAsar" AppendDataBoundItems="true" DataTextField="Name" DataValueField="ID" runat="server">
+        <asp:DropDownList  ID="cmbNoghteAsar" AppendDataBoundItems="true" DataTextField="Name" CssClass="form-control" DataValueField="ID" runat="server">
             <asp:ListItem Text="انتخاب کنید" Value=""></asp:ListItem>
         </asp:DropDownList>
     </div> 

@@ -6,14 +6,14 @@
 <div class="row" >
    
     <div class="col-sm-4">
-         <asp:TextBox ID="txtName" placeholder="نام" CssClass="comment-input" runat="server"></asp:TextBox>
+         <asp:TextBox ID="txtName" placeholder="نام" CssClass="comment-input form-control" runat="server"></asp:TextBox>
     </div>
   
     <div class="col-sm-4">
-        <asp:TextBox ID="txtFamily" placeholder="نام خانوادگی" CssClass="comment-input" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtFamily" placeholder="نام خانوادگی" CssClass="comment-input form-control" runat="server"></asp:TextBox>
     </div> 
       <div class="col-sm-4">
-        <asp:TextBox ID="txtShomareShenasname" placeholder="شماره شناسنامه" CssClass="comment-input" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtShomareShenasname" placeholder="شماره شناسنامه" CssClass="comment-input form-control" runat="server"></asp:TextBox>
     </div>
 </div>
 <div class="row">
@@ -21,7 +21,7 @@
         جنسیت
     </div>
     <div class="col-sm-4 pull-left">
-        <asp:DropDownList  ID="cmbJensiat" runat="server">
+        <asp:DropDownList  ID="cmbJensiat" CssClass="form-control" runat="server">
             <asp:ListItem Text="انتخاب کنید" Value=""></asp:ListItem>
             <asp:ListItem Text="مرد" Value="مرد">
             </asp:ListItem>
@@ -32,7 +32,7 @@
          استان محل تولد
     </div>
     <div class="col-sm-4 pull-left">
-        <asp:DropDownList  ID="cmbOstan" SelectMethod="Ostan_getdata" AppendDataBoundItems="true"  AutoPostBack="true" OnSelectedIndexChanged="cmbOstan_SelectedIndexChanged" DataValueField="ID" DataTextField="Name" runat="server">
+        <asp:DropDownList  ID="cmbOstan" SelectMethod="Ostan_getdata" CssClass="form-control" AppendDataBoundItems="true"  AutoPostBack="true" OnSelectedIndexChanged="cmbOstan_SelectedIndexChanged" DataValueField="ID" DataTextField="Name" runat="server">
             <asp:ListItem Text="انتخاب کنید" Value=""></asp:ListItem>
         </asp:DropDownList>
     </div>
@@ -42,8 +42,8 @@
         شهرستان
     </div>
     <div class="col-sm-4 pull-left">
-        <asp:DropDownList  ID="cmbShahrestan" AutoPostBack="true" AppendDataBoundItems="true"  OnSelectedIndexChanged="cmbShahrestan_SelectedIndexChanged" DataTextField="Name" DataValueField="ID" runat="server">
-            <asp:ListItem Text="انتخاب کنید" Value=""></asp:ListItem>     
+        <asp:DropDownList  ID="cmbShahrestan" AutoPostBack="true" CssClass="form-control"    OnSelectedIndexChanged="cmbShahrestan_SelectedIndexChanged" DataTextField="Name" DataValueField="ID" runat="server">
+            
         </asp:DropDownList>
     </div>
     <div class="col-sm-2 pull-right">
@@ -51,8 +51,8 @@
     </div>
  
     <div class="col-sm-4 pull-left">
-        <asp:DropDownList  ID="cmbBakhsh" AppendDataBoundItems="true"   DataTextField="Name" DataValueField="ID"   runat="server">
-            <asp:ListItem Text="انتخاب کنید" Value=""></asp:ListItem>
+        <asp:DropDownList  ID="cmbBakhsh"    CssClass="form-control" DataTextField="Name" DataValueField="ID"   runat="server">
+            
         </asp:DropDownList>
     </div> 
 
@@ -65,7 +65,7 @@
     <rhp:DatePicker CssClass=" text-right" Enabled="true"  ID="dpcTavalodAz"  runat="server"></rhp:DatePicker>
         </div>
         <div class="col-sm-2 pull-right">
-            تاریخ تول تا
+            تاریخ تولد تا
         </div>
          <div class="col-sm-4 pull-left">
     <rhp:DatePicker CssClass=" text-right" Enabled="true"  ID="dpcTavalodTa"  runat="server"></rhp:DatePicker>

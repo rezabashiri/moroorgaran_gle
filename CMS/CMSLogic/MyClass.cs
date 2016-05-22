@@ -296,6 +296,8 @@ public class MyClass
     {
         PersianCalendar pc = new PersianCalendar();
         DateTime InputDate = Convert.ToDateTime(dd);
+        if (InputDate == DateTime.MinValue)
+            return string.Empty;
         string year = pc.GetYear(InputDate).ToString();
         string m = pc.GetMonth(InputDate).ToString();
         string day = pc.GetDayOfMonth(InputDate).ToString();

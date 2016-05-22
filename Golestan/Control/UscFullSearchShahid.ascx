@@ -9,9 +9,11 @@
 
 
 <ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#home">شهید</a></li>
+  <li><a data-toggle="tab" href="#menu1">عملیات</a></li>
   <li><a data-toggle="tab" href="#menu2">یگان</a></li>
-    <li><a data-toggle="tab" href="#menu1">عملیات</a></li>
-    <li class="active"><a data-toggle="tab" href="#home">شهید</a></li>
+
+
 </ul>
 
 <div class="tab-content">
@@ -33,7 +35,7 @@
 </div>
 <div class="row">
     <div class="col-sm-12 text-center">
-        <asp:Button runat="server" ID="btnSearch" Text="جستجو" CssClass="btn detail-btn-sumbit2" OnClick="btnSearch_Click" />
+        <asp:Button runat="server" ID="btnSearch" Text="جستجو" CssClass="btn btn-info" OnClick="btnSearch_Click" />
     </div>
 </div>
     </div>

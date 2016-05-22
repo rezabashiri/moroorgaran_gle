@@ -30,7 +30,7 @@ namespace Golestan.Control
             string niroosearch = UscSearchNiroo.SearchString;
             if (!string.IsNullOrEmpty(amaliatsearch))
             {
-                condition = string.Format("IDAmaliat in (select IDAmaliat from ViewAmaiatMantaghe where {0} )", amaliatsearch);
+                condition = string.Format("IDAmaliat in (select IDAmaliat from ViewAmaliatMantaghe where {0} )", amaliatsearch);
             }
             if (!string.IsNullOrEmpty(niroosearch))
             {

@@ -69,6 +69,8 @@ namespace Golestan.Control
             if (!string.IsNullOrEmpty(cmbOstan.SelectedValue))
             {
                 int idostan = cmbOstan.SelectedValue.ToInt32();
+                cmbShahrestan.Items.Clear();
+                cmbShahrestan.Items.Add(new ListItem() { Text = "انتخاب کنید", Value = "" });
                 cmbShahrestan.DataSource = new Shahrestan().SelectShahrestanByOstan(idostan).ToList();
                 cmbShahrestan.DataBind();
             }
@@ -79,6 +81,8 @@ namespace Golestan.Control
             if (!string.IsNullOrEmpty(cmbShahrestan.SelectedValue))
             {
                 int idshahrestan = cmbShahrestan.SelectedValue.ToInt32();
+                cmbBakhsh.Items.Clear();
+                cmbBakhsh.Items.Add(new ListItem() { Text = "انتخاب کنید", Value = "" });
                 cmbBakhsh.DataSource = new Bakhsh().SelectBakhshByShahrestan(idshahrestan) ;
                 cmbBakhsh.DataBind();
             }

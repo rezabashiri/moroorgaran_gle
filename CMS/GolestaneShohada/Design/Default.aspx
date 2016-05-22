@@ -235,7 +235,7 @@
               <div class="round"><i class="fa fa-map"></i></div>
               <h3>جستجوی عملیاتها</h3>
               <p> آشنایی با عملیاتهای انجام شده و نقطه اثر هر کدام از عملیاتها بر روی نقشه.</p>
-              <a href="#" class="btn-widget">جستجو</a> </div>
+              <a href="/GolestaneShohada/Design/fa/amliyatlist.aspx" class="btn-widget">جستجو</a> </div>
           </div>
        
           <div class="col-md-3 col-sm-6">
@@ -243,7 +243,7 @@
               <div class="round"><i class="fa fa-users"></i></div>
               <h3>شهدا</h3>
               <p>شهید خود را بر اساس اطلاعات شخصی جستجو کنیم و افکارش را بیشتر بشناسیم.</p>
-              <a href="fa/SearchShahid" class="btn-widget">جستجو</a> </div>
+              <a href="/GolestaneShohada/Design/fa/shohadalist.aspx" class="btn-widget">جستجو</a> </div>
           </div>
         </div>
       </div>

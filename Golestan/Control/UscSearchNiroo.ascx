@@ -7,7 +7,7 @@
          نیرو
     </div>
     <div class="col-sm-4">
-        <asp:DropDownList  ID="cmbNiroo" SelectMethod="Niroo_getdata" AppendDataBoundItems="true"  AutoPostBack="true" OnSelectedIndexChanged="cmbNiroo_SelectedIndexChanged" DataValueField="ID" DataTextField="Name" runat="server">
+        <asp:DropDownList  ID="cmbNiroo" SelectMethod="Niroo_getdata" CssClass="form-control" AppendDataBoundItems="true"  AutoPostBack="true" OnSelectedIndexChanged="cmbNiroo_SelectedIndexChanged" DataValueField="ID" DataTextField="Name" runat="server">
             <asp:ListItem Text="انتخاب کنید" Value=""></asp:ListItem>
         </asp:DropDownList>
     </div>
@@ -15,7 +15,7 @@
         یگان
     </div>
     <div class="col-sm-4">
-        <asp:DropDownList  ID="cmbYegan" AutoPostBack="true" AppendDataBoundItems="true"  OnSelectedIndexChanged="cmbYegan_SelectedIndexChanged" DataTextField="Name" DataValueField="ID" runat="server">
+        <asp:DropDownList  ID="cmbYegan" AutoPostBack="true"   CssClass="form-control"  OnSelectedIndexChanged="cmbYegan_SelectedIndexChanged" DataTextField="Name" DataValueField="ID" runat="server">
             <asp:ListItem Text="انتخاب کنید" Value=""></asp:ListItem>     
         </asp:DropDownList>
     </div>
@@ -27,7 +27,7 @@
     </div>
  
     <div class="col-sm-4">
-        <asp:DropDownList  ID="cmbVahed" AppendDataBoundItems="true" DataTextField="Name" DataValueField="ID"  runat="server">
+        <asp:DropDownList  ID="cmbVahed"  DataTextField="Name" CssClass="form-control" DataValueField="ID"  runat="server">
             <asp:ListItem Text="انتخاب کنید" Value=""></asp:ListItem>
         </asp:DropDownList>
     </div> 

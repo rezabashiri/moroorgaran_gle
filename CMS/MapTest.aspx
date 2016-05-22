@@ -50,7 +50,8 @@
               
       <%--  <uc2:UscNaghsheGolestanShohada runat="server" ID="UscNaghsheGolestanShohada" />
         <uc1:FullSearchAmaliat ID="usc" runat="server"></uc1:FullSearchAmaliat>--%>
-
+         <uc1:DateTime ID="ucsDateTime" runat="server" />
+        <asp:Button Text="test" ID="btnte" runat="server" OnClick="btnte_Click" />
         <uc2:UscNaghsheManategheJangi runat="server" id="UscNaghsheManategheJangi" />
     </form>
 </body>

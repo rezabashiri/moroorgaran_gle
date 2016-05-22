@@ -35,5 +35,11 @@ namespace CMS
         {
              
         }
+
+        protected void btnte_Click(object sender, EventArgs e)
+        {
+            var d = ucsDateTime.DateTime;
+            var d2 = ucsDateTime.PersianDateTime;
+        }
     }
 }
