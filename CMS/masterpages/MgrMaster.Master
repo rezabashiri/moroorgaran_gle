@@ -100,7 +100,15 @@
                                     </asp:Repeater>
                               </ul>
                   </li>
-
+                    <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-paragraph"></i>
+                          <span>مدیریت جامعه مجازی</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="../panel/CommentMgr.aspx">مدیریت دیدگاه ها</a></li>
+                      </ul>
+                  </li>
                          <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-paragraph"></i>

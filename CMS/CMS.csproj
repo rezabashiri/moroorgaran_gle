@@ -399,11 +399,6 @@
     <Content Include="DynamicData\PageTemplates\Insert.aspx" />
     <Content Include="DynamicData\PageTemplates\List.aspx" />
     <Content Include="DynamicData\PageTemplates\ListDetails.aspx" />
-    <Content Include="fa\Album.aspx" />
-    <Content Include="fa\Contact.aspx" />
-    <Content Include="fa\PartList.aspx" />
-    <Content Include="fa\ReadItem.aspx" />
-    <Content Include="fa\Resume.aspx" />
     <Content Include="fonts\WebYekan.svg" />
     <Content Include="Global.asax" />
     <Content Include="GolestaneShohada\Controls\UscNaghsheGolestanShohada.ascx" />
@@ -427,9 +422,12 @@
     <Content Include="GolestaneShohada\Design\fa\eventarchive.aspx" />
     <Content Include="GolestaneShohada\Design\fa\GolestanMap.aspx" />
     <Content Include="GolestaneShohada\Design\fa\newsarchive.aspx" />
+    <Content Include="GolestaneShohada\Design\fa\PerAmaliyat.aspx" />
     <Content Include="GolestaneShohada\Design\fa\PerShahid.aspx" />
+    <Content Include="GolestaneShohada\Design\fa\ideageneration.aspx" />
     <Content Include="GolestaneShohada\Design\fa\readitem.aspx" />
     <Content Include="GolestaneShohada\Design\fa\ShahidModal.aspx" />
+    <Content Include="GolestaneShohada\Design\fa\amliyatlist.aspx" />
     <Content Include="GolestaneShohada\Design\fa\shohadalist.aspx" />
     <Content Include="GolestaneShohada\Design\fa\WarMap.aspx" />
     <Content Include="GolestaneShohada\Design\GolestanMap\embed.html" />
@@ -1074,6 +1072,7 @@
     <Content Include="panel\ChangeEmail.aspx" />
     <Content Include="panel\ChangePassword.aspx" />
     <Content Include="panel\ChangeUsername.aspx" />
+    <Content Include="panel\CommentMgr.aspx" />
     <Content Include="panel\DailyMsg.aspx" />
     <Content Include="panel\ItemsGroup.aspx" />
     <Content Include="panel\ItemsList.aspx" />
@@ -1425,21 +1424,6 @@
     <Compile Include="DynamicData\PageTemplates\ListDetails.aspx.designer.cs">
       <DependentUpon>ListDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="fa\Album.aspx.designer.cs">
-      <DependentUpon>Album.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="fa\Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="fa\PartList.aspx.designer.cs">
-      <DependentUpon>PartList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="fa\ReadItem.aspx.designer.cs">
-      <DependentUpon>ReadItem.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="fa\Resume.aspx.designer.cs">
-      <DependentUpon>Resume.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1492,12 +1476,26 @@
     <Compile Include="GolestaneShohada\Design\fa\newsarchive.aspx.designer.cs">
       <DependentUpon>newsarchive.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\PerAmaliyat.aspx.cs">
+      <DependentUpon>PerAmaliyat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\PerAmaliyat.aspx.designer.cs">
+      <DependentUpon>PerAmaliyat.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GolestaneShohada\Design\fa\pershahid.aspx.cs">
       <DependentUpon>PerShahid.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GolestaneShohada\Design\fa\pershahid.aspx.designer.cs">
       <DependentUpon>PerShahid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\ideageneration.aspx.cs">
+      <DependentUpon>ideageneration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\ideageneration.aspx.designer.cs">
+      <DependentUpon>ideageneration.aspx</DependentUpon>
     </Compile>
     <Compile Include="GolestaneShohada\Design\fa\readitem.aspx.cs">
       <DependentUpon>readitem.aspx</DependentUpon>
@@ -1513,12 +1511,22 @@
     <Compile Include="GolestaneShohada\Design\fa\ShahidModal.aspx.designer.cs">
       <DependentUpon>ShahidModal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\amliyatlist.aspx.cs">
+      <DependentUpon>amliyatlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\amliyatlist.aspx.designer.cs">
+      <DependentUpon>amliyatlist.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GolestaneShohada\Design\fa\shohadalist.aspx.cs">
       <DependentUpon>shohadalist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GolestaneShohada\Design\fa\shohadalist.aspx.designer.cs">
       <DependentUpon>shohadalist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GolestaneShohada\Design\fa\simple-math-captcha.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GolestaneShohada\Design\fa\WarMap.aspx.cs">
       <DependentUpon>WarMap.aspx</DependentUpon>
@@ -1565,26 +1573,6 @@
       <DependentUpon>WebMaster.master</DependentUpon>
     </Compile>
     <Compile Include="CMSLogic\MyClass.cs" />
-    <Compile Include="fa\Album.aspx.cs">
-      <DependentUpon>Album.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="fa\Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="fa\PartList.aspx.cs">
-      <DependentUpon>PartList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="fa\ReadItem.aspx.cs">
-      <DependentUpon>ReadItem.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="fa\Resume.aspx.cs">
-      <DependentUpon>Resume.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="MasterPages\WebMaster.master.cs">
       <DependentUpon>WebMaster.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1644,6 +1632,13 @@
     </Compile>
     <Compile Include="panel\ChangeUsername.aspx.designer.cs">
       <DependentUpon>ChangeUsername.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="panel\CommentMgr.aspx.cs">
+      <DependentUpon>CommentMgr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="panel\CommentMgr.aspx.designer.cs">
+      <DependentUpon>CommentMgr.aspx</DependentUpon>
     </Compile>
     <Compile Include="panel\DailyMsg.aspx.cs">
       <DependentUpon>DailyMsg.aspx</DependentUpon>
