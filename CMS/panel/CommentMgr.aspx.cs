@@ -16,6 +16,10 @@ namespace CMS.panel
         DataTable dt = new DataTable();
         string sql = "";
         int del = 1;
+        public int Customer()
+        {
+            return MyClass.CustomerId;
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
