@@ -425,7 +425,6 @@
     <Content Include="GolestaneShohada\Design\fa\newsarchive.aspx" />
     <Content Include="GolestaneShohada\Design\fa\PerAmaliyat.aspx" />
     <Content Include="GolestaneShohada\Design\fa\PerShahid.aspx" />
-    <Content Include="GolestaneShohada\Design\fa\ideageneration.aspx" />
     <Content Include="GolestaneShohada\Design\fa\readitem.aspx" />
     <Content Include="GolestaneShohada\Design\fa\ShahidModal.aspx" />
     <Content Include="GolestaneShohada\Design\fa\amliyatlist.aspx" />
@@ -1490,13 +1489,6 @@
     </Compile>
     <Compile Include="GolestaneShohada\Design\fa\pershahid.aspx.designer.cs">
       <DependentUpon>PerShahid.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GolestaneShohada\Design\fa\ideageneration.aspx.cs">
-      <DependentUpon>ideageneration.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GolestaneShohada\Design\fa\ideageneration.aspx.designer.cs">
-      <DependentUpon>ideageneration.aspx</DependentUpon>
     </Compile>
     <Compile Include="GolestaneShohada\Design\fa\readitem.aspx.cs">
       <DependentUpon>readitem.aspx</DependentUpon>
