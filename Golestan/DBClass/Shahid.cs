@@ -80,6 +80,10 @@ namespace Golestan.Model
                 var v = _qr.EnCodeQRCodeToBase64String(value);
                return  _qr.EnCodeQRCodeToBase64String(value);
             }
+            set
+            {
+                var val = value;
+            }
         }
         public override string ToString()
         {
