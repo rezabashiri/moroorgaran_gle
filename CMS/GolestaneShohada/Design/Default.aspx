@@ -350,7 +350,7 @@
               <div class="frame"> <a href="/GolestaneShohada/Design/fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
                   <img  style="width:263px;height:320px" src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
                                alt='<%# DataBinder.Eval(Container.DataItem, "ItemTopic") %>'></a>
-                <div class="date"><strong class="dat"><%# DataBinder.Eval(Container.DataItem, "dayE") %></strong><strong class="mnt">تیر</strong></div>
+                <div class="date"><strong class="dat"><%# new  MyClass().GetFarsiDate2( DataBinder.Eval(Container.DataItem, "EventDate"),2) %></strong><strong class="mnt"><%# new  MyClass().GetFarsiDate2( DataBinder.Eval(Container.DataItem, "EventDate"),3) %></strong></div>
                 <div class="caption">
                   <h4><%# DataBinder.Eval(Container.DataItem, "ItemTopic") %></h4>
                   <div class="text-box">
