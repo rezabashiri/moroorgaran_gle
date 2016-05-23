@@ -1675,12 +1675,13 @@ span.colun-3 {
 	padding: 13px 10px;
 }
 .latest-news .text-box strong.title {
-	font: 400 16px 'iransans','Noto Serif', serif;
+	font-size:12px;
 	color: #333;
 	display: block;
 	word-spacing: -3px;
 	padding: 0 0 14px 0;
     direction:rtl;
+    line-height:25px;
 }
 .date-row {
 	float: left;
@@ -1690,28 +1691,36 @@ span.colun-3 {
 	margin: 0 0 17px 0;
 }
 .date-row a.link {
-	font: 400 12px 'Open Sans', sans-serif;
+	font-size:10px;
 	color: #666;
 	padding: 0 7px 0 0;
 	text-decoration: none;
+   float:right;
 }
 .date-row a.link .fa {
-	padding: 0 5px 0 0;
+	padding: 0 0 0 5px;
 }
 .latest-news p {
-	font: 400 14px/20px 'Open Sans', sans-serif;
+	font-size:11px;
+    line-height:20px;
+    text-align:justify;
+    direction:rtl;
 	color: #666;
 	margin: 0 0 7px 0;
 }
 .latest-news a.readmore {
-	font: italic 400 14px 'Noto Serif', serif;
-	color: #333;
-	float: left;
+color: #333;
+	float: right;
 	text-decoration: none;
-	padding: 0 0 15px 15px;
+	padding: 4px 7px;
 	position: relative;
+    border:1px solid #34b500;
+    border-radius:4px;
+    font-size:11px;
+    margin-bottom:5px;
+
 }
-.latest-news a.readmore:before {
+/*.latest-news a.readmore:before {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -1719,7 +1728,7 @@ span.colun-3 {
 	border-left: 2px solid;
 	border-width: 10px;
 	height: 2px;
-}
+}*/
 .timelines-box {
 	float: left;
 	width: 100%;
@@ -4140,7 +4149,8 @@ span.colun-3 {
 	float: right;
 }
 .sidebar-latest-news .text-box strong.title {
-	font: 400 16px/16px 'Noto Serif', serif;
+	font-size:12px;
+    line-height:24px;
 	color: #333;
 	display: block;
 	padding: 0 0 10px 0;
@@ -4156,7 +4166,9 @@ span.colun-3 {
 	font-style: italic;
 }
 .sidebar-latest-news .text-box p {
-	font-size:12px;
+	font-size:11px;
+    line-height:25px;
+    text-align:justify;
 	color: #666;
 	margin: 0 0 6px 0;
 }
