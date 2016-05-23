@@ -295,7 +295,13 @@ public class MyClass
     public static string GetFarsiDate(object dd)
     {
         PersianCalendar pc = new PersianCalendar();
-        DateTime InputDate = Convert.ToDateTime(dd);
+        DateTime InputDate ;
+        if (dd == null)
+            return string.Empty;
+        if (!DateTime.TryParse(dd.ToString(), out InputDate))
+            return string.Empty;
+        if (InputDate == DateTime.MinValue)
+            return string.Empty;
         string year = pc.GetYear(InputDate).ToString();
         string m = pc.GetMonth(InputDate).ToString();
         string day = pc.GetDayOfMonth(InputDate).ToString();
@@ -372,10 +378,16 @@ public class MyClass
         date = string.Format(date, DayOfWeek, day, month, year);
         return date;
     }
-    public string GetFarsiDate2(object dd, int kind)
+    public  string GetFarsiDate2(object dd, int kind)
     {
         PersianCalendar pc = new PersianCalendar();
-        DateTime InputDate = Convert.ToDateTime(dd);
+        DateTime InputDate;
+        if (dd == null)
+            return string.Empty;
+        if (!DateTime.TryParse(dd.ToString(), out InputDate))
+            return string.Empty;
+        if (InputDate == DateTime.MinValue)
+            return string.Empty;
         string year = pc.GetYear(InputDate).ToString();
         string m = pc.GetMonth(InputDate).ToString();
         string day = pc.GetDayOfMonth(InputDate).ToString();

@@ -14,8 +14,8 @@
 
     <style type="text/css" >
         #map-canvas {
-            width:263px;
-            height:152px;
+            width:653px;
+            height:220px;
            
         }
         .pin-map 
@@ -95,7 +95,7 @@
                   <li><span><i class="fa fa-map"></i>تاریخ پایان:  <asp:Label ID="lblend" runat="server"></asp:Label></span></li>
                 </ul></div>
               <div class="event-frame"> <a href="#">
-                  <asp:Image ID="Image1" runat="server" /></a>
+                  <asp:Image ID="Image1"   runat="server" /></a>
               
                      <div class="map-row">
                   <div class="event-detail-timer">
@@ -124,13 +124,30 @@
 <script src="/GolestaneShohada/Design/Js/jquery.prettyPhoto.js"></script>
   <script type="text/javascript"   src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2DiT3FNLpHAw407Iph1GNo8OT12ijhQg"></script>
         <script type="text/javascript" >
-
+            google.maps.event.addDomListener(window, 'load', initialize);
                 $("#ShowMoreModal").on("show.bs.modal", function (a) { 
                     var d = $(a.relatedTarget); 
                     var ft = d.data("fulltext");
                     var m = $(this);
                     m.find(".modal-body label.more").text(ft);
                 });
+  
+         
+                   var map;
+                var myLatlng = new google.maps.LatLng( <%= Y %>,<%= X %>);
+             function initialize() {
+                 var mapOptions = {
+                     zoom: 8,
+                     center: myLatlng
+                 }
+                 var doc = document.getElementById('map-canvas');
+                 map = new google.maps.Map(document.getElementById('map-canvas'),
+                     mapOptions);
+                 marker = new google.maps.Marker({
+                     position: myLatlng,
+                     map: map
+                 });
+             }
            
 </script>
  

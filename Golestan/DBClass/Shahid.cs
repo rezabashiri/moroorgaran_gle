@@ -80,6 +80,10 @@ namespace Golestan.Model
                 var v = _qr.EnCodeQRCodeToBase64String(value);
                return  _qr.EnCodeQRCodeToBase64String(value);
             }
+            set
+            {
+                var val = value;
+            }
         }
         public override string ToString()
         {
@@ -106,9 +110,9 @@ namespace Golestan.Model
             if (monjarbshahdat != null)
             {
                 string query = string.Format(" IDAmaliat = {0} ", monjarbshahdat.IDAmaliat);
-                var hamrazm =  SearchShahidAmaliatByParameter(query);
+                var hamrazm = SearchShahidAmaliatByParameter(query);
                 if (hamrazm != null)
-                    return hamrazm.Where(x => x.IDShahid != IDShahid).ToList<ViewShahidAmaliat>();
+                    return hamrazm.Where(x => x.IDShahid != IDShahid).Distinct().ToList<ViewShahidAmaliat>();
                 return null;
             }
             return null;

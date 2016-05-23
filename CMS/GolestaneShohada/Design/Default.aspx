@@ -216,34 +216,34 @@
     <section class="home-widget-box">
       <div class="container">
         <div class="row">
-              <div class="col-md-3 col-sm-6">
+              <div class="col-md-4 col-sm-6">
             <div class="widget-box active">
               <div class="round"><i class="fa fa-map-marker"></i></div>
               <h3>مناطق عملیاتی</h3>
               <p>مناطق عملیاتی در جنگ کدام ها بوده اند و چه شهدایی در این مناطق به شهادت رسیده اند.</p>
               <a href="/GolestaneShohada/Design/fa/WarMap.aspx" class="btn-widget">مناطق</a> </div>
           </div>
-               <div class="col-md-3 col-sm-6">
+          <%--     <div class="col-md-3 col-sm-6">
             <div class="widget-box active">
               <div class="round"><i class="fa fa-gears"></i></div>
               <h3>یگان های عملیاتی</h3>
               <p>یگان های عملیاتی را جستجو نماییم .</p>
               <a href="#" class="btn-widget">یگان ها</a> </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
+          </div>--%>
+          <div class="col-md-4 col-sm-6">
             <div class="widget-box">
               <div class="round"><i class="fa fa-map"></i></div>
               <h3>جستجوی عملیاتها</h3>
               <p> آشنایی با عملیاتهای انجام شده و نقطه اثر هر کدام از عملیاتها بر روی نقشه.</p>
-              <a href="#" class="btn-widget">جستجو</a> </div>
+              <a href="/GolestaneShohada/Design/fa/amliyatlist.aspx" class="btn-widget">جستجو</a> </div>
           </div>
        
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-4 col-sm-6">
             <div class="widget-box active">
               <div class="round"><i class="fa fa-users"></i></div>
               <h3>شهدا</h3>
               <p>شهید خود را بر اساس اطلاعات شخصی جستجو کنیم و افکارش را بیشتر بشناسیم.</p>
-              <a href="fa/SearchShahid" class="btn-widget">جستجو</a> </div>
+              <a href="/GolestaneShohada/Design/fa/shohadalist.aspx" class="btn-widget">جستجو</a> </div>
           </div>
         </div>
       </div>
@@ -347,10 +347,10 @@
                 <ItemTemplate>
                     <div class="col-md-3 col-sm-6">
             <div class="latest-event-box">
-              <div class="frame"> <a href="fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
-                  <img src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
+              <div class="frame"> <a href="/GolestaneShohada/Design/fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
+                  <img  style="width:263px;height:320px" src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
                                alt='<%# DataBinder.Eval(Container.DataItem, "ItemTopic") %>'></a>
-                <div class="date"><strong class="dat">27</strong><strong class="mnt">تیر</strong></div>
+                <div class="date"><strong class="dat"><%# new  MyClass().GetFarsiDate2( DataBinder.Eval(Container.DataItem, "EventDate"),2) %></strong><strong class="mnt"><%# new  MyClass().GetFarsiDate2( DataBinder.Eval(Container.DataItem, "EventDate"),3) %></strong></div>
                 <div class="caption">
                   <h4><%# DataBinder.Eval(Container.DataItem, "ItemTopic") %></h4>
                   <div class="text-box">
@@ -369,7 +369,7 @@
                     <ul>
                       <li><span><i class="fa fa-calendar"></i></span><strong><%# new tkv.Utility.DateConversion().Object_dateconversiontosolar( (Eval("EventDate")) ) %></strong></li>
                     </ul>
-                    <a href="fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>" class="btn-participate">بیشتر</a> </div>
+                    <a href="/GolestaneShohada/Design/fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>" class="btn-participate">بیشتر</a> </div>
                 </div>
               </div>
             </div>
@@ -379,7 +379,7 @@
             </asp:ListView>
           
         </div>
-        <a href="fa/eventarchive.aspx" class="view-calender">مشاهده همه رویدادها</a> </div>
+        <a href="/GolestaneShohada/Design/fa/eventarchive.aspx" class="view-calender">مشاهده همه رویدادها</a> </div>
     </section>
     <!-- Latest Event Box End--> 
     <!-- Home Blog Posts Start-->

@@ -18,7 +18,7 @@ namespace CMS.GolestaneShohada.Design
         {
             if (!IsPostBack)
             {
-                dt = new CMSLogic.DateBaseHelprs().GetItemsByparameter("10", string.Empty);
+                dt = new CMSLogic.DateBaseHelprs().GetItemsByparameter("20", string.Empty);
                 FillSlider();
                 FillEvent();
                 FillBlog();

@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="last_row">
-                <asp:Button ID="btnOk" runat="server" Text="جستجو" CssClass="Mybtn" OnClick="btnOk_Click" />
+                <asp:Button ID="btnOk" runat="server" Text="جستجو" CssClass="btn btn-success" OnClick="btnOk_Click" />
             </div>
             <div class="clear_1">
             </div>

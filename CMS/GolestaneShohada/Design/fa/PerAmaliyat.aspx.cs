@@ -51,6 +51,8 @@ namespace CMS.GolestaneShohada.Design.fa
                 Image1.ImageUrl = manategh[0].VirtualAddress;
                 Image1.AlternateText = manategh[0].NameAmaliat;
                 lblTozihat.Text = manategh[0].Tozihat;
+                X = manategh[0].X ?? 0;
+                Y = manategh[0].Y ?? 0;
             }
         }
     }

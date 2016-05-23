@@ -53,6 +53,8 @@ namespace Golestan.Control
             if (!string.IsNullOrEmpty(cmbNiroo.SelectedValue))
             {
                 int idNiroo = cmbNiroo.SelectedValue.ToInt32();
+                cmbYegan.Items.Clear();
+                cmbYegan.Items.Add(new ListItem() { Text="انتخاب کنید",Value=""});
                 cmbYegan.DataSource = new Yegan().SelectYeganByNiroo(idNiroo) ;
                 cmbYegan.DataBind();
             }
@@ -63,6 +65,8 @@ namespace Golestan.Control
             if (!string.IsNullOrEmpty(cmbYegan.SelectedValue))
             {
                 int idYegan = cmbYegan.SelectedValue.ToInt32();
+                cmbVahed.Items.Clear();
+                cmbVahed.Items.Add(new ListItem() { Text = "انتخاب کنید", Value = "" });
                 cmbVahed.DataSource = new Vahed().SelectVahedByYegan(idYegan) ;
                 cmbVahed.DataBind();
             }
