@@ -444,9 +444,9 @@
                     <img style="max-width:262px;max-height:264px" src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
                                alt='<%# DataBinder.Eval(Container.DataItem, "ItemTopic") %>'></a></div>
                 <div class="text-box"> <strong class="title"><%# DataBinder.Eval(Container.DataItem, "ItemTopic") %></strong>
-                  <div class="date-row"> <a class="link"><i class="fa fa-calendar"></i><%# MyClass.GetFarsiDate(Eval("ShowDate")) %></a>  </div>
+                  <div class="date-row"> <a class="link"><%# MyClass.GetFarsiDate(Eval("ShowDate")) %><i class="fa fa-calendar"></i></a>  </div>
                   <p><%# DataBinder.Eval(Container.DataItem, "SummaryTxt")%></p>
-                  <a href="fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>" class="readmore">ادامه مطلب</a> </div>
+                  <a href="/GolestaneShohada/Design/fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>" class="readmore">ادامه مطلب</a> </div>
               </div>
                     </ItemTemplate>
                 </asp:ListView>
@@ -459,12 +459,12 @@
               <ul id="timelines-slider">
                 <li> <img src="/GolestaneShohada/Design/Image/sample-photo.jpg" alt="img" />
                 </li>
-                <li> <img src="/GolestaneShohada/Design/Image/sample-photo.jpg" alt="img" />
+                <li> <img src="/GolestaneShohada/Design/Image/13674030911.jpg" alt="img" />
                 </li>
-                <li> <img src="/GolestaneShohada/Design/Image/sample-photo.jpg" alt="img" />
+                <li> <img src="/GolestaneShohada/Design/Image/sample2.jpg" alt="img" />
                 </li>
               </ul>
-              <div id="bx-pager"> <a data-slide-index="0" href="#"><img src="/GolestaneShohada/Design/Image/thumb-sample.jpg" alt="img" /></a> <a data-slide-index="1" href="#"><img src="/GolestaneShohada/Design/Image/thumb-sample.jpg" alt="img" /></a> <a data-slide-index="2" href="#"><img src="/GolestaneShohada/Design/Image/thumb-sample.jpg" alt="img" /></a> </div>
+              <div id="bx-pager"> <a data-slide-index="0" href="#"><img src="/GolestaneShohada/Design/Image/thumb-sample.jpg" alt="img" /></a> <a data-slide-index="1" href="#"><img src="/GolestaneShohada/Design/Image/thumb-sample2.jpg" alt="img" /></a> <a data-slide-index="2" href="#"><img src="/GolestaneShohada/Design/Image/sample2-t.jpg" alt="img" /></a> </div>
             </div>
           </div>
         </div>

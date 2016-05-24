@@ -796,6 +796,7 @@
     <Content Include="GolestaneShohada\Design\GolestanMap\img\zoomout_rest.png" />
     <Content Include="GolestaneShohada\Design\GolestanMap\library.html" />
     <Content Include="GolestaneShohada\Design\GolestanMap\readme.txt" />
+    <Content Include="GolestaneShohada\Design\Image\13674030911.jpg" />
     <Content Include="GolestaneShohada\Design\Image\Android-Apps.png" />
     <Content Include="GolestaneShohada\Design\Image\animate-number-bg.png" />
     <Content Include="GolestaneShohada\Design\Image\bx_loader.gif" />
@@ -810,7 +811,10 @@
     <Content Include="GolestaneShohada\Design\Image\pin-map.png" />
     <Content Include="GolestaneShohada\Design\Image\right-arrow.png" />
     <Content Include="GolestaneShohada\Design\Image\sample-photo.jpg" />
+    <Content Include="GolestaneShohada\Design\Image\sample2-t.jpg" />
+    <Content Include="GolestaneShohada\Design\Image\sample2.jpg" />
     <Content Include="GolestaneShohada\Design\Image\thumb-sample.jpg" />
+    <Content Include="GolestaneShohada\Design\Image\thumb-sample2.jpg" />
     <Content Include="GolestaneShohada\Design\Js\audioplayer.js" />
     <Content Include="GolestaneShohada\Design\Js\blocksit.min.js" />
     <Content Include="GolestaneShohada\Design\Js\bootstrap.js" />
