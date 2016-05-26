@@ -10,6 +10,7 @@
             <asp:Label ID="lblOk" runat="server"></asp:Label></div>
         <div class="errorMSG" id="errorDiv" runat="server" visible="false"><i class="fa fa-remove"></i>
             <asp:Label ID="lblError" runat="server"></asp:Label></div>
+    <div class="frame"><a href="#"><img  style="float:right;max-height:447px;margin-left:3px;" id="itemImage"  runat="server" alt="img"/></a></div>
             <div class="text-box lineH">
               <div class="right" id="DivItem" runat="server">
               </div>

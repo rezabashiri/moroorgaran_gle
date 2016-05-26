@@ -149,7 +149,7 @@ body {
 }
 .lineH p{
     line-height:35px;
-    text-align:justify;
+    text-align:justify !important;
     direction:rtl;
 }
 /*Wrapper Start*/

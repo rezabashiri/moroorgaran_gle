@@ -8,8 +8,8 @@
                     <ItemTemplate>
                         <li>
                 <div class="event-listing-box">
-                  <div class="frame"> <a href="fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
-                      <img src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
+                  <div class="frame"> <a href="ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
+                      <img style="max-height:237px" src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
                                alt='<%# DataBinder.Eval(Container.DataItem, "ItemTopic") %>'></a>
                     <div class="caption">
                       <div class="timer-section">
@@ -22,10 +22,10 @@
                       </div>
                       <a href="fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>" class="btn-participate">بیشتر بدانید</a> </div>
                   </div>
-                  <div class="text-box">
+                  <div class="text-box"> 
                     <h2><%# DataBinder.Eval(Container.DataItem, "ItemTopic") %></h2>
                     <p><%# DataBinder.Eval(Container.DataItem, "SummaryTxt") %></p>
-                    <a href="fa/ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>" class="readmore">بیشتر بدانید</a>
+                    <a href="ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>" class="readmore">بیشتر بدانید</a>
                     <div class="detail-row"> <a><i class="fa fa-calendar"></i> <%# MyClass.GetFarsiDate(Eval("EventDate")) %></a> <a><i class="fa fa-folder-o"></i> <%# DataBinder.Eval(Container.DataItem, "GrpName")%></a> </div>
                   </div>
                 </div>

@@ -167,8 +167,14 @@ public class MyClass
     public string docommandScalar(string strsql)
     {
         cm.CommandText = strsql;
-        string st = cm.ExecuteScalar().ToString();
-        return st;
+        var ret = cm.ExecuteScalar();
+        if (ret != null)
+        {
+            return ret.ToString();
+        }
+        else
+            return string.Empty;
+      
     }
 
     //-----------------------------------------------------------------

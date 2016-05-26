@@ -400,6 +400,22 @@
     <Content Include="DynamicData\PageTemplates\Insert.aspx" />
     <Content Include="DynamicData\PageTemplates\List.aspx" />
     <Content Include="DynamicData\PageTemplates\ListDetails.aspx" />
+    <Content Include="files\photoItems\9502051119757092.jpg" />
+    <Content Include="files\photoItems\9502051929780776.jpg" />
+    <Content Include="files\photoItems\950205430750458.jpg" />
+    <Content Include="files\photoItems\950205812971963.jpg" />
+    <Content Include="files\photoItems\9502141449993190.jpg" />
+    <Content Include="files\photoItems\9502142101421521.jpg" />
+    <Content Include="files\photoItems\950214254067195.jpg" />
+    <Content Include="files\photoItems\95021444794487.jpg" />
+    <Content Include="files\photoItems\950214504248069.jpg" />
+    <Content Include="files\photoItems\950214954608330.jpg" />
+    <Content Include="files\photoItems\950215621970175.jpg" />
+    <Content Include="files\photoItems\9503031425321333.jpg" />
+    <Content Include="files\photoItems\9503031846145400.jpg" />
+    <Content Include="files\photoItems\9503031919514092.jpg" />
+    <Content Include="files\photoItems\950303400092526.jpg" />
+    <Content Include="files\photoItems\950303835914192.jpg" />
     <Content Include="fonts\WebYekan.svg" />
     <Content Include="Global.asax" />
     <Content Include="GolestaneShohada\Controls\UscNaghsheGolestanShohada.ascx" />
@@ -877,11 +893,38 @@
     <Content Include="GolestaneShohada\Design\Js\src\_outro.txt" />
     <Content Include="GolestaneShohada\Design\Js\styleswitch.js" />
     <Content Include="GolestaneShohada\Design\Js\TimeCircles.js" />
+    <Content Include="GolestaneShohada\Media\Amaliats\10\karbalay5.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\11\beitolmoghadas.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\12\karbalaye4-1.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\12\karbalaye4-2.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\12\karbalaye4.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\13\farmande-kolle-ghova.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\14\moharam2.jpg" />
     <Content Include="GolestaneShohada\Media\Amaliats\3\فتح المبین نقشه.jpg" />
     <Content Include="GolestaneShohada\Media\Amaliats\4\kar10-1.jpg" />
     <Content Include="GolestaneShohada\Media\Amaliats\4\karbala10.jpg" />
     <Content Include="GolestaneShohada\Media\Amaliats\5\بیت المقدس.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\6\badr.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\6\badr2.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\6\bard3.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\7\kheibar.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\8\ramezan.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\8\ramezan2.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\9\samenaeme.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\9\samenaeme2.jpg" />
+    <Content Include="GolestaneShohada\Media\Amaliats\9\samenaeme3.jpg" />
     <Content Include="GolestaneShohada\Media\Audio\kharazi.mp3" />
+    <Content Include="GolestaneShohada\Media\Shahids\-2147483648\1426480KAKA001-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\-2147483648\1691989KAKA001-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\-2147483648\1691989KVAC001-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\-2147483648\1753993KAKA001-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\10\1484950KAKA014-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\10\1484950KAKA022-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\10\1484950KAKA023-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\10\1484950KAKA031-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\10\1484950KAKA035-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\10\1484950KASA001-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\10\1484950MKAC002-001.jpg" />
     <Content Include="GolestaneShohada\Media\Shahids\1\اصغر اميني.jpg" />
     <Content Include="GolestaneShohada\Media\Shahids\2\00030.jpg" />
     <Content Include="GolestaneShohada\Media\Shahids\2\00056.jpg" />
@@ -891,6 +934,17 @@
     <Content Include="GolestaneShohada\Media\Shahids\3\00003.jpg" />
     <Content Include="GolestaneShohada\Media\Shahids\3\1179297KAKA003-001.jpg" />
     <Content Include="GolestaneShohada\Media\Shahids\3\1179297KAKA005-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\4\1593408KAKA002-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\4\1593408MZEC001-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\6\1234906KAKA002-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\6\1234906KAKA003-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\6\1234906KASA001-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\6\1234906KVAC002-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\6\1234906MZEC004-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\7\1820321KAKA002-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\7\1820321KAKA003-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\7\1820321KAKA006-001.jpg" />
+    <Content Include="GolestaneShohada\Media\Shahids\7\1820321KVAC001-001.jpg" />
     <Content Include="GolestaneShohada\WebServices\GolestanWebservice.asmx" />
     <Content Include="index.html" />
     <Content Include="images\Add.png" />
@@ -1099,6 +1153,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\DynamicDataConfig.cs" />
     <Compile Include="CMSLogic\DateBaseHelprs.cs" />
+    <Compile Include="CMSLogic\News.cs" />
     <Compile Include="Controls\UscDynamicMenu.ascx.cs">
       <DependentUpon>UscDynamicMenu.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1792,14 +1847,15 @@
   <ItemGroup>
     <Folder Include="files\Album\" />
     <Folder Include="files\GeneralFiles\" />
-    <Folder Include="files\photoItems\" />
     <Folder Include="files\Resume\" />
     <Folder Include="files\UploadFiles\" />
     <Folder Include="files\Video\" />
+    <Folder Include="GolestaneShohada\AppUploads\" />
     <Folder Include="GolestaneShohada\Logic\" />
     <Folder Include="GolestaneShohada\Media\Amaliats\-2147483648\" />
     <Folder Include="GolestaneShohada\Media\NoghteAsars\-2147483648\" />
     <Folder Include="GolestaneShohada\Media\NoghteAsars\2\" />
+    <Folder Include="GolestaneShohada\Media\Shahids\8\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

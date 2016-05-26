@@ -9,9 +9,9 @@
                          <li>
                 <div class="latest-news">
                   <div class="frame"><a href="ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">
-                      <img src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
+                      <img style="max-width:359px;max-height:266px" src='<%# "/files/photoItems/"+ DataBinder.Eval(Container, "DataItem.PhotoName") %>'
                                alt='<%# DataBinder.Eval(Container.DataItem, "ItemTopic") %>'></a></div>
-                  <div class="text-box width"> <strong class="title"><%# DataBinder.Eval(Container.DataItem, "ItemID")%></strong>
+                  <div class="text-box width"> <strong class="title"><%# DataBinder.Eval(Container.DataItem, "ItemTopic")%></strong>
                     <div class="date-row"> <a class="link" ><i class="fa fa-calendar"></i> <%# MyClass.GetFarsiDate(Eval("ShowDate")) %></a> <a class="link" ><i class="fa fa-pencil"></i> <%# DataBinder.Eval(Container.DataItem, "GrpName")%></a></div>
                     <p><%# DataBinder.Eval(Container.DataItem, "SummaryTxt")%></p>
                     <a class="readmore" href="ReadItem.aspx?itemID=<%# DataBinder.Eval(Container.DataItem, "ItemID")%>">ادامه مطلب</a> </div>

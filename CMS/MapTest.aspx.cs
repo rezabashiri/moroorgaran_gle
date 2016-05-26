@@ -29,6 +29,12 @@ namespace CMS
             //usc.OnDataBind += usc_OnDataBind;
             //Image1.ImageUrl= "data:image/gif;base64," + res5;
             //pictureBox1.Image = qrcode as Image;//Displays generated code in PictureBox
+
+
+            CMSLogic.NewsList _lis = new CMSLogic.NewsList();
+            _lis.AddToList(new CMSLogic.News() { ID = "1", Imageurle = "shohada-isf.ir", Summary = "این تست است", Title = "خبر1" });
+            _lis.AddToList(new CMSLogic.News() { ID = "2", Imageurle = "shohada-isf.ir", Summary = "این تست است", Title = "خبر1" });
+            var ser = _lis.Serialize();
         }
 
         void usc_OnDataBind(List<Golestan.Model.ViewAmaliat> DataSource)

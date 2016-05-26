@@ -18,10 +18,10 @@ namespace CMS.WebService
     {
 
         [WebMethod]
-        public DataTable SearchNews()
+        public string SearchNews()
         {
-            CMS.CMSLogic.DateBaseHelprs _int = new CMSLogic.DateBaseHelprs();
-            return _int.GetItemsByparameter("1000", "PartID=2");
+            var list = new CMSLogic.NewsList();
+            return list.AllItemsInXml("2");
         }
     }
 }

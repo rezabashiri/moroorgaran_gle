@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-
+using tkv.Utility;
 namespace CMS.GolestaneShohada.Design.fa
 {
     public partial class readitem : System.Web.UI.Page
@@ -25,15 +25,12 @@ namespace CMS.GolestaneShohada.Design.fa
         {
             try
             {
-                int id = Convert.ToInt32(Request.QueryString["itemID"]);
-                sql = "SELECT        TOP (100) PERCENT dbo.TItems.ItemTopic, dbo.TItems.SummaryTxt, dbo.TItems.BodyTxt, dbo.TItems.ShowDate, dbo.TGroups.GrpName " +
-                    " FROM            dbo.TGroups INNER JOIN dbo.TItems ON dbo.TGroups.GrpID = dbo.TItems.GrpID " +
-                    " WHERE        (dbo.TItems.FreshStat = 3) AND (dbo.TItems.PubStat = 9) AND (GETDATE() >= dbo.TItems.ShowDate) AND (dbo.TItems.ItemID = {0}) " +
-                    " ORDER BY dbo.TItems.ShowDate DESC";
-                sql = string.Format(sql, id);
-                mc.connect();
-                dt = mc.select(sql);
-                mc.disconnect();
+                int id = Request.QueryString["itemID"].ToInt32();
+                if (id == int.MinValue)
+                    return;
+                dt = new CMSLogic.DateBaseHelprs().GetItemsByparameter("1", string.Format("ItemID={0}", id));
+              
+              
                 string title = dt.Rows[0]["ItemTopic"].ToString();
                 lblTopic.Text = title;
                 lblDate.Text = mc.GetFarsiDate2(Convert.ToDateTime(dt.Rows[0]["ShowDate"]), 0);
@@ -41,6 +38,7 @@ namespace CMS.GolestaneShohada.Design.fa
                 //imgItem.ImageUrl = "http://www.???.ir/CMS/files/photoItems/" + dt.Rows[0]["PhotoName"];
                 //imgItem.AlternateText = title;
                 DivItem.InnerHtml = dt.Rows[0]["BodyTxt"].ToString();
+                itemImage.Src = "/files/photoItems/" + dt.Rows[0]["PhotoName"].ToString();
                 Page.Title = title;
                 Page.MetaDescription = dt.Rows[0]["SummaryTxt"].ToString();
             }
