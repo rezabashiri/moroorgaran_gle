@@ -29,5 +29,14 @@ namespace Golestan {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Golestan.Control.UscFullSearchAmaliat UscFullSearchAmaliat;
+        
+        /// <summary>
+        /// UscFullSearchShahid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Golestan.Control.UscFullSearchShahid UscFullSearchShahid;
     }
 }

@@ -4,7 +4,7 @@
 
 
 <div class="row">
-   
+   <rhp:JQLoader ID="JQLoader1" runat="server" />
     <div class="col-sm-4">
          <asp:TextBox ID="txtName" placeholder="نام عملیات" CssClass="comment-input form-control" runat="server"></asp:TextBox>
     </div>
@@ -53,13 +53,13 @@
             تاریخ شروع عملیات از
         </div>
         <div class="col-sm-4">
-    <rhp:DatePicker CssClass=" text-right" Enabled="true"  ID="dpcShorooAz"  runat="server"></rhp:DatePicker>
+    <rhp:JQDatePicker Regional="fa"  CssClass=" text-right date" Enabled="true"  ID="dpcShorooAz"  runat="server"></rhp:JQDatePicker>
         </div>
         <div class="col-sm-2">
             تاریخ شروع عملیات تا
         </div>
          <div class="col-sm-4">
-    <rhp:DatePicker CssClass=" text-right" Enabled="true"  ID="dpcShorooTa"  runat="server"></rhp:DatePicker>
+    <rhp:JQDatePicker Regional="fa"  CssClass=" text-right date" Enabled="true"  ID="dpcShorooTa"  runat="server"></rhp:JQDatePicker>
         </div>
     </div>
     <div class="row">
@@ -67,13 +67,13 @@
             تاریخ شروع عملیات از
         </div>
         <div class="col-sm-4">
-    <rhp:DatePicker CssClass=" text-right" Enabled="true"  ID="dpcPayanAz"  runat="server"></rhp:DatePicker>
+    <rhp:JQDatePicker Regional="fa"  CssClass=" text-right date" Enabled="true"  ID="dpcPayanAz"  runat="server"></rhp:JQDatePicker>
         </div>
         <div class="col-sm-2">
             تاریخ پایان عملیات  تا
         </div>
          <div class="col-sm-4">
-    <rhp:DatePicker CssClass=" text-right" Enabled="true"  ID="dpcPayanTa"  runat="server"></rhp:DatePicker>
+    <rhp:JQDatePicker Regional="fa"  CssClass=" text-right date" Enabled="true"  ID="dpcPayanTa"  runat="server"></rhp:JQDatePicker>
         </div>
 
     </div>

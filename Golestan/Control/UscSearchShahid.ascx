@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UscSearchShahid.ascx.cs" Inherits="Golestan.Control.UscSearchShahid" %>
-        <%@ Register Assembly="Heidarpour.WebControlUI" Namespace="Heidarpour.WebControlUI" TagPrefix="rhp" %>
+       
 <div>
-
+    <rhp:JQLoader ID="JQLoader1" runat="server" />
 
 <div class="row" >
    
@@ -62,13 +62,13 @@
             تاریخ تولد از
         </div> 
         <div class="col-sm-4 ">
-    <rhp:DatePicker CssClass=" text-right" Enabled="true"  ID="dpcTavalodAz"  runat="server"></rhp:DatePicker>
+    <rhp:JQDatePicker Regional="fa" CssClass=" text-right date" Enabled="true"  ID="dpcTavalodAz"  runat="server"></rhp:JQDatePicker>
         </div>
         <div class="col-sm-2  ">
             تاریخ تولد تا
         </div>
          <div class="col-sm-4  ">
-    <rhp:DatePicker CssClass=" text-right" Enabled="true"  ID="dpcTavalodTa"  runat="server"></rhp:DatePicker>
+    <rhp:JQDatePicker Regional="fa" CssClass=" text-right date" Enabled="true"  ID="dpcTavalodTa"  runat="server"></rhp:JQDatePicker>
         </div>
     </div>
     <div class="row">
@@ -76,13 +76,13 @@
             تاریخ شهادت از
         </div>
         <div class="col-sm-4 ">
-    <rhp:DatePicker CssClass=" text-right" Enabled="true"  ID="dpcShahadatAz"  runat="server"></rhp:DatePicker>
+    <rhp:JQDatePicker Regional="fa" CssClass=" text-right date" Enabled="true"  ID="dpcShahadatAz"  runat="server"></rhp:JQDatePicker>
         </div>
         <div class="col-sm-2 ">
             تاریخ شهادت تا
         </div>
          <div class="col-sm-4 ">
-    <rhp:DatePicker CssClass=" text-right" Enabled="true"  ID="dpcShahidTa"  runat="server"></rhp:DatePicker>
+    <rhp:JQDatePicker Regional="fa" CssClass=" text-right date" Enabled="true"  ID="dpcShahidTa"  runat="server"></rhp:JQDatePicker>
         </div>
 
     </div>

@@ -35,6 +35,11 @@ namespace CMS
             _lis.AddToList(new CMSLogic.News() { ID = "1", Imageurle = "shohada-isf.ir", Summary = "این تست است", Title = "خبر1" });
             _lis.AddToList(new CMSLogic.News() { ID = "2", Imageurle = "shohada-isf.ir", Summary = "این تست است", Title = "خبر1" });
             var ser = _lis.Serialize();
+        
+            JQDatePicker1.Enabled = true;
+            JQDatePicker1.Regional = JQControls.Regional.fa;
+            JQDatePicker1.ChangeMonth = JQDatePicker1.ChangeYear = true;
+            
         }
 
         void usc_OnDataBind(List<Golestan.Model.ViewAmaliat> DataSource)

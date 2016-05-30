@@ -12,7 +12,25 @@ namespace Golestan.Control
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            PopulateOptions();
+        }
+        private void PopulateOptions()
+        {
+            JQLoader1.Theme = JQControls.JQTheme.Blitzer;
+            JQLoader1.LoadJQScript = false;
 
+            dpcPayanAz.ChangeMonth = dpcPayanAz.ChangeYear = true;
+            dpcPayanTa.ChangeMonth = dpcPayanTa.ChangeYear = true;
+            dpcShorooAz.ChangeMonth = dpcShorooAz.ChangeYear = true;
+            dpcShorooTa.ChangeMonth = dpcShorooTa.ChangeYear = true;
+
+
+            dpcShorooTa.YearRange = dpcShorooAz.YearRange = "1357:1370";
+             
+
+             dpcPayanTa.YearRange= dpcPayanAz.YearRange = "1357:1370";
+
+             dpcShorooAz.DateFormat = dpcShorooTa.DateFormat = dpcPayanAz.DateFormat = dpcPayanTa.DateFormat = JQControls.DateFormat.YMD;
         }
         public string SearchString
         {
@@ -40,13 +58,13 @@ namespace Golestan.Control
             if (!string.IsNullOrEmpty(cmbNoghteAsar.SelectedValue))
                 query += string.Format(" and IDNoghteAsar = {0}", cmbNoghteAsar.SelectedValue.ToInt32());
             if (dpcShorooAz.Date != null)
-                query += string.Format(" and TarikheShoroo >= {0}", dpcShorooAz.Date.Value.ToShortDateString());
+                query += string.Format(" and TarikheShoroo >= '{0}'", dpcShorooAz.Date.Value.ToShortDateString());
             if (dpcShorooTa.Date != null)
-                query += string.Format(" and TarikheShoroo <= {0}", dpcShorooTa.Date.Value.ToShortDateString());
+                query += string.Format(" and TarikheShoroo <= '{0}'", dpcShorooTa.Date.Value.ToShortDateString());
             if (dpcPayanAz.Date != null)
-                query += string.Format(" and TarikhePayan >= {0}", dpcPayanAz.Date.Value.ToShortDateString());
+                query += string.Format(" and TarikhePayan >= '{0}'", dpcPayanAz.Date.Value.ToShortDateString());
             if (dpcPayanTa.Date != null)
-                query += string.Format(" and TarikhePayan >= {0}", dpcPayanTa.Date.Value.ToShortDateString());
+                query += string.Format(" and TarikhePayan >= '{0}'", dpcPayanTa.Date.Value.ToShortDateString());
              
             if (!string.IsNullOrEmpty(query))
             {

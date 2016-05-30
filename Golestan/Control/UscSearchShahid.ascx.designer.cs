@@ -13,6 +13,15 @@ namespace Golestan.Control {
     public partial class UscSearchShahid {
         
         /// <summary>
+        /// JQLoader1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::JQControls.JQLoader JQLoader1;
+        
+        /// <summary>
         /// txtName control.
         /// </summary>
         /// <remarks>
@@ -82,7 +91,7 @@ namespace Golestan.Control {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Heidarpour.WebControlUI.DatePicker dpcTavalodAz;
+        protected global::JQControls.JQDatePicker dpcTavalodAz;
         
         /// <summary>
         /// dpcTavalodTa control.
@@ -91,7 +100,7 @@ namespace Golestan.Control {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Heidarpour.WebControlUI.DatePicker dpcTavalodTa;
+        protected global::JQControls.JQDatePicker dpcTavalodTa;
         
         /// <summary>
         /// dpcShahadatAz control.
@@ -100,7 +109,7 @@ namespace Golestan.Control {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Heidarpour.WebControlUI.DatePicker dpcShahadatAz;
+        protected global::JQControls.JQDatePicker dpcShahadatAz;
         
         /// <summary>
         /// dpcShahidTa control.
@@ -109,6 +118,6 @@ namespace Golestan.Control {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Heidarpour.WebControlUI.DatePicker dpcShahidTa;
+        protected global::JQControls.JQDatePicker dpcShahidTa;
     }
 }

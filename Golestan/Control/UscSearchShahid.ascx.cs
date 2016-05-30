@@ -12,7 +12,26 @@ namespace Golestan.Control
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            PopulateOptions();
+        }
 
+        private void PopulateOptions()
+        {
+            JQLoader1.Theme = JQControls.JQTheme.Blitzer;
+            JQLoader1.LoadJQScript = false;
+            dpcShahadatAz.ChangeMonth = dpcShahadatAz.ChangeYear = true;
+            dpcShahidTa.ChangeMonth = dpcShahidTa.ChangeYear = true;
+            dpcTavalodAz.ChangeMonth = dpcTavalodAz.ChangeYear = true;
+            dpcTavalodTa.ChangeMonth = dpcTavalodTa.ChangeYear = true;
+
+
+            dpcShahadatAz.YearRange = "1357:1395";
+            dpcShahidTa.YearRange = "1357:1395";
+
+            dpcTavalodAz.YearRange = "1320:1360";
+            dpcTavalodTa.YearRange = "1320:1360";
+
+            dpcTavalodTa.DateFormat= dpcTavalodAz.DateFormat = dpcShahadatAz.DateFormat = dpcShahidTa.DateFormat = JQControls.DateFormat.YMD;
         }
         public List<Ostan> Ostan_getdata()
         {
@@ -45,13 +64,13 @@ namespace Golestan.Control
             if (!string.IsNullOrEmpty(cmbBakhsh.SelectedValue))
                 query += string.Format(" and IDBakhsh = {0}", cmbBakhsh.SelectedValue.ToInt32());
             if (dpcTavalodAz.Date != null)
-                query += string.Format(" and TarikheTavalod >= {0}", dpcTavalodAz.Date.Value.ToShortDateString());
+                query += string.Format(" and TarikheTavalod >= '{0}'", dpcTavalodAz.Date.Value.ToShortDateString());
             if (dpcTavalodTa.Date != null)
-                query += string.Format(" and TarikheTavalod <= {0}", dpcTavalodTa.Date.Value.ToShortDateString());
+                query += string.Format(" and TarikheTavalod <= '{0}'", dpcTavalodTa.Date.Value.ToShortDateString());
             if (dpcShahadatAz.Date != null)
-                query += string.Format(" and TarikheShahadat >= {0}", dpcShahadatAz.Date.Value.ToShortDateString());
+                query += string.Format(" and TarikheShahadat >= '{0}'", dpcShahadatAz.Date.Value.ToShortDateString());
             if (dpcShahidTa.Date != null)
-                query += string.Format(" and TarikheShahadat >= {0}", dpcShahidTa.Date.Value.ToShortDateString());
+                query += string.Format(" and TarikheShahadat >= '{0}'", dpcShahidTa.Date.Value.ToShortDateString());
            
             if (!string.IsNullOrEmpty(query))
             {

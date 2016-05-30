@@ -99,6 +99,9 @@
     <Reference Include="ImageResizer">
       <HintPath>..\packages\ImageResizer.4.0.5\lib\net45\ImageResizer.dll</HintPath>
     </Reference>
+    <Reference Include="JQControls">
+      <HintPath>..\packages\JQControls.dll</HintPath>
+    </Reference>
     <Reference Include="MessagingToolkit.QRCode">
       <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
     </Reference>
@@ -347,6 +350,7 @@
     <Content Include="css\MgrLogin_style.css" />
     <Content Include="css\MgrMasterStyle.css" />
     <Content Include="css\Style.css" />
+    <Content Include="default.htm" />
     <Content Include="DynamicData\Content\GridViewPager.ascx" />
     <Content Include="DynamicData\Content\Images\Back.gif" />
     <Content Include="DynamicData\Content\Images\header_back.gif" />
@@ -858,6 +862,7 @@
     <Content Include="GolestaneShohada\Design\Js\jquery.countdown.js" />
     <Content Include="GolestaneShohada\Design\Js\jquery.final-countdown.js" />
     <Content Include="GolestaneShohada\Design\Js\jquery.flexisel.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery.maskedinput.js" />
     <Content Include="GolestaneShohada\Design\Js\jquery.plugin.js" />
     <Content Include="GolestaneShohada\Design\Js\jquery.prettyPhoto.js" />
     <Content Include="GolestaneShohada\Design\Js\jquery.stellar.min.js" />
@@ -893,6 +898,7 @@
     <Content Include="GolestaneShohada\Design\Js\src\_outro.txt" />
     <Content Include="GolestaneShohada\Design\Js\styleswitch.js" />
     <Content Include="GolestaneShohada\Design\Js\TimeCircles.js" />
+    <Content Include="GolestaneShohada\Design\Js\validation.js" />
     <Content Include="GolestaneShohada\Media\Amaliats\10\karbalay5.jpg" />
     <Content Include="GolestaneShohada\Media\Amaliats\11\beitolmoghadas.jpg" />
     <Content Include="GolestaneShohada\Media\Amaliats\12\karbalaye4-1.jpg" />
@@ -1037,6 +1043,7 @@
     <Content Include="images\User_Icon.png" />
     <Content Include="js\calendar.js" />
     <Content Include="js\jquery-1.6.3.min.js" />
+    <Content Include="js\jquery-migrate-1.2.1.min.js" />
     <Content Include="js\jquery.carouFredSel-6.1.0-packed.js" />
     <Content Include="js\jquery.lightbox-0.5.js" />
     <Content Include="js\jquery.lightbox-0.5.min.js" />

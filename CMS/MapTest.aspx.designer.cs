@@ -40,12 +40,21 @@ namespace CMS {
         protected global::System.Web.UI.WebControls.Button btnte;
         
         /// <summary>
-        /// UscNaghsheManategheJangi control.
+        /// JQLoader1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CMS.GolestaneShohada.Controls.UscNaghsheManategheJangi UscNaghsheManategheJangi;
+        protected global::JQControls.JQLoader JQLoader1;
+        
+        /// <summary>
+        /// JQDatePicker1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::JQControls.JQDatePicker JQDatePicker1;
     }
 }

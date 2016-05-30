@@ -50,12 +50,12 @@
       <div class="container holder">
         <div class="left"> <strong class="ph"><i class="fa fa-phone"></i>031-36622177</strong> <strong class="ph"><i class="fa fa-envelope"></i>paidari_esf@yahoo.com</strong> </div>
         <div class="right">
-          <a id="active-btn" href="#" class="btn-search"><i class="fa fa-search"></i></a> <a href="#" class="btn-login"><i class="fa fa-user"></i></a> </div>
-        <form action="#" id="search-box-form" class="search-box">
+        <%--  <a id="active-btn" href="#" class="btn-search"><i class="fa fa-search"></i></a> --%><a href="#" class="btn-login"><i class="fa fa-user"></i></a> </div>
+      <%--  <form action="#" id="search-box-form" class="search-box">
           <input type="text" class="topbar-search-input" placeholder="Search for..."/>
           <button value="" class="topbar-btn-search"><i class="fa fa-search"></i></button>
           <a href="#" class="crose"><i class="fa fa-times"></i></a>
-        </form>
+        </form>--%>
       </div>
     </section>
     <!--Head Topbar End--> 
