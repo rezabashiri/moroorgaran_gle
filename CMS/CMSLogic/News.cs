@@ -79,19 +79,33 @@ namespace CMS.CMSLogic
             var _serial = _helper.SerializeEntity<NewsList>(this);
             return _serial;
         }
-        public string AllItemsInXml(string partid)
+        public string JsonSerialize()
+        {
+            var _webutil =new WebUtility.Helpers.JsonHelpers();
+            var _serialize = _webutil.SerializeToJson<NewsList>(this);
+            return _serialize;
+        }
+        public void AddAllIntoList(string partid)
         {
             var data = new CMSLogic.DateBaseHelprs().GetItemsByparameter("100", string.Format("PartID={0}", partid));
             if (data != null)
             {
                 foreach (DataRow dr in data.Rows)
                 {
-                    AddToList(new News() { ID = dr["ItemID"] != null ? dr["ItemID"].ToString() : string.Empty, Title = dr["ItemTopic"] != null ? dr["ItemTopic"].ToString() : string.Empty, Summary = dr["SummaryTxt"] != null ? dr["SummaryTxt"].ToString() : string.Empty, Imageurle = dr["PhotoName"] != null ? ImageUrl + dr["PhotoName"].ToString() : string.Empty,Linkurl= string.Format("{0}?{1}",PageUrl,dr["ItemID"] )});
+                    AddToList(new News() { ID = dr["ItemID"] != null ? dr["ItemID"].ToString() : string.Empty, Title = dr["ItemTopic"] != null ? dr["ItemTopic"].ToString() : string.Empty, Summary = dr["SummaryTxt"] != null ? dr["SummaryTxt"].ToString() : string.Empty, Imageurle = dr["PhotoName"] != null ? ImageUrl + dr["PhotoName"].ToString() : string.Empty, Linkurl = string.Format("{0}?{1}", PageUrl, dr["ItemID"]) });
                 }
-                return Serialize();
             }
-            return string.Empty;
-             
+        }
+        public string AllItemsInXml(string partid)
+        {
+            AddAllIntoList(partid);
+            return Serialize();
+        }
+        public string AllItemsInJson(string partid)
+        {
+            AddAllIntoList(partid);
+            return JsonSerialize();
+
         }
     }
 }

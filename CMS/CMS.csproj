@@ -856,6 +856,7 @@
     <Content Include="GolestaneShohada\Design\Image\zoomout_pressed.png" />
     <Content Include="GolestaneShohada\Design\Image\zoomout_rest.png" />
     <Content Include="GolestaneShohada\Design\Js\jquery-1.11.3.min.js" />
+    <Content Include="GolestaneShohada\Design\Js\jquery-migrate-1.2.1.min.js" />
     <Content Include="GolestaneShohada\Design\Js\jquery.bxslider.min.js" />
     <Content Include="GolestaneShohada\Design\Js\jquery.content_slider.js" />
     <Content Include="GolestaneShohada\Design\Js\jquery.content_slider.min.js" />

@@ -18,10 +18,17 @@ namespace CMS.WebService
     {
 
         [WebMethod]
-        public string SearchNews()
+        public string SearchNewsInXML()
         {
             var list = new CMSLogic.NewsList();
             return list.AllItemsInXml("2");
+        }
+
+        [WebMethod]
+        public string SearchNewsInJson()
+        {
+            var list = new CMSLogic.NewsList();
+            return list.AllItemsInJson("2");
         }
     }
 }

@@ -44,7 +44,7 @@ namespace CMS
 
         void usc_OnDataBind(List<Golestan.Model.ViewAmaliat> DataSource)
         {
-             
+           
         }
 
         protected void btnte_Click(object sender, EventArgs e)
