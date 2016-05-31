@@ -1,7 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MaintainScrollPositionOnPostback="true" Title="جستجوی عملیات ها" CodeBehind="amliyatlist.aspx.cs" Inherits="CMS.GolestaneShohada.Design.fa.amliyatlist" MasterPageFile="~/GolestaneShohada/Design/MasterPage/WebMaster.Master"%>
-<asp:Content ID="Content3" runat="server" contentplaceholderid="head">
-<link href="/GolestaneShohada/Design/css/bootstrap-list-rtl.css" type="text/css" rel="stylesheet" />
-</asp:Content>
+ 
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPageHeading">
     <h1>لیست عملیات ها</h1>
         <p>جهت جستجوی عملیات مورد نظر خود، از فرم زیر استفاده نمایید.</p>

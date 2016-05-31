@@ -148,9 +148,9 @@ body {
 	padding: 0;
 }
 .lineH p{
-    line-height:35px;
+    line-height:35px !important;
     text-align:justify !important;
-    direction:rtl;
+    direction:rtl !important;
 }
 /*Wrapper Start*/
 #wrapper {
@@ -3339,7 +3339,7 @@ color: #333;
 	box-sizing: border-box;         /* Opera/IE 8+ */
 }
 .tab-text-box p {
-	font: 400 14px/20px 'Open Sans', sans-serif;
+	 
 	color: #666;
 	margin: 0 0 20px 0;
 }
@@ -6052,4 +6052,27 @@ color: #333;
     direction: rtl;
     border-radius: 5px;
     background: #b3d892 url(../images/Confirm.png) no-repeat right;
+}
+
+.nav-tabs li {
+width:auto !important;
+padding:0  !important;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    width:100%;
+    margin-top:10px;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 , p , span {
+direction:rtl !important;
 }

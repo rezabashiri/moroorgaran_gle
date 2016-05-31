@@ -21,17 +21,22 @@ public partial class panel_MakeItem : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-             
-            //FillTitle();
-            BindGrp();
-            BindFreshStat();
-            BindCommentStat();
-            BindPubStat();
-            FillDate();
-            FromGroupList();
-            Session["Edit"] = 0;
-            CheckEdit();
+
+            Bind();
         }
+    }
+
+    private void Bind()
+    {
+        //FillTitle();
+        BindGrp();
+        BindFreshStat();
+        BindCommentStat();
+        BindPubStat();
+        FillDate();
+        FromGroupList();
+        Session["Edit"] = 0;
+        CheckEdit();
     }
     protected void CheckCustomer()
     {
@@ -151,77 +156,92 @@ public partial class panel_MakeItem : System.Web.UI.Page
     }
     protected void AddEdit()
     {
+
         if (CheckImgSize())
         {
-            int EditThis = Convert.ToInt32(Session["Edit"]);
-            string photoName = "";
-            string FileName = "-";
-            if (EditThis != 0)
+            try
             {
-                photoName = Session["photo"].ToString();
-                FileName = Session["file"].ToString();
-            }
+                int EditThis = Convert.ToInt32(Session["Edit"]);
+                string photoName = "";
+                string FileName = "-";
+                if (EditThis != 0)
+                {
+                    photoName = Session["photo"].ToString();
+                    FileName = Session["file"].ToString();
+                }
 
-            string topic = txtTopic.Text.Trim();
-            int grp = Convert.ToInt32(drpGrpNews.SelectedValue);
-            //image
-            string ImgSaveLocation = "";
-            if (AsyncFileUpload1.FileName.Length != 0)
+                string topic = txtTopic.Text.Trim();
+                int grp = Convert.ToInt32(drpGrpNews.SelectedValue);
+                //image
+                string ImgSaveLocation = "";
+                if (AsyncFileUpload1.FileName.Length != 0)
+                {
+                    photoName = System.IO.Path.GetFileName(AsyncFileUpload1.PostedFile.FileName);
+                    string format = photoName.Split('.').Last();
+                    photoName = RandomName() + "." + format;
+                    ImgSaveLocation = Server.MapPath("..\\files\\photoItems") + "\\" + photoName;
+                    AsyncFileUpload1.PostedFile.SaveAs(ImgSaveLocation);
+                }
+
+                string summary = txtSummary.Text;
+                string BodyTxt = editor.Value;
+
+                //File
+                string FileSaveLocation = "";
+                if (AsyncFileUpload2.FileName.Length != 0)
+                {
+                    FileName = System.IO.Path.GetFileName(AsyncFileUpload2.PostedFile.FileName);
+                    string format = FileName.Split('.').Last();
+                    FileName = RandomName() + "." + format;
+                    FileSaveLocation = Server.MapPath("..\\files\\UploadFiles") + "\\" + FileName;
+                    AsyncFileUpload2.PostedFile.SaveAs(FileSaveLocation);
+                }
+
+                int FreshStat = Convert.ToInt32(drpFreshStat.SelectedValue);
+                int CommentStat = Convert.ToInt32(drpCommentStat.SelectedValue);
+
+                int yearPub = Convert.ToInt32(txtYearPub.Text);
+                int monthPub = Convert.ToInt32(txtmonthPub.Text);
+                int dayPub = Convert.ToInt32(txtDayPub.Text);
+                int hourPub = Convert.ToInt32(TimeSelector1.Hour);
+                int MinPub = Convert.ToInt32(TimeSelector1.Minute);
+                DateTime ShowDate = pc.ToDateTime(yearPub, monthPub, dayPub, hourPub, MinPub, 0, 0);
+                DateTime dt = new DateTime(yearPub, monthPub, dayPub, hourPub, MinPub, 0, 0);
+                int PubStat = Convert.ToInt32(drpPubStat.SelectedValue);
+
+                string msg = "";
+                if (EditThis == 0)
+                {
+                    sql = "insert into TItems (GrpID,ItemTopic,PhotoName,SummaryTxt,BodyTxt,FileURL,InputDate,ShowDate,FreshStat,CommentStat,PubStat,VisitCnt) " +
+                        " values ({0},N'{1}','{2}',N'{3}',N'{4}','{5}','{6}','{7}',{8},{9},{10},0)";
+                    msg = "مطلب جدید با موفقیت ثبت گردید";
+                }
+                else if (EditThis != 0)
+                {
+                    sql = "update TItems set GrpID={0},ItemTopic=N'{1}',PhotoName='{2}',SummaryTxt=N'{3}',BodyTxt=N'{4}' " +
+                    " ,FileURL='{5}',InputDate='{6}',ShowDate='{7}',FreshStat={8},CommentStat={9},PubStat={10} where ItemId=" + EditThis;
+                    msg = "مطلب با موفقیت ویرایش گردید";
+                }
+                sql = string.Format(sql, grp, topic, photoName, summary, BodyTxt, FileName, DateTime.Now, ShowDate, FreshStat, CommentStat, PubStat);
+                mc.connect();
+                mc.docommand(sql);
+
+                if (EditThis == 0)
+                {
+                    cleaner();  // just in insert mode
+                }
+                errorDiv.Visible = false;
+                confirmDiv.Visible = true;
+                lblOk.Text = msg;
+                Bind(); 
+            }
+            catch (Exception ex)
             {
-                photoName = System.IO.Path.GetFileName(AsyncFileUpload1.PostedFile.FileName);
-                string format = photoName.Split('.').Last();
-                photoName = RandomName() + "." + format;
-                ImgSaveLocation = Server.MapPath("..\\files\\photoItems") + "\\" + photoName;
-                AsyncFileUpload1.PostedFile.SaveAs(ImgSaveLocation);
             }
-
-            string summary = txtSummary.Text;
-            string BodyTxt = editor.Value;
-
-            //File
-            string FileSaveLocation = "";
-            if (AsyncFileUpload2.FileName.Length != 0)
-            {
-                FileName = System.IO.Path.GetFileName(AsyncFileUpload2.PostedFile.FileName);
-                string format = FileName.Split('.').Last();
-                FileName = RandomName() + "." + format;
-                FileSaveLocation = Server.MapPath("..\\files\\UploadFiles") + "\\" + FileName;
-                AsyncFileUpload2.PostedFile.SaveAs(FileSaveLocation);
+            finally
+            {  
+                mc.disconnect();
             }
-
-            int FreshStat = Convert.ToInt32(drpFreshStat.SelectedValue);
-            int CommentStat = Convert.ToInt32(drpCommentStat.SelectedValue);
-
-            int yearPub = Convert.ToInt32(txtYearPub.Text);
-            int monthPub = Convert.ToInt32(txtmonthPub.Text);
-            int dayPub = Convert.ToInt32(txtDayPub.Text);
-            int hourPub = Convert.ToInt32(TimeSelector1.Hour);
-            int MinPub = Convert.ToInt32(TimeSelector1.Minute);
-            DateTime ShowDate = pc.ToDateTime(yearPub, monthPub, dayPub, hourPub, MinPub, 0, 0);
-            DateTime dt = new DateTime(yearPub, monthPub, dayPub, hourPub, MinPub, 0, 0);
-            int PubStat = Convert.ToInt32(drpPubStat.SelectedValue);
-
-            string msg = "";
-            if (EditThis == 0)
-            {
-                sql = "insert into TItems (GrpID,ItemTopic,PhotoName,SummaryTxt,BodyTxt,FileURL,InputDate,ShowDate,FreshStat,CommentStat,PubStat,VisitCnt) " +
-                    " values ({0},N'{1}','{2}',N'{3}',N'{4}','{5}','{6}','{7}',{8},{9},{10},0)";
-                msg = "مطلب جدید با موفقیت ثبت گردید";
-            }
-            else if (EditThis != 0)
-            {
-                sql = "update TItems set GrpID={0},ItemTopic=N'{1}',PhotoName='{2}',SummaryTxt=N'{3}',BodyTxt=N'{4}' " +
-                " ,FileURL='{5}',InputDate='{6}',ShowDate='{7}',FreshStat={8},CommentStat={9},PubStat={10} where ItemId=" + EditThis;
-                msg = "مطلب با موفقیت ویرایش گردید";
-            }
-            sql = string.Format(sql, grp, topic, photoName, summary, BodyTxt, FileName, DateTime.Now, ShowDate, FreshStat, CommentStat, PubStat);
-            mc.connect();
-            mc.docommand(sql);
-            mc.disconnect();
-            cleaner();
-            errorDiv.Visible = false;
-            confirmDiv.Visible = true;
-            lblOk.Text = msg;
 
         }
         else if (!CheckImgSize())

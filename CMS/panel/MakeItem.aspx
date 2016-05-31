@@ -44,7 +44,7 @@
 + "input[accept|alt|checked|disabled|maxlength|name|readonly|size|src|type|value],"
 + "kbd,label[for],legend,noscript,optgroup[label|disabled],option[disabled|label|selected|value],"
 + "q[cite],samp,select[disabled|multiple|name|size],small,"
-+ "textarea[cols|rows|disabled|name|readonly],tt,var,big"
++ "textarea[cols|rows|disabled|name|readonly],tt,var,big,iframe[src|allowfullscreen]"
        });
     </script>
 </asp:Content>

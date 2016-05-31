@@ -13,7 +13,8 @@
 <!--Custom Css-->
 <link href="/GolestaneShohada/Design/css/custom.css?ver=1.0.1" rel="stylesheet" type="text/css"/>
 <!--Bootstrap 3.1.1 Css-->
-<link href="/GolestaneShohada/Design/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="/GolestaneShohada/Design/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<%--<link href="/GolestaneShohada/Design/css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css"/>--%>
 <!--RESPONSIVE Css-->
 <link rel="stylesheet" href="/GolestaneShohada/Design/css/responsive.css" />
 <!--Audio Player Css-->
@@ -29,6 +30,9 @@
 <link href="/GolestaneShohada/Design/css/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
 <!--Content Slider Css-->
 <link href="/GolestaneShohada/Design/css/content_slider_style.css" rel="stylesheet" type="text/css" />
+
+<link href="/GolestaneShohada/Design/css/bootstrap-list-rtl.css" type="text/css" rel="stylesheet" />
+
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>

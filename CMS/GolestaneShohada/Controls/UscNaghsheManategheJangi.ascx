@@ -57,7 +57,7 @@
                     }
                     function attachMessage(marker, noghteasar,mogheyat,nameamaliat,idamalit) {
                         var infowindow = new google.maps.InfoWindow({
-                            content: '<div>' + 'نام عملیات : ' + nameamaliat + '</br>'+ ' نام موقعیت : ' + mogheyat + '</br>' + 'نام نقطه اثر :' + noghteasar + '</br>' + '<a href='+idamalit + '>اطلاعات بیشتر </a>'  + '  </div>'
+                            content: '<div>' + 'نام عملیات : ' + nameamaliat + '</br>' + ' نام موقعیت : ' + mogheyat + '</br>' + 'نام نقطه اثر :' + noghteasar + '</br>' + '<a href=PerAmaliyat.aspx?AmaliyatID=' + idamalit + '>اطلاعات بیشتر </a>' + '  </div>'
                         });
 
                         marker.addListener('click', function () {

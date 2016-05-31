@@ -1,25 +1,26 @@
-    @media(min-width: 768px) {
+    @media(min-width: 768px) 
+    {
         .inner-headding .col-sm-1, .inner-headding .col-sm-2,.inner-headding .col-sm-3,.inner-headding .col-sm-4,.inner-headding .col-sm-5,
         .inner-headding .col-sm-6,.inner-headding .col-sm-7,.inner-headding .col-sm-8,.inner-headding .col-sm-9,
-        .inner-headding .col-sm-10,.inner-headding .col-sm-11,.inner-headding .col-sm-12 {
-            float: right;
-            text-align: right;
-            direction: rtl;
-        }
-    }
-    .inner-headding .nav-tabs > li {
-  float: right;
+        .inner-headding .col-sm-10,.inner-headding .col-sm-11,.inner-headding .col-sm-12
+{
+    float: right !important;
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+.inner-headding .nav-tabs > li {
+    float: right !important;
 }
 .inner-headding .nav-tabs > li > a {
-  margin-left: auto;
-  margin-right: -2px;
-  border-radius: 4px 4px 0 0;
+  margin-left: auto !important;
+  margin-right: -2px !important;
+  border-radius: 4px 4px 0 0 !important;
 }
 .text-center {
   text-align: center !important;
 }
-@media (min-width: 768px) {
-  .inner-headding .nav-tabs-justified > li > a {
-    border-radius: 4px 4px 0 0;
-  }
+.inner-headding .nav-tabs-justified > li > a {
+    border-radius: 4px 4px 0 0 !important;
+}
 }
